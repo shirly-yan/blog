@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Shirly" />
+
+
+
+<meta name="description" content="转自：  http://blog.csdn.net/goohong/article/details/40505291IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。一 、socket 方式       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 网络编程模式总结">
+<meta property="og:url" content="https://yqzh186.github.io/2016/10/08/iOS 网络编程模式总结/index.html">
+<meta property="og:site_name" content="Shirly">
+<meta property="og:description" content="转自：  http://blog.csdn.net/goohong/article/details/40505291IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。一 、socket 方式       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，C">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:image" content="https://code.csdn.net/assets/CODE_ico.png">
+<meta property="og:image" content="https://code.csdn.net/assets/ico_fork.svg">
+<meta property="og:updated_time" content="2016-10-08T09:16:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS 网络编程模式总结">
+<meta name="twitter:description" content="转自：  http://blog.csdn.net/goohong/article/details/40505291IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。一 、socket 方式       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，C">
+<meta name="twitter:image" content="https://code.csdn.net/assets/CODE_ico.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>iOS 网络编程模式总结 | Shirly</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shirly</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                        <li>關於我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">分类</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shirly</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shirly</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">分类</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-iOS 网络编程模式总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/iOS 网络编程模式总结/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS 网络编程模式总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>转自：  <a href="http://blog.csdn.net/goohong/article/details/40505291" target="_blank" rel="external">http://blog.csdn.net/goohong/article/details/40505291</a><br>IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。<br>一 、socket 方式<br>       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，CFSocket提供BSD sockets几乎所有的功能，并与run loop集成，用来实现多线程网络编程和网络事件监听。基于 CFSocket可以实现各种类型的 socket编程，包括stream-based 的sockets(如tcp)和packet-based 的sockets(如udp)。需要注意的是在iOS中CFSocket接口在需要时不自动激活设备的<br> cellular modem或on-demand VPN。<br>      CFSocket包括以下编程接口，包括Socket的 创建、配置，以及根据创建和配置好的Socket 进行 远程通讯等接口。<br>1  Socket的 创建</p>
+<blockquote>
+<p>1 .1、CFSocketCreate<br>创建一个特定协议和类型的 CFSocket对象<br>1.2、CFSocketCreateWithSocketSignature<br>该接口根据一个包含通讯协议和地址的CFSocketSignature结构来创建一个CFSocket对象</p>
+<p>1.3、 CFSocketCreateConnectedToSocketSignature<br>该接口在创建一个CFSocket对象的同时还与一个远端主机进行连接。</p>
+<p>1.4、CFSocketCreateWithNative<br>该接口通过封装一个存在的 BSD socket来创建一个CFSocket对象。</p>
+</blockquote>
+<p>2   Socket的配置</p>
+<blockquote>
+<p>2.1   CFSocketCopyAddress<br>功能： 返回一个 CFSocket对象的本地地址。<br>语法：<br>SWIFT<br>func CFSocketCopyAddress(<em> s: CFSocket!) -&gt; CFData!<br>2.2、CFSocketCopyPeerAddress<br>功能：返回与一个 CFSocket对象连接的远端地址。<br>语法：<br>SWIFT<br>func CFSocketCopyPeerAddress(</em> s: CFSocket!) -&gt; CFData!<br>2.3  CFSocketDisableCallBacks<br>功能：临时取消一个CFSocket对象创建时指定的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketDisableCallBacks(<em> s: CFSocket!,
+                            </em> callBackTypes: CFOptionFlags)<br>2.4   CFSocketEnableCallBacks<br>功能：重新允许先前CFSocketDisableCallBacks函数取消的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketEnableCallBacks(<em> s: CFSocket!,
+                           </em> callBackTypes: CFOptionFlags)<br>2.5 CFSocketGetContext<br>功能：返回一个CFSocket对象的上下文信息。<br>语法：<br>SWIFT<br>func CFSocketGetContext(<em> s: CFSocket!,
+                      </em> context: UnsafeMutablePointer<cfsocketcontext>)<br>2.6 CFSocketGetNative<br>返回与一个CFSocket对象相关的本地 BSD socket。<br>语法：<br>SWIFT<br>func CFSocketGetNative(<em> s: CFSocket!) -&gt; CFSocketNativeHandle<br>2.7   CFSocketGetSocketFlags<br>功能：返回控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketGetSocketFlags(</em> s: CFSocket!) -&gt; CFOptionFlags</cfsocketcontext></p>
+<p>2.8 CFSocketSetSocketFlags<br>功能：设置控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketSetSocketFlags(<em> s: CFSocket!,
+                          </em> flags: CFOptionFlags)<br>2.9 CFSocketSetAddress<br>语法：<br>SWIFT<br>func CFSocketSetAddress(<em> s: CFSocket!,
+                      </em> address: CFData!) -&gt; CFSocketError<br>功能：为一个CFSocket对象绑定一个本地地址并在本地socket支持的情况下对socket进行配置使其处于监听状态。该函数对应本地socket的 bind以及listen功能。一旦CFSocket对象绑定地址，依赖于socket的协议，其它进程和主机能连接到该CFSocket对象。</p>
+</blockquote>
+<p>3、Sockets的使用</p>
+<blockquote>
+<p>3.1 CFSocketConnectToAddress<br>功能：打开与一个远程socket的一个连接。<br>语法：<br>SWIFT<br>func CFSocketConnectToAddress(<em> s: CFSocket!,
+                            </em> address: CFData!,<br>                            <em> timeout: CFTimeInterval) -&gt; CFSocketError<br>3.2 CFSocketCreateRunLoopSource<br>语法：<br>SWIFT<br>func CFSocketCreateRunLoopSource(</em> allocator: CFAllocator!,<br>                               <em> s: CFSocket!,
+                               </em> order: CFIndex) -&gt; CFRunLoopSource!<br>功能：为一个CFSocket对象创建一个CFRunLoopSource对象。该创建的 CFRunLoopSource对象不自动添加到一个run loop。为了增加该run loop source到某个run loop，需要调用CFRunLoop对象 的CFRunLoopAddSource函数来为该CFRunLoop对象添加run loop source。<br>3.3 CFSocketGetTypeID<br>功能：返回CFSocket对象的 opaque类型对应的类型标示符。<br>语法：<br>SWIFT<br>func CFSocketGetTypeID() -&gt; CFTypeID<br>3.4  CFSocketInvalidate<br>功能：使一个CFSocket对象无效，使其停止接收和发送任何消息。<br>语法：<br>SWIFT<br>func CFSocketInvalidate(<em> s: CFSocket!)<br>3.5 CFSocketIsValid<br>功能：返回一个指示一个CFSocket对象是否有效及是否能够发送和接收消息的布尔值。<br>语法：<br>SWIFT<br>func CFSocketIsValid(</em> s: CFSocket!) -&gt; Boolean<br>3.6 CFSocketSendData<br>功能：该函数用来通过一个CFSocket对象发送数据。<br>语法：<br>SWIFT<br>func CFSocketSendData(<em> s: CFSocket!,
+                    </em> address: CFData!,<br>                    <em> data: CFData!,
+                    </em> timeout: CFTimeInterval) -&gt; CFSocketError</p>
+</blockquote>
+<p>二、stream编程模式<br>       stream编程模式提供了与 unix 的文件操作类似的模式。首先创建和设置流，接着打开流，然后读写流，在流存在时还可以通过查询流的相关属性来读取流的相关信息，在流使用完毕后关闭流。<br>       iOS 为stream编程模式提供的api编程接口包括两大类，一类是Core Foundation框架层用C语言实现的CFStream  API（包括CFStream、 CFReadStream 、CFWriteStream等）,一类是基于其上的在Foundation框架层用Objective-C语言实现的NSStream API（包括NSStream、NSInputStream NSOutputStream等）,两者提供相似的接口和行为，其中某些对象是toll-free<br> bridged类型的，如CFStream 与NSStream，CFReadStream与NSInputStream，CFWriteStream与NSOutputStream之间，因此可以混合使用。<br>       开发人员可以根据自己的语言偏好选择使用。<br>       CFStream API的主要接口：<br>1、CFStream 创建接口</p>
+<blockquote>
+<p>1.1  CFStreamCreatePairWithPeerSocketSignature<br>          功能：创建一对到一个socket的可读和可写流。<br>1.2 CFStreamCreatePairWithSocketToHost<br>功能：创建连接到一个特定主机的特定端口的一对可读写流。<br>1.3 CFStreamCreatePairWithSocket<br>功能：创建一对连接到一个socket的可读写流<br>1.4 CFStreamCreateBoundPair<br>功能：创建一对读写流。<br>其它可读写流创建接口：<br> 1.5 CFReadStreamCreateForHTTPRequest<br>   功能：为一个CFHTTP请求创建一个可读流。<br>1.6 CFReadStreamCreateForStreamedHTTPRequest<br>功能：为一个HTTP请求的body保持在内存的CFHTTP请求创建一个可读流。<br>1.7  CFReadStreamCreateWithFTPURL<br>功能：创建一个FTP可读流<br>1.8  CFWriteStreamCreateWithFTPURL<br>功能：创建一个FTP可读流</p>
+<ol>
+<li>CFReadStream接口<br>2.1 流的打开和关闭<br>   CFReadStreamOpen<pre><code>CFReadStreamClose
+</code></pre>2.2  读取数据<br>   CFReadStreamRead<br>2.3.  调度一个可读流<br>CFReadStreamScheduleWithRunLoop(<em>:</em>:_:) <pre><code>CFReadStreamUnscheduleFromRunLoop(_:_:_:) 
+</code></pre>2.4 检查可读流的属性<br>CFReadStreamCopyProperty(<em>:</em>:)<br>CFReadStreamGetBuffer(<em>:</em>:<em>:)<br>CFReadStreamCopyError(</em>:)<br>CFReadStreamGetError(<em>:)<br>CFReadStreamGetStatus(</em>:)<br>CFReadStreamHasBytesAvailable(<em>:)<br>2.5 设置可读流的属性<br>CFReadStreamSetClient(</em>:<em>:</em>:<em>:)<br>CFReadStreamSetProperty(</em>:<em>:</em>:)<br>2.6 得到 CFReadStream的 Type ID<pre><code>CFReadStreamGetTypeID()
+</code></pre></li>
+</ol>
+</blockquote>
+<p>3.CFWriteStream 相关接口</p>
+<blockquote>
+<pre><code>3.1 CFWriteStreamClose(_:) 
+3.2 CFWriteStreamOpen(_:) 
+3.3 CFWriteStreamWrite(_:_:_:)
+   3.4 CFWriteStreamScheduleWithRunLoop(_:_:_:)
+</code></pre><p>  3.5 CFWriteStreamUnscheduleFromRunLoop(<em>:</em>:<em>:)<br>        3.6 CFWriteStreamCanAcceptBytes(</em>:)<br>      3.7 CFWriteStreamCopyProperty(<em>:</em>:)<br>      3.8 CFWriteStreamCopyError(<em>:)<br>      3.9 CFWriteStreamGetError(</em>:)<br>      3.10 CFWriteStreamGetStatus(<em>:)<br>         3.11 CFWriteStreamSetClient(</em>:<em>:</em>:<em>:)<br>  3.12 CFWriteStreamSetProperty(</em>:<em>:</em>:)<br>      3.13 CFWriteStreamGetTypeID()<br>CFStream API的使用步骤：<br>1） 利用流创建接口创建相关流；<br>2）、调用CFReadStreamSetClient （可读流）或CFWriteStreamSetClient （可写流）来登记要接收的流相关的事件；<br>3）、调用CFReadStreamScheduleWithRunLoop（可读流）或CFWriteStreamScheduleWithRunLoop（可写流）来使在流在一个run loop上进行调度以便接收相关事件；<br>4）、调用CFReadStreamOpen 或CFWriteStreamOpen 来打开已创建的流；<br>5）、在读取流的创建时登记的回调中，在接收到kCFStreamEventHasBytesAvailable事件时来读取数据， 在可写流已登记的回调中，在接收到kCFStreamEventCanAcceptBytes 事件时开始发送数据或请求；<br>6） 数据传输完成，关闭和释放打开和创建的相关流；<br>2、NSStream   API的使用&gt;  在ios 中由于NSStream类不支持 与一个远程主机连接，而CFStream支持，因此为了使用 NSStream，你需要使用流创建函数CFStreamCreatePairWithSocketToHost或CFStreamCreatePairWithSocketToCFHost来打开一个与远程主机连接的socket并分配一对CFStream 对象（CFReadStream和CFWriteStream），并cast这些对象到NSStream<br> 对象（对应NSInputStream 和 NSOutputStream）。从而可以使用NSStream类的相关接口进行相关网络编程。如设置接收网络事件的代理对象，调度到当前的run loop，然后打开它们进行相应处理。<br>代码片段如下：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. {  </p>
+<ol>
+<li></li>
+<li>NSURL *website = [NSURL URLWithString:urlStr];  </li>
+<li></li>
+<li>if (!website) {  </li>
+<li></li>
+<li>NSLog(@”%@ is not a valid URL”);  </li>
+<li></li>
+<li>return;  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>CFReadStreamRef readStream;  </li>
+<li></li>
+<li>CFWriteStreamRef writeStream;  </li>
+<li></li>
+<li>CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)[website host], 80, &amp;readStream, &amp;writeStream);  </li>
+<li></li>
+<li>NSInputStream <em>inputStream = (__bridge_transfer NSInputStream </em>)readStream;  </li>
+<li></li>
+<li>NSOutputStream <em>outputStream = (__bridge_transfer NSOutputStream </em>)writeStream;  </li>
+<li></li>
+<li>[inputStream setDelegate:self];  </li>
+<li></li>
+<li>[outputStream setDelegate:self];  </li>
+<li></li>
+<li>[inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
+<li></li>
+<li>[outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
+<li></li>
+<li>[inputStream open];  </li>
+<li></li>
+<li>[outputStream open];  </li>
+<li></li>
+<li></li>
+<li>/* Store a reference to the input and output streams so that </li>
+<li></li>
+<li>they don’t go away…. */  </li>
+<li></li>
+<li>…  </li>
+<li></li>
+<li>}  </li>
+</ol>
+</blockquote>
+<pre><code>在NSStream对象打开后，当接收到相关的stream-event网络消息，其代理对象中的handleEvent: 函数被调用，从而进行流相关的网络消息处理，  如发送相关协议的请求或接收应答等。以下为handleEvent: 函数进行事件处理的代码片段：
+</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {  </p>
+<ol>
+<li></li>
+<li>NSLog(@”stream:handleEvent: is invoked…”);  </li>
+<li></li>
+<li></li>
+<li></li>
+<li>switch(eventCode) {  </li>
+<li></li>
+<li>case NSStreamEventHasSpaceAvailable:  </li>
+<li></li>
+<li>{  </li>
+<li></li>
+<li>if (stream == oStream) {  </li>
+<li></li>
+<li>NSString * str = [NSString stringWithFormat:  </li>
+<li></li>
+<li>@”GET / HTTP/1.0\r\n\r\n”];  </li>
+<li></li>
+<li>const uint8_t * rawstring =  </li>
+<li></li>
+<li>(const uint8_t *)[str UTF8String];  </li>
+<li></li>
+<li>[oStream write:rawstring maxLength:strlen(rawstring)];  </li>
+<li></li>
+<li>[oStream close];  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>break;  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>// continued …  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>}  </li>
+</ol>
+<p>三、url 编程模式<br>         url 编程模式通过URL 的方式来实现网络编程，任何要存取的网络资源（包括局域网和广域网）都可以用一个URL来表示和存取，并支持设备间的资源共享。url 编程模式系统提供http, https, file, ftp, data等五种协议支持，并允许用户自己开发和登记相关类来支持另外的应用层网络协议，进行协议的扩展。<br>        url 编程模式在IOS系统可以使用两种编程接口：NSURLSession 和NSURLConnection。<br>        对于iOS 7 以后的最新系统推荐使用NSURLSession API，对于老版本由于不支持NSURLSession，因此必须使用NSURLConnection API。<br>NSURLSession编程模式是对相关的连接请求通过一个会话来完成，应用通过创建一系列sessions来实现网络通讯，每一个session协调一组相关数据的传输任务。在每一个session内，应用添加一系列任务，每一个任务表现一个特定URL 请求。<br>        NSURLSession相比NSURLConnection的优点是支持在应用挂起、停止或crashed时能够在后台继续下载数据，即支持任务的取消、重启（恢复）、挂起，以及支持从已挂起、取消或失败的下载中重新恢复下载的能力。<br>         对于简单的请求，还可以直接通过一个简单的NSURL对象来发出请求，并使用一个NSData内存对象或者一个文件的方式来引出NSURL指向的内容。而NSURLConnection API只能通过构造一个NSURLRequest对象或其子类来发出URL请求来请求下载或上传URL数据。 使用一个NSURLRequest请求对象封装一个URL请求，例如HTTP协议方法，除了可以封装一些协议特定的属性外，还可以规定任意本地cached数据的使用策略。<br>         对于NSURLRequest请求对象的应答包括两部分：描述内容的元数据metadata及内容数据本身。两种API对于使用NSURLRequest请求接收的元数据metadata都由NSURLResponse类来封装，其中包含MIME类型、内容长度、编码及提供应答的URL等内容。NSURLResponse协议特定的子类还能提供额外的元数据，如NSHTTPURLResponse提供协议头和WEB服务器返回的状态码<br> 等信息。<br>         NSURLSession API的使用：</p>
+<pre><code>NSURLSession类支持三种会话类型（默认会话类型、临时会话、后台会话）以及三种类型的任务（数据任务、下载任务、上传任务）。
+数据任务使用NSData 对象来发送和接收内存数据，不存储数据到一个文件，因此不支持后台会话。
+下载任务以一个文件的形式引出数据，并支持在应用没有运行时的后台下载。
+上传任务用来上传数据（文件），也能够支持应用没有运行时的后台上传。
+ 默认会话和后台会话的区别是后台会话使用一个分离的进程处理所有的数据传输任务，并带有一些限制：后台会话必须使用特定应用代理来提供事件提交，并仅支持HTTP和HTTPS 协议，不支持其它定制协议，并仅支持上传和下载任务，不支持数据任务。
+临时会话不存储任何数据到磁盘，所有接收的内容都保存到与会话关联的RAM中，当会话无效时，RAM中接收的内容自动被清除。
+</code></pre><p>   NSURLSession API的使用步骤：<br>   1 、创建一个NSURLSessionConfiguration配置对象</p>
+<blockquote>
+<p>NSURLSessionConfiguration配置对象提供广泛的配置选项，包括：<br>1）、特定于单个会话的私有数据存储，包括caches, cookies, credentials, 和protocols；<br>2）、与一个特定请求或一个会话关联的Authentication；<br>3）、与一个主机的最大连接数；<br>4）、与一个资源关联的超时；<br>5）、最小和最大TLS版本支持；<br>6）、定制的代理词典；<br>7）、cookie策略的控制；<br>8）、HTTP pipelining行为的控制<br>2、根据配置创建相应的NSURLSession；<br>       如下代码片段展示了根据不同的配置对象创建不同类型的NSURLSession会话对象。</p>
+</blockquote>
+<p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. /<em> Create a session for each configurations. </em>/  </p>
+<ol>
+<li>self.defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+<li>self.backgroundSession = [NSURLSession sessionWithConfiguration: backgroundConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+<li>self.ephemeralSession = [NSURLSession sessionWithConfiguration: ephemeralConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+</ol>
+<pre><code>  NSURLSession API通过代理来实现异步URL内容存取，代理可以是系统提供的代理，还可以是应用提供的特定代理对象。任务对象当从服务器接收到数据或传输完成时调用这些代理对象的方法。
+在创建会话指定相应的代理对象。
+</code></pre><p>3、为会话添加任务；<br>使用如下方法来添加数据任务到一个会话。</p>
+<blockquote>
+<p>dataTaskWithURL(<em>:)<br>dataTaskWithURL(</em>:completionHandler:)<br>dataTaskWithRequest(<em>:)<br>dataTaskWithRequest(</em>:completionHandler:) </p>
+</blockquote>
+<p>使用如下方法来添加下载任务到一个会话。</p>
+<blockquote>
+<p>downloadTaskWithURL(<em>:)<br>downloadTaskWithURL(</em>:completionHandler:)<br>downloadTaskWithRequest(<em>:)<br>downloadTaskWithRequest(</em>:completionHandler:)<br>downloadTaskWithResumeData(<em>:)<br>downloadTaskWithResumeData(</em>:completionHandler:) </p>
+</blockquote>
+<p>使用如下方法来添加上传任务到一个会话</p>
+<blockquote>
+<p>uploadTaskWithRequest(<em>:fromData:)<br>uploadTaskWithRequest(</em>:fromData:completionHandler:)<br>uploadTaskWithRequest(<em>:fromFile:)<br>uploadTaskWithRequest(</em>:fromFile:completionHandler:)<br>uploadTaskWithStreamedRequest(_:)<br>         如下是数据任务创建代码片段：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“];  </p>
+<ol>
+<li></li>
+<li>NSURLSessionDataTask *dataTask = [self.defaultSession dataTaskWithURL: url];  </li>
+<li></li>
+<li>[dataTask resume];  </li>
+</ol>
+</blockquote>
+<pre><code>下面是下载任务创建代码片段：         
+</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/" target="_blank" rel="external">https://developer.apple.com/library/ios/documentation/Cocoa/Reference/</a>“  </p>
+<ol>
+<li></li>
+<li>“Foundation/ObjC_classic/FoundationObjC.pdf”];  </li>
+<li></li>
+<li>NSURLSessionDownloadTask *downloadTask = [self.backgroundSession downloadTaskWithURL: url];  </li>
+<li></li>
+<li>[downloadTask resume];  </li>
+</ol>
+<p>4、使用代理方法接收数据及状态信息</p>
+<blockquote>
+<p>会话的数据任务在使用应用特定代理接收数据时必须实现如下两个代理方法：<br>URLSession:dataTask:didReceiveData:<br>一次一片的提供请求的数据给会话任务。<br>URLSession:task:didCompleteWithError:<br>指示请求数据已经全部接收。</p>
+<p>会话的下载任务在下载文件时应该实现如下代理方法：<br>URLSession:downloadTask:didFinishDownloadingToURL:<br>下载内容存储到一个URL指定的一个临时文件，在该方法返回之前，必须把临时文件的内容移到一个永久位置，而临时文件被删除。<br>URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:<br>为应用提供关于当前下载进度的状态信息<br>URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:<br>告诉应用已经从从先前的失败下载中恢复。<br>URLSession:task:didCompleteWithError:<br>告诉应用下载已经失败。</p>
+<p>下载失败恢复处理：<br>在应用使用cancelByProducingResumeData: 方法取消下载任务时，可以使用downloadTaskWithResumeData: 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务并传送cancelByProducingResumeData:产生的恢复数据从而接着继续下载。<br>在传输失败时，如果任务可恢复，则调用URLSession:task:didCompleteWithError: 方法。在传送给URLSession:task:didCompleteWithError: 方法的参数NSError中的 userInfo 词典中包含键值为NSURLSessionDownloadTaskResumeData的恢复数据，因此可以使用downloadTaskWithResumeData:<br> 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务来接着恢复数据继续下载。</p>
+<p>系统代理仅能支持基本的URL资源存取任务，不支持认证和后台下载，并且还必须提供一个completion handler block来把返回的URL数据提交到应用。如下是一个使用系统代理的代码例子：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];  </p>
+<ol>
+<li></li>
+<li>[delegateFreeSession dataTaskWithURL: [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“]  </li>
+<li></li>
+<li>completionHandler:^(NSData <em>data, NSURLResponse </em>response,  </li>
+<li></li>
+<li>NSError *error) {  </li>
+<li></li>
+<li>NSLog(@”Got response %@ with error %@.\n”, response, error);  </li>
+<li></li>
+<li>NSLog(@”DATA:\n%@\nEND DATA\n”,  </li>
+<li></li>
+<li>[[NSString alloc] initWithData: data  </li>
+<li></li>
+<li>encoding: NSUTF8StringEncoding]);  </li>
+<li></li>
+<li>}] resume];  </li>
+</ol>
+</blockquote>
+<pre><code>会话的上传任务的任务创建和相关代理方法：
+会话的上传任务使用HTTP  POST方法来上传数据。可以以一个NSData对象、一个文件或使用一个流为HTTP POST请求的body提供内容。
+在以NSData对象提供上传数据时，应用调用uploadTaskWithRequest:fromData: 或uploadTaskWithRequest:fromData:completionHandler: 方法来创建上传任务。
+</code></pre><blockquote>
+<p>在以文件形式提供上传数据时，应用调用uploadTaskWithRequest:fromFile: 或 uploadTaskWithRequest:fromFile:completionHandler:方法来创建上传任务<br>在以流方式提供上传数据时，应用调用uploadTaskWithStreamedRequest:方法来创建上传任务。<br>应用特定代理可以通过实现URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:方法来获得上传进度信息。</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/10/08/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Shirly</a></p>
+        <p><span>發布時間:</span>2016-10-08, 11:39:43</p>
+        <p><span>最後更新:</span>2016-10-08, 17:16:58</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/10/08/iOS 网络编程模式总结/" title="iOS 网络编程模式总结">https://yqzh186.github.io/2016/10/08/iOS 网络编程模式总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://yqzh186.github.io/2016/10/08/iOS 网络编程模式总结/　　作者: Shirly" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/10/08/UIWindow.h详解/">
+                    UIWindow.h详解
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/10/08/iOS开发拓展篇—CoreLocation简单介绍/">
+                    iOS开发拓展篇—CoreLocation简单介绍
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"iOS 网络编程模式总结　| Shirly　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/08/iOS 网络编程模式总结/" data-title="iOS 网络编程模式总结" data-url="https://yqzh186.github.io/2016/10/08/iOS 网络编程模式总结/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"yqzh186"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/10/08/UIWindow.h详解/" title="上一篇: UIWindow.h详解">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/10/08/iOS开发拓展篇—CoreLocation简单介绍/" title="下一篇: iOS开发拓展篇—CoreLocation简单介绍">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/ruby属性/">ruby属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/rvm/">rvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/用string或symbol访问hash/">用string或symbol访问hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/rails下信鸽推送/">rails下信鸽推送</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/rake任务/">rake任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/virtualbox共享文件夹/">virtualbox共享文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/I18n/">I18n</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/rspec/">rspec</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/grape/">grape</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/postgresql/">postgresql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/rails/">rails</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/gem/">gem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/supervisor/">supervisor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/docker/">docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/apt/">apt</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/ssh/">ssh</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/bootstrap/">bootstrap</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/rake/">rake</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/编程思想/">编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/java中的spring/">java中的spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/Ubuntu网络管理/">linux网络管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/centos与ubuntu不同/">centos与ubuntu不同</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux文件权限/">linux文件权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/debian安装sudo/">debian安装sudo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux用户管理/">linux用户管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux系统目录结构/">linux系统目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux命令/">linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/virtualbox安装debian/">virtualbox安装debian</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php图形操作/">php图形操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php日期和时间/">php日期和时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php文件系统/">php文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/会话控制（session与cookie）/">会话控制（session与cookie）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php字符串/">php字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php静态关键字static/">php静态关键字static</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php类/">php类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php函数/">php函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php数组/">php数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php结构语句/">php结构语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php运算符/">php运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php常量/">php常量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/html字符实体/">html字符实体</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/markdown转义字符/">markdown转义字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php变量/">php变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/php基本语法格式/">php基本语法格式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/sublime text3/">sublime text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/mac下的php环境配置/">mac下的php环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Data/">Core Data</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/IOS7使用原生API进行二维码和条形码的扫描/">iOS7使用原生API进行二维码和条形码的扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/判断文件是否存在的脚本语法/">shell或bash中判断文件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/mac显示隐藏文件夹/">mac显示隐藏文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/音乐播放器时间/">音乐播放器时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/MessageUI.framework发短信/">MessageUI.framework发短信</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSHTTPCookieStorage/">NSHTTPCookieStorage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIWindow.h详解/">UIWindow.h详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iPhone尺寸/">iPhone尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS隐藏状态栏/">iOS隐藏状态栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS之CF和OC之间类型转换/">iOS之CF和OC之间类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSTimer/">NSTimer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSString/">NSString</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/OC 函数库方法/">OC 函数库方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSUserDefaults/">NSUserDefaults</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIAlertController/">UIAlertController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIBarMetrics/">UIBarMetrics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/model归档/">model归档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/APP间的调用/">APP间的调用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc 播放gif动画/">oc 播放gif动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIColor和TintColor/">UIColor和TintColor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIControlEvents/">UIControlEvents</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIDevice/">UIDevice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIDatePicker/">UIDatePicker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIGestureRecognizerState/">UIGestureRecognizerState</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIProgressView进度条/">UIProgressView进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UINavigationController/">UINavigationController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISearchController/">UISearchController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UITextView/">UITextView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UITextField/">UITextField</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIPageControl/">UIPageControl</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIWebView/">UIWebView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISlider滑条/">UISlider滑条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISwitch 圆点按钮/">UISwitch 圆点按钮</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/长按保存图片到本地/">长按保存图片到本地</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/assert/">assert</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/通知/">通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/category extension/">category extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/进程和线程/">进程和线程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/获取当前时间/">获取当前时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/AVAudioPlayer/">AVAudioPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/计算字符串的宽或者高/">计算字符串的宽或者高</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/cell的几种style/">cell的几种style</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Animation 3D介绍(第2部分)/">Core Animation 3D介绍(第2部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/storyboard传值/">storyboard传值</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/scrollView加约束/">scrollView加约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/tableview 下拉图片放大/">tableview 下拉图片放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/target action/">target action</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/通讯录/">通讯录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/不同数据类型转换/">不同数据类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/删除Xcode插件/">删除Xcode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/不规则瀑布流/">不规则瀑布流</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/double 型转换成 金额/">double 型转换成 金额</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/单例模式/">单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/协议/">协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/按照时间排序/">按照时间排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 打电话/">iOS 打电话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/夜间模式/">夜间模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/模态/">模态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/数组 基本用法和排序/">数组 基本用法和排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/汉字转拼音/">汉字转拼音</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/30/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/swift类型/">swift类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/ruby常用命令/">ruby常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/ruby调试/">ruby调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/ActiveRecord(四)/">ActiveRecord(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/05/ActiveRecord(三)/">ActiveRecord(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/ActiveRecord(二)/">ActiveRecord(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/ActiveRecord(一)/">ActiveRecord(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/ruby基本语法3/">ruby基本语法3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/ruby正则/">ruby正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/13/ruby基本语法2/">ruby基本语法2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/ruby基本语法1/">ruby基本语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/08/iOS之 CoreMotion 框架/">iOS之 CoreMotion 框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/08/推送通知/">推送通知</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2017 Shirly
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

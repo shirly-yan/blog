@@ -3,7 +3,7 @@ title: php类
 date: 2016-10-14 12:45:26
 categories:
 ---
-
+php类
 <!-- more -->
 
 ```php

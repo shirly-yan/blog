@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Shirly" />
+
+
+
+<meta name="description" content="和本地通知不同，推送通知是由应用服务提供商发起的，通过苹果的APNs（Apple Push Notification Server）发送到应用客户端。下面是苹果官方关于推送通知的过程示意图：
+推送通知的过程可以分为以下几步：
+应用服务提供商从服务器端把要发送的消息和设备令牌（device token）发送给苹果的消息推送服务器APNs。APNs根据设备令牌在已注册的设备（iPhone、iPad、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="推送通知">
+<meta property="og:url" content="https://yqzh186.github.io/2015/09/08/推送通知/index.html">
+<meta property="og:site_name" content="Shirly">
+<meta property="og:description" content="和本地通知不同，推送通知是由应用服务提供商发起的，通过苹果的APNs（Apple Push Notification Server）发送到应用客户端。下面是苹果官方关于推送通知的过程示意图：
+推送通知的过程可以分为以下几步：
+应用服务提供商从服务器端把要发送的消息和设备令牌（device token）发送给苹果的消息推送服务器APNs。APNs根据设备令牌在已注册的设备（iPhone、iPad、">
+<meta property="og:updated_time" content="2016-10-08T05:41:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="推送通知">
+<meta name="twitter:description" content="和本地通知不同，推送通知是由应用服务提供商发起的，通过苹果的APNs（Apple Push Notification Server）发送到应用客户端。下面是苹果官方关于推送通知的过程示意图：
+推送通知的过程可以分为以下几步：
+应用服务提供商从服务器端把要发送的消息和设备令牌（device token）发送给苹果的消息推送服务器APNs。APNs根据设备令牌在已注册的设备（iPhone、iPad、">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>推送通知 | Shirly</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shirly</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                        <li>關於我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">分类</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shirly</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shirly</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">分类</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-推送通知" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/08/推送通知/" class="article-date">
+      <time datetime="2015-09-08T03:39:42.000Z" itemprop="datePublished">2015-09-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      推送通知
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>和本地通知不同，推送通知是由应用服务提供商发起的，通过苹果的APNs（Apple Push Notification Server）发送到应用客户端。下面是苹果官方关于推送通知的过程示意图：</p>
+<p>推送通知的过程可以分为以下几步：</p>
+<p>应用服务提供商从服务器端把要发送的消息和设备令牌（device token）发送给苹果的消息推送服务器APNs。<br>APNs根据设备令牌在已注册的设备（iPhone、iPad、iTouch、mac等）查找对应的设备，将消息发送给相应的设备。<br>客户端设备接将接收到的消息传递给相应的应用程序，应用程序根据用户设置弹出通知消息。<br>当然，这只是一个简单的流程，有了这个流程我们还无从下手编写程序，将上面的流程细化可以得到如下流程图（图片来自互联网），在这个过程中会也会提到如何在程序中完成这些步骤：</p>
+<p>1.应用程序注册APNs推送消息。</p>
+<p>说明：</p>
+<p>a.只有注册过的应用才有可能接收到消息，程序中通常通过UIApplication的registerUserNotificationSettings:方法注册，iOS8中通知注册的方法发生了改变，如果是iOS7及之前版本的iOS请参考其他代码。</p>
+<p>b.注册之前有两个前提条件必须准备好：开发配置文件（provisioning profile，也就是.mobileprovision后缀的文件）的App ID不能使用通配ID必须使用指定APP ID并且生成配置文件中选择Push Notifications服务，一般的开发配置文件无法完成注册；应用程序的Bundle Identifier必须和生成配置文件使用的APP ID完全一致。</p>
+<p>2.iOS从APNs接收device token，在应用程序获取device token。</p>
+<p>说明：</p>
+<p>a.在UIApplication的-(void)application:(UIApplication <em>)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData </em>)deviceToken代理方法中获取令牌，此方法发生在注册之后。</p>
+<p>b.如果无法正确获得device token可以在UIApplication的-(void)application:(UIApplication <em>)application didFailToRegisterForRemoteNotificationsWithError:(NSError </em>)error代理方法中查看详细错误信息，此方法发生在获取device token失败之后。</p>
+<p>c.必须真机调试，模拟器无法获取device token。</p>
+<p>3.iOS应用将device token发送给应用程序提供商，告诉服务器端当前设备允许接收消息。</p>
+<p>说明：</p>
+<p>a.device token的生成算法只有Apple掌握，为了确保算法发生变化后仍然能够正常接收服务器端发送的通知，每次应用程序启动都重新获得device token（注意：device token的获取不会造成性能问题，苹果官方已经做过优化）。</p>
+<p>b.通常可以创建一个网络连接发送给应用程序提供商的服务器端， 在这个过程中最好将上一次获得的device token存储起来，避免重复发送，一旦发现device token发生了变化最好将原有的device token一块发送给服务器端，服务器端删除原有令牌存储新令牌避免服务器端发送无效消息。</p>
+<p>4.应用程序提供商在服务器端根据前面发送过来的device token组织信息发送给APNs。</p>
+<p>说明：</p>
+<p>a.发送时指定device token和消息内容，并且完全按照苹果官方的消息格式组织消息内容，通常情况下可以借助其他第三方消息推送框架来完成。</p>
+<p>5.APNs根据消息中的device token查找已注册的设备推送消息。</p>
+<p>说明：</p>
+<p>a.正常情况下可以根据device token将消息成功推送到客户端设备中，但是也不排除用户卸载程序的情况，此时推送消息失败，APNs会将这个错误消息通知服务器端以避免资源浪费（服 务器端此时可以根据错误删除已经存储的device token，下次不再发送）。</p>
+<p>下面将简单演示一下推送通知的简单流程:</p>
+<p>首先，看一下iOS客户端代码：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  AppDelegate.m</span></div><div class="line"><span class="comment">//  pushnotification</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by Kenshin Cui on 14/03/27.</span></div><div class="line"><span class="comment">//  Copyright (c) 2014年 Kenshin Cui. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"KCMainViewController.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 应用程序代理方法</span></div><div class="line"><span class="meta">#pragma mark 应用程序启动之后</span></div><div class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</div><div class="line">    </div><div class="line">    _window=[[<span class="built_in">UIWindow</span> alloc]initWithFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</div><div class="line">    </div><div class="line">    _window.backgroundColor =[<span class="built_in">UIColor</span> colorWithRed:<span class="number">249</span>/<span class="number">255.0</span> green:<span class="number">249</span>/<span class="number">255.0</span> blue:<span class="number">249</span>/<span class="number">255.0</span> alpha:<span class="number">1</span>];</div><div class="line">    </div><div class="line">    <span class="comment">//设置全局导航条风格和颜色</span></div><div class="line">    [[<span class="built_in">UINavigationBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> colorWithRed:<span class="number">23</span>/<span class="number">255.0</span> green:<span class="number">180</span>/<span class="number">255.0</span> blue:<span class="number">237</span>/<span class="number">255.0</span> alpha:<span class="number">1</span>]];</div><div class="line">    [[<span class="built_in">UINavigationBar</span> appearance] setBarStyle:<span class="built_in">UIBarStyleBlack</span>];</div><div class="line">    </div><div class="line">    KCMainViewController *mainController=[[KCMainViewController alloc]init];</div><div class="line">    _window.rootViewController=mainController;</div><div class="line">    </div><div class="line">    [_window makeKeyAndVisible];</div><div class="line">    </div><div class="line">    <span class="comment">//注册推送通知（注意iOS8注册方法发生了变化）</span></div><div class="line">    [application registerUserNotificationSettings:[<span class="built_in">UIUserNotificationSettings</span> settingsForTypes:<span class="built_in">UIUserNotificationTypeAlert</span>|<span class="built_in">UIUserNotificationTypeBadge</span>|<span class="built_in">UIUserNotificationTypeSound</span> categories:<span class="literal">nil</span>]];</div><div class="line">    [application registerForRemoteNotifications];</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma mark 注册推送通知之后</span></div><div class="line"><span class="comment">//在此接收设备令牌</span></div><div class="line">-(<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didRegisterForRemoteNotificationsWithDeviceToken:(<span class="built_in">NSData</span> *)deviceToken&#123;</div><div class="line">    [<span class="keyword">self</span> addDeviceToken:deviceToken];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"device token:%@"</span>,deviceToken);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark 获取device token失败后</span></div><div class="line">-(<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didFailToRegisterForRemoteNotificationsWithError:(<span class="built_in">NSError</span> *)error&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"didFailToRegisterForRemoteNotificationsWithError:%@"</span>,error.localizedDescription);</div><div class="line">    [<span class="keyword">self</span> addDeviceToken:<span class="literal">nil</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark 接收到推送通知之后</span></div><div class="line">-(<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didReceiveRemoteNotification:(<span class="built_in">NSDictionary</span> *)userInfo&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"receiveRemoteNotification,userInfo is %@"</span>,userInfo);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 私有方法</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  添加设备令牌到服务器端</div><div class="line"> *</div><div class="line"> *  @param deviceToken 设备令牌</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)addDeviceToken:(<span class="built_in">NSData</span> *)deviceToken&#123;</div><div class="line">    <span class="built_in">NSString</span> *key=<span class="string">@"DeviceToken"</span>;</div><div class="line">    <span class="built_in">NSData</span> *oldToken= [[<span class="built_in">NSUserDefaults</span> standardUserDefaults]objectForKey:key];</div><div class="line">    <span class="comment">//如果偏好设置中的已存储设备令牌和新获取的令牌不同则存储新令牌并且发送给服务器端</span></div><div class="line">    <span class="keyword">if</span> (![oldToken isEqualToData:deviceToken]) &#123;</div><div class="line">        [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] setObject:deviceToken forKey:key];</div><div class="line">        [<span class="keyword">self</span> sendDeviceTokenWidthOldDeviceToken:oldToken newDeviceToken:deviceToken];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)sendDeviceTokenWidthOldDeviceToken:(<span class="built_in">NSData</span> *)oldToken newDeviceToken:(<span class="built_in">NSData</span> *)newToken&#123;</div><div class="line">    <span class="comment">//注意一定确保真机可以正常访问下面的地址</span></div><div class="line">    <span class="built_in">NSString</span> *urlStr=<span class="string">@"http://192.168.1.101/RegisterDeviceToken.aspx"</span>;</div><div class="line">    urlStr=[urlStr stringByAddingPercentEscapesUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</div><div class="line">    <span class="built_in">NSURL</span> *url=[<span class="built_in">NSURL</span> URLWithString:urlStr];</div><div class="line">    <span class="built_in">NSMutableURLRequest</span> *requestM=[<span class="built_in">NSMutableURLRequest</span> requestWithURL:url cachePolicy:<span class="number">0</span> timeoutInterval:<span class="number">10.0</span>];</div><div class="line">    [requestM setHTTPMethod:<span class="string">@"POST"</span>];</div><div class="line">    <span class="built_in">NSString</span> *bodyStr=[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"oldToken=%@&amp;newToken=%@"</span>,oldToken,newToken];</div><div class="line">    <span class="built_in">NSData</span> *body=[bodyStr dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</div><div class="line">    [requestM setHTTPBody:body];</div><div class="line">    <span class="built_in">NSURLSession</span> *session=[<span class="built_in">NSURLSession</span> sharedSession];</div><div class="line">    <span class="built_in">NSURLSessionDataTask</span> *dataTask= [session dataTaskWithRequest:requestM completionHandler:^(<span class="built_in">NSData</span> *data, <span class="built_in">NSURLResponse</span> *response, <span class="built_in">NSError</span> *error) &#123;</div><div class="line">        <span class="keyword">if</span> (error) &#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"Send failure,error is :%@"</span>,error.localizedDescription);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"Send Success!"</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;];</div><div class="line">    [dataTask resume];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<p>iOS客户端代码的代码比较简单，注册推送通知，获取device token存储到偏好设置中，并且如果新获取的device token不同于偏好设置中存储的数据则发送给服务器端，更新服务器端device token列表。</p>
+<p>其次，由于device token需要发送给服务器端，这里使用一个Web应用作为服务器端接收device token，这里使用了ASP.NET程序来处理令牌接收注册工作，当然你使用其他技术同样没有问题。下面是对应的后台代码：</p>
+<p>using System;<br>using System.Collections.Generic;<br>using System.Web;<br>using System.Web.UI;<br>using System.Web.UI.WebControls;<br>using CMJ.Framework.Data;</p>
+<p>namespace WebServer<br>{<br>    public partial class RegisterDeviceToken : System.Web.UI.Page<br>    {<br>        private string _appID = @”com.cmjstudio.pushnotification”;<br>        private SqlHelper _helper = new SqlHelper();<br>        protected void Page_Load(object sender, EventArgs e)<br>        {<br>            try<br>            {<br>                string oldToken = Request[“oldToken”] + “”;<br>                string newToken = Request[“newToken”] + “”;<br>                string sql = “”;<br>                //如果传递旧的设备令牌则删除旧令牌添加新令牌<br>                if (oldToken != “”)<br>                {<br>                    sql = string.Format(“DELETE FROM dbo.Device WHERE AppID=’{0}’ AND DeviceToken=’{1}’;”, _appID, oldToken);<br>                }<br>                sql += string.Format(@”IF NOT EXISTS (SELECT ID FROM dbo.Device WHERE AppID=’{0}’ AND DeviceToken=’{1}’)<br>                                        INSERT INTO dbo.Device ( AppID, DeviceToken ) VALUES ( N’{0}’, N’{1}’);”, _appID, newToken);<br>                _helper.ExecuteNonQuery(sql);<br>                Response.Write(“注册成功！”);<br>            }<br>            catch(Exception ex)<br>            {<br>                Response.Write(“注册失败，错误详情：”+ex.ToString());<br>            }<br>        }<br>    }<br>}<br>这个过程主要就是保存device token到数据库中，当然如果同时传递旧的设备令牌还需要先删除就的设备令牌，这里简单的在数据库中创建了一张Device表来保存设备令牌，其中记录了应用程序Id和设备令牌。</p>
+<p>第三步就是服务器端发送消息，如果要给APNs发送消息就必须按照Apple的标准消息格式组织消息内容。但是好在目前已经有很多开源的第三方类库供我们使用，具体消息如何包装完全不用自己组织，这里使用一个开源的类库Push Sharp来 给APNs发送消息 ,除了可以给Apple设备推送消息，Push Sharp还支持Android、Windows Phone等多种设备，更多详细内容大家可以参照官方说明。前面说过如果要开发消息推送应用不能使用一般的开发配置文件，这里还需要注意：如果服务器端要 给APNs发送消息其秘钥也必须是通过APNs Development iOS类型的证书来导出的，一般的iOS Development 类型的证书导出的秘钥无法用作服务器端发送秘钥。下面通过在一个简单的WinForm程序中调用Push Sharp给APNs发送消息，这里读取之前Device表中的所有设备令牌循环发送消息：</p>
+<p>using System;<br>using System.IO;<br>using System.Collections.Generic;<br>using System.ComponentModel;<br>using System.Data;<br>using System.Drawing;<br>using System.Text;<br>using System.Windows.Forms;<br>using PushSharp;<br>using PushSharp.Apple;<br>using CMJ.Framework.Data;<br>using CMJ.Framework.Logging;<br>using CMJ.Framework.Windows.Forms;</p>
+<p>namespace PushNotificationServer<br>{<br>    public partial class frmMain : PersonalizeForm<br>    {<br>        private string _appID = @”com.cmjstudio.pushnotification”;<br>        private SqlHelper _helper = new SqlHelper();<br>        public frmMain()<br>        {<br>            InitializeComponent();<br>        }</p>
+<pre><code>    private void btnClose_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
+
+    private void btnSend_Click(object sender, EventArgs e)
+    {
+        List&lt;string&gt; deviceTokens = GetDeviceToken();
+        SendMessage(deviceTokens, tbMessage.Text);
+    }
+
+    #region 发送消息
+    /// &lt;summary&gt;
+    /// 取得所有设备令牌
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;设备令牌&lt;/returns&gt;
+    private List&lt;string&gt; GetDeviceToken()
+    {
+        List&lt;string&gt; deviceTokens = new List&lt;string&gt;();
+        string sql = string.Format(&quot;SELECT DeviceToken FROM dbo.Device WHERE AppID=&apos;{0}&apos;&quot;,_appID);
+        DataTable dt = _helper.GetDataTable(sql);
+        if(dt.Rows.Count&gt;0)
+        {
+            foreach(DataRow dr in dt.Rows)
+            {
+                deviceTokens.Add((dr[&quot;DeviceToken&quot;]+&quot;&quot;).TrimStart(&apos;&lt;&apos;).TrimEnd(&apos;&gt;&apos;).Replace(&quot; &quot;,&quot;&quot;));
+            }
+        }
+        return deviceTokens;
+    }
+
+    /// &lt;summary&gt;
+    /// 发送消息
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;deviceToken&quot;&gt;设备令牌&lt;/param&gt;
+    /// &lt;param name=&quot;message&quot;&gt;消息内容&lt;/param&gt;
+    private void SendMessage(List&lt;string&gt; deviceToken, string message)
+    {
+        //创建推送对象
+        var pusher = new PushBroker();
+        pusher.OnNotificationSent += pusher_OnNotificationSent;//发送成功事件
+        pusher.OnNotificationFailed += pusher_OnNotificationFailed;//发送失败事件
+        pusher.OnChannelCreated += pusher_OnChannelCreated;
+        pusher.OnChannelDestroyed += pusher_OnChannelDestroyed;
+        pusher.OnChannelException += pusher_OnChannelException;
+        pusher.OnDeviceSubscriptionChanged += pusher_OnDeviceSubscriptionChanged;
+        pusher.OnDeviceSubscriptionExpired += pusher_OnDeviceSubscriptionExpired;
+        pusher.OnNotificationRequeue += pusher_OnNotificationRequeue;
+        pusher.OnServiceException += pusher_OnServiceException;
+        //注册推送服务
+        byte[] certificateData = File.ReadAllBytes(@&quot;E:\KenshinCui_Push.p12&quot;);
+        pusher.RegisterAppleService(new ApplePushChannelSettings(certificateData, &quot;123&quot;));
+        foreach (string token in deviceToken)
+        {
+            //给指定设备发送消息
+            pusher.QueueNotification(new AppleNotification()
+                .ForDeviceToken(token)
+                .WithAlert(message) 
+                .WithBadge(1)
+                .WithSound(&quot;default&quot;));
+        }
+    }
+
+    void pusher_OnServiceException(object sender, Exception error)
+    {
+        Console.WriteLine(&quot;消息发送失败，错误详情：&quot; + error.ToString());
+        PersonalizeMessageBox.Show(this, &quot;消息发送失败，错误详情：&quot; + error.ToString(), &quot;系统提示&quot;);
+    }
+
+    void pusher_OnNotificationRequeue(object sender, PushSharp.Core.NotificationRequeueEventArgs e)
+    {
+        Console.WriteLine(&quot;pusher_OnNotificationRequeue&quot;);
+    }
+
+    void pusher_OnDeviceSubscriptionExpired(object sender, string expiredSubscriptionId, DateTime expirationDateUtc, PushSharp.Core.INotification notification)
+    {
+        Console.WriteLine(&quot;pusher_OnDeviceSubscriptionChanged&quot;);
+    }
+
+    void pusher_OnDeviceSubscriptionChanged(object sender, string oldSubscriptionId, string newSubscriptionId, PushSharp.Core.INotification notification)
+    {
+        Console.WriteLine(&quot;pusher_OnDeviceSubscriptionChanged&quot;);
+    }
+
+    void pusher_OnChannelException(object sender, PushSharp.Core.IPushChannel pushChannel, Exception error)
+    {
+        Console.WriteLine(&quot;消息发送失败，错误详情：&quot; + error.ToString());
+        PersonalizeMessageBox.Show(this, &quot;消息发送失败，错误详情：&quot; + error.ToString(), &quot;系统提示&quot;);
+    }
+
+    void pusher_OnChannelDestroyed(object sender)
+    {
+        Console.WriteLine(&quot;pusher_OnChannelDestroyed&quot;);
+    }
+
+    void pusher_OnChannelCreated(object sender, PushSharp.Core.IPushChannel pushChannel)
+    {
+        Console.WriteLine(&quot;pusher_OnChannelCreated&quot;);
+    }
+
+    void pusher_OnNotificationFailed(object sender, PushSharp.Core.INotification notification, Exception error)
+    {
+        Console.WriteLine(&quot;消息发送失败，错误详情：&quot; + error.ToString());
+        PersonalizeMessageBox.Show(this, &quot;消息发送失败，错误详情：&quot;+error.ToString(), &quot;系统提示&quot;);
+    }
+
+    void pusher_OnNotificationSent(object sender, PushSharp.Core.INotification notification)
+    {
+        Console.WriteLine(&quot;消息发送成功！&quot;);
+        PersonalizeMessageBox.Show(this, &quot;消息发送成功！&quot;, &quot;系统提示&quot;);
+    }
+    #endregion
+}
+</code></pre><p>}<br>服务器端消息发送应用运行效果：</p>
+<p>iOS客户端接收的消息的效果：</p>
+<p>到目前为止通过服务器端应用可以顺利发送消息给APNs并且iOS应用已经成功接收推送消息。</p>
+<p>补充–iOS开发证书、秘钥</p>
+<p>iOS开发过程中如果需要进行真机调试、发布需要注册申请很多证书，对于初学者往往迷惑不解，再加上今天的文章中会牵扯到一些特殊配置，这里就简单的对iOS开发的常用证书和秘钥等做一说明。</p>
+<p>证书</p>
+<p>iOS常用的证书包括开发证书和发布证书，无论是真机调试还是最终发布应用到App Store这两个证书都是必须的，它是iOS开发的基本证书。</p>
+<p>a.开发证书：开发证书又分为普通开发证书和推送证书，如果仅仅是一般的应用则前者即可满足，但是如果开发推送应用则必须使用推送证书。</p>
+<p>b.发布证书：发布证书又可以分为普通发布证书、推送证书、Pass Type ID证书、站点发布证书、VoIP服务证书、苹果支付证书。同样的，对于需要使用特殊服务的应用则必须选择对应的证书。</p>
+<p>应用标识</p>
+<p>App ID,应用程序的唯一标识，对应iOS应用的Bundle Identifier，App ID在苹果开发者中心中分为通配应用ID和明确的应用ID,前者一般用于普通应用开发，一个ID可以适用于多个不同标识的应用；但是对于使用消息推送、 Passbook、站点发布、iCloud等服务的应用必须配置明确的应用ID。</p>
+<p>设备标识</p>
+<p>UDID,用于标识每一台硬件设备的标示符。注意它不是device token，device token是根据UDID使用一个只有Apple自己才知道的算法生成的一组标示符。</p>
+<p>配置简介</p>
+<p>Provisioning Profiles,平时又称为PP文件。将UDID、App ID、开发证书打包在一起的配置文件，同样分为开发和发布两类配置文件。</p>
+<p>秘钥</p>
+<p>在申请开发证书时必须要首先提交一个秘钥请求文件，对于生成秘钥请求文件的mac，如果要做开发则只需要下载证书和配置简介即可开发。但是如果要想 在其他机器上做开发则必须将证书中的秘钥导出（导出之后是一个.p12文件），然后导入其他机器。同时对于类似于推送服务器端应用如果要给APNs发送消 息，同样需要使用.p12秘钥文件，并且这个秘钥文件需要是推送证书导出的对应秘钥。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2015/09/08/推送通知/">推送通知</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Shirly</a></p>
+        <p><span>發布時間:</span>2015-09-08, 11:39:42</p>
+        <p><span>最後更新:</span>2016-10-08, 13:41:28</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2015/09/08/推送通知/" title="推送通知">https://yqzh186.github.io/2015/09/08/推送通知/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://yqzh186.github.io/2015/09/08/推送通知/　　作者: Shirly" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2015/10/08/iOS之 CoreMotion 框架/">
+                    iOS之 CoreMotion 框架
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"推送通知　| Shirly　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2015/09/08/推送通知/" data-title="推送通知" data-url="https://yqzh186.github.io/2015/09/08/推送通知/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"yqzh186"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2015/10/08/iOS之 CoreMotion 框架/" title="上一篇: iOS之 CoreMotion 框架">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/ruby属性/">ruby属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/rvm/">rvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/用string或symbol访问hash/">用string或symbol访问hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/rails下信鸽推送/">rails下信鸽推送</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/rake任务/">rake任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/virtualbox共享文件夹/">virtualbox共享文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/I18n/">I18n</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/rspec/">rspec</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/grape/">grape</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/postgresql/">postgresql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/rails/">rails</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/gem/">gem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/supervisor/">supervisor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/docker/">docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/apt/">apt</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/ssh/">ssh</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/bootstrap/">bootstrap</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/rake/">rake</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/编程思想/">编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/java中的spring/">java中的spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/Ubuntu网络管理/">linux网络管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/centos与ubuntu不同/">centos与ubuntu不同</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux文件权限/">linux文件权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/debian安装sudo/">debian安装sudo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux用户管理/">linux用户管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux系统目录结构/">linux系统目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/linux命令/">linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/virtualbox安装debian/">virtualbox安装debian</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php图形操作/">php图形操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php日期和时间/">php日期和时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php文件系统/">php文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/会话控制（session与cookie）/">会话控制（session与cookie）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php字符串/">php字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php静态关键字static/">php静态关键字static</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php类/">php类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php函数/">php函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php数组/">php数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php结构语句/">php结构语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php运算符/">php运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php常量/">php常量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/html字符实体/">html字符实体</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/markdown转义字符/">markdown转义字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php变量/">php变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/php基本语法格式/">php基本语法格式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/sublime text3/">sublime text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/mac下的php环境配置/">mac下的php环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Data/">Core Data</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/IOS7使用原生API进行二维码和条形码的扫描/">iOS7使用原生API进行二维码和条形码的扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/判断文件是否存在的脚本语法/">shell或bash中判断文件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/mac显示隐藏文件夹/">mac显示隐藏文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/音乐播放器时间/">音乐播放器时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/MessageUI.framework发短信/">MessageUI.framework发短信</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSHTTPCookieStorage/">NSHTTPCookieStorage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIWindow.h详解/">UIWindow.h详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iPhone尺寸/">iPhone尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS隐藏状态栏/">iOS隐藏状态栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS之CF和OC之间类型转换/">iOS之CF和OC之间类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSTimer/">NSTimer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSString/">NSString</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/OC 函数库方法/">OC 函数库方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NSUserDefaults/">NSUserDefaults</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIAlertController/">UIAlertController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIBarMetrics/">UIBarMetrics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/model归档/">model归档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/APP间的调用/">APP间的调用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc 播放gif动画/">oc 播放gif动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIColor和TintColor/">UIColor和TintColor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIControlEvents/">UIControlEvents</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIDevice/">UIDevice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIDatePicker/">UIDatePicker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIGestureRecognizerState/">UIGestureRecognizerState</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIProgressView进度条/">UIProgressView进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UINavigationController/">UINavigationController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISearchController/">UISearchController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UITextView/">UITextView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UITextField/">UITextField</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIPageControl/">UIPageControl</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIWebView/">UIWebView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISlider滑条/">UISlider滑条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UISwitch 圆点按钮/">UISwitch 圆点按钮</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/长按保存图片到本地/">长按保存图片到本地</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/assert/">assert</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/通知/">通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/category extension/">category extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/进程和线程/">进程和线程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/获取当前时间/">获取当前时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/AVAudioPlayer/">AVAudioPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/计算字符串的宽或者高/">计算字符串的宽或者高</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/cell的几种style/">cell的几种style</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Animation 3D介绍(第2部分)/">Core Animation 3D介绍(第2部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/storyboard传值/">storyboard传值</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/scrollView加约束/">scrollView加约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/tableview 下拉图片放大/">tableview 下拉图片放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/target action/">target action</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/通讯录/">通讯录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/不同数据类型转换/">不同数据类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/删除Xcode插件/">删除Xcode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/不规则瀑布流/">不规则瀑布流</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/double 型转换成 金额/">double 型转换成 金额</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/单例模式/">单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/协议/">协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/按照时间排序/">按照时间排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS 打电话/">iOS 打电话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/夜间模式/">夜间模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/模态/">模态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/数组 基本用法和排序/">数组 基本用法和排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/汉字转拼音/">汉字转拼音</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/30/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/swift类型/">swift类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/ruby常用命令/">ruby常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/ruby调试/">ruby调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/ActiveRecord(四)/">ActiveRecord(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/05/ActiveRecord(三)/">ActiveRecord(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/ActiveRecord(二)/">ActiveRecord(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/ActiveRecord(一)/">ActiveRecord(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/ruby基本语法3/">ruby基本语法3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/ruby正则/">ruby正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/13/ruby基本语法2/">ruby基本语法2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/ruby基本语法1/">ruby基本语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/08/iOS之 CoreMotion 框架/">iOS之 CoreMotion 框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/08/推送通知/">推送通知</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2017 Shirly
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

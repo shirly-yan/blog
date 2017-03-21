@@ -3,7 +3,7 @@ title: php字符串
 date: 2016-10-14 17:19:35
 categories: php
 ---
-
+php字符串
 <!-- more -->
 
 <h2>字符串的定义</h2>
@@ -78,10 +78,97 @@ echo mb_strlen($str,"UTF8");//结果：3，此处的UTF8表示中文编码是UTF
 ```
 
 <h2>字符串的截取</h2>
++ 英文字符串的截取函数substr()
++ 中文字符串的截取函数mb_substr()
 
+英文字符串的截取函数substr()
+函数说明：substr(字符串变量,开始截取的位置,截取个数）
+例如：
 
+```php
+$str='i love you';
+//截取love这几个字母
+echo substr($str, 2, 4);
+//为什么开始位置是2呢，因为substr函数计算字符串位置是从0开始的，也就是0的位置是i,1的位置是空格，l的位置是2。从位置2开始取4个字符，就是love。
+```
+中文字符串的截取函数mb_substr()
+函数说明：mb_substr(字符串变量,开始截取的位置，截取个数, 网页编码）
+例如：
 
+```php
+$str='我爱你，中国';
+//截取中国两个字
+echo mb_substr($str, 4, 2, 'utf8');
+//为什么开始位置是4呢，和上一个例子一样，因为mb_substr函数计算汉字位置是从0开始的，也就是0的位置是我,1的位置是爱，4的位置是中。从位置4开始取2个汉字，就是中国。中文编码一般是utf8格式
+```
 
+<h2>查找字符串</h2>
+查找字符串函数strpos();
+函数说明：strpos(要处理的字符串, 要定位的字符串, 定位的起始位置[可选])
+例子：
+
+```php
+$str = 'I want to study at imooc';
+$pos = strpos($str, 'imooc');
+echo $pos;//结果显示19，表示从位置0开始，imooc在第19个位置开始出现
+```
+
+<h2>替换字符串</h2>
+替换函数str_replace()
+函数说明：str_replace(要查找的字符串, 要替换的字符串, 被搜索的字符串, 替换进行计数[可选])
+例子：
+
+```php
+$str = 'I want to learn js';
+$replace = str_replace('js', 'php', $str);
+echo $replace;//结果显示I want to learn php
+```
+
+<h2>格式化字符串</h2>
+格式化字符串函数sprintf()
+函数说明：sprintf(格式, 要转化的字符串)
+返回：格式化好的字符串
+例子：
+
+```php
+$str = '99.9';
+$result = sprintf('%01.2f', $str);
+echo $result;//结果显示99.90
+```
+
+<h2>字符串的合并</h2>
+字符串合并函数implode()
+函数说明：implode(分隔符[可选], 数组)
+返回值：把数组元素组合为一个字符串
+例子：
+
+```php
+$arr = array('Hello', 'World!');
+$result = implode('', $arr);
+print_r($result);//结果显示Hello World!
+```
+<h2>字符串的分隔</h2>
+字符串分隔函数explode()
+函数说明：explode(分隔符[可选], 字符串)
+返回值：函数返回由字符串组成的数组
+例子：
+
+```php
+$str = 'apple,banana';
+$result = explode(',', $str);
+print_r($result);//结果显示array('apple','banana')
+```
+
+<h2>字符串的转义</h2>
+字符串转义函数addslashes()
+函数说明：用于对特殊字符加上转义字符，返回一个字符串
+返回值：一个经过转义后的字符串
+例子：
+
+```php
+$str = "what's your name?";
+echo addslashes($str);//输出：what\'s your name?
+```
 
 
 
