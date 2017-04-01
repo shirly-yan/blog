@@ -144,13 +144,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情鏈接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>關於我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -189,7 +189,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc/">oc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
                     </div>
                 </section>
                 
@@ -262,14 +262,14 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-double 型转换成 金额" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIscrollView滚动时调用的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/double 型转换成 金额/" class="article-date">
+      <a href="/2016/10/08/oc/UIscrollView滚动时调用的方法/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -285,7 +285,424 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/double 型转换成 金额/">double 型转换成 金额</a>
+      <a class="article-title" href="/2016/10/08/oc/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//UIscrollView开始拖拽的时候调用</span></div><div class="line">- (<span class="keyword">void</span>)scrollViewWillBeginDragging:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"开始拖拽"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//UIscrollView拖拽结束的时候调用</span></div><div class="line">-(<span class="keyword">void</span>)scrollViewDidEndDragging:(<span class="built_in">UIScrollView</span> *)scrollView willDecelerate:(<span class="built_in">BOOL</span>)decelerate</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"拖拽结束"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//UIscrollView拖拽结束的时候调用</span></div><div class="line">-(<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="comment">//在滚动的时候调用</span></div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="comment">//UIscrollView开始减速的时候调用</span></div><div class="line">-(<span class="keyword">void</span>)scrollViewWillBeginDecelerating:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"开始减速"</span>);</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//UIscrollView减速停止的时候调用</span></div><div class="line">-(<span class="keyword">void</span>)scrollViewDidEndDecelerating:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"减速停止"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(<span class="built_in">UIView</span> *)viewForZoomingInScrollView:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> [scrollView viewWithTag:<span class="number">9999</span>];</div><div class="line">    <span class="comment">//只有实现这个方法 才能执行缩放 指定对象;</span></div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)scrollViewDidZoom:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"缩放时一直触发"</span>);</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="built_in">UIView</span> *)viewForZoomingInScrollView:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> _imageView;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark 当缩放完毕的时候调用</span></div><div class="line">- (<span class="keyword">void</span>)scrollViewDidEndZooming:(<span class="built_in">UIScrollView</span> *)scrollView withView:(<span class="built_in">UIView</span> *)view atScale:(<span class="keyword">float</span>)scale</div><div class="line">&#123;</div><div class="line"><span class="comment">//    NSLog(@"结束缩放 - %f", scale);</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark 当正在缩放的时候调用</span></div><div class="line">- (<span class="keyword">void</span>)scrollViewDidZoom:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line"><span class="comment">//    NSLog(@"-----");</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UTF-8 和 GBK 的 NSString 相互转化的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>应用都要遇到一个很头疼的问题：文字编码，汉字的 GBK 和 国际通用的 UTF-8 的互相转化稍一不慎，<br>就会满屏乱码。下面介绍 UTF-8 和 GBK 的 NSString 相互转化的方法</p>
+<p> NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);<br>    char<em> c_test = “北京”;<br>    int nLen = strlen(c_test);<br>    NSString</em> str = [[NSString alloc]initWithBytes:c_test length:nLen encoding:enc ];<br>    NSLog(@”str = %@”,str);</p>
+<p><strong>从 GBK 转到 UTF-8
+</strong>用 NSStringEncoding enc =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000) ，<br>然后就可以用initWithData：encoding来实现。</p>
+<p><strong>从 UTF-8 转到 GBK
+</strong>CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)，<br>得到的enc却是kCFStringEncodingInvalidId。<br>没关系，试试 NSData *data=[nsstring dataUsingEncoding:-2147482063];</p>
+<p>转换字符编码主要用到CFStringConvertEncodingToNSStringEncoding函数,具体的大家可以看看这个函数的用法<br>NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);</p>
+<p>完整代码如下:<br><strong>NSURL <em>url = [NSURL URLWithString:urlStr];<br>NSData </em>data = [NSData dataWithContentsOfURL:url];<br>NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);<br>NSString *retStr = [[NSString alloc] initWithData:data encoding:enc];
+</strong><br>一个比较方便的转换NSString为UTF8编码的函数,大家可以试试</p>
+<p><strong>头文件：
+</strong>@interface NSString (OAURLEncodingAdditions) </p>
+<ul>
+<li>(NSString *)URLEncodedString; </li>
+<li><p>(NSString <em>)URLDecodedString;<br>@end<br><em>*m文件:
+</em></em><br>@implementation<br>NSString (OAURLEncodingAdditions) </p>
+<ul>
+<li>(NSString <em>)URLEncodedString<br>{<br>NSString </em>result = (NSString <em>)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,NULL,CFSTR(“!</em>‘();:@&amp;=+$,/?%#[]”),kCFStringEncodingUTF8);<br>[result autorelease];<br>return result;<br>}</li>
+</ul>
+</li>
+<li><p>(NSString<em>)URLDecodedString<br>{<br> NSString </em>result = (NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,(CFStringRef)self, CFSTR(“”),kCFStringEncodingUTF8);CFSTR(“”),kCFStringEncodingUTF8);<br> [result autorelease];<br> return result;<br>}<br>@end<br>如果需要转换一个NSString, 只需要</p>
+</li>
+</ul>
+<p>NSString <em>temp = [@”测试utf8” URLEncodedString];<br>NSString </em>decoded = [temp URLDecodedString];</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-system/mac显示隐藏文件夹" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/system/mac显示隐藏文件夹/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/system/mac显示隐藏文件夹/">mac显示隐藏文件夹</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>打开终端，输入：defaults write com.apple.finder AppleShowAllFiles -bool true 此命令显示隐藏文件defaults write com.apple.finder AppleShowAllFiles -bool false 此命令关闭显示隐藏文件<br>命令运行之后需要重新加载Finder：快捷键option+command+esc，选中Finder，重新启动即可</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/assert" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/assert/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/assert/">assert</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">assert宏的原型定义在&lt;assert.h&gt;中，其作用是如果它的条件返回错误，则终止程序执行，原型定义：</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#include <span class="meta-string">&lt;assert.h&gt;</span></span></div><div class="line"><span class="keyword">void</span> assert( <span class="keyword">int</span> expression );</div><div class="line">assert的作用是现计算表达式 expression ，如果其值为假（即为<span class="number">0</span>），那么它先向stderr打印一条出错信息，然后通过调用 abort 来终止程序运行。请看下面的程序清单badptr.c：</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> <span class="number">1</span> <span class="meta">#include <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"> <span class="number">2</span> <span class="meta">#include <span class="meta-string">&lt;assert.h&gt;</span></span></div><div class="line"> <span class="number">3</span> <span class="meta">#include <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"> <span class="number">4</span> <span class="keyword">int</span> main( <span class="keyword">void</span> )</div><div class="line"> <span class="number">5</span> &#123;</div><div class="line"> <span class="number">6</span>        FILE *fp;</div><div class="line"> <span class="number">7</span>     </div><div class="line"> <span class="number">8</span>        fp = fopen( <span class="string">"test.txt"</span>, <span class="string">"w"</span> );<span class="comment">//以可写的方式打开一个文件，如果不存在就创建一个同名文件</span></div><div class="line"> <span class="number">9</span>        assert( fp );                           <span class="comment">//所以这里不会出错</span></div><div class="line"><span class="number">10</span>        fclose( fp );</div><div class="line"><span class="number">11</span>     </div><div class="line"><span class="number">12</span>        fp = fopen( <span class="string">"noexitfile.txt"</span>, <span class="string">"r"</span> );<span class="comment">//以只读的方式打开一个文件，如果不存在就打开文件失败</span></div><div class="line"><span class="number">13</span>        assert( fp );                           <span class="comment">//所以这里出错</span></div><div class="line"><span class="number">14</span>        fclose( fp );                           <span class="comment">//程序永远都执行不到这里来</span></div><div class="line"><span class="number">15</span>        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line"><span class="number">16</span> &#125;</div><div class="line"></div><div class="line">已放弃使用assert()的缺点是，频繁的调用会极大的影响程序的性能，增加额外的开销。在调试结束后，可以通过在包含<span class="meta">#include <span class="meta-string">&lt;assert.h&gt;</span>的语句之前插入 #define NDEBUG 来禁用assert调用，示例代码如下：</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#include <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#define NDEBUG</span></div><div class="line"><span class="meta">#include <span class="meta-string">&lt;assert.h&gt;</span></span></div><div class="line">用法总结与注意事项：</div><div class="line"></div><div class="line"><span class="number">1</span>）在函数开始处检验传入参数的合法性如：</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">int</span> resetBufferSize(<span class="keyword">int</span> nNewSize)</div><div class="line">&#123;</div><div class="line">　　<span class="comment">//功能:改变缓冲区大小,</span></div><div class="line">　　<span class="comment">//参数:nNewSize 缓冲区新长度</span></div><div class="line">　　<span class="comment">//返回值:缓冲区当前长度 </span></div><div class="line">　　<span class="comment">//说明:保持原信息内容不变     nNewSize&lt;=0表示清除缓冲区</span></div><div class="line">　　assert(nNewSize &gt;= <span class="number">0</span>);</div><div class="line">　　assert(nNewSize &lt;= MAX_BUFFER_SIZE);</div><div class="line">　　...</div><div class="line">&#125;</div><div class="line"></div><div class="line">  <span class="number">2</span>）每个assert只检验一个条件，因为同时检验多个条件时，如果断言失败，无法直观的判断是哪个条件失败，如：</div><div class="line"></div><div class="line">　不好：</div><div class="line"></div><div class="line"></div><div class="line">assert(nOffset&gt;=<span class="number">0</span> &amp;&amp; nOffset+nSize&lt;=m_nInfomationSize);</div><div class="line">　好：</div><div class="line"></div><div class="line"></div><div class="line">assert(nOffset &gt;= <span class="number">0</span>);</div><div class="line">assert(nOffset+nSize &lt;= m_nInfomationSize);</div><div class="line"></div><div class="line"><span class="number">3</span>）不能使用改变环境的语句，因为assert只在DEBUG个生效，如果这么做，会使用程序在真正运行时遇到问题，如：</div><div class="line">　错误：</div><div class="line"></div><div class="line"></div><div class="line">assert(i++ &lt; <span class="number">100</span>);</div><div class="line">这是因为如果出错，比如在执行之前i=<span class="number">100</span>，那么这条语句就不会执行，那么i++这条命令就没有执行。</div><div class="line"></div><div class="line">　正确：</div><div class="line"></div><div class="line"></div><div class="line">assert(i &lt; <span class="number">100</span>);</div><div class="line"> i++;</div><div class="line"></div><div class="line">   <span class="number">4</span>）assert和后面的语句应空一行，以形成逻辑和视觉上的一致感。</div><div class="line">  <span class="number">5</span>）有的地方，assert不能代替条件过滤。</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/category extension" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/category extension/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/category extension/">category extension</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>category和extension用来做类扩展的，可以对现有类扩展功能或者修改其功能。在iOS中category应用是非常广泛的，系统自带的很多类都有多个category扩展功能。<br>一般category中可以定义新的方法、重写类原来的方法和添加readonly属性<br>而extension可以认为是匿名的category，但是这个extension相对于category有有一个特殊功能：在extension中可以定义可写的属性，公有可读、私有可写的属性(Publicly-Readable, Privately-Writeable Properties)一般这样实现！<br>举例说明如下：1. 创建测试程序empty application2. 我们自定义一个UIViewController，命名为RootViewController，它的.h文件为：###<a href=""></a>[代码]c#/cpp/oc代码：<br><code>01``//``02``// 
+ RootViewController.h``03``// 
+ Test4``04``//``05``// 
+ Created by Vincent on 13-5-29.``06``// 
+ Copyright (c) 2013年 DevDiv Community. All rights reserved.``07``//``08</code> <code>09``#import
+ &lt;UIKit/UIKit.h&gt;``10</code> <code>11``@``interface</code> <code>RootViewController
+ : UIViewController``12``@end</code></p>
+<p>那么在其对应的.m中会自动生成以下代码：###<a href=""></a>[代码]c#/cpp/oc代码：<br><code>01``//``02``// 
+ RootViewController.m``03``// 
+ Test4``04``//``05``// 
+ Created by Vincent on 13-5-29.``06``// 
+ Copyright (c) 2013年 DevDiv Community. All rights reserved.``07``//``08</code> <code>09``#import
+ &quot;RootViewController.h&quot;``10</code> <code>11``@``interface</code> <code>RootViewController
+ ()``12``@end``13</code> <code>14``@implementation
+ RootViewController``15</code> <code>16</code> <code>17``-
+ (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil``18``{``19``    ``self
+ = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];``20``    ``if</code> <code>(self)
+ {``21``        ``//
+ Custom initialization``22``    ``}``23``    ``return</code> <code>self;``24``}``25</code> <code>26``-
+ (``void``)viewDidLoad``27``{``28``    ``[super
+ viewDidLoad];``29``    ``//
+ Do any additional setup after loading the view.``30``    ``self.title
+ = ``@&quot;RootController&quot;``;``31``    ``self.navigationItem``32``}``33</code> <code>34``-
+ (``void``)didReceiveMemoryWarning``35``{``36``    ``[super
+ didReceiveMemoryWarning];``37``    ``//
+ Dispose of any resources that can be recreated.``38``}``39</code> <code>40``@end</code></p>
+<ol>
+<li>第2步中我们能看到###<a href=""></a>[代码]c#/cpp/oc代码：<br><code>1``@``interface</code> <code>RootViewController
+()``2``@end</code><br>这个就是extension了（也就是特殊类型的category）<br>如果我们在.h添加这样一个属性@property (readonly) float value;那么RootViewController对外就暴露一个readonly的属性，它是公开的，所以外部是不能够对它进行写操作的。这时我们可以在extension加入以下代码：@property (readwrite) float value;那么这个属性在内部就是可读写的了，如果是只读只能在构造时期对它赋值，其他类方法中是不能对其赋值的。有了这个特性支持，那么类的内部方法均可以对其进行赋值了。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/cell的几种style" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/cell的几种style/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/cell的几种style/">cell的几种style</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>cell.accessoryType = UITableViewCellAccessoryNone;//cell没有任何的样式<br>cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;//cell的右边有一个小箭头，距离右边有十几像素；<br>cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;//cell右边有一个蓝色的圆形button；<br>cell.accessoryType = UITableViewCellAccessoryCheckmark;//cell右边的形状是对号；</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/double 型转换成 金额" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/double 型转换成 金额/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/double 型转换成 金额/">double 型转换成 金额</a>
     </h1>
   
 
@@ -331,10 +748,10 @@
 
 
   
-    <article id="post-单例模式" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS 使用纯代码或xib创建圆角视图" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/单例模式/" class="article-date">
+      <a href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -350,71 +767,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/单例模式/">单例模式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>单例模式：传值<br>    单一的实例 唯一的对象 全工程中唯一的一个对象<br>    作用是通过单例来保存工程中的多个页面中共享的对象和数据<br>    生命周期和程序的生命周期一样 当程序结束时单例对象释放掉<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/10/08/单例模式/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-在c的函数中调用oc的方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/在c的函数中调用oc的方法/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a>
     </h1>
   
 
@@ -425,7 +778,76 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> soundCompleteCallback(SystemSoundID sound,<span class="keyword">void</span> * clientData) &#123;</div><div class="line"></div><div class="line"> </div><div class="line">    [[Single shareDateHandle] a];</div><div class="line">&#125;</div><div class="line">在程序中创建个单例</div><div class="line">使用单例调用方法，单例属于全局性的指针</div></pre></td></tr></table></figure>
+<p>####尊重原创 转自：<a href="http://www.jianshu.com/p/80f1fd3f63a0" target="_blank" rel="external">http://www.jianshu.com/p/80f1fd3f63a0</a></p>
+<p>####</p>
+<p>####引言:</p>
+<blockquote>
+<p>在我们日常开发中, 很多中情况下我们需要设置UIView或者UIImageView的圆角以及边框等,例如个人中心的用户头像等等。</p>
+<p><strong>例如 简书:</strong><br><img src="http://upload-images.jianshu.io/upload_images/1975627-4cd88898bae5d219.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>简书-我的界面#####我们通常的做法是:</p>
+<ol>
+<li>使用纯代码。</li>
+<li>在xib下设置属性。</li>
+</ol>
+</blockquote>
+<hr>
+<p>####纯代码创建圆角视图:<br>代码如下:<br>        UIView *view = [[UIView alloc] initWithFrame:(CGRectMake(50, 100, 200, 200))];<br>        view.backgroundColor = [UIColor brownColor];</p>
+<pre><code>// 设置圆角的角度(当view的宽和高相等, 且 圆角角度为宽的一半时 为圆形)
+view.layer.cornerRadius = 20;
+
+// 设置允许裁剪
+view.layer.masksToBounds = YES;
+
+// 设置边框
+view.layer.borderWidth = 5;
+
+// 设置边框颜色
+view.layer.borderColor = [[UIColor redColor] CGColor];
+
+[self.view addSubview:view];
+</code></pre><p>创建imageView 和 view 的方式是一样的, 在这里只演示view的创建。</p>
+<hr>
+<p>####xib下创建圆角视图:<br>正常情况下, 我们在xib中使用 keyPath 来设置圆角。如图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-5e1fb160b9f1c014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>xib.png<br>这里虽然设置了, 但是我们并不能立即在xib中看到设置后圆角效果的, 只有在程序运行后才会看到效果。 所以我们要使用<code>IB_DESIGNABLE</code>和<code>IBInspectable</code>来实现实时查看圆角效果。</p>
+<p>######IB_DESIGNABLE:<br>这是一个宏定义, 功能就是让XCode动态渲染出该类图形化界面。<br>使用方法: 在自定义的view的.h文件中 添加该 宏定义。</p>
+<p>######IBInspectable:<br>IBInspectable 宏定义的功能是可以可视化显示自定义view中相关的属性。</p>
+<hr>
+<p>####如何实现实时查看圆角效果:<br>1.自定义view , CornerView.h:</p>
+<pre><code>#import &lt;UIKit/UIKit.h&gt;
+IB_DESIGNABLE  // 动态刷新
+@interfaceCornerView : UIView
+// 注意: 加上IBInspectable就可以可视化显示相关的属性
+/** 可视化设置边框宽度 */
+@property (nonatomic, assign)IBInspectable CGFloat borderWidth;
+/** 可视化设置边框颜色 */
+@property (nonatomic, strong)IBInspectable UIColor *borderColor;
+/** 可视化设置圆角 */
+@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
+@end
+</code></pre><p>CornerView.m:<br>    @implementationCornerView.m</p>
+<pre><code>#pragma mark - 设置边框宽度
+- (void)setBorderWidth:(CGFloat)borderWidth {
+
+    if (borderWidth &lt; 0) return;
+
+    self.layer.borderWidth = borderWidth;
+}
+
+#pragma mark - 设置边框颜色
+- (void)setBorderColor:(UIColor *)borderColor {
+
+    self.layer.borderColor = borderColor.CGColor;
+}
+
+#pragma mark - 设置圆角
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = cornerRadius &gt; 0;
+}
+</code></pre><p>2.在xib中拖一个view, 将view设定为 自定义view: CornerView 如图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-4db67f19b49fe871.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>自定义view<br>注意:<code>Designable</code>如果没有这行字，说明没有正确添加添加IB_DESIGNABLE，如果它的状态显示up to date,说明设置成功, 如果是updating，说明视图在更新，案如果是build failed的话，请检查布局代码，可能有哪里出错了。<br>3.如图, 我们就可以看到自定义view中设置的属性了:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-07722f927de30e71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>自定义属性4.设置好 属性后 , 右边的view就会立即 更新了!<br><img src="http://upload-images.jianshu.io/upload_images/1975627-e8d8c896c0de4983.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>效果图.jpg该方法同样适用于UIIamgeView ! ! ! !</p>
+<hr>
+<p>####效果图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-ebdb869d89da681f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>效果图</p>
+<p>本篇文章对应的源代码下载地址:<a href="https://github.com/LiCheng244/CornerViewDemo" target="_blank" rel="external">CornerViewDemo</a><br><strong>该 demo 中封装了 自定义view 和 自定义imageView , 可以将CornerTool文件夹拖入到项目中直接使用, <code>xib下 view</code> 继承 <code>CornerView</code>类, <code>imageView</code> 继承 <code>CornerImageView</code>即可设置属性。</strong></p>
+<p>文／Li_Cheng（简书作者）<br>原文链接：<a href="http://www.jianshu.com/p/80f1fd3f63a0" target="_blank" rel="external">http://www.jianshu.com/p/80f1fd3f63a0</a><br>著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。</p>
 
       
     </div>
@@ -456,10 +878,10 @@
 
 
   
-    <article id="post-协议" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS 打电话" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/协议/" class="article-date">
+      <a href="/2016/10/08/oc/iOS 打电话/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -475,189 +897,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/协议/">协议</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">协议共分六步：<span class="number">1.</span>声明协议<span class="number">2.</span>声明代理人属性<span class="number">3.</span>执行协议方法<span class="number">4.</span>签订协议<span class="number">5.</span>指定代理人<span class="number">6.</span>实现协议方法<span class="comment">/******************声明协议的类****************************/</span></div><div class="line"></div><div class="line"><span class="comment">/******************声明协议的类.h****************************/</span><span class="meta">#warning协议第一步声明协议@protocolMarry <span class="meta-string">&lt;NSObject&gt;</span></span></div><div class="line">-(<span class="keyword">void</span>)makeMoney:(<span class="built_in">NSString</span>*)text;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="meta">#warning协议第二步声明代理人@interfaceGirl :NSObject@property(nonatomic,assign)id<span class="meta-string">&lt;Marry&gt;</span>myDelegate;//assign弱引用，不会对内存引起记数变化</span></div><div class="line">-(<span class="keyword">void</span>)getMessage:(<span class="built_in">NSString</span>*)content;<span class="keyword">@end</span><span class="comment">/*********************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******************声明协议的类.m****************************/</span><span class="meta">#warning协议第三步执行协议方法@implementationGirl-(void)getMessage:(NSString*)content</span></div><div class="line">&#123;</div><div class="line"></div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,content);</div><div class="line">   <span class="comment">//使用代理人去执行协议方法</span></div><div class="line">    [<span class="keyword">self</span>.myDelegate makeMoney:<span class="string">@"赶快去赚钱!!!"</span>];</div><div class="line">   </div><div class="line">&#125;<span class="keyword">@end</span><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/********************执行协议的类*************************/</span></div><div class="line"></div><div class="line"><span class="comment">/********************执行协议的类.h***********************/</span><span class="meta">#warning协议第四步签订协议#import<span class="meta-string">"Girl.h"</span>@interfaceBoy :NSObject<span class="meta-string">&lt;Marry&gt;</span></span></div><div class="line">-(<span class="keyword">void</span>)sendMessageToGirl:(<span class="built_in">NSString</span> *)content;<span class="keyword">@end</span><span class="comment">/*******************************************************/</span></div><div class="line"><span class="comment">/********************执行协议的类.m*************************/</span><span class="meta">#warning协议第五步指定代理人@implementationBoy</span></div><div class="line">-(<span class="keyword">void</span>)sendMessageToGirl:(<span class="built_in">NSString</span>*)content</div><div class="line">&#123;</div><div class="line"></div><div class="line">   Girl*aGirl = [[Girlalloc]init];</div><div class="line"></div><div class="line"></div><div class="line">   <span class="comment">//指定代理人，一定要找到声明协议类的对象，因为代理人是Girl的一个属性，所以用Girl对象调用属性.</span></div><div class="line">    aGirl.myDelegate=<span class="keyword">self</span>;<span class="comment">//成为奴隶</span></div><div class="line">    [aGirlgetMessage:content];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#warning协议第六步实现协议方法</span></div><div class="line">-(<span class="keyword">void</span>)makeMoney:(<span class="built_in">NSString</span>*)text</div><div class="line">&#123;</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,text);</div><div class="line">&#125;<span class="keyword">@end</span><span class="comment">/******************************************************/</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-和CFStringRef相关的CFSTR与和NSString相关的@" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/和CFStringRef相关的CFSTR与和NSString相关的@/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">CoreFoundation里面的<span class="built_in">CFStringRef</span>和<span class="built_in">NSString</span>*是可以直接转换的，两种也都有一个相似的用来直接赋常量的操作。例如：</div><div class="line"></div><div class="line"><span class="built_in">CFStringRef</span> a = <span class="built_in">CFSTR</span>(<span class="string">"a"</span>);</div><div class="line"><span class="built_in">NSString</span> *b = <span class="string">@"b"</span>;</div><div class="line"></div><div class="line"><span class="built_in">CFSTR</span>是一个宏，这个宏的定义可能是<span class="built_in">CFStringMakeConstantString</span>，也可能是__builtin___CFStringMakeConstantString。如果是<span class="built_in">CFStringMakeConstantString</span>，看看<span class="built_in">CFStringMakeConstantString</span>的实现就会明白，<span class="built_in">CFSTR</span>(<span class="string">"a"</span>)是存放在一个全局字典里面的，下次用到<span class="built_in">CFSTR</span>(<span class="string">"a"</span>)的时候先查字典里面有没有，如果有就是用存在的，如果没有则分配一个，并且放到字典里面。</div><div class="line"></div><div class="line">所以这里有两个需要注意的，一：<span class="built_in">CFSTR</span>分配出来的字符串对象是不能自己释放的，如果你释放了下次在使用就会使用到一个野对象；二：多线程使用可能会出问题，因为全局的字典是没有锁的。</div><div class="line"></div><div class="line">而<span class="built_in">NSString</span>的@有些不一样，应该和__builtin___CFStringMakeConstantString有些类似，允许你多线程使用，同样也不需要你自己去release，可以理解为b是一个autorelease的对象，系统会自己自动收回b。如果想长时间持有b那就<span class="keyword">retain</span>，但不要忘了release。</div><div class="line"></div><div class="line">他们俩直接类型转换就可以了，比如</div><div class="line"><span class="built_in">CFStringRef</span> aCFString = (<span class="built_in">CFStringRef</span>)aNSString;</div><div class="line"><span class="built_in">NSString</span> *aNSString = (<span class="built_in">NSString</span> *)aCFString;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-按照时间排序" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/按照时间排序/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/按照时间排序/">按照时间排序</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//排序 对时间进行排序</span></div><div class="line">    <span class="built_in">NSMutableArray</span> *dataArray=[[<span class="built_in">NSMutableArray</span> alloc]initWithCapacity:<span class="number">0</span>];</div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir setObject:<span class="string">@"2012-12-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir1=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir1 setObject:<span class="string">@"2012-02-15"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir1];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir2=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir2 setObject:<span class="string">@"2012-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir2];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir3=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir3 setObject:<span class="string">@"2000-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir3];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir4=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir4 setObject:<span class="string">@"2112-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir4];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableArray</span> *myArray=[[<span class="built_in">NSMutableArray</span> alloc]initWithCapacity:<span class="number">0</span>];</div><div class="line">    [myArray addObjectsFromArray:dataArray];</div><div class="line">    <span class="comment">//[myArray release];</span></div><div class="line"></div><div class="line">   </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;[myArray count]; i++) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"排序前-----&gt;&gt;%@"</span>,[[myArray objectAtIndex:i] objectForKey:<span class="string">@"time"</span>]);</div><div class="line">    &#125;</div><div class="line">   </div><div class="line">    <span class="built_in">NSSortDescriptor</span> *sorter = [[<span class="built_in">NSSortDescriptor</span> alloc]initWithKey:<span class="string">@"time"</span> ascending:<span class="literal">YES</span>];</div><div class="line">    <span class="built_in">NSMutableArray</span> *sortDescriptors=[[<span class="built_in">NSMutableArray</span> alloc]initWithObjects:&amp;sorter count:<span class="number">1</span>];</div><div class="line">    <span class="built_in">NSArray</span> *sortArray=[myArray sortedArrayUsingDescriptors:sortDescriptors];</div><div class="line"></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;[sortArray count]; i++) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"排序后-----&gt;&gt;%@"</span>,[[sortArray objectAtIndex:i] objectForKey:<span class="string">@"time"</span>]);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-iOS 打电话" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/iOS 打电话/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/iOS 打电话/">iOS 打电话</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS 打电话/">iOS 打电话</a>
     </h1>
   
 
@@ -699,10 +939,10 @@
 
 
   
-    <article id="post-屏幕横屏竖屏转换" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS 网络编程模式总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/屏幕横屏竖屏转换/" class="article-date">
+      <a href="/2016/10/08/oc/iOS 网络编程模式总结/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -718,7 +958,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS 网络编程模式总结/">iOS 网络编程模式总结</a>
     </h1>
   
 
@@ -729,7 +969,209 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//横屏</span></div><div class="line">  <span class="keyword">if</span> ([[<span class="built_in">UIDevice</span> currentDevice] respondsToSelector:<span class="keyword">@selector</span>(setOrientation:)]) &#123;</div><div class="line">      SEL selector = <span class="built_in">NSSelectorFromString</span>(<span class="string">@"setOrientation:"</span>);</div><div class="line">      <span class="built_in">NSInvocation</span> *invocation = [<span class="built_in">NSInvocation</span> invocationWithMethodSignature:[<span class="built_in">UIDevice</span> instanceMethodSignatureForSelector:selector]];</div><div class="line">      [invocation setSelector:selector];</div><div class="line">      [invocation setTarget:[<span class="built_in">UIDevice</span> currentDevice]];</div><div class="line">      <span class="keyword">int</span> val = <span class="built_in">UIInterfaceOrientationLandscapeRight</span>;</div><div class="line">      [invocation setArgument:&amp;val atIndex:<span class="number">2</span>];</div><div class="line">      [invocation invoke];</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">//竖屏</span></div><div class="line">  <span class="keyword">if</span> ([[<span class="built_in">UIDevice</span> currentDevice] respondsToSelector:<span class="keyword">@selector</span>(setOrientation:)]) &#123;</div><div class="line">      SEL selector = <span class="built_in">NSSelectorFromString</span>(<span class="string">@"setOrientation:"</span>);</div><div class="line">      <span class="built_in">NSInvocation</span> *invocation = [<span class="built_in">NSInvocation</span> invocationWithMethodSignature:[<span class="built_in">UIDevice</span> instanceMethodSignatureForSelector:selector]];</div><div class="line">      [invocation setSelector:selector];</div><div class="line">      [invocation setTarget:[<span class="built_in">UIDevice</span> currentDevice]];</div><div class="line">      <span class="keyword">int</span> val = <span class="built_in">UIInterfaceOrientationPortrait</span>;</div><div class="line">      [invocation setArgument:&amp;val atIndex:<span class="number">2</span>];</div><div class="line">      [invocation invoke];</div><div class="line">     </div><div class="line">     </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>转自：  <a href="http://blog.csdn.net/goohong/article/details/40505291" target="_blank" rel="external">http://blog.csdn.net/goohong/article/details/40505291</a><br>IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。<br>一 、socket 方式<br>       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，CFSocket提供BSD sockets几乎所有的功能，并与run loop集成，用来实现多线程网络编程和网络事件监听。基于 CFSocket可以实现各种类型的 socket编程，包括stream-based 的sockets(如tcp)和packet-based 的sockets(如udp)。需要注意的是在iOS中CFSocket接口在需要时不自动激活设备的<br> cellular modem或on-demand VPN。<br>      CFSocket包括以下编程接口，包括Socket的 创建、配置，以及根据创建和配置好的Socket 进行 远程通讯等接口。<br>1  Socket的 创建</p>
+<blockquote>
+<p>1 .1、CFSocketCreate<br>创建一个特定协议和类型的 CFSocket对象<br>1.2、CFSocketCreateWithSocketSignature<br>该接口根据一个包含通讯协议和地址的CFSocketSignature结构来创建一个CFSocket对象</p>
+<p>1.3、 CFSocketCreateConnectedToSocketSignature<br>该接口在创建一个CFSocket对象的同时还与一个远端主机进行连接。</p>
+<p>1.4、CFSocketCreateWithNative<br>该接口通过封装一个存在的 BSD socket来创建一个CFSocket对象。</p>
+</blockquote>
+<p>2   Socket的配置</p>
+<blockquote>
+<p>2.1   CFSocketCopyAddress<br>功能： 返回一个 CFSocket对象的本地地址。<br>语法：<br>SWIFT<br>func CFSocketCopyAddress(<em> s: CFSocket!) -&gt; CFData!<br>2.2、CFSocketCopyPeerAddress<br>功能：返回与一个 CFSocket对象连接的远端地址。<br>语法：<br>SWIFT<br>func CFSocketCopyPeerAddress(</em> s: CFSocket!) -&gt; CFData!<br>2.3  CFSocketDisableCallBacks<br>功能：临时取消一个CFSocket对象创建时指定的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketDisableCallBacks(<em> s: CFSocket!,
+                            </em> callBackTypes: CFOptionFlags)<br>2.4   CFSocketEnableCallBacks<br>功能：重新允许先前CFSocketDisableCallBacks函数取消的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketEnableCallBacks(<em> s: CFSocket!,
+                           </em> callBackTypes: CFOptionFlags)<br>2.5 CFSocketGetContext<br>功能：返回一个CFSocket对象的上下文信息。<br>语法：<br>SWIFT<br>func CFSocketGetContext(<em> s: CFSocket!,
+                      </em> context: UnsafeMutablePointer<cfsocketcontext>)<br>2.6 CFSocketGetNative<br>返回与一个CFSocket对象相关的本地 BSD socket。<br>语法：<br>SWIFT<br>func CFSocketGetNative(<em> s: CFSocket!) -&gt; CFSocketNativeHandle<br>2.7   CFSocketGetSocketFlags<br>功能：返回控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketGetSocketFlags(</em> s: CFSocket!) -&gt; CFOptionFlags</cfsocketcontext></p>
+<p>2.8 CFSocketSetSocketFlags<br>功能：设置控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketSetSocketFlags(<em> s: CFSocket!,
+                          </em> flags: CFOptionFlags)<br>2.9 CFSocketSetAddress<br>语法：<br>SWIFT<br>func CFSocketSetAddress(<em> s: CFSocket!,
+                      </em> address: CFData!) -&gt; CFSocketError<br>功能：为一个CFSocket对象绑定一个本地地址并在本地socket支持的情况下对socket进行配置使其处于监听状态。该函数对应本地socket的 bind以及listen功能。一旦CFSocket对象绑定地址，依赖于socket的协议，其它进程和主机能连接到该CFSocket对象。</p>
+</blockquote>
+<p>3、Sockets的使用</p>
+<blockquote>
+<p>3.1 CFSocketConnectToAddress<br>功能：打开与一个远程socket的一个连接。<br>语法：<br>SWIFT<br>func CFSocketConnectToAddress(<em> s: CFSocket!,
+                            </em> address: CFData!,<br>                            <em> timeout: CFTimeInterval) -&gt; CFSocketError<br>3.2 CFSocketCreateRunLoopSource<br>语法：<br>SWIFT<br>func CFSocketCreateRunLoopSource(</em> allocator: CFAllocator!,<br>                               <em> s: CFSocket!,
+                               </em> order: CFIndex) -&gt; CFRunLoopSource!<br>功能：为一个CFSocket对象创建一个CFRunLoopSource对象。该创建的 CFRunLoopSource对象不自动添加到一个run loop。为了增加该run loop source到某个run loop，需要调用CFRunLoop对象 的CFRunLoopAddSource函数来为该CFRunLoop对象添加run loop source。<br>3.3 CFSocketGetTypeID<br>功能：返回CFSocket对象的 opaque类型对应的类型标示符。<br>语法：<br>SWIFT<br>func CFSocketGetTypeID() -&gt; CFTypeID<br>3.4  CFSocketInvalidate<br>功能：使一个CFSocket对象无效，使其停止接收和发送任何消息。<br>语法：<br>SWIFT<br>func CFSocketInvalidate(<em> s: CFSocket!)<br>3.5 CFSocketIsValid<br>功能：返回一个指示一个CFSocket对象是否有效及是否能够发送和接收消息的布尔值。<br>语法：<br>SWIFT<br>func CFSocketIsValid(</em> s: CFSocket!) -&gt; Boolean<br>3.6 CFSocketSendData<br>功能：该函数用来通过一个CFSocket对象发送数据。<br>语法：<br>SWIFT<br>func CFSocketSendData(<em> s: CFSocket!,
+                    </em> address: CFData!,<br>                    <em> data: CFData!,
+                    </em> timeout: CFTimeInterval) -&gt; CFSocketError</p>
+</blockquote>
+<p>二、stream编程模式<br>       stream编程模式提供了与 unix 的文件操作类似的模式。首先创建和设置流，接着打开流，然后读写流，在流存在时还可以通过查询流的相关属性来读取流的相关信息，在流使用完毕后关闭流。<br>       iOS 为stream编程模式提供的api编程接口包括两大类，一类是Core Foundation框架层用C语言实现的CFStream  API（包括CFStream、 CFReadStream 、CFWriteStream等）,一类是基于其上的在Foundation框架层用Objective-C语言实现的NSStream API（包括NSStream、NSInputStream NSOutputStream等）,两者提供相似的接口和行为，其中某些对象是toll-free<br> bridged类型的，如CFStream 与NSStream，CFReadStream与NSInputStream，CFWriteStream与NSOutputStream之间，因此可以混合使用。<br>       开发人员可以根据自己的语言偏好选择使用。<br>       CFStream API的主要接口：<br>1、CFStream 创建接口</p>
+<blockquote>
+<p>1.1  CFStreamCreatePairWithPeerSocketSignature<br>          功能：创建一对到一个socket的可读和可写流。<br>1.2 CFStreamCreatePairWithSocketToHost<br>功能：创建连接到一个特定主机的特定端口的一对可读写流。<br>1.3 CFStreamCreatePairWithSocket<br>功能：创建一对连接到一个socket的可读写流<br>1.4 CFStreamCreateBoundPair<br>功能：创建一对读写流。<br>其它可读写流创建接口：<br> 1.5 CFReadStreamCreateForHTTPRequest<br>   功能：为一个CFHTTP请求创建一个可读流。<br>1.6 CFReadStreamCreateForStreamedHTTPRequest<br>功能：为一个HTTP请求的body保持在内存的CFHTTP请求创建一个可读流。<br>1.7  CFReadStreamCreateWithFTPURL<br>功能：创建一个FTP可读流<br>1.8  CFWriteStreamCreateWithFTPURL<br>功能：创建一个FTP可读流</p>
+<ol>
+<li>CFReadStream接口<br>2.1 流的打开和关闭<br>   CFReadStreamOpen<pre><code>CFReadStreamClose
+</code></pre>2.2  读取数据<br>   CFReadStreamRead<br>2.3.  调度一个可读流<br>CFReadStreamScheduleWithRunLoop(<em>:</em>:_:) <pre><code>CFReadStreamUnscheduleFromRunLoop(_:_:_:) 
+</code></pre>2.4 检查可读流的属性<br>CFReadStreamCopyProperty(<em>:</em>:)<br>CFReadStreamGetBuffer(<em>:</em>:<em>:)<br>CFReadStreamCopyError(</em>:)<br>CFReadStreamGetError(<em>:)<br>CFReadStreamGetStatus(</em>:)<br>CFReadStreamHasBytesAvailable(<em>:)<br>2.5 设置可读流的属性<br>CFReadStreamSetClient(</em>:<em>:</em>:<em>:)<br>CFReadStreamSetProperty(</em>:<em>:</em>:)<br>2.6 得到 CFReadStream的 Type ID<pre><code>CFReadStreamGetTypeID()
+</code></pre></li>
+</ol>
+</blockquote>
+<p>3.CFWriteStream 相关接口</p>
+<blockquote>
+<pre><code>3.1 CFWriteStreamClose(_:) 
+3.2 CFWriteStreamOpen(_:) 
+3.3 CFWriteStreamWrite(_:_:_:)
+   3.4 CFWriteStreamScheduleWithRunLoop(_:_:_:)
+</code></pre><p>  3.5 CFWriteStreamUnscheduleFromRunLoop(<em>:</em>:<em>:)<br>        3.6 CFWriteStreamCanAcceptBytes(</em>:)<br>      3.7 CFWriteStreamCopyProperty(<em>:</em>:)<br>      3.8 CFWriteStreamCopyError(<em>:)<br>      3.9 CFWriteStreamGetError(</em>:)<br>      3.10 CFWriteStreamGetStatus(<em>:)<br>         3.11 CFWriteStreamSetClient(</em>:<em>:</em>:<em>:)<br>  3.12 CFWriteStreamSetProperty(</em>:<em>:</em>:)<br>      3.13 CFWriteStreamGetTypeID()<br>CFStream API的使用步骤：<br>1） 利用流创建接口创建相关流；<br>2）、调用CFReadStreamSetClient （可读流）或CFWriteStreamSetClient （可写流）来登记要接收的流相关的事件；<br>3）、调用CFReadStreamScheduleWithRunLoop（可读流）或CFWriteStreamScheduleWithRunLoop（可写流）来使在流在一个run loop上进行调度以便接收相关事件；<br>4）、调用CFReadStreamOpen 或CFWriteStreamOpen 来打开已创建的流；<br>5）、在读取流的创建时登记的回调中，在接收到kCFStreamEventHasBytesAvailable事件时来读取数据， 在可写流已登记的回调中，在接收到kCFStreamEventCanAcceptBytes 事件时开始发送数据或请求；<br>6） 数据传输完成，关闭和释放打开和创建的相关流；<br>2、NSStream   API的使用&gt;  在ios 中由于NSStream类不支持 与一个远程主机连接，而CFStream支持，因此为了使用 NSStream，你需要使用流创建函数CFStreamCreatePairWithSocketToHost或CFStreamCreatePairWithSocketToCFHost来打开一个与远程主机连接的socket并分配一对CFStream 对象（CFReadStream和CFWriteStream），并cast这些对象到NSStream<br> 对象（对应NSInputStream 和 NSOutputStream）。从而可以使用NSStream类的相关接口进行相关网络编程。如设置接收网络事件的代理对象，调度到当前的run loop，然后打开它们进行相应处理。<br>代码片段如下：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. {  </p>
+<ol>
+<li></li>
+<li>NSURL *website = [NSURL URLWithString:urlStr];  </li>
+<li></li>
+<li>if (!website) {  </li>
+<li></li>
+<li>NSLog(@”%@ is not a valid URL”);  </li>
+<li></li>
+<li>return;  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>CFReadStreamRef readStream;  </li>
+<li></li>
+<li>CFWriteStreamRef writeStream;  </li>
+<li></li>
+<li>CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)[website host], 80, &amp;readStream, &amp;writeStream);  </li>
+<li></li>
+<li>NSInputStream <em>inputStream = (__bridge_transfer NSInputStream </em>)readStream;  </li>
+<li></li>
+<li>NSOutputStream <em>outputStream = (__bridge_transfer NSOutputStream </em>)writeStream;  </li>
+<li></li>
+<li>[inputStream setDelegate:self];  </li>
+<li></li>
+<li>[outputStream setDelegate:self];  </li>
+<li></li>
+<li>[inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
+<li></li>
+<li>[outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
+<li></li>
+<li>[inputStream open];  </li>
+<li></li>
+<li>[outputStream open];  </li>
+<li></li>
+<li></li>
+<li>/* Store a reference to the input and output streams so that </li>
+<li></li>
+<li>they don’t go away…. */  </li>
+<li></li>
+<li>…  </li>
+<li></li>
+<li>}  </li>
+</ol>
+</blockquote>
+<pre><code>在NSStream对象打开后，当接收到相关的stream-event网络消息，其代理对象中的handleEvent: 函数被调用，从而进行流相关的网络消息处理，  如发送相关协议的请求或接收应答等。以下为handleEvent: 函数进行事件处理的代码片段：
+</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {  </p>
+<ol>
+<li></li>
+<li>NSLog(@”stream:handleEvent: is invoked…”);  </li>
+<li></li>
+<li></li>
+<li></li>
+<li>switch(eventCode) {  </li>
+<li></li>
+<li>case NSStreamEventHasSpaceAvailable:  </li>
+<li></li>
+<li>{  </li>
+<li></li>
+<li>if (stream == oStream) {  </li>
+<li></li>
+<li>NSString * str = [NSString stringWithFormat:  </li>
+<li></li>
+<li>@”GET / HTTP/1.0\r\n\r\n”];  </li>
+<li></li>
+<li>const uint8_t * rawstring =  </li>
+<li></li>
+<li>(const uint8_t *)[str UTF8String];  </li>
+<li></li>
+<li>[oStream write:rawstring maxLength:strlen(rawstring)];  </li>
+<li></li>
+<li>[oStream close];  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>break;  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>// continued …  </li>
+<li></li>
+<li>}  </li>
+<li></li>
+<li>}  </li>
+</ol>
+<p>三、url 编程模式<br>         url 编程模式通过URL 的方式来实现网络编程，任何要存取的网络资源（包括局域网和广域网）都可以用一个URL来表示和存取，并支持设备间的资源共享。url 编程模式系统提供http, https, file, ftp, data等五种协议支持，并允许用户自己开发和登记相关类来支持另外的应用层网络协议，进行协议的扩展。<br>        url 编程模式在IOS系统可以使用两种编程接口：NSURLSession 和NSURLConnection。<br>        对于iOS 7 以后的最新系统推荐使用NSURLSession API，对于老版本由于不支持NSURLSession，因此必须使用NSURLConnection API。<br>NSURLSession编程模式是对相关的连接请求通过一个会话来完成，应用通过创建一系列sessions来实现网络通讯，每一个session协调一组相关数据的传输任务。在每一个session内，应用添加一系列任务，每一个任务表现一个特定URL 请求。<br>        NSURLSession相比NSURLConnection的优点是支持在应用挂起、停止或crashed时能够在后台继续下载数据，即支持任务的取消、重启（恢复）、挂起，以及支持从已挂起、取消或失败的下载中重新恢复下载的能力。<br>         对于简单的请求，还可以直接通过一个简单的NSURL对象来发出请求，并使用一个NSData内存对象或者一个文件的方式来引出NSURL指向的内容。而NSURLConnection API只能通过构造一个NSURLRequest对象或其子类来发出URL请求来请求下载或上传URL数据。 使用一个NSURLRequest请求对象封装一个URL请求，例如HTTP协议方法，除了可以封装一些协议特定的属性外，还可以规定任意本地cached数据的使用策略。<br>         对于NSURLRequest请求对象的应答包括两部分：描述内容的元数据metadata及内容数据本身。两种API对于使用NSURLRequest请求接收的元数据metadata都由NSURLResponse类来封装，其中包含MIME类型、内容长度、编码及提供应答的URL等内容。NSURLResponse协议特定的子类还能提供额外的元数据，如NSHTTPURLResponse提供协议头和WEB服务器返回的状态码<br> 等信息。<br>         NSURLSession API的使用：</p>
+<pre><code>NSURLSession类支持三种会话类型（默认会话类型、临时会话、后台会话）以及三种类型的任务（数据任务、下载任务、上传任务）。
+数据任务使用NSData 对象来发送和接收内存数据，不存储数据到一个文件，因此不支持后台会话。
+下载任务以一个文件的形式引出数据，并支持在应用没有运行时的后台下载。
+上传任务用来上传数据（文件），也能够支持应用没有运行时的后台上传。
+ 默认会话和后台会话的区别是后台会话使用一个分离的进程处理所有的数据传输任务，并带有一些限制：后台会话必须使用特定应用代理来提供事件提交，并仅支持HTTP和HTTPS 协议，不支持其它定制协议，并仅支持上传和下载任务，不支持数据任务。
+临时会话不存储任何数据到磁盘，所有接收的内容都保存到与会话关联的RAM中，当会话无效时，RAM中接收的内容自动被清除。
+</code></pre><p>   NSURLSession API的使用步骤：<br>   1 、创建一个NSURLSessionConfiguration配置对象</p>
+<blockquote>
+<p>NSURLSessionConfiguration配置对象提供广泛的配置选项，包括：<br>1）、特定于单个会话的私有数据存储，包括caches, cookies, credentials, 和protocols；<br>2）、与一个特定请求或一个会话关联的Authentication；<br>3）、与一个主机的最大连接数；<br>4）、与一个资源关联的超时；<br>5）、最小和最大TLS版本支持；<br>6）、定制的代理词典；<br>7）、cookie策略的控制；<br>8）、HTTP pipelining行为的控制<br>2、根据配置创建相应的NSURLSession；<br>       如下代码片段展示了根据不同的配置对象创建不同类型的NSURLSession会话对象。</p>
+</blockquote>
+<p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. /<em> Create a session for each configurations. </em>/  </p>
+<ol>
+<li>self.defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+<li>self.backgroundSession = [NSURLSession sessionWithConfiguration: backgroundConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+<li>self.ephemeralSession = [NSURLSession sessionWithConfiguration: ephemeralConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
+</ol>
+<pre><code>  NSURLSession API通过代理来实现异步URL内容存取，代理可以是系统提供的代理，还可以是应用提供的特定代理对象。任务对象当从服务器接收到数据或传输完成时调用这些代理对象的方法。
+在创建会话指定相应的代理对象。
+</code></pre><p>3、为会话添加任务；<br>使用如下方法来添加数据任务到一个会话。</p>
+<blockquote>
+<p>dataTaskWithURL(<em>:)<br>dataTaskWithURL(</em>:completionHandler:)<br>dataTaskWithRequest(<em>:)<br>dataTaskWithRequest(</em>:completionHandler:) </p>
+</blockquote>
+<p>使用如下方法来添加下载任务到一个会话。</p>
+<blockquote>
+<p>downloadTaskWithURL(<em>:)<br>downloadTaskWithURL(</em>:completionHandler:)<br>downloadTaskWithRequest(<em>:)<br>downloadTaskWithRequest(</em>:completionHandler:)<br>downloadTaskWithResumeData(<em>:)<br>downloadTaskWithResumeData(</em>:completionHandler:) </p>
+</blockquote>
+<p>使用如下方法来添加上传任务到一个会话</p>
+<blockquote>
+<p>uploadTaskWithRequest(<em>:fromData:)<br>uploadTaskWithRequest(</em>:fromData:completionHandler:)<br>uploadTaskWithRequest(<em>:fromFile:)<br>uploadTaskWithRequest(</em>:fromFile:completionHandler:)<br>uploadTaskWithStreamedRequest(_:)<br>         如下是数据任务创建代码片段：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“];  </p>
+<ol>
+<li></li>
+<li>NSURLSessionDataTask *dataTask = [self.defaultSession dataTaskWithURL: url];  </li>
+<li></li>
+<li>[dataTask resume];  </li>
+</ol>
+</blockquote>
+<pre><code>下面是下载任务创建代码片段：         
+</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/" target="_blank" rel="external">https://developer.apple.com/library/ios/documentation/Cocoa/Reference/</a>“  </p>
+<ol>
+<li></li>
+<li>“Foundation/ObjC_classic/FoundationObjC.pdf”];  </li>
+<li></li>
+<li>NSURLSessionDownloadTask *downloadTask = [self.backgroundSession downloadTaskWithURL: url];  </li>
+<li></li>
+<li>[downloadTask resume];  </li>
+</ol>
+<p>4、使用代理方法接收数据及状态信息</p>
+<blockquote>
+<p>会话的数据任务在使用应用特定代理接收数据时必须实现如下两个代理方法：<br>URLSession:dataTask:didReceiveData:<br>一次一片的提供请求的数据给会话任务。<br>URLSession:task:didCompleteWithError:<br>指示请求数据已经全部接收。</p>
+<p>会话的下载任务在下载文件时应该实现如下代理方法：<br>URLSession:downloadTask:didFinishDownloadingToURL:<br>下载内容存储到一个URL指定的一个临时文件，在该方法返回之前，必须把临时文件的内容移到一个永久位置，而临时文件被删除。<br>URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:<br>为应用提供关于当前下载进度的状态信息<br>URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:<br>告诉应用已经从从先前的失败下载中恢复。<br>URLSession:task:didCompleteWithError:<br>告诉应用下载已经失败。</p>
+<p>下载失败恢复处理：<br>在应用使用cancelByProducingResumeData: 方法取消下载任务时，可以使用downloadTaskWithResumeData: 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务并传送cancelByProducingResumeData:产生的恢复数据从而接着继续下载。<br>在传输失败时，如果任务可恢复，则调用URLSession:task:didCompleteWithError: 方法。在传送给URLSession:task:didCompleteWithError: 方法的参数NSError中的 userInfo 词典中包含键值为NSURLSessionDownloadTaskResumeData的恢复数据，因此可以使用downloadTaskWithResumeData:<br> 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务来接着恢复数据继续下载。</p>
+<p>系统代理仅能支持基本的URL资源存取任务，不支持认证和后台下载，并且还必须提供一个completion handler block来把返回的URL数据提交到应用。如下是一个使用系统代理的代码例子：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];  </p>
+<ol>
+<li></li>
+<li>[delegateFreeSession dataTaskWithURL: [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“]  </li>
+<li></li>
+<li>completionHandler:^(NSData <em>data, NSURLResponse </em>response,  </li>
+<li></li>
+<li>NSError *error) {  </li>
+<li></li>
+<li>NSLog(@”Got response %@ with error %@.\n”, response, error);  </li>
+<li></li>
+<li>NSLog(@”DATA:\n%@\nEND DATA\n”,  </li>
+<li></li>
+<li>[[NSString alloc] initWithData: data  </li>
+<li></li>
+<li>encoding: NSUTF8StringEncoding]);  </li>
+<li></li>
+<li>}] resume];  </li>
+</ol>
+</blockquote>
+<pre><code>会话的上传任务的任务创建和相关代理方法：
+会话的上传任务使用HTTP  POST方法来上传数据。可以以一个NSData对象、一个文件或使用一个流为HTTP POST请求的body提供内容。
+在以NSData对象提供上传数据时，应用调用uploadTaskWithRequest:fromData: 或uploadTaskWithRequest:fromData:completionHandler: 方法来创建上传任务。
+</code></pre><blockquote>
+<p>在以文件形式提供上传数据时，应用调用uploadTaskWithRequest:fromFile: 或 uploadTaskWithRequest:fromFile:completionHandler:方法来创建上传任务<br>在以流方式提供上传数据时，应用调用uploadTaskWithStreamedRequest:方法来创建上传任务。<br>应用特定代理可以通过实现URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:方法来获得上传进度信息。</p>
+</blockquote>
 
       
     </div>
@@ -743,131 +1185,6 @@
 
 
       
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-欢迎使用CSDN-markdown编辑器" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/欢迎使用CSDN-markdown编辑器/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>安装soucetree后，启动<br>1添加账户.<br><img src="http://img.blog.csdn.net/20151214154736709" alt="这里写图片描述"><br>设置托管主机，用户名，密码，协议方式<br><img src="http://img.blog.csdn.net/20151214154943293" alt="这里写图片描述"><br>2.克隆到本地<br>点击远程，这时就可以看见远程仓库中内容<br><img src="http://img.blog.csdn.net/20151214155310766" alt="这里写图片描述"><br>点击克隆，选择要克隆的目标路径，与克隆名称，点击克隆<br><img src="http://img.blog.csdn.net/20151214155442212" alt="这里写图片描述"><br>3.在本地管理项目<br>点击已经克隆到本地的项目<br><img src="http://img.blog.csdn.net/20151214155652034" alt="这里写图片描述"><br>此时是在主分支master分支下<br>双击一条远程分支<br><img src="http://img.blog.csdn.net/20151214155957907" alt="这里写图片描述"><br>将其他的远程分支克隆到本地</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-夜间模式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/夜间模式/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/夜间模式/">夜间模式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>夜间模式：利用继承与NSUserDefaults1.创建基类，负责夜间模式的转换2.所有的类都继承于基类，基类的模式改变了，所有子类的模式也改变了3.夜间模式触发的按钮发送通知4.利用NSUserDefault把模式保存到本地<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/10/08/夜间模式/#more">查看全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -887,7 +1204,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/14/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/14/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -903,7 +1220,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -912,7 +1229,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -945,9 +1262,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

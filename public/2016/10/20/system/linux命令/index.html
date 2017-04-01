@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Shirly" />
+
+
+
+<meta name="description" content="linux常用命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令">
+<meta property="og:url" content="https://yqzh186.github.io/2016/10/20/system/linux命令/index.html">
+<meta property="og:site_name" content="Shirly">
+<meta property="og:description" content="linux常用命令">
+<meta property="og:updated_time" content="2016-11-15T06:55:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux命令">
+<meta name="twitter:description" content="linux常用命令">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>linux命令 | Shirly</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shirly</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                        <li>About Me</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">分类</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc/">oc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shirly</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shirly</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">分类</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-system/linux命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/20/system/linux命令/" class="article-date">
+      <time datetime="2016-10-19T23:36:09.000Z" itemprop="datePublished">2016-10-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux命令
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>linux常用命令<br><a id="more"></a></p>
+<h2>关机与重启</h2>
+
+<h3>关机</h3><br>立即关机<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -h now</div></pre></td></tr></table></figure><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">poweroff 不推荐</div></pre></td></tr></table></figure><br><br><h3>重启</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -r</div></pre></td></tr></table></figure><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure><br><br>后台执行5点30重启<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -r 05:30 &amp;</div></pre></td></tr></table></figure><br><br><h3>取消前一个关机命令</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">shutdown -c</div></pre></td></tr></table></figure><br><br><h2>init</h2><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">0  关机</div><div class="line">1  单用户</div><div class="line">2  不完全多用户，不含NFS服务</div><div class="line">3  完全多用户</div><div class="line">4  未分配</div><div class="line">5  图形界面</div><div class="line">6  重启</div></pre></td></tr></table></figure><br><br><h3>查询系统运行级别</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">runlevel</div></pre></td></tr></table></figure><br><br><h3>系统默认运行级别</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/inittab</div></pre></td></tr></table></figure><br><br><h3>退出登录命令</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">logout 退出系统</div></pre></td></tr></table></figure><br><br><h2>压缩与解压缩</h2><br>压缩格式 .zip .gz .bz2 .tar.gz .tar.bz2<br><br><h3>安装压缩解压缩工具</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install zip</div></pre></td></tr></table></figure><br><br><h3>.zip</h3><br><h4>压缩.zip</h4><br>压缩文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip 压缩文件名 压缩文件</div></pre></td></tr></table></figure><br><br>压缩目录<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">zip -r 压缩文件名 目录名</div></pre></td></tr></table></figure><br><br><h4>解压缩.zip</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unzip 压缩文件名</div></pre></td></tr></table></figure><br><br><h3>.gz</h3><br><h4>压缩.gz</h4><br>不保留源文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gzip 压缩文件</div></pre></td></tr></table></figure><br><br>保留源文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gzip -c 源文件 &gt; 压缩文件</div></pre></td></tr></table></figure><br><br>压缩目录下的所有子文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gzip -r 目录</div></pre></td></tr></table></figure><br><br><h4>解压缩.gz</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gzip -d 压缩文件名</div></pre></td></tr></table></figure><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gunzip 压缩文件名</div></pre></td></tr></table></figure><br><br>解压缩目录下的所有文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gunzip -r 目录名</div></pre></td></tr></table></figure><br><br><h3>.bz2</h3><br><h4>压缩.bz2</h4><br>bzip2不能压缩目录<br><br>不保留源文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bzip2 源文件</div></pre></td></tr></table></figure><br><br>保留源文件<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bzip2 -k 源文件</div></pre></td></tr></table></figure><br><br><h4>解压缩.bz2</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bunzip2 压缩文件</div></pre></td></tr></table></figure><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bzip2 -d 压缩文件</div></pre></td></tr></table></figure><br><br>-k保留压缩文件<br><br><h3>tar打包命令</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tar -cvf 打包文件名 源文件</div><div class="line">选项：</div><div class="line">    -c: 打包</div><div class="line">    -v: 显示过程</div><div class="line">    -f: 指定打包后的文件名</div><div class="line">例：</div><div class="line">tar -cvf test.tar test</div></pre></td></tr></table></figure><br><br><h3>.tar.gz</h3><br><h4>压缩.tar.gz</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zcvf 压缩包名.tar.gz 源文件</div></pre></td></tr></table></figure><br><br><h4>解压缩.tar.gz</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf 压缩包名.tar.gz</div></pre></td></tr></table></figure><br><br><h3>.tar.bz2</h3><br><h4>压缩.tar.bz2</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jcvf 压缩包名.tar.bz2 源文件</div></pre></td></tr></table></figure><br><br><h4>解压缩.tar.bz2</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jxvf 压缩包名.tar.bz2</div></pre></td></tr></table></figure><br><br><h2>帮助命令</h2><br><h3>man的级别</h3>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1 ：常看命令的帮助</div><div class="line">2 ：查看可被内核调用的函数的帮助</div><div class="line">3 ：查看函数和函数库的帮助</div><div class="line">4 ：查看特殊文件的帮助（主要是/dev目录下的文件）</div><div class="line">5 ：查看配置文件的帮助</div><div class="line">6 ：查看游戏的帮助</div><div class="line">7 ：查看其它杂项的帮助</div><div class="line">8 ：查看系统管理员可用命令的帮助</div><div class="line">9 ：查看和内核相关文件的帮助</div></pre></td></tr></table></figure>
+<h3>显示命令帮助</h3>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">man 命令</div></pre></td></tr></table></figure>
+<h4>显示命令帮助等级</h4>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">man -f 命令</div></pre></td></tr></table></figure>
+<p>相当于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whatis 命令</div></pre></td></tr></table></figure>
+<h4>调用相应等级的帮助</h4>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">man -等级 命令</div></pre></td></tr></table></figure>
+<h4>查看和命令相关的所有帮助</h4>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">man -k 命令</div></pre></td></tr></table></figure>
+<p>相当于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apropos 命令</div></pre></td></tr></table></figure>
+<p></p><h3>选项帮助</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">命令 --help</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>shell内部命令帮助</h3><p></p>
+<p></p><h4>确定是否是shell命令</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whereis 命令</div></pre></td></tr></table></figure><p></p>
+<p></p><h4>获取内部命令帮助</h4><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">help shell内部命令</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>详细命令帮助info</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">info 命令</div><div class="line">- 回车 : 进入子帮助页面（带有*号标记）</div><div class="line">- u   : 进入上层页面</div><div class="line">- n   : 进入下一个帮助小节</div><div class="line">- p   : 进入上一个帮助小节</div><div class="line">- q   : 退出</div></pre></td></tr></table></figure><p></p>
+<p></p><h2>目录</h2><p></p>
+<p></p><h3>建立目录</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir 目录名</div></pre></td></tr></table></figure><p></p>
+<p>递归创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p 目录名/目录名</div></pre></td></tr></table></figure>
+<p></p><h3>切换目录</h3><br>进入当前用户的家目录<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~</div></pre></td></tr></table></figure>
+<p></p><h3>清屏</h3><br>control + l<p></p>
+<p></p><h3>查看debian版本</h3><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">more /etc/debian_version</div></pre></td></tr></table></figure><p></p>
+<p></p><h3>查看内核版本</h3><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uname -a</div></pre></td></tr></table></figure><p></p>
+<!--<img src="/images/6.png" width="800" height="263" />-->
+<!--<font color=#FF6666></font>-->
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/10/20/system/linux命令/">linux命令</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Shirly</a></p>
+        <p><span>Created:</span>2016-10-20, 07:36:09</p>
+        <p><span>Updated:</span>2016-11-15, 14:55:53</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/10/20/system/linux命令/" title="linux命令">https://yqzh186.github.io/2016/10/20/system/linux命令/</a>
+            <span class="copy-path" data-clipboard-text="From https://yqzh186.github.io/2016/10/20/system/linux命令/　　By Shirly" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/10/20/system/linux系统目录结构/">
+                    linux系统目录结构
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/10/19/system/virtualbox安装debian/">
+                    virtualbox安装debian
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">关机与重启</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">关机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">重启</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">取消前一个关机命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">init</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.1.</span> <span class="toc-text">查询系统运行级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.2.</span> <span class="toc-text">系统默认运行级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.3.</span> <span class="toc-text">退出登录命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">压缩与解压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text">安装压缩解压缩工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text">.zip</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.1.</span> <span class="toc-text">压缩.zip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.2.</span> <span class="toc-text">解压缩.zip</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.</span> <span class="toc-text">.gz</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.1.</span> <span class="toc-text">压缩.gz</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.3.2.</span> <span class="toc-text">解压缩.gz</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.4.</span> <span class="toc-text">.bz2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.4.1.</span> <span class="toc-text">压缩.bz2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.4.2.</span> <span class="toc-text">解压缩.bz2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.5.</span> <span class="toc-text">tar打包命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.</span> <span class="toc-text">.tar.gz</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.1.</span> <span class="toc-text">压缩.tar.gz</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.6.2.</span> <span class="toc-text">解压缩.tar.gz</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.</span> <span class="toc-text">.tar.bz2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.1.</span> <span class="toc-text">压缩.tar.bz2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.7.2.</span> <span class="toc-text">解压缩.tar.bz2</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">帮助命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.1.</span> <span class="toc-text">man的级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.</span> <span class="toc-text">显示命令帮助</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.1.</span> <span class="toc-text">显示命令帮助等级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.2.</span> <span class="toc-text">调用相应等级的帮助</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.2.3.</span> <span class="toc-text">查看和命令相关的所有帮助</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.3.</span> <span class="toc-text">选项帮助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.</span> <span class="toc-text">shell内部命令帮助</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.1.</span> <span class="toc-text">确定是否是shell命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">4.4.2.</span> <span class="toc-text">获取内部命令帮助</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.5.</span> <span class="toc-text">详细命令帮助info</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.1.</span> <span class="toc-text">建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.2.</span> <span class="toc-text">切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.3.</span> <span class="toc-text">清屏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.4.</span> <span class="toc-text">查看debian版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.5.</span> <span class="toc-text">查看内核版本</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"linux命令　| Shirly　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/10/20/system/linux命令/" data-title="linux命令" data-url="https://yqzh186.github.io/2016/10/20/system/linux命令/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"yqzh186"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/10/20/system/linux系统目录结构/" title="Pre: linux系统目录结构">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/10/19/system/virtualbox安装debian/" title="Next: virtualbox安装debian">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/oc/标题自动旋转滚动效果/">标题自动旋转滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/security/wifi/">wifi</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/system/linux环境变量/">linux环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/ruby/ruby属性/">ruby属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/ruby/rvm/">rvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/ruby/用string或symbol访问hash/">用string或symbol访问hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rails下信鸽推送/">rails下信鸽推送</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rake任务/">rake任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/system/virtualbox共享文件夹/">virtualbox共享文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/system/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/ruby/I18n/">I18n</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/rspec/">rspec</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/grape/">grape</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/system/postgresql/">postgresql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/ruby/rails/">rails</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/ruby/gem/">gem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/system/supervisor/">supervisor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/docker/docker/">docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/apt/">apt</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/ssh/">ssh</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/html/bootstrap/">bootstrap</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/ruby/rake/">rake</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/system/编程思想/">编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/java/java中的spring/">java中的spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/centos与ubuntu不同/">centos与ubuntu不同</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/Ubuntu网络管理/">linux网络管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux文件权限/">linux文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/debian安装sudo/">debian安装sudo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux用户管理/">linux用户管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux系统目录结构/">linux系统目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux命令/">linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/system/virtualbox安装debian/">virtualbox安装debian</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php图形操作/">php图形操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php日期和时间/">php日期和时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php文件系统/">php文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/会话控制（session与cookie）/">会话控制（session与cookie）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php字符串/">php字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php静态关键字static/">php静态关键字static</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php类/">php类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php函数/">php函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php数组/">php数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php结构语句/">php结构语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php运算符/">php运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php常量/">php常量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/html/html字符实体/">html字符实体</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/markdown/markdown转义字符/">markdown转义字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php变量/">php变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/php/php基本语法格式/">php基本语法格式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/system/sublime text3/">sublime text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/php/mac下的php环境配置/">mac下的php环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Data/">Core Data</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/shell/判断文件是否存在的脚本语法/">shell或bash中判断文件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/IOS7使用原生API进行二维码和条形码的扫描/">iOS7使用原生API进行二维码和条形码的扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS隐藏状态栏/">iOS隐藏状态栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iPhone尺寸/">iPhone尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/model归档/">model归档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/oc 播放gif动画/">oc 播放gif动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/scrollView加约束/">scrollView加约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/storyboard传值/">storyboard传值</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/tableview 下拉图片放大/">tableview 下拉图片放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/target action/">target action</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不同数据类型转换/">不同数据类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不规则瀑布流/">不规则瀑布流</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/协议/">协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/单例模式/">单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/夜间模式/">夜间模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/数组 基本用法和排序/">数组 基本用法和排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第2部分)/">Core Animation 3D介绍(第2部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/模态/">模态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/汉字转拼音/">汉字转拼音</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/获取当前时间/">获取当前时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/计算字符串的宽或者高/">计算字符串的宽或者高</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/进程和线程/">进程和线程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通知/">通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通讯录/">通讯录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/长按保存图片到本地/">长按保存图片到本地</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/音乐播放器时间/">音乐播放器时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/APP间的调用/">APP间的调用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MessageUI.framework发短信/">MessageUI.framework发短信</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSHTTPCookieStorage/">NSHTTPCookieStorage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSString/">NSString</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSTimer/">NSTimer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/AVAudioPlayer/">AVAudioPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults/">NSUserDefaults</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/OC 函数库方法/">OC 函数库方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIAlertController/">UIAlertController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBarMetrics/">UIBarMetrics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIControlEvents/">UIControlEvents</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/删除Xcode插件/">删除Xcode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDevice/">UIDevice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIGestureRecognizerState/">UIGestureRecognizerState</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UINavigationController/">UINavigationController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIPageControl/">UIPageControl</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIProgressView进度条/">UIProgressView进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISearchController/">UISearchController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISlider滑条/">UISlider滑条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISwitch 圆点按钮/">UISwitch 圆点按钮</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextField/">UITextField</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextView/">UITextView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWebView/">UIWebView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWindow.h详解/">UIWindow.h详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/mac显示隐藏文件夹/">mac显示隐藏文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/assert/">assert</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/category extension/">category extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/cell的几种style/">cell的几种style</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/double 型转换成 金额/">double 型转换成 金额</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 打电话/">iOS 打电话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS之CF和OC之间类型转换/">iOS之CF和OC之间类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/按照时间排序/">按照时间排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/30/markdown/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/swift/swift类型/">swift类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/ruby/ruby常用命令/">ruby常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/ruby/ruby调试/">ruby调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/ruby/ActiveRecord(四)/">ActiveRecord(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/05/ruby/ActiveRecord(三)/">ActiveRecord(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/ruby/ActiveRecord(二)/">ActiveRecord(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/ruby/ActiveRecord(一)/">ActiveRecord(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/ruby/ruby基本语法3/">ruby基本语法3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/ruby/ruby正则/">ruby正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/13/ruby/ruby基本语法2/">ruby基本语法2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/ruby/ruby基本语法1/">ruby基本语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/08/oc/iOS之 CoreMotion 框架/">iOS之 CoreMotion 框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/08/oc/推送通知/">推送通知</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2015-2017 Shirly
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
