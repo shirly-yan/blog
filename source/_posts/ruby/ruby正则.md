@@ -1,7 +1,7 @@
 ---
 title: ruby正则
 date: 2016-03-14 11:00:05
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 ruby正则

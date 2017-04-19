@@ -32,7 +32,7 @@
 
 
 
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.png">
 
 
 
@@ -133,11 +133,6 @@
                         </div>
                         
                         
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
                     </div>
                     
                 </div>
@@ -149,8 +144,6 @@
                         
                         <li>Friends</li>
                         
-                        
-                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -169,8 +162,6 @@
                         
                             <li><a href="/tags/">分类</a></li>
                         
-                            <li><a href="/about/">关于我</a></li>
-                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
@@ -178,9 +169,7 @@
                             
                                 <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" href="https://github.com/yqzh186" title="GitHub"></a>
                             
                         </ul>
                     </nav>
@@ -189,7 +178,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc/">oc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
                     </div>
                 </section>
                 
@@ -200,7 +189,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/yqzh186">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -208,12 +197,6 @@
                 </section>
                 
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
                 
             </div>
         </div>
@@ -244,8 +227,6 @@
                 
                     <li><a href="/tags/">分类</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
-                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
@@ -254,9 +235,7 @@
                             
                                 <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa GitHub" target="_blank" href="https://github.com/yqzh186" title="GitHub"></a>
                             
                         </ul>
             </nav>
@@ -445,67 +424,6 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 
 
   
-    <article id="post-oc/UIColor和TintColor" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIColor和TintColor/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>前者是指颜色，tint是指着色，色调。<br>通过tintColor属性可以定制UINavigationBar的背景颜色，但如果需要设定渐变色、甚至纹理来说，就需要贴图了。比较“暴力”的一种做法就是通过Category来重新实现- (void)<br> drawRect:(CGRect)rect的实现，“暴力”是因为这种杀伤面很广，所有项目内的UINavigationBar都会因此改变。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-oc/UIBlurEffect系统自带毛玻璃效果" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -539,6 +457,67 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 <p>```objc<br>   //需要模糊效果的view<br>   UIImageView*i = [[UIImageViewalloc]initWithFrame:CGRectMake(100,100,100,200)];<br>    [self.viewaddSubview:i];<br>    i.image= [UIImageimageNamed:@”1”];</p>
 <p>   //创建UIBlurEffect<br>   UIBlurEffect*blurEffect = [UIBlurEffecteffectWithStyle:UIBlurEffectStyleLight];</p>
 <p>   //UIVisualEffectView<br>   UIVisualEffectView*effectView = [[UIVisualEffectViewalloc]initWithEffect:blurEffect];   //设置模糊效果的frame    effectView.frame = i.bounds;   //添加到view上    [iaddSubview:effectView];    //设置模糊的程度    effectView.alpha =.5f;<br>typedefNS_ENUM(NSInteger, UIBlurEffectStyle) {    UIBlurEffectStyleExtraLight,    UIBlurEffectStyleLight,<br>    UIBlurEffectStyleDark}</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UIColor和TintColor" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UIColor和TintColor/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>前者是指颜色，tint是指着色，色调。<br>通过tintColor属性可以定制UINavigationBar的背景颜色，但如果需要设定渐变色、甚至纹理来说，就需要贴图了。比较“暴力”的一种做法就是通过Category来重新实现- (void)<br> drawRect:(CGRect)rect的实现，“暴力”是因为这种杀伤面很广，所有项目内的UINavigationBar都会因此改变。</p>
 
       
     </div>
@@ -629,6 +608,128 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 
 
   
+    <article id="post-oc/UIDatePicker" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UIDatePicker/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.datePicker = [[<span class="built_in">UIDatePicker</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">200</span>, <span class="number">375</span>, <span class="number">267</span>)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.datePicker.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置地区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.locale = [[<span class="built_in">NSLocale</span> alloc]initWithLocaleIdentifier:<span class="string">@"zh_CN"</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//设置DatePicker的日历，默认为当天。</span></div><div class="line">    <span class="keyword">self</span>.datePicker.calendar = [<span class="built_in">NSCalendar</span> currentCalendar];</div><div class="line">   </div><div class="line">    <span class="comment">//设置时区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.timeZone = [<span class="built_in">NSTimeZone</span> defaultTimeZone];</div><div class="line">   </div><div class="line">    <span class="comment">//选择时区</span></div><div class="line"><span class="comment">//    [self.datePicker setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+8"]];</span></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 设置当前显示时间</span></div><div class="line">   </div><div class="line">    <span class="built_in">NSDate</span> *currentTime  = [<span class="built_in">NSDate</span> date];</div><div class="line"></div><div class="line">    <span class="keyword">self</span>.datePicker.date = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 设置显示最大时间</span></div><div class="line">   </div><div class="line">   <span class="keyword">self</span>.datePicker.maximumDate = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 显示模式</span></div><div class="line">    [<span class="keyword">self</span>.datePicker setDatePickerMode:<span class="built_in">UIDatePickerModeDate</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//倒计时按秒显示</span></div><div class="line">    <span class="keyword">self</span>.datePicker.countDownDuration = <span class="number">600</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置分钟间隔</span></div><div class="line">    <span class="keyword">self</span>.datePicker.minuteInterval = <span class="number">10</span>;</div><div class="line">   </div><div class="line">    <span class="comment">// 回调的方法</span></div><div class="line">    [<span class="keyword">self</span>.datePicker addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(datePickerValueChanged:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.datePicker];</div><div class="line">   </div><div class="line">&#125;</div><div class="line">   </div><div class="line">-(<span class="keyword">void</span>)datePickerValueChanged:(<span class="keyword">id</span>)sender</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSDate</span> *selected = [<span class="built_in">NSDate</span> date];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"date: %@"</span>, selected);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-system/欢迎使用CSDN-markdown编辑器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>安装soucetree后，启动<br>1添加账户.<br><img src="http://img.blog.csdn.net/20151214154736709" alt="这里写图片描述"><br>设置托管主机，用户名，密码，协议方式<br><img src="http://img.blog.csdn.net/20151214154943293" alt="这里写图片描述"><br>2.克隆到本地<br>点击远程，这时就可以看见远程仓库中内容<br><img src="http://img.blog.csdn.net/20151214155310766" alt="这里写图片描述"><br>点击克隆，选择要克隆的目标路径，与克隆名称，点击克隆<br><img src="http://img.blog.csdn.net/20151214155442212" alt="这里写图片描述"><br>3.在本地管理项目<br>点击已经克隆到本地的项目<br><img src="http://img.blog.csdn.net/20151214155652034" alt="这里写图片描述"><br>此时是在主分支master分支下<br>双击一条远程分支<br><img src="http://img.blog.csdn.net/20151214155957907" alt="这里写图片描述"><br>将其他的远程分支克隆到本地</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-system/删除Xcode插件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -662,67 +763,6 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 <pre><code>直接进入插件所在的目录，将插件删除即可。
 </code></pre><p>插件路径为：~/Library/Application Support/Developer/Shared/Xcode/Plug-ins    Library文件夹（即资源库）默认是隐藏的，所以你可以使用一下方法打开该路径：</p>
 <p>Finder 前往-&gt;前往文件夹(快捷键cmd+Shift+G)，输入以上路径，回车，找到Fuzzy Aotocomplete插件，删除。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIDatePicker" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIDatePicker/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.datePicker = [[<span class="built_in">UIDatePicker</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">200</span>, <span class="number">375</span>, <span class="number">267</span>)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.datePicker.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置地区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.locale = [[<span class="built_in">NSLocale</span> alloc]initWithLocaleIdentifier:<span class="string">@"zh_CN"</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//设置DatePicker的日历，默认为当天。</span></div><div class="line">    <span class="keyword">self</span>.datePicker.calendar = [<span class="built_in">NSCalendar</span> currentCalendar];</div><div class="line">   </div><div class="line">    <span class="comment">//设置时区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.timeZone = [<span class="built_in">NSTimeZone</span> defaultTimeZone];</div><div class="line">   </div><div class="line">    <span class="comment">//选择时区</span></div><div class="line"><span class="comment">//    [self.datePicker setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+8"]];</span></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 设置当前显示时间</span></div><div class="line">   </div><div class="line">    <span class="built_in">NSDate</span> *currentTime  = [<span class="built_in">NSDate</span> date];</div><div class="line"></div><div class="line">    <span class="keyword">self</span>.datePicker.date = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 设置显示最大时间</span></div><div class="line">   </div><div class="line">   <span class="keyword">self</span>.datePicker.maximumDate = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 显示模式</span></div><div class="line">    [<span class="keyword">self</span>.datePicker setDatePickerMode:<span class="built_in">UIDatePickerModeDate</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//倒计时按秒显示</span></div><div class="line">    <span class="keyword">self</span>.datePicker.countDownDuration = <span class="number">600</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置分钟间隔</span></div><div class="line">    <span class="keyword">self</span>.datePicker.minuteInterval = <span class="number">10</span>;</div><div class="line">   </div><div class="line">    <span class="comment">// 回调的方法</span></div><div class="line">    [<span class="keyword">self</span>.datePicker addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(datePickerValueChanged:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.datePicker];</div><div class="line">   </div><div class="line">&#125;</div><div class="line">   </div><div class="line">-(<span class="keyword">void</span>)datePickerValueChanged:(<span class="keyword">id</span>)sender</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSDate</span> *selected = [<span class="built_in">NSDate</span> date];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"date: %@"</span>, selected);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -878,100 +918,6 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 
 
   
-    <article id="post-oc/UIImagePickerController从本地相册加载图片" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>/*1.签两个协议协议<br>          UIImagePickerControllerDelegate<br>          UINavigationControllerDelegate<br>  2.两个方法</p>
-<p>方法一：<br>//点击按钮触发的方法<br>-(void)buttonAction:(UIButton*)button<br>{</p>
-<pre><code>//创建获取本地相册控制器对象
-UIImagePickerController *picker = [[UIImagePickerControlleralloc]init];
-
-//成为代理
-picker.delegate= self;
-
-//设置相片来源类型
-picker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
-
-//是否可以编辑
-picker.allowsEditing= YES;
-
-//模态显示本地相册
-[selfpresentViewController:pickeranimated:YEScompletion:^{
-
-
-}]; 
-</code></pre><p>}</p>
-<p>方法二：<br>//当用户选择相册中的某个图片时触发的方法,协议里的方法<br>//该方法可以获取到选中的图片</p>
-<ul>
-<li><p>(void)imagePickerController:(UIImagePickerController<em>)picker didFinishPickingMediaWithInfo:(NSDictionary</em>)info<br>{</p>
-<p>  NSLog(@”info = %@”,info);<br>  UIImage <em>image=<br>  [info objectForKey:@”UIImagePickerControllerOriginalImage”];<br>  //通过tag值取对象<br>  UIButton </em>button = (UIButton*)[self.viewviewWithTag:10000];<br>  [button setBackgroundImage:imageforState:UIControlStateNormal];</p>
-<p>  //让相册模态消失<br>  [picker dismissViewControllerAnimated:YEScompletion:^{</p>
-</li>
-</ul>
-<pre><code>}];
-</code></pre><p>}<br>数据来源类型一共有三种：<br>enum {<br>   UIImagePickerControllerSourceTypePhotoLibrary ,//来自图库<br>   UIImagePickerControllerSourceTypeCamera ,//来自相机<br>   UIImagePickerControllerSourceTypeSavedPhotosAlbum //来自相册<br>};<br>在用这些来源的时候最好检测以下设备是否支持；<br> if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])<br>    {<br>        NSLog(@”支持相机”);<br>    }<br>    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])<br>    {<br>        NSLog(@”支持图库”);<br>    }<br>    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])<br>    {<br>        NSLog(@”支持相片库”);<br>    }</p>
-<p>调用摄像头来获取资源</p>
-<ul>
-<li>(void)viewDidLoad {<br>  [super viewDidLoad];<br>  picker = [[UIImagePickerController alloc]init];<br>  picker.view.backgroundColor = [UIColor orangeColor];<br>  UIImagePickerControllerSourceType sourcheType = UIImagePickerControllerSourceTypeCamera;<br>  picker.sourceType = sourcheType;<br>  picker.delegate = self;<br>  picker.allowsEditing = YES;<br>}</li>
-</ul>
-<p>```</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
@@ -1010,22 +956,6 @@ picker.allowsEditing= YES;
     </div>
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
 
 
 
