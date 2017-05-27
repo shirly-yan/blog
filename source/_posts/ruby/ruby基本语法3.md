@@ -1,7 +1,7 @@
 ---
 title: ruby基本语法3
 date: 2016-03-17 17:40:04
-categories: ruby
+categories: [ruby]
 tags: [ruby]
 ---
 ruby基本语法3

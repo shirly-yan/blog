@@ -1,7 +1,7 @@
 ---
 title: ActiveRecord(一)
 date: 2016-04-01 20:47:18
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 ActiveRecord(一)

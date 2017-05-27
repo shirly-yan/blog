@@ -1,7 +1,7 @@
 ---
 title: gem
 date: 2016-11-17 22:14:05
-categories: ruby
+categories: [ruby]
 ---
 gem常用命令
 <!-- more -->

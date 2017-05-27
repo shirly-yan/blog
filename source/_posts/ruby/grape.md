@@ -1,7 +1,7 @@
 ---
 title: grape
 date: 2016-11-22 14:24:15
-categories:
+categories: [ruby]
 ---
 grape
 <!-- more -->

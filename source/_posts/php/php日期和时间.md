@@ -1,7 +1,7 @@
 ---
 title: php日期和时间
 date: 2016-10-17 13:00:08
-categories: php
+categories: [php]
 ---
 php日期和时间
 <!-- more -->

@@ -43,18 +43,22 @@ shutdown -c
 5  图形界面
 6  重启
 ```
+
 <h3>查询系统运行级别</h3>
 ```mark
 runlevel
 ```
+
 <h3>系统默认运行级别</h3>
 ```mark
 cat /etc/inittab
 ```
+
 <h3>退出登录命令</h3>
 ```mark
 logout 退出系统
 ```
+
 <h2>压缩与解压缩</h2>
 压缩格式 .zip .gz .bz2 .tar.gz .tar.bz2
 
@@ -62,18 +66,19 @@ logout 退出系统
 ```mark
 sudo apt-get install zip
 ```
+
 <h3>.zip</h3>
 <h4>压缩.zip</h4>
 压缩文件
-
 ```mark
 zip 压缩文件名 压缩文件
 ```
-压缩目录
 
+压缩目录
 ```mark
 zip -r 压缩文件名 目录名 
 ```
+
 <h4>解压缩.zip</h4>
 ```mark
 unzip 压缩文件名
@@ -82,20 +87,20 @@ unzip 压缩文件名
 <h3>.gz</h3>
 <h4>压缩.gz</h4>
 不保留源文件
-
 ```mark
 gzip 压缩文件
 ```
-保留源文件
 
+保留源文件
 ```mark
 gzip -c 源文件 > 压缩文件
 ```
-压缩目录下的所有子文件
 
+压缩目录下的所有子文件
 ```mark
 gzip -r 目录
 ```
+
 <h4>解压缩.gz</h4>
 ```mark
 gzip -d 压缩文件名

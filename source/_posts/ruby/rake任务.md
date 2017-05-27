@@ -1,7 +1,7 @@
 ---
 title: rake任务
 date: 2016-12-20 20:59:13
-categories: ruby
+categories: [ruby]
 tags: [ruby,rake]
 ---
 rails中创建使用rake任务

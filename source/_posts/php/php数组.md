@@ -1,7 +1,7 @@
 ---
 title: php数组
 date: 2016-10-14 11:20:49
-categories: php
+categories: [php]
 ---
 php数组
 <!-- more -->

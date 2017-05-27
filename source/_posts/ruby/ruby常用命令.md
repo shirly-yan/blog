@@ -1,7 +1,7 @@
 ---
 title: ruby常用命令
 date: 2016-04-17 16:51:32
-categories: ruby
+categories: [ruby]
 tags: [ruby]
 ---
 ruby常用命令

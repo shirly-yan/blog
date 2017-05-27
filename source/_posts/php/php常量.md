@@ -1,7 +1,7 @@
 ---
 title: php常量
 date: 2016-10-12 16:20:51
-categories:
+categories: [php]
 ---
 php常量的分类和定义
 <!-- more -->

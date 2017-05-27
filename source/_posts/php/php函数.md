@@ -1,7 +1,7 @@
 ---
 title: php函数
 date: 2016-10-14 11:44:24
-categories:
+categories: [php]
 ---
 php函数
 <!-- more -->

@@ -1,7 +1,7 @@
 ---
 title: php运算符
 date: 2016-10-12 17:13:21
-categories: php
+categories: [php]
 ---
 php算数运算符 赋值运算符 比较运算符
 <!-- more -->

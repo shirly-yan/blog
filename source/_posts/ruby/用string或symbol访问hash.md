@@ -1,7 +1,7 @@
 ---
 title: 用string或symbol访问hash
 date: 2017-01-04 13:53:37
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 用string或symbol访问hash

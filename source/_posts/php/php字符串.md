@@ -1,7 +1,7 @@
 ---
 title: php字符串
 date: 2016-10-14 17:19:35
-categories: php
+categories: [php]
 ---
 php字符串
 <!-- more -->

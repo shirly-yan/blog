@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
                     </ul>
@@ -178,7 +178,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpmyadmin/">phpmyadmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,14 +241,14 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-oc/汉字转拼音" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS开发拓展篇—CoreLocation简单介绍" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/汉字转拼音/" class="article-date">
+      <a href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -264,7 +264,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/汉字转拼音/">汉字转拼音</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a>
     </h1>
   
 
@@ -275,7 +275,15 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">带音标</div><div class="line"><span class="built_in">CFMutableStringRefstring</span> = <span class="built_in">CFStringCreateMutableCopy</span>(<span class="literal">NULL</span>,<span class="number">0</span>,<span class="built_in">CFSTR</span>(<span class="string">"中国"</span>));</div><div class="line">   <span class="built_in">CFStringTransform</span>(string,<span class="literal">NULL</span>,kCFStringTransformMandarinLatin,<span class="literal">NO</span>);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, string);</div><div class="line"> </div><div class="line">不带音标</div><div class="line"><span class="built_in">CFMutableStringRefstring</span> = <span class="built_in">CFStringCreateMutableCopy</span>(<span class="literal">NULL</span>,<span class="number">0</span>,<span class="built_in">CFSTR</span>(<span class="string">"中国"</span>));</div><div class="line">   <span class="built_in">CFStringTransform</span>(string,<span class="literal">NULL</span>,kCFStringTransformMandarinLatin,<span class="literal">NO</span>);</div><div class="line">    <span class="built_in">CFStringTransform</span>(string,<span class="literal">NULL</span>,kCFStringTransformStripDiacritics,<span class="literal">NO</span>);</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, string);</div></pre></td></tr></table></figure>
+<p><strong>一、简介</strong><br>1.在移动互联网时代，移动app能解决用户的很多生活琐事，比如<br>（1）导航：去任意陌生的地方<br>（2）周边：找餐馆、找酒店、找银行、找电影院</p>
+<p>2.在上述应用中，都用到了地图和定位功能，在iOS开发中，要想加入这2大功能，必须基于2个框架进行开发<br>（1）Map Kit ：用于地图展示<br>（2）Core Location ：用于地理定位</p>
+<p>3.两个热门专业术语<br>（1）LBS ：Location Based Service（基于定位的服务）<br>（2）SoLoMo ：Social Local Mobile（索罗门）</p>
+<p><strong>二、CoreLocation框架的使用</strong><br>1.CoreLocation框架使用前提<br>（1）导入框架<br>　　<img src="http://images.cnitblog.com/i/450136/201408/091531084436493.png" alt=""><br>说明：在Xcode5以后，不再需要我们手动导入<br>（2）导入主头文件<br>　　#import <corelocation corelocation.h=""></corelocation></p>
+<p>2.CoreLocation框架使用须知<br>CoreLocation框架中所有数据类型的前缀都是CL<br>CoreLocation中使用CLLocationManager对象来做用户定位</p>
+<p><strong>三、经纬度等地理信息扫盲</strong><br>1.示意图<br><strong>　　<img src="http://images.cnitblog.com/i/450136/201408/091533193501020.png" alt=""></strong><br>2.本初子午线：穿过英国伦敦格林文治天文台<br>往东边（右边）走，是东经（E）<br>往西边（左边）走，是西经（W）<br>东西经各180°，总共360°</p>
+<p>3.赤道：零度维度<br>往北边（上边）走，是北纬（N）<br>往南边（下边）走，是南纬（S）<br>南北纬各90°，总共180°</p>
+<p>提示：横跨经度\纬度越大（1° ≈ 111km），表示的范围就越大，在地图上看到的东西就越小<br>4.我国的经纬度:<br>（1）中国的经纬度范围<br>纬度范围：N 3°51′ ~  N 53°33′<br>经度范围：E 73°33′ ~  E 135°05′<br>（2）部分城市的经纬度<br>　　<img src="http://images.cnitblog.com/i/450136/201408/091536473652603.png" alt=""></p>
+<p><strong>四、模拟位置</strong><br>说明：在对程序进行测试的时候，设置手机模拟器的模拟位置（经纬度）<br><img src="http://images.cnitblog.com/i/450136/201408/091538586931958.png" alt="">    <img src="http://images.cnitblog.com/i/450136/201408/091539108818080.png" alt=""></p>
 
       
     </div>
@@ -306,10 +314,10 @@
 
 
   
-    <article id="post-oc/获取当前时间" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS隐藏状态栏" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/获取当前时间/" class="article-date">
+      <a href="/2016/10/08/oc/iOS隐藏状态栏/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -325,7 +333,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/获取当前时间/">获取当前时间</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS隐藏状态栏/">iOS隐藏状态栏</a>
     </h1>
   
 
@@ -336,7 +344,7 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取当前时间</span></div><div class="line"><span class="built_in">NSDate</span> *date = [<span class="built_in">NSDate</span> date];</div><div class="line"><span class="comment">//时间格式</span></div><div class="line"><span class="built_in">NSDateFormatter</span> *dateFormatter = [[<span class="built_in">NSDateFormatter</span> alloc]init];</div><div class="line">dateFormatter.dateFormat = <span class="string">@"YYYY-MM-dd HH:mm:ss"</span>;</div><div class="line"><span class="comment">//时间转换</span></div><div class="line"><span class="built_in">NSString</span> *time = [dateFormatter stringFromDate:date];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">状态栏： 运营商时间电量的行</div><div class="line"><span class="meta">#pragma mark  隐藏状态栏</span></div><div class="line">-(<span class="built_in">BOOL</span>)prefersStatusBarHidden</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -367,10 +375,10 @@
 
 
   
-    <article id="post-oc/模态" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/AVAudioPlayer" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/模态/" class="article-date">
+      <a href="/2016/10/08/oc/AVAudioPlayer/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -386,7 +394,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/模态/">模态</a>
+      <a class="article-title" href="/2016/10/08/oc/AVAudioPlayer/">AVAudioPlayer</a>
     </h1>
   
 
@@ -397,11 +405,7 @@
       
           
         <a id="more"></a>
-<p>/<em>模态：就是从一个页面中弹出一个临时的页面，用来收集用户信息，常用于登陆注册页面</em>/</p>
-<p>aViewController.m中调用bViewController.m的模态</p>
-<p>aViewController.m/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/在  - (void)viewDidLoad<br>  中用Button调用action方法-(void)action{      //1.用bViewController创建bViewController的对象bVC   bViewController*bVC = [[bViewControlleralloc]init];      //2.用self 调用模态控制器方法    //animated:是否有动画    [selfpresentViewController:bVCanimated:YEScompletion:^{   //可以设置方法处理事件<br>    }];       //3.设置模态样式     [bVCsetModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];   </p>
-<p>   }/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
-<p>bViewController.m /<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/在  - (void)viewDidLoad<br>  中用Button调用action方法-(void)action{<br>       //用self 调用模态控制器方法<br> 模态消失    [selfdismissViewControllerAnimated:YEScompletion:^{    //可以设置方法处理事件<br>    }];}/<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;AVFoundation/AVFoundation.h&gt;</span></span></div><div class="line"></div><div class="line">    <span class="comment">//初始化三个按钮</span></div><div class="line">   </div><div class="line">    <span class="comment">//play</span></div><div class="line">    <span class="built_in">UIButton</span> * button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:button];</div><div class="line">    button.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</div><div class="line">    [button setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</div><div class="line">    [button setTitle:<span class="string">@"play"</span> forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(play) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line"></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//pause暂停</span></div><div class="line">    <span class="built_in">UIButton</span> * button1 = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:button1];</div><div class="line">    button1.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</div><div class="line">    [button1 setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">150</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</div><div class="line">    [button1 setTitle:<span class="string">@"pause"</span> forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button1 setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button1 addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(pause) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line"></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//stop</span></div><div class="line">    <span class="built_in">UIButton</span> * button2 = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:button1];</div><div class="line">    button2.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</div><div class="line">    [button2 setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">200</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</div><div class="line">    [button2 setTitle:<span class="string">@"stop"</span> forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button2 setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [button2 addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(stop) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:button2];</div><div class="line"></div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 从bundle路径下读取音频文件</span></div><div class="line">    <span class="built_in">NSString</span> * string = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"凭什么说-刘心"</span> ofType:<span class="string">@"mp3"</span>];</div><div class="line">    <span class="comment">// 把音频文件转换成url格式</span></div><div class="line">    <span class="built_in">NSURL</span> * url = [<span class="built_in">NSURL</span> fileURLWithPath:string];</div><div class="line">    <span class="comment">// 初始化音频类 并且添加播放文件</span></div><div class="line">    <span class="keyword">self</span>.avAudioPlayer = [[<span class="built_in">AVAudioPlayer</span> alloc] initWithContentsOfURL:url error:<span class="literal">nil</span>];</div><div class="line">    <span class="comment">// 设置代理</span></div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer setDelegate:<span class="keyword">self</span>];</div><div class="line">    <span class="comment">// 设置初始音量大小</span></div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer setVolume:<span class="number">1</span>];</div><div class="line">    <span class="comment">// 设置音乐播放次数 -1为一直循环</span></div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer setNumberOfLoops:<span class="number">-1</span>];</div><div class="line">    <span class="comment">// 预播放</span></div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer prepareToPlay];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 初始化一个播放进度条</span></div><div class="line">    <span class="keyword">self</span>.progressV = [[<span class="built_in">UIProgressView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">80</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">20</span>)];</div><div class="line">    [<span class="keyword">self</span>.progressV setProgressTintColor:[<span class="built_in">UIColor</span> redColor]];</div><div class="line">    [<span class="keyword">self</span>.progressV setTrackTintColor:[<span class="built_in">UIColor</span> blueColor]];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.progressV];</div><div class="line">    [<span class="keyword">self</span>.progressV release];</div><div class="line">   </div><div class="line">    <span class="comment">// 用NSTimer来监控音频播放进度</span></div><div class="line">    <span class="keyword">self</span>.timer = [<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">0.1</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(playProgress) userInfo:<span class="literal">nil</span> repeats:<span class="literal">YES</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 初始化音量控制</span></div><div class="line">    <span class="keyword">self</span>.volumeSlider = [[<span class="built_in">UISlider</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">80</span>, <span class="number">130</span>, <span class="number">200</span>, <span class="number">20</span>)];</div><div class="line">    [<span class="keyword">self</span>.volumeSlider addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(volumeChange) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">    <span class="comment">// 设置最小音量</span></div><div class="line">    [<span class="keyword">self</span>.volumeSlider setMinimumValue:<span class="number">0.0</span>f];</div><div class="line">    <span class="comment">// 设置最大音量</span></div><div class="line">    [<span class="keyword">self</span>.volumeSlider setMaximumValue:<span class="number">10.0</span>f];</div><div class="line">    <span class="comment">// 初始化音量为多少</span></div><div class="line">    [<span class="keyword">self</span>.volumeSlider setValue:<span class="number">5.0</span>f];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.volumeSlider];</div><div class="line">    [<span class="keyword">self</span>.volumeSlider release];</div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//声音开关控件(静音)</span></div><div class="line">    <span class="built_in">UISwitch</span> *swith = [[<span class="built_in">UISwitch</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">500</span>, <span class="number">60</span>, <span class="number">40</span>)];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:swith];</div><div class="line">    [swith addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(onOrOff:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">    <span class="comment">//默认状态为打开</span></div><div class="line">    swith.on = <span class="literal">YES</span>;</div><div class="line">    [swith release];</div><div class="line"></div><div class="line"><span class="comment">/********************AVAudioPlayer***************/</span></div><div class="line"><span class="comment">//播放</span></div><div class="line">- (<span class="keyword">void</span>)play</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer play];</div><div class="line">&#125;</div><div class="line"><span class="comment">//暂停</span></div><div class="line">- (<span class="keyword">void</span>)pause</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer pause];</div><div class="line">&#125;</div><div class="line"><span class="comment">//停止</span></div><div class="line">- (<span class="keyword">void</span>)stop</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span>.avAudioPlayer.currentTime = <span class="number">0</span>;  <span class="comment">//当前播放时间设置为0</span></div><div class="line">    [<span class="keyword">self</span>.avAudioPlayer stop];</div><div class="line">&#125;</div><div class="line"><span class="comment">//播放进度条</span></div><div class="line">- (<span class="keyword">void</span>)playProgress</div><div class="line">&#123;</div><div class="line">    <span class="comment">//通过音频播放时长的百分比,给progressview进行赋值;</span></div><div class="line">    <span class="keyword">self</span>.progressV.progress = <span class="keyword">self</span>.avAudioPlayer.currentTime/<span class="keyword">self</span>.avAudioPlayer.duration;</div><div class="line">&#125;</div><div class="line"><span class="comment">//声音开关(是否静音)</span></div><div class="line">- (<span class="keyword">void</span>)onOrOff:(<span class="built_in">UISwitch</span> *)sender</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span>.avAudioPlayer.volume = sender.on;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//播放音量控制</span></div><div class="line">- (<span class="keyword">void</span>)volumeChange</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span>.avAudioPlayer.volume = <span class="keyword">self</span>.volumeSlider.value;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//播放完成时调用的方法  (代理里的方法),需要设置代理才可以调用</span></div><div class="line">- (<span class="keyword">void</span>)audioPlayerDidFinishPlaying:(<span class="built_in">AVAudioPlayer</span> *)player successfully:(<span class="built_in">BOOL</span>)flag</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.timer invalidate]; <span class="comment">//NSTimer暂停  invalidate  使...无效;</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/********************AVAudioPlayer***************/</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -432,10 +436,10 @@
 
 
   
-    <article id="post-oc/计算字符串的宽或者高" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/Core Animation 3D介绍(第1部分)" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/计算字符串的宽或者高/" class="article-date">
+      <a href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -451,7 +455,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/计算字符串的宽或者高/">计算字符串的宽或者高</a>
+      <a class="article-title" href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a>
     </h1>
   
 
@@ -462,9 +466,40 @@
       
           
         <a id="more"></a>
-<p>```objc<br>/<em>* </em>返回值是该字符串所占的大小(width,<br> height)<br> <em>font :该字符串所用的字体(字体大小不一样,显示出来的面积也不同)
- </em>maxSize :为限制改字体的最大宽和高(如果显示一行,则宽高都设置为MAXFLOAT,如果显示为多行,只需将宽设置一个有限定长值,高设置为MAXFLOAT)<br> <em>/+(CGSize)sizeWithFont:(UIFont </em>)font maxSize:(CGSize)maxSize<br> content:(NSString <em>)content;<br>//返回字符串所占用的尺寸.<br>+(CGSize)sizeWithFont:(UIFont</em>)font maxSize:(CGSize)maxSize content:(NSString<em>)content<br>{<br>   NSDictionary</em>attrs =@{NSFontAttributeName: font};</p>
-<p>   return[contentboundingRectWithSize:maxSizeoptions:NSStringDrawingUsesLineFragmentOriginattributes:attrscontext:nil].size;}</p>
+<p>尊重原创 转自：<a href="http://codingobjc.com/blog/2013/06/11/core-animation-3djie-shao-di-1bu-fen/" target="_blank" rel="external">http://codingobjc.com/blog/2013/06/11/core-animation-3djie-shao-di-1bu-fen/</a></p>
+<p>在本教程中，我将向你介绍Core Animation中用于绘制3D图形的一些技术。<br>我要告诉你的好消息是：我们不必直接使用OpenGL，仅仅用Core Animation就可以很容易的实现一些3D效果。但是，也别太高兴了，因为”用Core Animation来制作一个复杂的3D游戏”也并不是一个好主意。<br>这个教程分两部分。第一部分，我们先讨论下一些3D原理知识，然后运用这些概念来创建一些简单的3D场景。然后在第二部分中，我们将使用Core Animation来制作一个类似于旋转木马的3D场景特效。<br>最终app的预览效果如下：(译注: 原文中这里的视频被墙，因此这里只简单的提供一个图片预览，你可以直接下载例子代码运行即可以看到最终app的效果)<br><img src="http://codingobjc.com/images/posts/2013_06_11_core_animation_3d_app_preview.png" alt=""><br>好，准备好了吗？我们开始写代码吧！<br>首先，下载文章后面的代码。如果你要自己创建项目的话，要记得添加QuartzCore框架。</p>
+<p>###3D和矩阵相关的数学知识(一点点…别担心，只有一点点)<br>要在一个3D空间中绘图，除了标准2D坐标(X和Y)概念外，我们还需要引入一个深度(depth)的概念，也就是要加入第三个坐标轴–Z轴。<br>这样，在空间中，我们只需要简单的改变物体的X、Y和Z坐标，就可以在垂直方向、水平方向或深度方向上移动物体。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/handed.png" alt=""><br>在2D或3D空间中，对一个物体执行平移、缩放或旋转这些操作时需要使用矩阵运算。<br>你可以将矩阵想象成一个多维数组。比如，在3D空间中我们使用一个像下面这种格式的4X4矩阵：</p>
+<pre><code>[X][0][0][0][0][Y][0][0][0][0][Z][0][0][0][0][1]
+</code></pre><p>把这个矩阵和物体的每一个坐标点(又称顶点)相乘，我们可以得到物体的一个变换(transformation)效果。<br>严格点讲，前面这个矩阵是用来执行缩放操作的。其中的X、Y、Z值代表每个轴上的缩放值。<br>如果你要进行其他的变换操作，比如旋转或者平移，你需要将矩阵换成其他矩阵格式(scheme)。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/Screen-Shot-2013-03-20-at-11.02.03-AM.png" alt=""><br>不要紧张！你不需要知道其他更多原理知识，而且也不必直接进行这些操作。Core Animation会为你完成这些操作，虽然你不知道它是如何做到的，但是它确实会为你完成这些操作，所以不必害怕。<br>当然，就我个人来说，如果我知道它背后是如何工作的(至少知道一些它的基本原理)，我会对我的代码更有自信。因此，如果你想了解更多矩阵相关的知识，建议你读一读这篇<a href="http://www.matrix44.net/cms/notes/opengl-3d-graphics/basic-3d-math-matrices" target="_blank" rel="external">文章</a>。</p>
+<p>###3D变换(Transformations)<br>现在基本上，你已经知道矩阵的作用了，也知道了3D空间是如何构成的。来，我们用Core Animation做一些3D的东西吧。<br>打开TB_3DIntro-&gt;viewController.m文件。<br>我在里面列出了6个分别以A、B、C、D、E、F开头的函数。每一个函数对应了一种不同的3D场景效果。<br>我们先来看看由<code>A_singlePlan</code>函数创造的场景吧。<br>用这个函数，我们画了一个平面，平面绕Y轴旋转了45度。<br>首先，我们创建了一个CALayer，用它来作容器层(当然，并不是一定要这样做，只是我更喜欢不直接在self.view的layer上进行工作)。</p>
+<pre><code>-(void)A_singlePlane{//Create the containerCALayer*container=[CALayerlayer];container.frame=CGRectMake(0,0,640,300);[self.view.layeraddSublayer:container];
+</code></pre><p>然后我们创建了另一个CALayer，用它代表一个平面。</p>
+<pre><code>//Create a PlaneCALayer*purplePlane=[selfaddPlaneToLayer:containersize:CGSizeMake(100,100)position:CGPointMake(250,150)color:[UIColorpurpleColor]];
+</code></pre><p>我写了一个简单的辅助函数，用它将平面直接添加到容器层上，然后返回这个新建的平面层。代码非常简单：</p>
+<pre><code>-(CALayer*)addPlaneToLayer:(CALayer*)containersize:(CGSize)sizeposition:(CGPoint)pointcolor:(UIColor*)color{//Initialize the layerCALayer*plane=[CALayerlayer];//Define position,size and colorsplane.backgroundColor=[colorCGColor];plane.opacity=0.6;plane.frame=CGRectMake(0,0,size.width,size.height);plane.position=point;plane.anchorPoint=CGPointMake(0.5,0.5);plane.borderColor=[[UIColorcolorWithWhite:1.0alpha:0.5]CGColor];plane.borderWidth=3;plane.cornerRadius=10;//Add the layer to the container layer[containeraddSublayer:plane];returnplane;}
+</code></pre><p>最后，我们用CATransform3D来添加变换。<br>啊？？？你一定又想问CATransform3D是什么东西？按住Cmd键点击这个类型名称，你可以发现它是一个结构体，使用了一种很”火星”的语法来表示一个矩阵。<img src="http://www.thinkandbuild.it/wp-includes/images/smilies/icon_razz.gif" alt=""></p>
+<pre><code>structCATransform3D{CGFloatm11,m12,m13,m14;CGFloatm21,m22,m23,m24;CGFloatm31,m32,m33,m34;CGFloatm41,m42,m43,m44;};typedefstructCATransform3DCATransform3D;
+</code></pre><p>旋转变换部分的代码也相当简单：</p>
+<pre><code>//Apply transform to the PLANECATransform3Dt=CATransform3DIdentity;t=CATransform3DRotate(t,45.00f*M_PI/180.0f,0,1,0);purplePlane.transform=t;}
+</code></pre><p>先用单位矩阵<code>CATransform3DIdentity</code>来初始化一个变换(transformation)，然后用<code>CATransform3DRotate</code>函数给变换乘上一个旋转矩阵。<br>CATransform3DRotate这个函数的参数分别表示矩阵，旋转的角度(以弧度为单位)和3个坐标轴上的变换系数。这个例子中，X和Z轴都没受到影响，只对Y轴有影响，物体会在Y轴上旋转45度。<br>下图是运行结果。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa1.png" alt=""><br>呃……你可以看到，它还不是3D的！我们只是在X轴方向上将一个正方形压扁了。<br>这是由于我们还没有设置视点的值(perspective value)。通常，在绘制3D场景的时候会将场景进行正射投影(Orthographic projection)处理，由此会产生一个扁平的场景。换句话说，在正射投影后你无法看到Z轴上的深度感。<br>要给我们的场景加上空间深度感，我们必须修改变换矩阵的<code>m34</code>参数。这个参数决定了视点的值。<br>现在，来看看<code>B_singlePlanePerspective</code>这个函数，这函数展示了视点的作用。<br>这个函数和前一个函数只有变换部分的代码有所不同：</p>
+<pre><code>//Apply transform to the PLANECATransform3Dt=CATransform3DIdentity;//Add perspective!!!t.m34=1.0/-500;t=CATransform3DRotate(t,degToRad(45.0),0,1,0);purplePlane.transform=t;}
+</code></pre><p>你可以看到，我们直接给矩阵的m34属性赋了一个值。在这里，我不会深入的从数学上解释这个值是如何起作用的。但是我可以告诉你的是，这个值越接近0，视点就越深。<br>下面是两种不同视点值的效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa_2.png" alt=""><br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa_21.png" alt=""></p>
+<p>###3D变换的顺序问题(Transformations chain)<br>我们可以将多个矩阵相乘从而将多种变换应用到一个物体上。比如，如果我们想将平移和旋转变换应用到一个物体上，我们可以直接将两个变换矩阵相乘：</p>
+<pre><code>TransformMatrix=TranslateMtx*RotateMtx
+</code></pre><p>数学上，一般情况下乘法都可以使用交换律：</p>
+<pre><code>TranslateMtx*RotateMxt=RotateMtx*TranslateMtx
+</code></pre><p>但是矩阵乘法不适用于交换律。AxB的结果可能和BxA的结果不一样。要记住这一点！<br>接下来<code>C_transformationsChain</code>这个例子中，我们会将2个变换效果按不同的先后顺序应用到2个不同的物体上。<br>以下是主要代码：</p>
+<pre><code>//Apply transformation to the PLANESCATransform3Dt=CATransform3DIdentity;//Purple plane: Perform a rotation and then a translationt=CATransform3DRotate(t,45.0f*M_PI/180.0f,0,0,1);t=CATransform3DTranslate(t,100,0,0);purplePlane.transform=t;//reset the transform matrixt=CATransform3DIdentity;//Red plane: Perform translation first and then the rotationt=CATransform3DTranslate(t,100,0,0);t=CATransform3DRotate(t,45.0f*M_PI/180.0f,0,0,1);redPlane.transform=t;
+</code></pre><p>运行结果如下：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/Screen-Shot-2013-03-20-at-11.47.15-AM.png" alt=""><br>看到了吗，不同的变换顺序完全导致了不同的效果。<br>我们重点下看一下紫色的那块。旋转变换改变了它的坐标轴方向，然后我们又将它沿X轴进行了平移，此时它的X轴方向已经和红色平面的X轴方向不一致了。<br>变换步骤示意图如下：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p_r.png" alt=""><br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p_r2.png" alt=""></p>
+<p>###图层层次(layer hierarchies)<br>到目前为止，我们都是将变换直接应用在这些平面上。在3D场景中，经常需要创建一些相互之间有层次结构的物体。这个时候，只需要将变换应用到根层次上，就可以使整个层次结构中的物体整体具有这个变换效果。这种做法非常有用。<br>接下来，我们来看看<code>D_multiplePlanes</code>这个例子。<br>我们在容器层上添加了4个平面。<br>当没有任何变换效果时看起来是这样的：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5.png" alt=""><br>如果我们给每一个平面都加上一个Y轴上的旋转变换，我们会得到4个独立的旋转效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5_2.png" alt=""><br>但是，如果我们只是在容器层上应用旋转变换，我们会得到一个完全不同的场景效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5_1.png" alt=""><br>这种效果，是相机(camera)位置发生改变带来的结果。我们没有移动每个平面，只是改变了视点的位置。<br>此函数主要的变换部分代码如下，包含了分别应用于各个平面和应用于容器层的两种变换效果的代码：</p>
+<pre><code>//Transformation CATransform3Dt=CATransform3DIdentity;BOOLapplyToContainer=NO;//Apply the transformation to each PLANEif(!applyToContainer){t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);purplePlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);redPlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);orangePlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);yellowPlane.transform=t;}//Apply the transformation to the CONTAINERelse{CATransform3Dt=CATransform3DIdentity;t.m34=1.0/-500;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);container.transform=t;}
+</code></pre><p>###CATransformLayer<br>到目前为止我们所见到的代码都能正常工作，但说实话，作为3D层次结构的根，CALayer不是正确的选择。<br>函数<code>E_multiplePlanesZAxis</code>展示了为什么。<br>这个例子中，我们创建4个XY坐标相同只有Z坐标不同的平面。紫色平面最近，黄色平面最远。</p>
+<pre><code>//Apply transforms to the PLANESt=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-10);purplePlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-50);redPlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-90);orangePlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-130);yellowPlane.transform=t;
+</code></pre><p>在旋转这些平面前，我们先让容器层执行了一个旋转变换。</p>
+<pre><code>//Apply transform to the CONTAINERCATransform3Dt=CATransform3DIdentity;t.m34=1.0/-500;t=CATransform3DRotate(t,80.0f*M_PI/180.0f,0,1,0);container.transform=t;
+</code></pre><p>你也许希望看到下面这种结果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p6_1.png" alt=""><br>但是，实际上会得到这种结果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p6.png" alt=""><br>这是因为CALayer不能处理3D层次结构的深度，它只能将场景处理成相同的Z层次。<br>为了修正这个问题，我们需要用一个<code>CATransformLayers</code>来做根层对象。<br>函数<code>F_multiplePlanesZAxis</code>修正了这个问题：</p>
+<pre><code>//Create the container as a CATransformLayerCATransformLayer*container=[CATransformLayerlayer];container.frame=CGRectMake(0,0,640,300);[self.view.layeraddSublayer:container];
+</code></pre><p>CATransformLayer是一个特殊的layer。与CALayer的不同之处在于，CATransformLayer本身不会被渲染到屏幕上，只有它的子图层才会被渲染到屏幕上。所以它的一些属性，比如backgroundColor、contents、border等等都没有什么用。要记住这点。<br>到这里，这个教程的第一部分就完了。建议你实际运行一下这些函数，也可以试试我没有讲到的<code>CATransform3DScale</code>，试试用它做一个缩放变换看。<br>如果你有任何问题，可以在twitter上找到我(<a href="http://www.twitter.com/bitwaker" target="_blank" rel="external">@bitwaker</a>)。<br><a href="https://github.com/ariok/TB_3DCoreAnimation" target="_blank" rel="external">本教程代码下载</a><br>译自：<a href="http://www.thinkandbuild.it/introduction-to-3d-drawing-in-core-animation-part-1/" target="_blank" rel="external">Think<br> &amp; Build</a></p>
 
       
     </div>
@@ -495,10 +530,10 @@
 
 
   
-    <article id="post-oc/让超出自己视图范围的子视图响应事件" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/oc 播放gif动画" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/" class="article-date">
+      <a href="/2016/10/08/oc/oc 播放gif动画/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -514,71 +549,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>有时需要让子视图的位置超出父视图，这时子视图不会响应点击事件，在父视图中实现这个方法，可以让子视图超出的部分也响应点击事件<br>父视图需要是view的子类<br>这个方法可以判断出自己的子视图，和子视图的子视图，在多层的话需要继续遍历<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/进程和线程" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/进程和线程/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/进程和线程/">进程和线程</a>
+      <a class="article-title" href="/2016/10/08/oc/oc 播放gif动画/">oc 播放gif动画</a>
     </h1>
   
 
@@ -589,22 +560,7 @@
       
           
         <a id="more"></a>
-<p><strong>一、进程和线程</strong><br>1.什么是进程</p>
-<p>进程是指在系统中正在运行的一个应用程序<br>每个进程之间是独立的，每个进程均运行在其专用且受保护的内存空间内<br><img src="http://images.cnitblog.com/i/450136/201406/241224432836121.png" alt=""></p>
-<p>比如同时打开QQ、Xcode，系统就会分别启动2个进程<br>通过“活动监视器”可以查看Mac系统中所开启的进程</p>
-<p>2.什么是线程<br>1个进程要想执行任务，必须得有线程（每1个进程至少要有1条线程）<br>线程是进程的基本执行单元，一个进程（程序）的所有任务都在线程中执行<br>比如使用酷狗播放音乐、使用迅雷下载电影，都需要在线程中执行<br> 　　<img src="http://images.cnitblog.com/i/450136/201406/241225080809896.png" alt=""></p>
-<p>3.线程的串行</p>
-<p>1个线程中任务的执行是串行的<br>如果要在1个线程中执行多个任务，那么只能一个一个地按顺序执行这些任务<br>也就是说，在同一时间内，1个线程只能执行1个任务<br>比如在1个线程中下载3个文件（分别是文件A、文件B、文件C）<br> <img src="http://images.cnitblog.com/i/450136/201406/241225242528638.png" alt=""></p>
-<p>二、多线程</p>
-<p>1.什么是多线程<br>1个进程中可以开启多条线程，每条线程可以并行（同时）执行不同的任务<br>进程 -&gt;车间，线程-&gt;车间工人<br>多线程技术可以提高程序的执行效率<br>比如同时开启3条线程分别下载3个文件（分别是文件A、文件B、文件C）<br><img src="http://images.cnitblog.com/i/450136/201406/241226293143615.png" alt=""><br><img src="http://images.cnitblog.com/i/450136/201406/241227387673566.png" alt=""></p>
-<p>2.多线程的原理</p>
-<p>同一时间，CPU只能处理1条线程，只有1条线程在工作（执行）<br>多线程并发（同时）执行，其实是CPU快速地在多条线程之间调度（切换）<br>如果CPU调度线程的时间足够快，就造成了多线程并发执行的假象<br>思考：如果线程非常非常多，会发生什么情况？<br>CPU会在N多线程之间调度，CPU会累死，消耗大量的CPU资源<br>每条线程被调度执行的频次会降低（线程的执行效率降低）</p>
-<p>3.多线程的优缺点</p>
-<p>多线程的优点<br>能适当提高程序的执行效率<br>能适当提高资源利用率（CPU、内存利用率）</p>
-<p>多线程的缺点<br>开启线程需要占用一定的内存空间（默认情况下，主线程占用1M，子线程占用512KB），如果开启大量的线程，会占用大量的内存空间，降低程序的性能<br>线程越多，CPU在调度线程上的开销就越大<br>程序设计更加复杂：比如线程之间的通信、多线程的数据共享</p>
-<p>4.多线程在iOS开发中的应用<br>主线程:一个iOS程序运行后，默认会开启1条线程，称为“主线程”或“UI线程”<br>主线程的主要作用<br>显示\刷新UI界面<br>处理UI事件（比如点击事件、滚动事件、拖拽事件等）</p>
-<p>主线程的使用注意:别将比较耗时的操作放到主线程中。<br>耗时操作会卡住主线程，严重影响UI的流畅度，给用户一种“卡”的坏体验</p>
-<p>5.代码示例<br><img src="http://images.cnitblog.com/i/450136/201406/241233129086114.png" alt=""><br><a href="&quot;复制代码&quot;"><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>     1 //<br>     2 //  YYViewController.m 3 //  01-阻塞主线程 4 //<br>     5 //  Created by apple on 14-6-23. 6 //  Copyright (c) 2014年 itcase. All rights reserved. 7 // 8<br>     9 #import “YYViewController.h”<br>    10<br>    11 @interface YYViewController ()12 - (IBAction)btnClick;13 @end<br>    14<br>    15<br>    16 @implementation YYViewController17<br>    18<br>    19 - (void)viewDidLoad20 {21     [super viewDidLoad];22 }23<br>    24<br>    25 //按钮的点击事件<br>    26 - (IBAction)btnClick {27     //1.获取当前线程<br>    28     NSThread *current=[NSThread currentThread];29     //2.使用for循环执行一些耗时操作<br>    30     for (int i=0; i&lt;10000; i++) {31         //3.输出线程<br>    32         NSLog(@”btnClick—%d—%@”,i,current);33     }34 }35<br>    36 @end<br><a href="&quot;复制代码&quot;"><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a><a href="&quot;复制代码&quot;"></a> 执行效果：<br><img src="http://images.cnitblog.com/i/450136/201406/241235051118926.png" alt=""><br>说明：当点击执行的时候，textView点击无响应。<br><img src="http://images.cnitblog.com/i/450136/201406/241236350808178.png" alt=""><br>执行分析：等待主线程串行执行。<br><img src="http://images.cnitblog.com/i/450136/201406/241238095028893.png" alt=""><br>开启子线程。<br><img src="http://images.cnitblog.com/i/450136/201406/241238382996357.png" alt=""></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设定位置和大小</span></div><div class="line">    <span class="built_in">CGRect</span> frame = <span class="built_in">CGRectMake</span>(<span class="number">50</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">    frame.size = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"load.gif"</span>].size;</div><div class="line">    <span class="comment">// 读取gif图片数据</span></div><div class="line">    <span class="built_in">NSData</span> *gif = [<span class="built_in">NSData</span> dataWithContentsOfFile: [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"load"</span> ofType:<span class="string">@"gif"</span>]];</div><div class="line">    <span class="comment">// view生成</span></div><div class="line">    <span class="built_in">UIWebView</span> *webView = [[<span class="built_in">UIWebView</span> alloc] initWithFrame:frame];</div><div class="line">    webView.userInteractionEnabled = <span class="literal">NO</span>;<span class="comment">//用户不可交互</span></div><div class="line">    [webView loadData:gif MIMEType:<span class="string">@"image/gif"</span> textEncodingName:<span class="literal">nil</span> baseURL:<span class="literal">nil</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:webView];</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -635,10 +591,10 @@
 
 
   
-    <article id="post-oc/通知" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/model归档" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/通知/" class="article-date">
+      <a href="/2016/10/08/oc/model归档/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -654,7 +610,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/通知/">通知</a>
+      <a class="article-title" href="/2016/10/08/oc/model归档/">model归档</a>
     </h1>
   
 
@@ -665,106 +621,129 @@
       
           
         <a id="more"></a>
-<p>#warning通知第一步，注册通知<br>   //    NSNotification消息通知类，是抽象类，使用他的子类，消息中心单例    [[NSNotificationCenterdefaultCenter] addObserver:selfselector:@selector(changeColor:)name:@”changeColor”object:nil];   #warning通知第二步，实现通知触发的方法<br>//当收到通知后，该方法会被执行<br>-(void)changeColor:(NSNotification*)notification<br>{</p>
-<p>#warning通知第四步，接收消息<br>   UIColor<em>color = (UIColor</em>)[notificationobject];<br>   self.view.backgroundColor= color;}</p>
-<p>#warning通知第三步，发送通知<br>    [[NSNotificationCenterdefaultCenter]postNotificationName:@”changeColor”object:[UIColorredColor]];    [[NSNotificationCenterdefaultCenter]postNotificationName:@”changeColor2”object:[UIColorredColor]];  </p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#warning 归档第一步：让model签订NSCoding协议</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Student</span> : <span class="title">NSObject</span>&lt;<span class="title">NSCoding</span>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)<span class="built_in">NSString</span> *name;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">assign</span>)<span class="built_in">NSInteger</span> age;</div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)<span class="built_in">NSString</span> *gender;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"Student.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Student</span></span></div><div class="line"></div><div class="line"><span class="meta">#warning 归档第二步：对model属性进行编码</span></div><div class="line">-(<span class="keyword">void</span>)encodeWithCoder:(<span class="built_in">NSCoder</span> *)aCoder</div><div class="line">&#123;</div><div class="line">    [aCoder encodeObject:<span class="keyword">self</span>.name forKey:<span class="string">@"name"</span>];</div><div class="line">    [aCoder encodeObject:<span class="keyword">self</span>.gender forKey:<span class="string">@"gender"</span>];</div><div class="line">    [aCoder encodeInteger:<span class="keyword">self</span>.age forKey:<span class="string">@"age"</span>];</div><div class="line">&#125;</div><div class="line"><span class="meta">#warning 归档第三步：对model进行解码</span></div><div class="line">-(<span class="keyword">id</span>)initWithCoder:(<span class="built_in">NSCoder</span> *)aDecoder</div><div class="line">&#123;</div><div class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</div><div class="line">        <span class="keyword">self</span>.name =</div><div class="line">        [aDecoder decodeObjectForKey:<span class="string">@"name"</span>];</div><div class="line">        <span class="keyword">self</span>.gender =</div><div class="line">        [aDecoder decodeObjectForKey:<span class="string">@"gender"</span>];</div><div class="line">        <span class="keyword">self</span>.age =</div><div class="line">        [aDecoder decodeIntegerForKey:<span class="string">@"age"</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"></div><div class="line"> <span class="comment">/***************写入model*************************/</span></div><div class="line">    <span class="comment">//缓存自定义model模型数据</span></div><div class="line">    <span class="comment">//需要使用iOS中归档/反归档，专门来存储model数据到本地</span></div><div class="line">   </div><div class="line"><span class="meta">#warning 归档第四步：对model进行归档操作</span></div><div class="line">    Student *stu = [[Student alloc]init];</div><div class="line">    stu.name = <span class="string">@"大水杯"</span>;</div><div class="line">    stu.gender = <span class="string">@"男"</span>;</div><div class="line">    stu.age = <span class="number">18</span>;</div><div class="line">    <span class="built_in">NSString</span> *archiverPath = [documentPath stringByAppendingPathComponent:<span class="string">@"student"</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//归档类</span></div><div class="line">    <span class="built_in">BOOL</span> result3 =</div><div class="line">    [<span class="built_in">NSKeyedArchiver</span> archiveRootObject:stu toFile:archiverPath];</div><div class="line">   </div><div class="line">    <span class="keyword">if</span> (result3) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"归档成功"</span>);</div><div class="line">    &#125;<span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"归档失败"</span>);</div><div class="line">    &#125;</div><div class="line">   </div><div class="line">    <span class="comment">//反归档取出model数据</span></div><div class="line">    Student *stu1 = [<span class="built_in">NSKeyedUnarchiver</span> unarchiveObjectWithFile:archiverPath];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"name = %@ %@ %ld"</span>,stu1.name,stu1.gender,stu1.age);</div><div class="line">    <span class="comment">/***************写入model*************************/</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/runtime 运行时机制 完全解读" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/runtime 运行时机制 完全解读/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>我们前面已经讲过一篇runtime 原理，现在这篇文章主要介绍的是runtime是什么以及怎么用！希望对读者有所帮助！<br>首先，第一个问题，<br>1》runtime实现的机制是什么,怎么用，一般用于干嘛？<br>这个问题我就不跟大家绕弯子了，直接告诉大家，<br>runtime是一套比较底层的纯C语言API, 属于1个C语言库, 包含了很多底层的C语言API。<br>在我们平时编写的OC代码中, 程序运行过程时, 其实最终都是转成了runtime的C语言代码, runtime算是OC的幕后工作者<br>比如说，下面一个创建对象的方法中，<br>举例:<br>OC :<br>[[MJPerson alloc] init]<br>runtime :<br>objc_msgSend(objc_msgSend(“MJPerson” , “alloc”), “init”)<br>第二个问题<br>runtime 用来干什么呢？？用在那些地方呢？怎么用呢？<br>runtime是属于OC的底层, 可以进行一些非常底层的操作(用OC是无法现实的, 不好实现)</p>
 <ul>
-<li>(void)dealloc<br>{<br>  [[NSNotificationCenterdefaultCenter]removeObserver:selfname:@”changeColor”object:nil];<br>  [superdealloc];}</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/长按保存图片到本地" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/长按保存图片到本地/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/长按保存图片到本地/">长按保存图片到本地</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>```objc<br>  //创建UILongPressGestureRecognizer     UILongPressGestureRecognizer*longPG = [[UILongPressGestureRecognizeralloc]initWithTarget:selfaction:@selector(longAction:)<br> ];    [selfaddGestureRecognizer:longPG];</p>
-<p>}</p>
-<p>//长按触发的方法<br>-(void)longAction:(UILongPressGestureRecognizer*)longPG<br>{</p>
-<p>   if(longPG.state==UIGestureRecognizerStateBegan)<br>    {</p>
-<pre><code>   //创建UIAlertView对象
-   UIAlertView*alert = [[UIAlertViewalloc]initWithTitle:@&quot;提示&quot;message:@&quot;是否保存图片到本地&quot;delegate:selfcancelButtonTitle:@&quot;取消&quot;otherButtonTitles:@&quot;确定&quot;,nil];
-   //调用show方法
-    [alertshow];
-   //释放
-    [alertrelease];
-
-
-}
-</code></pre><p>}</p>
-<ul>
-<li><p>(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex<br>{<br> if(buttonIndex ==1) {</p>
-<pre><code>//UIImage写入本地的方法
-UIImageWriteToSavedPhotosAlbum(self.photo.image,nil,nil,nil);
-
-//创建UIAlertView对象
-UIAlertView*alert = [[UIAlertViewalloc]initWithTitle:@&quot;提示&quot;message:@&quot;图片已保存成功&quot;delegate:selfcancelButtonTitle:nilotherButtonTitles:nil];
-//调用show方法
- [alertshow];
-//释放
- [alertrelease];
-
-dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
-</code></pre><p>(int64_t)(1.0f*NSEC_PER_SEC)),dispatch_get_main_queue(), ^{</p>
-<pre><code>    [alertdismissWithClickedButtonIndex:0animated:YES];
-});
-</code></pre><p>  }</p>
-<p> }</p>
+<li><p>在程序运行过程中, 动态创建一个类(比如KVO的底层实现)</p>
+</li>
+<li><p>在程序运行过程中, 动态地为某个类添加属性\方法, 修改属性值\方法</p>
+</li>
+<li><p>遍历一个类的所有成员变量(属性)\所有方法<br>例如：我们需要对一个类的属性进行归档解档的时候属性特别的多，这时候，我们就会写很多对应的代码，但是如果使用了runtime就可以动态设置！<br>例如，PYPerson.h的文件如下所示<br>#import </p>
 </li>
 </ul>
+<p><a href="http://my.oschina.net/u/996807" target="_blank" rel="external">@interface</a> PYPerson : NSObject<br>@property (nonatomic, assign) int age;<br>@property (nonatomic, assign) int height;<br>@property (nonatomic, copy) NSString <em>name;<br>@property (nonatomic, assign) int age2;<br>@property (nonatomic, assign) int height2;<br>@property (nonatomic, assign) int age3;<br>@property (nonatomic, assign) int height3;<br>@property (nonatomic, assign) int age4;<br>@property (nonatomic, assign) int height4;<br><a href="http://my.oschina.net/u/567204" target="_blank" rel="external">@end</a><br>而PYPerson.m实现文件的内容如下
+    </em><!-- lang: cpp -->*</p>
+<pre><code>#import &quot;PYPerson.h&quot;
+</code></pre><p>#import<br>@implementation PYPerson</p>
+<ul>
+<li><p>(void)encodeWithCoder:(NSCoder )encoder<br>{<br>unsigned int count = 0;<br>Ivar ivars = class_copyIvarList([PYPerson class], &amp;count);<br>for (int i = 0; i&lt;count; i++) {<br>  <em>// 取出i位置对应的成员变量</em><br>  Ivar ivar = ivars[i];</p>
+<p>  <em>// 查看成员变量</em><br>  const char *name = ivar_getName(ivar);</p>
+<p>  <em>// 归档</em><br>  NSString *key = [NSString stringWithUTF8String:name];<br>  id value = [self valueForKey:key];<br>  [encoder encodeObject:value forKey:key];</p>
+</li>
+</ul>
+<p>}<br>free(ivars);<br>}</p>
+<ul>
+<li><p>(id)initWithCoder:(NSCoder <em>)decoder<br>{<br>if (self = [super init]) {<br>  unsigned int count = 0;<br>  Ivar </em>ivars = class_copyIvarList([PYPerson class], &amp;count);</p>
+<p>  for (int i = 0; i&lt;count; i++) {</p>
+<pre><code>*// 取出i位置对应的成员变量*
+Ivar ivar = ivars[i];
+
+*// 查看成员变量*
+const char *name = ivar_getName(ivar);
+
+*// 归档*
+NSString *key = [NSString stringWithUTF8String:name];
+id value = [decoder decodeObjectForKey:key];
+
+*// 设置到成员变量身上*
+[self setValue:value forKey:key];
+</code></pre><p>  }</p>
+<p>  free(ivars);</p>
+</li>
+</ul>
+<p>}<br>return self;<br>}</p>
+<p><a href="http://my.oschina.net/u/567204" target="_blank" rel="external">@end</a><br>这样我们可以看到归档和解档的案例其实是runtime写下的<br>学习，runtime机制首先要了解下面几个问题<br>1相关的头文件和函数<br>1&gt; 头文件</p>
+<ul>
+<li>利用头文件，我们可以查看到runtime中的各个方法！ </li>
+</ul>
+<p>2&gt; 相关应用</p>
+<ul>
+<li>NSCoding(归档和解档, 利用runtime遍历模型对象的所有属性)</li>
+<li>字典 –&gt; 模型 (利用runtime遍历模型对象的所有属性, 根据属性名从字典中取出对应的值, 设置到模型的属性上)</li>
+<li>KVO(利用runtime动态产生一个类)</li>
+<li>用于封装框架(想怎么改就怎么改)<br>这就是我们runtime机制的只要运用方向</li>
+</ul>
+<p>3&gt; 相关函数</p>
+<ul>
+<li>objc_msgSend : 给对象发送消息</li>
+<li>class_copyMethodList : 遍历某个类所有的方法</li>
+<li>class_copyIvarList : 遍历某个类所有的成员变量</li>
+<li>class_…..<br>这是我们学习runtime必须知道的函数！</li>
+</ul>
+<p>4.必备常识<br>1&gt; Ivar : 成员变量<br>2&gt; Method : 成员方法<br>从上面例子中我们看到我们定义的成员变量，如果要是动态创建方法，可以使用Method，<br>也许，看到这里，你是否对runtime有了更深入的了解呢？在这里，希望我们大家相互交流！有什么错误之处，还请指正 </p>
+<p>RunTime简称运行时。就是系统在运行的时候的一些机制，其中最主要的是消息机制。对于C语言，函数的调用在编译的时候会决定调用哪个函数（ C语言的函数调用请看这里 ）。编译完成之后直接顺序执行，无任何二义性。OC的函数调用成为消息发送。属于动态调用过程。在编译的时候并不能决定真正调用哪个函数（事实证明，在编 译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错。而C语言在编译阶段就会报错）。只有在真正运行的时候才会根据函数的名称找 到对应的函数来调用。<br>那OC是怎么实现动态调用的呢？下面我们来看看OC通过发送消息来达到动态调用的秘密。假如在OC中写了这样的一个代码：<br>1<code>[obj makeText];</code>其中obj是一个对象，makeText是一个函数名称。对于这样一个简单的调用。在编译时RunTime会将上述代码转化成<br>1<code>objc_msgSend(obj,@selector(makeText));</code>首先我们来看看obj这个对象，iOS中的obj都继承于NSObject。<br>123<code>@interface NSObject &lt;nsobject&gt; {``    ``Class isa  OBJC_ISA_AVAILABILITY;``}&lt;/nsobject&gt;</code>在NSObjcet中存在一个Class的isa指针。然后我们看看Class：<br>1234567891011121314<code>typedef struct objc_class *Class;``struct objc_class {``  ``Class isa; ``// 指向metaclass`` </code> <code>``Class super_class ; ``// 指向其父类``  ``const char *name ; ``// 类名``  ``long version ; ``// 类的版本信息，初始化默认为0，可以通过runtime函数class_setVersion和class_getVersion进行修改、读取``  ``long info; ``// 一些标识信息,如CLS_CLASS (0x1L) 表示该类为普通 class ，其中包含对象方法和成员变量;CLS_META (0x2L) 表示该类为 metaclass，其中包含类方法;``  ``long instance_size ; ``// 该类的实例变量大小(包括从父类继承下来的实例变量);``  ``struct objc_ivar_list *ivars; ``// 用于存储每个成员变量的地址``  ``struct objc_method_list **methodLists ; ``// 与 info 的一些标志位有关,如CLS_CLASS (0x1L),则存储对象方法，如CLS_META (0x2L)，则存储类方法;``  ``struct objc_cache *cache; ``// 指向最近使用的方法的指针，用于提升效率；``  ``struct objc_protocol_list *protocols; ``// 存储该类遵守的协议``    ``}</code></p>
+<p>我们可以看到，对于一个Class类中，存在很多东西，下面我来一一解释一下：<br>Class isa：指向metaclass，也就是静态的Class。一般一个Obj对象中的isa会指向普通的Class，这个Class中存储普通成员变量和对 象方法（“-”开头的方法），普通Class中的isa指针指向静态Class，静态Class中存储static类型成员变量和类方法（“+”开头的方 法）。<br>Class super_class:指向父类，如果这个类是根类，则为NULL。<br>下面一张图片很好的描述了类和对象的继承关系：<br><img src="cid:f919a9e0f1d396baac9ed7f8fdc4a3be" alt="iuqQFnm.png" title="1413628797629491.png"><br><strong>注意</strong>：所有metaclass中isa指针都指向跟metaclass。而跟metaclass则指向自身。Root metaclass是通过继承Root class产生的。与root class结构体成员一致，也就是前面提到的结构。不同的是Root metaclass的isa指针指向自身。<br>Class类中其他的成员这里就先不做过多解释了，下面我们来看看：<br><strong>@selector (makeText)</strong>：这是一个SEL方法选择器。SEL其主要作用是快速的通过方法名字（makeText）查找到对应方法的函数指针，然后调用其函 数。SEL其本身是一个Int类型的一个地址，地址中存放着方法的名字。对于一个类中。每一个方法对应着一个SEL。所以iOS类中不能存在2个名称相同 的方法，即使参数类型不同，因为SEL是根据方法名字生成的，相同的方法名称只能对应一个SEL。<br>下面我们就来看看具体消息发送之后是怎么来动态查找对应的方法的。</p>
+<p>首先，编译器将代码[obj makeText];转化为objc_msgSend(obj, @selector (makeText));，在objc_msgSend函数中。首先通过obj的isa指针找到obj对应的class。在Class中先去cache中 通过SEL查找对应函数method（猜测cache中method列表是以SEL为key通过hash表来存储的，这样能提高函数查找速度），若 cache中未找到。再去methodList中查找，若methodlist中未找到，则取superClass中查找。若能找到，则将method加<br> 入到cache中，以方便下次查找，并通过method中的函数指针跳转到对应的函数中去执行。 </p>
 
       
     </div>
@@ -795,10 +774,10 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
 
 
   
-    <article id="post-oc/通讯录" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/scrollView加约束" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/通讯录/" class="article-date">
+      <a href="/2016/10/08/oc/scrollView加约束/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -814,7 +793,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/通讯录/">通讯录</a>
+      <a class="article-title" href="/2016/10/08/oc/scrollView加约束/">scrollView加约束</a>
     </h1>
   
 
@@ -825,8 +804,36 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
       
           
         <a id="more"></a>
-<p>通讯录<br>AddressBook<br>iOS中带有一个Contacts应用程序来管理联系人，但是有些时候我们希望自己的应用能够访问或者修改这些信息，这个时候就要用到AddressBook.framework框架。iOS中的通讯录是存储在数据库中的，由于iOS的权限设计，开发人员是不允许直接访问通讯录数据库的，必须依靠AddressBook提供的标准API来实现通讯录操作。通过AddressBook.framework开发者可以从底层去操作AddressBook.framework的所有信息，但是需要注意的是这个框架是基于C语言编写的，无法使用ARC来管理内存，开发者需要自己管理内存。下面大致介绍一下通讯录操作中常用的类型：<br>ABAddressBookRef：代表通讯录对象，通过该对象开发人员不用过多的关注通讯录的存储方式，可以直接以透明的方式去访问、保存（在使用AddressBook.framework操作联系人时，所有的增加、删除、修改后都必须执行保存操作，类似于Core Data）等。<br>ABRecordRef：代表一个通用的记录对象，可以是一条联系人信息，也可以是一个群组，可以通过ABRecordGetRecordType()函数获得具体类型。如果作为联系人（事实上也经常使用它作为联系人），那么这个记录记录了一个完整的联系人信息（姓名、性别、电话、邮件等），每条记录都有一个唯一的ID标示这条记录（可以通过ABRecordGetRecordID()函数获得）。<br>ABPersonRef：代表联系人信息，很少直接使用，实际开发过程中通常会使用类型为“kABPersonType”的ABRecordRef来表示联系人（由此可见ABPersonRef其实是一种类型为“kABPersonType”的ABRecordRef）<br>ABGroupRef：代表群组，与ABPersonRef类似，很少直接使用ABGroupRef，而是使用类型为“kABGroupType”的ABRecordRef来表示群组，一个群组可以包含多个联系人，一个联系人也同样可以多个群组。<br>由于通讯录操作的关键是对ABRecordRef的操作，首先看一下常用的操作通讯录记录的方法：<br>ABPersonCreate():创建一个类型为“kABPersonType”的ABRecordRef。<br>ABRecordCopyValue():取得指定属性的值。<br>ABRecordCopyCompositeName():取得联系人（或群组）的复合信息（对于联系人则包括：姓、名、公司等信息，对于群组则返回组名称）。<br>ABRecordSetValue():设置ABRecordRef的属性值。注意在设置ABRecordRef的值时又分为单值属性和多值属性：单值属性设置只要通过ABRecordSetValue()方法指定属性名和值即可；多值属性则要先通过创建一个ABMutableMultiValueRef类型的变量，然后通过ABMultiValueAddValueAndLabel()方法依次添加属性值，最后通过ABRecordSetValue()方法将ABMutableMultiValueRef类型的变量设置为记录值。<br>ABRecordRemoveValue():删除指定的属性值。<br>注意：<br>由于联系人访问时（读取、设置、删除时）牵扯到大量联系人属性，可以到ABPerson.h中查询或者直接到帮助文档“Personal Information Properties”<br>通讯录的访问步骤一般如下：<br>调用ABAddressBookCreateWithOptions()方法创建通讯录对象ABAddressBookRef。<br>调用ABAddressBookRequestAccessWithCompletion()方法获得用户授权访问通讯录。<br>调用ABAddressBookCopyArrayOfAllPeople()、ABAddressBookCopyPeopleWithName()方法查询联系人信息。<br>读取联系人后如果要显示联系人信息则可以调用ABRecord相关方法读取相应的数据；如果要进行修改联系人信息，则可以使用对应的方法修改ABRecord信息，然后调用ABAddressBookSave()方法提交修改；如果要删除联系人，则可以调用ABAddressBookRemoveRecord()方法删除，然后调用ABAddressBookSave()提交修改操作。<br>也就是说如果要修改或者删除都需要首先查询对应的联系人，然后修改或删除后提交更改。如果用户要增加一个联系人则不用进行查询，直接调用ABPersonCreate()方法创建一个ABRecord然后设置具体的属性，调用ABAddressBookAddRecord方法添加即可。<br>下面就通过一个示例演示一下如何通过ABAddressBook.framework访问通讯录，这个例子中通过一个UITableViewController模拟一下通讯录的查看、删除、添加操作。<br>主控制器视图，用于显示联系人，修改删除联系人：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div><div class="line">329</div><div class="line">330</div><div class="line">331</div><div class="line">332</div><div class="line">333</div><div class="line">334</div><div class="line">335</div><div class="line">336</div><div class="line">337</div><div class="line">338</div><div class="line">339</div><div class="line">340</div><div class="line">341</div><div class="line">342</div><div class="line">343</div><div class="line">344</div><div class="line">345</div><div class="line">346</div><div class="line">347</div><div class="line">348</div><div class="line">349</div><div class="line">350</div><div class="line">351</div><div class="line">352</div><div class="line">353</div><div class="line">354</div><div class="line">355</div><div class="line">356</div><div class="line">357</div><div class="line">358</div><div class="line">359</div><div class="line">360</div><div class="line">361</div><div class="line">362</div></pre></td><td class="code"><pre><div class="line">KCContactViewController.h</div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  KCTableViewController.h</span></div><div class="line"><span class="comment">//  AddressBook</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by Kenshin Cui on 14/04/05.</span></div><div class="line"><span class="comment">//  Copyright (c) 2014年 cmjstudio. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  定义一个协议作为代理</div><div class="line"> */</div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">KCContactDelegate</span></span></div><div class="line"><span class="comment">//新增或修改联系人</span></div><div class="line">-(<span class="keyword">void</span>)editPersonWithFirstName:(<span class="built_in">NSString</span> *)firstName lastName:(<span class="built_in">NSString</span> *)lastName workNumber:(<span class="built_in">NSString</span> *)workNumber;</div><div class="line"><span class="comment">//取消修改或新增</span></div><div class="line">-(<span class="keyword">void</span>)cancelEdit;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">KCContactTableViewController</span> : <span class="title">UITableViewController</span></span></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line">KCContactViewController.m</div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  KCTableViewController.m</span></div><div class="line"><span class="comment">//  AddressBook</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  Created by Kenshin Cui on 14/04/05.</span></div><div class="line"><span class="comment">//  Copyright (c) 2014年 cmjstudio. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"KCContactTableViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;AddressBook/AddressBook.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"KCAddPersonViewController.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">KCContactTableViewController</span> ()&lt;<span class="title">KCContactDelegate</span>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">assign</span>,<span class="keyword">nonatomic</span>) ABAddressBookRef addressBook;<span class="comment">//通讯录</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>,<span class="keyword">nonatomic</span>) <span class="built_in">NSMutableArray</span> *allPerson;<span class="comment">//通讯录所有人员</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">assign</span>,<span class="keyword">nonatomic</span>) <span class="keyword">int</span> isModify;<span class="comment">//标识是修改还是新增，通过选择cell进行导航则认为是修改，否则视为新增</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">assign</span>,<span class="keyword">nonatomic</span>) <span class="built_in">UITableViewCell</span> *selectedCell;<span class="comment">//当前选中的单元格</span></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">KCContactTableViewController</span></span></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 控制器视图</span></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line"> </div><div class="line">    <span class="comment">//请求访问通讯录并初始化数据</span></div><div class="line">    [<span class="keyword">self</span> requestAddressBook];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//由于在整个视图控制器周期内addressBook都驻留在内存中，所有当控制器视图销毁时销毁该对象</span></div><div class="line">-(<span class="keyword">void</span>)dealloc&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.addressBook!=<span class="literal">NULL</span>) &#123;</div><div class="line">        <span class="built_in">CFRelease</span>(<span class="keyword">self</span>.addressBook);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - UI事件</span></div><div class="line"><span class="comment">//点击删除按钮</span></div><div class="line">- (<span class="keyword">IBAction</span>)trashClick:(<span class="built_in">UIBarButtonItem</span> *)sender &#123;</div><div class="line">    <span class="keyword">self</span>.tableView.editing=!<span class="keyword">self</span>.tableView.editing;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - UITableView数据源方法</span></div><div class="line"></div><div class="line">- (<span class="built_in">NSInteger</span>)numberOfSectionsInTableView:(<span class="built_in">UITableView</span> *)tableView &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">self</span>.allPerson.count;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</div><div class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> *identtityKey=<span class="string">@"myTableViewCellIdentityKey1"</span>;</div><div class="line">    <span class="built_in">UITableViewCell</span> *cell=[tableView dequeueReusableCellWithIdentifier:identtityKey];</div><div class="line">    <span class="keyword">if</span>(cell==<span class="literal">nil</span>)&#123;</div><div class="line">        cell=[[<span class="built_in">UITableViewCell</span> alloc]initWithStyle:<span class="built_in">UITableViewCellStyleValue1</span> reuseIdentifier:identtityKey];</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//取得一条人员记录</span></div><div class="line">    ABRecordRef recordRef=(__bridge ABRecordRef)<span class="keyword">self</span>.allPerson[indexPath.row];</div><div class="line">    <span class="comment">//取得记录中得信息</span></div><div class="line">    <span class="built_in">NSString</span> *firstName=(__bridge <span class="built_in">NSString</span> *) ABRecordCopyValue(recordRef, kABPersonFirstNameProperty);<span class="comment">//注意这里进行了强转，不用自己释放资源</span></div><div class="line">    <span class="built_in">NSString</span> *lastName=(__bridge <span class="built_in">NSString</span> *)ABRecordCopyValue(recordRef, kABPersonLastNameProperty);</div><div class="line">    </div><div class="line">    ABMultiValueRef phoneNumbersRef= ABRecordCopyValue(recordRef, kABPersonPhoneProperty);<span class="comment">//获取手机号，注意手机号是ABMultiValueRef类，有可能有多条</span></div><div class="line"><span class="comment">//    NSArray *phoneNumbers=(__bridge NSArray *)ABMultiValueCopyArrayOfAllValues(phoneNumbersRef);//取得CFArraryRef类型的手机记录并转化为NSArrary</span></div><div class="line">    <span class="keyword">long</span> count= ABMultiValueGetCount(phoneNumbersRef);</div><div class="line"><span class="comment">//    for(int i=0;i&lt;count;++i)&#123;</span></div><div class="line"><span class="comment">//        NSString *phoneLabel= (__bridge NSString *)(ABMultiValueCopyLabelAtIndex(phoneNumbersRef, i));</span></div><div class="line"><span class="comment">//        NSString *phoneNumber=(__bridge NSString *)(ABMultiValueCopyValueAtIndex(phoneNumbersRef, i));</span></div><div class="line"><span class="comment">//        NSLog(@"%@:%@",phoneLabel,phoneNumber);</span></div><div class="line"><span class="comment">//    &#125;</span></div><div class="line">    </div><div class="line">    cell.textLabel.text=[<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@ %@"</span>,firstName,lastName];</div><div class="line">    <span class="keyword">if</span> (count&gt;<span class="number">0</span>) &#123;</div><div class="line">        cell.detailTextLabel.text=(__bridge <span class="built_in">NSString</span> *)(ABMultiValueCopyValueAtIndex(phoneNumbersRef, <span class="number">0</span>));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(ABPersonHasImageData(recordRef))&#123;<span class="comment">//如果有照片数据</span></div><div class="line">        <span class="built_in">NSData</span> *imageData= (__bridge <span class="built_in">NSData</span> *)(ABPersonCopyImageData(recordRef));</div><div class="line">        cell.imageView.image=[<span class="built_in">UIImage</span> imageWithData:imageData];</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        cell.imageView.image=[<span class="built_in">UIImage</span> imageNamed:<span class="string">@"avatar"</span>];<span class="comment">//没有图片使用默认头像</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//使用cell的tag存储记录id</span></div><div class="line">    cell.tag=ABRecordGetRecordID(recordRef);</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> cell;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView commitEditingStyle:(<span class="built_in">UITableViewCellEditingStyle</span>)editingStyle forRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</div><div class="line">    <span class="keyword">if</span> (editingStyle == <span class="built_in">UITableViewCellEditingStyleDelete</span>) &#123;</div><div class="line">        ABRecordRef recordRef=(__bridge ABRecordRef )<span class="keyword">self</span>.allPerson[indexPath.row];</div><div class="line">        [<span class="keyword">self</span> removePersonWithRecord:recordRef];<span class="comment">//从通讯录删除</span></div><div class="line">        [<span class="keyword">self</span>.allPerson removeObjectAtIndex:indexPath.row];<span class="comment">//从数组移除</span></div><div class="line">        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:<span class="built_in">UITableViewRowAnimationFade</span>];<span class="comment">//从列表删除</span></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (editingStyle == <span class="built_in">UITableViewCellEditingStyleInsert</span>) &#123;</div><div class="line">        <span class="comment">// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view</span></div><div class="line">    &#125;   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - UITableView代理方法</span></div><div class="line">-(<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView didSelectRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath&#123;</div><div class="line">    <span class="keyword">self</span>.isModify=<span class="number">1</span>;</div><div class="line">    <span class="keyword">self</span>.selectedCell=[tableView cellForRowAtIndexPath:indexPath];</div><div class="line">    [<span class="keyword">self</span> performSegueWithIdentifier:<span class="string">@"AddPerson"</span> sender:<span class="keyword">self</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - Navigation</span></div><div class="line">- (<span class="keyword">void</span>)prepareForSegue:(<span class="built_in">UIStoryboardSegue</span> *)segue sender:(<span class="keyword">id</span>)sender &#123;</div><div class="line">    <span class="keyword">if</span>([segue.identifier isEqualToString:<span class="string">@"AddPerson"</span>])&#123;</div><div class="line">        <span class="built_in">UINavigationController</span> *navigationController=(<span class="built_in">UINavigationController</span> *)segue.destinationViewController;</div><div class="line">        <span class="comment">//根据导航控制器取得添加/修改人员的控制器视图</span></div><div class="line">        KCAddPersonViewController *addPersonController=(KCAddPersonViewController *)navigationController.topViewController;</div><div class="line">        addPersonController.delegate=<span class="keyword">self</span>;</div><div class="line">        <span class="comment">//如果是通过选择cell进行的导航操作说明是修改，否则为添加</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.isModify) &#123;</div><div class="line">            <span class="built_in">UITableViewCell</span> *cell=<span class="keyword">self</span>.selectedCell;</div><div class="line">            addPersonController.recordID=(ABRecordID)cell.tag;<span class="comment">//设置</span></div><div class="line">            <span class="built_in">NSArray</span> *array=[cell.textLabel.text componentsSeparatedByString:<span class="string">@" "</span>];</div><div class="line">            <span class="keyword">if</span> (array.count&gt;<span class="number">0</span>) &#123;</div><div class="line">                addPersonController.firstNameText=[array firstObject];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (array.count&gt;<span class="number">1</span>) &#123;</div><div class="line">                addPersonController.lastNameText=[array lastObject];</div><div class="line">            &#125;</div><div class="line">            addPersonController.workPhoneText=cell.detailTextLabel.text;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">#pragma mark - KCContact代理方法</span></div><div class="line">-(<span class="keyword">void</span>)editPersonWithFirstName:(<span class="built_in">NSString</span> *)firstName lastName:(<span class="built_in">NSString</span> *)lastName workNumber:(<span class="built_in">NSString</span> *)workNumber&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.isModify) &#123;</div><div class="line">        <span class="built_in">UITableViewCell</span> *cell=<span class="keyword">self</span>.selectedCell;</div><div class="line">        <span class="built_in">NSIndexPath</span> *indexPath= [<span class="keyword">self</span>.tableView indexPathForCell:cell];</div><div class="line">        [<span class="keyword">self</span> modifyPersonWithRecordID:(ABRecordID)cell.tag firstName:firstName lastName:lastName workNumber:workNumber];</div><div class="line">        [<span class="keyword">self</span>.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:<span class="built_in">UITableViewRowAnimationRight</span>];</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        [<span class="keyword">self</span> addPersonWithFirstName:firstName lastName:lastName workNumber:workNumber];<span class="comment">//通讯簿中添加信息</span></div><div class="line">        [<span class="keyword">self</span> initAllPerson];<span class="comment">//重新初始化数据</span></div><div class="line">        [<span class="keyword">self</span>.tableView reloadData];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">self</span>.isModify=<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)cancelEdit&#123;</div><div class="line">    <span class="keyword">self</span>.isModify=<span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 私有方法</span></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  请求访问通讯录</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)requestAddressBook&#123;</div><div class="line">    <span class="comment">//创建通讯录对象</span></div><div class="line">    <span class="keyword">self</span>.addressBook=ABAddressBookCreateWithOptions(<span class="literal">NULL</span>, <span class="literal">NULL</span>);</div><div class="line">    </div><div class="line">    <span class="comment">//请求访问用户通讯录,注意无论成功与否block都会调用</span></div><div class="line">    ABAddressBookRequestAccessWithCompletion(<span class="keyword">self</span>.addressBook, ^(<span class="keyword">bool</span> granted, <span class="built_in">CFErrorRef</span> error) &#123;</div><div class="line">        <span class="keyword">if</span> (!granted) &#123;</div><div class="line">            <span class="built_in">NSLog</span>(<span class="string">@"未获得通讯录访问权限！"</span>);</div><div class="line">        &#125;</div><div class="line">        [<span class="keyword">self</span> initAllPerson];</div><div class="line">        </div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  取得所有通讯录记录</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)initAllPerson&#123;</div><div class="line">    <span class="comment">//取得通讯录访问授权</span></div><div class="line">    ABAuthorizationStatus authorization= ABAddressBookGetAuthorizationStatus();</div><div class="line">    <span class="comment">//如果未获得授权</span></div><div class="line">    <span class="keyword">if</span> (authorization!=kABAuthorizationStatusAuthorized) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"尚未获得通讯录访问授权！"</span>);</div><div class="line">        <span class="keyword">return</span> ;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//取得通讯录中所有人员记录</span></div><div class="line">    <span class="built_in">CFArrayRef</span> allPeople= ABAddressBookCopyArrayOfAllPeople(<span class="keyword">self</span>.addressBook);</div><div class="line">    <span class="keyword">self</span>.allPerson=(__bridge <span class="built_in">NSMutableArray</span> *)allPeople;</div><div class="line">    </div><div class="line">    <span class="comment">//释放资源</span></div><div class="line">    <span class="built_in">CFRelease</span>(allPeople);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  删除指定的记录</div><div class="line"> *</div><div class="line"> *  @param recordRef 要删除的记录</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)removePersonWithRecord:(ABRecordRef)recordRef&#123;</div><div class="line">    ABAddressBookRemoveRecord(<span class="keyword">self</span>.addressBook, recordRef, <span class="literal">NULL</span>);<span class="comment">//删除</span></div><div class="line">    ABAddressBookSave(<span class="keyword">self</span>.addressBook, <span class="literal">NULL</span>);<span class="comment">//删除之后提交更改</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  根据姓名删除记录</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)removePersonWithName:(<span class="built_in">NSString</span> *)personName&#123;</div><div class="line">    <span class="built_in">CFStringRef</span> personNameRef=(__bridge <span class="built_in">CFStringRef</span>)(personName);</div><div class="line">    <span class="built_in">CFArrayRef</span> recordsRef= ABAddressBookCopyPeopleWithName(<span class="keyword">self</span>.addressBook, personNameRef);<span class="comment">//根据人员姓名查找</span></div><div class="line">    <span class="built_in">CFIndex</span> count= <span class="built_in">CFArrayGetCount</span>(recordsRef);<span class="comment">//取得记录数</span></div><div class="line">    <span class="keyword">for</span> (<span class="built_in">CFIndex</span> i=<span class="number">0</span>; i&lt;count; ++i) &#123;</div><div class="line">        ABRecordRef recordRef=<span class="built_in">CFArrayGetValueAtIndex</span>(recordsRef, i);<span class="comment">//取得指定的记录</span></div><div class="line">        ABAddressBookRemoveRecord(<span class="keyword">self</span>.addressBook, recordRef, <span class="literal">NULL</span>);<span class="comment">//删除</span></div><div class="line">    &#125;</div><div class="line">    ABAddressBookSave(<span class="keyword">self</span>.addressBook, <span class="literal">NULL</span>);<span class="comment">//删除之后提交更改</span></div><div class="line">    <span class="built_in">CFRelease</span>(recordsRef);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  添加一条记录</div><div class="line"> *</div><div class="line"> *  @param firstName  名</div><div class="line"> *  @param lastName   姓</div><div class="line"> *  @param iPhoneName iPhone手机号</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)addPersonWithFirstName:(<span class="built_in">NSString</span> *)firstName lastName:(<span class="built_in">NSString</span> *)lastName workNumber:(<span class="built_in">NSString</span> *)workNumber&#123;</div><div class="line">    <span class="comment">//创建一条记录</span></div><div class="line">    ABRecordRef recordRef= ABPersonCreate();</div><div class="line">    ABRecordSetValue(recordRef, kABPersonFirstNameProperty, (__bridge <span class="built_in">CFTypeRef</span>)(firstName), <span class="literal">NULL</span>);<span class="comment">//添加名</span></div><div class="line">    ABRecordSetValue(recordRef, kABPersonLastNameProperty, (__bridge <span class="built_in">CFTypeRef</span>)(lastName), <span class="literal">NULL</span>);<span class="comment">//添加姓</span></div><div class="line">    </div><div class="line">    ABMutableMultiValueRef multiValueRef =ABMultiValueCreateMutable(kABStringPropertyType);<span class="comment">//添加设置多值属性</span></div><div class="line">    ABMultiValueAddValueAndLabel(multiValueRef, (__bridge <span class="built_in">CFStringRef</span>)(workNumber), kABWorkLabel, <span class="literal">NULL</span>);<span class="comment">//添加工作电话</span></div><div class="line">    ABRecordSetValue(recordRef, kABPersonPhoneProperty, multiValueRef, <span class="literal">NULL</span>);</div><div class="line">    </div><div class="line">    <span class="comment">//添加记录</span></div><div class="line">    ABAddressBookAddRecord(<span class="keyword">self</span>.addressBook, recordRef, <span class="literal">NULL</span>);</div><div class="line">    </div><div class="line">    <span class="comment">//保存通讯录，提交更改</span></div><div class="line">    ABAddressBookSave(<span class="keyword">self</span>.addressBook, <span class="literal">NULL</span>);</div><div class="line">    <span class="comment">//释放资源</span></div><div class="line">    <span class="built_in">CFRelease</span>(recordRef);</div><div class="line">    <span class="built_in">CFRelease</span>(multiValueRef);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> *  根据RecordID修改联系人信息</div><div class="line"> *</div><div class="line"> *  @param recordID   记录唯一ID</div><div class="line"> *  @param firstName  姓</div><div class="line"> *  @param lastName   名</div><div class="line"> *  @param homeNumber 工作电话</div><div class="line"> */</div><div class="line">-(<span class="keyword">void</span>)modifyPersonWithRecordID:(ABRecordID)recordID firstName:(<span class="built_in">NSString</span> *)firstName lastName:(<span class="built_in">NSString</span> *)lastName workNumber:(<span class="built_in">NSString</span> *)workNumber&#123;</div><div class="line">    ABRecordRef recordRef=ABAddressBookGetPersonWithRecordID(<span class="keyword">self</span>.addressBook,recordID);</div><div class="line">    ABRecordSetValue(recordRef, kABPersonFirstNameProperty, (__bridge <span class="built_in">CFTypeRef</span>)(firstName), <span class="literal">NULL</span>);<span class="comment">//添加名</span></div><div class="line">    ABRecordSetValue(recordRef, kABPersonLastNameProperty, (__bridge <span class="built_in">CFTypeRef</span>)(lastName), <span class="literal">NULL</span>);<span class="comment">//添加姓</span></div><div class="line">    </div><div class="line">    ABMutableMultiValueRef multiValueRef =ABMultiValueCreateMutable(kABStringPropertyType);</div><div class="line">    ABMultiValueAddValueAndLabel(multiValueRef, (__bridge <span class="built_in">CFStringRef</span>)(workNumber), kABWorkLabel, <span class="literal">NULL</span>);</div><div class="line">    ABRecordSetValue(recordRef, kABPersonPhoneProperty, multiValueRef, <span class="literal">NULL</span>);</div><div class="line">    <span class="comment">//保存记录，提交更改</span></div><div class="line">    ABAddressBookSave(<span class="keyword">self</span>.addressBook, <span class="literal">NULL</span>);</div><div class="line">    <span class="comment">//释放资源</span></div><div class="line">    <span class="built_in">CFRelease</span>(multiValueRef);</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div><div class="line">新增或修改控制器视图，用于显示一个联系人的信息或者新增一个联系人：</div><div class="line">KCAddPersonViewController.h</div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  KCAddPersonViewController.h</span></div><div class="line"><span class="comment">//  AddressBook</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  kABPersonFirstNameProperty</span></div><div class="line"><span class="comment">//  Copyright (c) 2014年 cmjstudio. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">KCContactDelegate</span>;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">KCAddPersonViewController</span> : <span class="title">UIViewController</span></span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">assign</span>,<span class="keyword">nonatomic</span>) <span class="keyword">int</span> recordID;<span class="comment">//通讯录记录id，如果ID不为0则代表修改否则认为是新增</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>,<span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *firstNameText;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>,<span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *lastNameText;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>,<span class="keyword">nonatomic</span>) <span class="built_in">NSString</span> *workPhoneText;</div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">strong</span>,<span class="keyword">nonatomic</span>) <span class="keyword">id</span>&lt;KCContactDelegate&gt; delegate;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line">KCAddPersonViewController.m</div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  KCAddPersonViewController.m</span></div><div class="line"><span class="comment">//  AddressBook</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">//  kABPersonFirstNameProperty</span></div><div class="line"><span class="comment">//  Copyright (c) 2014年 cmjstudio. All rights reserved.</span></div><div class="line"><span class="comment">//</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"KCAddPersonViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"KCContactTableViewController.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">KCAddPersonViewController</span> ()</span></div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UITextField</span> *firstName;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UITextField</span> *lastName;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">weak</span>, <span class="keyword">nonatomic</span>) <span class="keyword">IBOutlet</span> <span class="built_in">UITextField</span> *workPhone;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">KCAddPersonViewController</span></span></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    [<span class="keyword">self</span> setupUI];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - UI事件</span></div><div class="line">- (<span class="keyword">IBAction</span>)cancelClick:(<span class="built_in">UIBarButtonItem</span> *)sender &#123;</div><div class="line">    [<span class="keyword">self</span>.delegate cancelEdit];</div><div class="line">    [<span class="keyword">self</span> dismissViewControllerAnimated:<span class="literal">YES</span> completion:<span class="literal">nil</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">IBAction</span>)doneClick:(<span class="built_in">UIBarButtonItem</span> *)sender &#123;</div><div class="line">    <span class="comment">//调用代理方法</span></div><div class="line">    [<span class="keyword">self</span>.delegate editPersonWithFirstName:<span class="keyword">self</span>.firstName.text lastName:<span class="keyword">self</span>.lastName.text workNumber:<span class="keyword">self</span>.workPhone.text];</div><div class="line">    </div><div class="line">    [<span class="keyword">self</span> dismissViewControllerAnimated:<span class="literal">YES</span> completion:<span class="literal">nil</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 私有方法</span></div><div class="line">-(<span class="keyword">void</span>)setupUI&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.recordID) &#123;<span class="comment">//如果ID不为0则认为是修改，此时需要初始化界面</span></div><div class="line">        <span class="keyword">self</span>.firstName.text=<span class="keyword">self</span>.firstNameText;</div><div class="line">        <span class="keyword">self</span>.lastName.text=<span class="keyword">self</span>.lastNameText;</div><div class="line">        <span class="keyword">self</span>.workPhone.text=<span class="keyword">self</span>.workPhoneText;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<p>#尊重原创 转自：<a href="http://www.jianshu.com/p/1cfeb1eab6c6" target="_blank" rel="external">http://www.jianshu.com/p/1cfeb1eab6c6</a><br>#</p>
+<p>#先办到能设置contentSize</p>
+<ul>
+<li>得添加一个额外的视图,占位</li>
+<li>scrollView中只添加个UIView</li>
+<li>其它的控件全部放在这个UIView上</li>
+<li>设置UIView的高度,即为scrollView的contendSize</li>
+<li>得设置水平居中</li>
+<li>约束完毕</li>
+</ul>
+<p>##上下滚动</p>
+<ul>
+<li>1.添加一个UIView类型的子控件(这将是UIScrollView唯一的一个子控件)</li>
+<li>2.上下左右0</li>
+<li>3.高度(contentSize的高度,可滚动的高度)</li>
+<li>4.水平居中</li>
+</ul>
+<p>##左右滚动</p>
+<ul>
+<li>1.添加一个UIView类型的子控件(这将是UIScrollView唯一的一个子控件)</li>
+<li>2.上下左右0</li>
+<li>3.宽度(contentSize的宽度,可滚动的宽度)</li>
+<li>4.竖直居中</li>
+</ul>
+<p>##上下左右都能滚动</p>
+<ul>
+<li>1.添加一个UIView类型的子控件(这将是UIScrollView唯一的一个子控件)</li>
+<li>2.上下左右0</li>
+<li>3.宽度,高度(contentSize的宽度,可滚动的宽度,contentSize的高度,可滚动的高度)</li>
+</ul>
 
       
     </div>
@@ -857,10 +864,10 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
 
 
   
-    <article id="post-oc/音乐播放器时间" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/storyboard传值" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/音乐播放器时间/" class="article-date">
+      <a href="/2016/10/08/oc/storyboard传值/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -876,7 +883,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/音乐播放器时间/">音乐播放器时间</a>
+      <a class="article-title" href="/2016/10/08/oc/storyboard传值/">storyboard传值</a>
     </h1>
   
 
@@ -887,12 +894,76 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
       
           
         <a id="more"></a>
-<p>```objc<br> NSNumber*n = [self.dataDicvalueForKey:@”duration”];</p>
-<p>   self.progressSilder.maximumValue= n.floatValue;<br>   self.progressSilder.value= progress;</p>
-<p>   //当前时长进度progress<br>   NSIntegerproMin = (NSInteger)progress /60;//当前秒<br>   NSIntegerproSec = (NSInteger)progress %60;//当前分钟</p>
-<p>   //duration总时长<br>   NSIntegerdurMin = (NSInteger)n.floatValue/60;//总秒<br>   NSIntegerdurSec = (NSInteger)n.floatValue%60;//总分钟</p>
-<p>   self.curentTimeLabel.text= [NSStringstringWithFormat:@”%02ld:%02ld”,<br> proMin, proSec];   self.totalTimeLabel.text = [NSStringstringWithFormat:@”%02ld:%02ld”,durMin,durSec];</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#pragma mark - Navigation</span></div><div class="line"></div><div class="line"><span class="comment">// In a storyboard-based application, you will often want to do a little preparation before navigation</span></div><div class="line">- (<span class="keyword">void</span>)prepareForSegue:(<span class="built_in">UIStoryboardSegue</span> *)segue sender:(<span class="keyword">id</span>)sender &#123;</div><div class="line">    <span class="comment">// Get the new view controller using [segue destinationViewController].</span></div><div class="line">    <span class="comment">// Pass the selected object to the new view controller.</span></div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="comment">//得到点击的cell，sender是指触发跳转的那个控件，这里指的是点击的cell</span></div><div class="line">    <span class="built_in">UITableViewCell</span> *cell = (<span class="built_in">UITableViewCell</span> *)sender;</div><div class="line">    </div><div class="line">    <span class="comment">//通过当前被点击的cell得到点击位置</span></div><div class="line">    <span class="built_in">NSIndexPath</span> *selectedIndexPath = [<span class="keyword">self</span>.tableView indexPathForCell:cell];</div><div class="line">    </div><div class="line">    Roster *roster = <span class="keyword">self</span>.rosterArray[selectedIndexPath.row];</div><div class="line">    </div><div class="line">    <span class="comment">//得到要跳转的viewcontroller</span></div><div class="line">    ChatTableViewController *chatTableViewController = (ChatTableViewController *)[segue destinationViewController];</div><div class="line">    </div><div class="line">    chatTableViewController.chatToRoster = roster;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/target action" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/target action/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/target action/">target action</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>//自定义target:<br> action:方法</p>
+<p>#warning第一步声明target和action属性@property(nonatomic,assign)idmyTarget;<br>@property(nonatomic,assign)SELmyAction;</p>
+<p>#warning第二部声明方法-(void)addmyTarget:(id)target<br> Ation:(SEL)action;</p>
+<p>#warning第三步实现方法<br>-(void)addmyTarget:(id)target<br> Ation:(SEL)action{</p>
+<p>#warning第四步接收传进来的目标对象和行为方法<br>   self.myTarget= target;<br>   self.myAction= action;</p>
+<p>}</p>
+<p>#warning第五步使用目标对象去执行行为方法<br>-(void)touchesBegan:(NSSet<em>)touches withEvent:(UIEvent</em>)event<br>{</p>
+<pre><code>[self.myTargetperformSelector:self.myActionwithObject:nil];}
+</code></pre>
       
     </div>
     
@@ -924,7 +995,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -940,7 +1011,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -949,7 +1020,7 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -966,9 +1037,9 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW,
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

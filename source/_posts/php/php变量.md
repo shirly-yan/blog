@@ -1,7 +1,7 @@
 ---
 title: php变量
 date: 2016-10-12 10:42:53
-categories: php
+categories: [php]
 ---
 变量的声明 变量的数据类型
 <!-- more -->

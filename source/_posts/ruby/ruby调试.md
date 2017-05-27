@@ -1,7 +1,7 @@
 ---
 title: ruby调试
 date: 2016-04-14 14:54:51
-categories: ruby
+categories: [ruby]
 tags: [ruby]
 ---
 ruby调试

@@ -1,7 +1,7 @@
 ---
 title: ActiveRecord(二)
 date: 2016-04-04 14:38:26
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 ActiveRecord 回调

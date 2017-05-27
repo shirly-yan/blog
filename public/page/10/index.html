@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
                     </ul>
@@ -178,7 +178,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpmyadmin/">phpmyadmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,14 +241,14 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-oc/APP间的调用" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/tableview 下拉图片放大" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/APP间的调用/" class="article-date">
+      <a href="/2016/10/08/oc/tableview 下拉图片放大/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -264,7 +264,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/APP间的调用/">APP间的调用</a>
+      <a class="article-title" href="/2016/10/08/oc/tableview 下拉图片放大/">tableview 下拉图片放大</a>
     </h1>
   
 
@@ -275,7 +275,7 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">被调用的App：</div><div class="line"><span class="number">1.</span>在appdelegate里实现方法</div><div class="line"></div><div class="line">-(<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)app openURL:(<span class="built_in">NSURL</span> *)url options:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="keyword">id</span>&gt; *)options</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,app);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,url);</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,options);</div><div class="line">    <span class="keyword">return</span>  <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="number">2.</span>配置Info.plist文件</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">调用方法：</div><div class="line"></div><div class="line">    <span class="comment">//打开另一个APP的方法</span></div><div class="line">    <span class="comment">//a另一个APP的openurl</span></div><div class="line">    <span class="comment">//aaaaaaaaa参数</span></div><div class="line">    [[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"a:aaaaaaa"</span>]];</div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">"RootViewController.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">RootViewController</span> ()</span></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">RootViewController</span></span></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="comment">// Do any additional setup after loading the view.</span></div><div class="line"></div><div class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> lightGrayColor];</div><div class="line"></div><div class="line">    [<span class="keyword">self</span> setAutomaticallyAdjustsScrollViewInsets:<span class="literal">NO</span>];</div><div class="line"></div><div class="line">    <span class="keyword">self</span>.myTableView = [[<span class="built_in">UITableView</span> alloc] initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen] bounds] style:<span class="built_in">UITableViewStylePlain</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.myTableView];</div><div class="line">    [_myTableView release];</div><div class="line"></div><div class="line">    <span class="comment">//设置tableview的contentView距离上边界200</span></div><div class="line">    <span class="comment">//相对于0点,已经向下偏移了-200</span></div><div class="line">    <span class="keyword">self</span>.myTableView.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">200.0</span>+<span class="number">64</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">    <span class="keyword">self</span>.myTableView.delegate = <span class="keyword">self</span>;</div><div class="line">    <span class="keyword">self</span>.myTableView.dataSource = <span class="keyword">self</span>;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">//相对于0点,图片坐标应该是(0,-200)</span></div><div class="line">    <span class="keyword">self</span>.imageView = [[<span class="built_in">UIImageView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">-200.0</span>, <span class="keyword">self</span>.view.frame.size.width, <span class="number">200</span>)];</div><div class="line">    <span class="keyword">self</span>.imageView.image = [<span class="built_in">UIImage</span> imageNamed:<span class="string">@"hua.jpg"</span>];</div><div class="line">    <span class="comment">//设置imageView高度改变时宽度也跟着改变</span></div><div class="line">    <span class="keyword">self</span>.imageView.contentMode = <span class="built_in">UIViewContentModeScaleAspectFill</span>;</div><div class="line">    [<span class="keyword">self</span>.myTableView addSubview:<span class="keyword">self</span>.imageView];</div><div class="line">    [_imageView release];</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//指定多少行</span></div><div class="line">-(<span class="built_in">NSInteger</span>)tableView:(<span class="built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="built_in">NSInteger</span>)section</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//创建一个cell</span></div><div class="line">-(<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSString</span> *cellIdentifier = <span class="string">@"cell"</span>;</div><div class="line">  <span class="built_in">UITableViewCell</span> *cell =  [tableView dequeueReusableCellWithIdentifier:cellIdentifier];</div><div class="line">    <span class="keyword">if</span> (!cell) &#123;</div><div class="line">        cell = [[<span class="built_in">UITableViewCell</span> alloc] initWithStyle:<span class="built_in">UITableViewCellStyleDefault</span> reuseIdentifier:cellIdentifier];</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    cell.textLabel.text = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%ld"</span>,indexPath.row];</div><div class="line">    cell.selectionStyle =  <span class="built_in">UITableViewCellSelectionStyleNone</span>;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> cell;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">//设置行高</span></div><div class="line">-(<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">80</span>;</div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)tableView:(<span class="built_in">UITableView</span> *)tableView didSelectRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">    <span class="comment">//点击后自动取消选中置灰效果</span></div><div class="line">    [tableView deselectRowAtIndexPath:indexPath animated:<span class="literal">YES</span>];</div><div class="line"></div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView</div><div class="line">&#123;</div><div class="line">    <span class="comment">//刚开始y的偏移量初始值就是-264</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"y1 === %f"</span>,scrollView.contentOffset.y);</div><div class="line">    <span class="built_in">CGFloat</span> y = scrollView.contentOffset.y + <span class="number">64</span>;<span class="comment">//加上导航栏高度,第一次是-200</span></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"y2 === %f"</span>,y);</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (y &lt; <span class="number">-200</span>) &#123;</div><div class="line">        <span class="built_in">CGRect</span> frame = <span class="keyword">self</span>.imageView.frame;</div><div class="line">        frame.origin.y = y;<span class="comment">//imageView的frame是不断往上偏移</span></div><div class="line">        frame.size.height =  -y;<span class="comment">//tablview向下偏移了多少,高度就增加多少</span></div><div class="line">        <span class="keyword">self</span>.imageView.frame = frame;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning &#123;</div><div class="line">    [<span class="keyword">super</span> didReceiveMemoryWarning];</div><div class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -306,10 +306,10 @@
 
 
   
-    <article id="post-oc/MPMoviePlayerViewController和MPMoviePlayerController" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/view 的 clipsToBounds属性" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/MPMoviePlayerViewController和MPMoviePlayerController/" class="article-date">
+      <a href="/2016/10/08/oc/view 的 clipsToBounds属性/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -325,7 +325,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a>
+      <a class="article-title" href="/2016/10/08/oc/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a>
     </h1>
   
 
@@ -336,10 +336,7 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line"></div><div class="line">    [<span class="keyword">self</span> playVideo:[<span class="built_in">NSURL</span> URLWithString:<span class="keyword">self</span>.playURL]];</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">//根据视频url播放视频</span></div><div class="line">- (<span class="keyword">void</span>) playVideo:(<span class="built_in">NSURL</span> *) movieURL</div><div class="line">&#123;</div><div class="line">    <span class="built_in">MPMoviePlayerViewController</span> *playerViewController = [[<span class="built_in">MPMoviePlayerViewController</span> alloc]     initWithContentURL:movieURL];</div><div class="line">    <span class="keyword">self</span>.playerViewController = playerViewController;</div><div class="line">    [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(playVideoFinished:) name:<span class="built_in">MPMoviePlayerPlaybackDidFinishNotification</span> object:[playerViewController moviePlayer]];</div><div class="line">    playerViewController.modalTransitionStyle = <span class="built_in">UIModalTransitionStyleFlipHorizontal</span>;</div><div class="line">    [<span class="keyword">self</span>.view addSubview:playerViewController.view];</div><div class="line">    <span class="built_in">MPMoviePlayerController</span> *player = [playerViewController moviePlayer];</div><div class="line">    [player play];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//当点击Done按键或者播放完毕时调用此函数</span></div><div class="line">- (<span class="keyword">void</span>) playVideoFinished:(<span class="built_in">NSNotification</span> *)theNotification</div><div class="line">&#123;</div><div class="line">    <span class="built_in">MPMoviePlayerController</span> *player = [theNotification object];</div><div class="line">    [[<span class="built_in">NSNotificationCenter</span> defaultCenter] removeObserver:<span class="keyword">self</span> name:<span class="built_in">MPMoviePlayerPlaybackDidFinishNotification</span> object:player];</div><div class="line">    [player stop];</div><div class="line"></div><div class="line">    [<span class="keyword">self</span> dismissViewControllerAnimated:<span class="literal">YES</span> completion:^&#123;</div><div class="line">       </div><div class="line">       </div><div class="line">    &#125;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>MPMoviePlayerViewController和MPMoviePlayerController 使用场合不一样MPMoviePlayerViewController是在iOS3.2以后的平台上使用。MPMoviePlayerController在3.2之前使用，虽然在3.2之后也能使用，但是使用方法略有改变，建议3.2之后使用MPMoviePlayerViewController。<br>3.2之后,MPMoviePlayerController作为MPMoviePlayerViewController的一个属性存在。</p>
-<p>以下是使用MPMoviePlayerViewController播放视频的代码:</p>
-<p>去掉系统上的按钮导航条 self.play.controlStyle = MPMovieControlStyleNone;</p>
+<p><strong>取值：</strong>BOOL（YES/NO）<strong>作用：</strong>决定了子视图的显示范围当取值为YES时，超出父视图范围的子视图被剪裁不显示；当取值为NO时，超出父视图范围的子视图不被剪裁，显示。默认值为NO。<br>如下图所示：view2是view1的子视图<br><strong>取值为NO时：</strong><br><strong>取值为YES时：</strong><img src="http://img.blog.csdn.net/20160525095602290?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br><img src="http://img.blog.csdn.net/20160525095512445?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
 
       
     </div>
@@ -370,10 +367,10 @@
 
 
   
-    <article id="post-oc/Masonry介绍与使用实践：快速上手Autolayout" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/不同数据类型转换" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/Masonry介绍与使用实践：快速上手Autolayout/" class="article-date">
+      <a href="/2016/10/08/oc/不同数据类型转换/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -389,7 +386,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a>
+      <a class="article-title" href="/2016/10/08/oc/不同数据类型转换/">不同数据类型转换</a>
     </h1>
   
 
@@ -399,194 +396,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<p>转自：<a href="http://www.cocoachina.com/ios/20141219/10702.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20141219/10702.html</a><br>前言<br>    MagicNumber -&gt; autoresizingMask -&gt; autolayou<br>以上是纯手写代码所经历的关于页面布局的三个时期<br>在iphone1-iphone3gs时代 window的size固定为(320,480) 我们只需要简单计算一下相对位置就好了<br>在iphone4-iphone4s时代 苹果推出了retina屏 但是给了码农们非常大的福利:window的size不变<br>在iphone5-iphone5s时代 window的size变了(320,568) 这时autoresizingMask派上了用场(为啥这时候不用Autolayout? 因为还要支持ios5呗) 简单的适配一下即可<br>在iphone6+时代 window的width也发生了变化(相对5和5s的屏幕比例没有变化) 终于是时候抛弃autoresizingMask改用autolayout了(不用支持ios5了 相对于屏幕适配的多样性来说autoresizingMask也已经过时了)<br>那如何快速的上手autolayout呢? 说实话 当年ios6推出的同时新增了autolayout的特性 我看了一下官方文档和demo 就立马抛弃到一边了 因为实在过于的繁琐和啰嗦(有过经验的朋友肯定有同感)<br>直到iPhone6发布之后 我知道使用autolayout势在必行了 这时想起了以前在浏览Github看到过的一个第三方库Masonry 在花了几个小时的研究使用后 我就将autolayout掌握了(重点是我并没有学习任何的官方文档或者其他的关于autolayout的知识) 这就是我为什么要写下这篇文章来推荐它的原因.<br><strong>介绍</strong><br>Masonry 源码：<a href="https://github.com/Masonry/Masonry" target="_blank" rel="external">https://github.com/Masonry/Masonry</a><br>Masonry是一个轻量级的布局框架 拥有自己的描述语法 采用更优雅的链式语法封装自动布局 简洁明了 并具有高可读性 而且同时支持 iOS 和 Max OS X。<br>我们先来看一段官方的sample code来认识一下Masonry<br>    [view1 mas_makeConstraints:^(MASConstraintMaker <em>make) {<br>        make.edges.equalTo(superview).with.insets(padding);<br>    }];<br>看到block里面的那句话: make edges equalTo superview with insets<br>通过链式的自然语言 就把view1给autolayout好了 是不是简单易懂?<br><strong>使用</strong><br>看一下Masonry支持哪一些属性<br>    @property (nonatomic, strong, readonly) MASConstraint </em>left;<br>    @property (nonatomic, strong, readonly) MASConstraint <em>top;<br>    @property (nonatomic, strong, readonly) MASConstraint </em>right;<br>    @property (nonatomic, strong, readonly) MASConstraint <em>bottom;<br>    @property (nonatomic, strong, readonly) MASConstraint </em>leading;<br>    @property (nonatomic, strong, readonly) MASConstraint <em>trailing;<br>    @property (nonatomic, strong, readonly) MASConstraint </em>width;<br>    @property (nonatomic, strong, readonly) MASConstraint <em>height;<br>    @property (nonatomic, strong, readonly) MASConstraint </em>centerX;<br>    @property (nonatomic, strong, readonly) MASConstraint <em>centerY;<br>    @property (nonatomic, strong, readonly) MASConstraint </em>baseline;<br>这些属性与NSLayoutAttrubute的对照表如下</p>
-<p>其中leading与left trailing与right 在正常情况下是等价的 但是当一些布局是从右至左时(比如阿拉伯文?没有类似的经验) 则会对调 换句话说就是基本可以不理不用 用left和right就好了<br>在ios8发布后 又新增了一堆奇奇怪怪的属性(有兴趣的朋友可以去瞅瞅) Masonry暂时还不支持(不过你要支持ios6,ios7 就没必要去管那么多了)<br>在讲实例之前 先介绍一个MACRO<br>1<code>#define WS(weakSelf)  __weak __typeof(&amp;*self)weakSelf = self;</code>快速的定义一个weakSelf 当然是用于block里面啦 下面进入正题(为了方便 我们测试的superView都是一个size为(300,300)的UIView)<br>下面 通过一些简单的实例来简单介绍如何轻松愉快的使用Masonry:</p>
-<ol>
-<li>[基础] 居中显示一个view<br>1234567891011121314151617<code>- (void)viewDidLoad``{``    ``[``super</code> <code>viewDidLoad];``    ``// Do any additional setup after loading the view.`` </code> <code>``WS(ws);`` </code> <code>``UIView *sv = [UIView ``new``];``    ``[sv showPlaceHolder];``    ``sv.backgroundColor = [UIColor blackColor];``    ``[self.view addSubview:sv];``    ``[sv mas_makeConstraints:^(MASConstraintMaker *make) {``        ``make.center.equalTo(ws.view);``        ``make.size.mas_equalTo(CGSizeMake(300, 300));``    ``}];`` </code> <code>}</code></li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/MessageUI.framework发短信" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/MessageUI.framework发短信/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/MessageUI.framework发短信/">MessageUI.framework发短信</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"ViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;MessageUI/MessageUI.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">ViewController</span> ()&lt;<span class="title">MFMessageComposeViewControllerDelegate</span>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">ViewController</span></span></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="comment">// Do any additional setup after loading the view, typically from a nib.</span></div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="built_in">UIButton</span> *b = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:b];</div><div class="line">    b.frame = <span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">100</span>);</div><div class="line">    b.backgroundColor = [<span class="built_in">UIColor</span> blackColor];</div><div class="line">    [b setTitle:<span class="string">@"sendMessage"</span> forState:<span class="built_in">UIControlStateNormal</span>];</div><div class="line">    [b addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(buttonAction) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line">   </div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)buttonAction</div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (![MFMessageComposeViewController canSendText])</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"当前设备不能发短信"</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">       </div><div class="line">    &#125;<span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">   </div><div class="line">    MFMessageComposeViewController *messageVC = [[MFMessageComposeViewController alloc]init];</div><div class="line">   </div><div class="line">    messageVC.recipients = @[<span class="string">@"10086"</span>,<span class="string">@"10010"</span>];</div><div class="line">    messageVC.body = <span class="string">@"大水杯"</span>;</div><div class="line">    messageVC.messageComposeDelegate = <span class="keyword">self</span>;</div><div class="line">   </div><div class="line">    [<span class="keyword">self</span> presentViewController:messageVC animated:<span class="literal">YES</span> completion:^&#123;</div><div class="line">       </div><div class="line">       </div><div class="line">    &#125;];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result</div><div class="line">&#123;</div><div class="line">   </div><div class="line">    [<span class="keyword">self</span> dismissViewControllerAnimated:<span class="literal">YES</span> completion:^&#123;</div><div class="line">       </div><div class="line">       </div><div class="line">    &#125;];</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)didReceiveMemoryWarning &#123;</div><div class="line">    [<span class="keyword">super</span> didReceiveMemoryWarning];</div><div class="line">    <span class="comment">// Dispose of any resources that can be recreated.</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/NSHTTPCookieStorage" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/NSHTTPCookieStorage/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/NSHTTPCookieStorage/">NSHTTPCookieStorage</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//保存cookie</span></div><div class="line">+ (<span class="keyword">void</span>)saveCookies &#123;</div><div class="line">    <span class="built_in">NSData</span> *cookiesData = [<span class="built_in">NSKeyedArchiver</span> archivedDataWithRootObject: [[<span class="built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage] cookies]];</div><div class="line">    <span class="built_in">NSUserDefaults</span> *defaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</div><div class="line">    [defaults setObject: cookiesData forKey:kCookie];</div><div class="line">    [defaults synchronize];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//加载cookie</span></div><div class="line">+ (<span class="keyword">void</span>)loadCookies &#123;</div><div class="line">   </div><div class="line">    <span class="built_in">NSArray</span> *cookies = [<span class="built_in">NSKeyedUnarchiver</span> unarchiveObjectWithData: [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] objectForKey: kCookie]];</div><div class="line">    <span class="built_in">NSHTTPCookieStorage</span> *cookieStorage = [<span class="built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage];</div><div class="line">   </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSHTTPCookie</span> *cookie <span class="keyword">in</span> cookies)&#123;</div><div class="line">        [cookieStorage setCookie: cookie];</div><div class="line">    &#125;</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//删除cookie</span></div><div class="line">+ (<span class="keyword">void</span>)clearCookies &#123;</div><div class="line">   </div><div class="line">    <span class="built_in">NSArray</span> *cookies = [[<span class="built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage] cookies];</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSHTTPCookie</span> *cookie <span class="keyword">in</span> cookies)</div><div class="line">    &#123;</div><div class="line">        [[<span class="built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage] deleteCookie:cookie];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/NSString" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/NSString/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/NSString/">NSString</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>NSString<br>
+              <p>不同数据类型转换<br>
           
       
     </div>
@@ -602,7 +412,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/08/oc/NSString/#more">more >></a>
+          <a href="/2016/10/08/oc/不同数据类型转换/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -621,10 +431,10 @@
 
 
   
-    <article id="post-oc/NSTimer" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/不规则瀑布流" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/NSTimer/" class="article-date">
+      <a href="/2016/10/08/oc/不规则瀑布流/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -640,7 +450,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/NSTimer/">NSTimer</a>
+      <a class="article-title" href="/2016/10/08/oc/不规则瀑布流/">不规则瀑布流</a>
     </h1>
   
 
@@ -650,7 +460,130 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>NSTimer<br>
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKit.h&gt;</span></span></div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">WaterLayoutDelegate</span> &lt;<span class="title">NSObject</span>&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">@required</span></div><div class="line">- (<span class="built_in">CGSize</span>)collectionView:(<span class="built_in">UICollectionView</span> *)collectionView</div><div class="line">                  layout:(<span class="built_in">UICollectionViewLayout</span> *)collectionViewLayout</div><div class="line">  sizeForItemAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">WJY_WaterFallLayout</span> : <span class="title">UICollectionViewLayout</span></span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="keyword">id</span>&lt;WaterLayoutDelegate&gt; delegate;</div><div class="line"><span class="comment">// 行数</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">NSInteger</span> lineCount;</div><div class="line"><span class="comment">// 水平间距</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">CGFloat</span> verticalSpacing;</div><div class="line"><span class="comment">// 垂直间距</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">CGFloat</span> horizontalSpacing;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">UIEdgeInsets</span> sectionInset;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"WJY_WaterFallLayout.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">WJY_WaterFallLayout</span>()</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">retain</span>) <span class="built_in">NSMutableArray</span> *heights;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">retain</span>) <span class="built_in">NSMutableArray</span> *originX;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">retain</span>) <span class="built_in">NSMutableDictionary</span> *itemsArrange;</div><div class="line"></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">retain</span>) <span class="built_in">NSMutableDictionary</span> *itemsInitialArrange;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">WJY_WaterFallLayout</span></span></div><div class="line"><span class="meta">#pragma mark - 重写，应 始终调用子类</span></div><div class="line">- (<span class="keyword">void</span>)prepareLayout</div><div class="line">&#123;</div><div class="line">    <span class="comment">// 如果item 是0 返回</span></div><div class="line">    <span class="built_in">NSInteger</span> cellCount = [<span class="keyword">self</span>.collectionView numberOfItemsInSection:<span class="number">0</span>];</div><div class="line">    <span class="keyword">if</span> (cellCount == <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> ;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 调转系统的协议方法 并设置代理</span></div><div class="line">    <span class="keyword">self</span>.delegate = (<span class="keyword">id</span>&lt;WaterLayoutDelegate&gt;)<span class="keyword">self</span>.collectionView.delegate;</div><div class="line">    </div><div class="line">    <span class="keyword">self</span>.itemsArrange = [<span class="built_in">NSMutableDictionary</span> dictionary];</div><div class="line">    <span class="keyword">self</span>.itemsInitialArrange = [<span class="built_in">NSMutableDictionary</span> dictionary];</div><div class="line">    </div><div class="line">    [<span class="keyword">self</span> initAllarrays];</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = <span class="number">0</span>; i &lt; cellCount; i++) &#123;</div><div class="line">        [</div><div class="line">         <span class="keyword">self</span> layoutForItemAtIndexPath:[<span class="built_in">NSIndexPath</span> indexPathForItem:i inSection:<span class="number">0</span>]];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma 初始化所以数组</span></div><div class="line">- (<span class="keyword">void</span>)initAllarrays</div><div class="line">&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">self</span>.heights = [<span class="built_in">NSMutableArray</span> array];</div><div class="line">    <span class="keyword">self</span>.originX = [<span class="built_in">NSMutableArray</span> array];</div><div class="line">    <span class="comment">// item宽度</span></div><div class="line">    <span class="built_in">CGFloat</span> itemWidth   = ([<span class="built_in">UIScreen</span> mainScreen].bounds.size.width - <span class="keyword">self</span>.sectionInset.left - <span class="keyword">self</span>.sectionInset.right - (<span class="keyword">self</span>.lineCount - <span class="number">1</span>) * <span class="keyword">self</span>.horizontalSpacing) / <span class="keyword">self</span>.lineCount;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = <span class="number">0</span>; i &lt; <span class="keyword">self</span>.lineCount; i++) &#123;</div><div class="line">        </div><div class="line">        <span class="comment">// 循环添加 每行的每个top的点到 height数组中</span></div><div class="line">        [<span class="keyword">self</span>.heights addObject:[<span class="built_in">NSNumber</span> numberWithDouble:<span class="keyword">self</span>.sectionInset.top]];</div><div class="line">        </div><div class="line">        <span class="comment">//设置oringin_x 为0</span></div><div class="line">        <span class="built_in">CGFloat</span> oringin_x   = <span class="number">0.0</span>;</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</div><div class="line">         <span class="comment">//i = 0 x点 = left;</span></div><div class="line">            oringin_x = <span class="keyword">self</span>.sectionInset.left;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">//  x = i + item宽 + 横向宽度</span></div><div class="line">            oringin_x = [<span class="keyword">self</span>.originX[i - <span class="number">1</span>] doubleValue] + itemWidth + <span class="keyword">self</span>.horizontalSpacing;</div><div class="line">        &#125;</div><div class="line">         <span class="comment">// 把得到的点加到 x数组中</span></div><div class="line">        [<span class="keyword">self</span>.originX addObject:[<span class="built_in">NSNumber</span> numberWithDouble: oringin_x]];</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma mark - itme设置</span></div><div class="line">- (<span class="keyword">void</span>)layoutForItemAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath</div><div class="line">&#123;</div><div class="line">    </div><div class="line">    <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectZero</span>;</div><div class="line">    <span class="comment">// 协议方法</span></div><div class="line">    <span class="built_in">CGSize</span> size = [<span class="keyword">self</span>.delegate collectionView:<span class="keyword">self</span>.collectionView layout:<span class="keyword">self</span> sizeForItemAtIndexPath:indexPath];</div><div class="line">    </div><div class="line">    rect.size.height = size.height;</div><div class="line">    </div><div class="line">    rect.size.width  = ([<span class="built_in">UIScreen</span> mainScreen].bounds.size.width  - <span class="keyword">self</span>.sectionInset.left - <span class="keyword">self</span>.sectionInset.right - (<span class="keyword">self</span>.lineCount - <span class="number">1</span>) * <span class="keyword">self</span>.horizontalSpacing) / <span class="keyword">self</span>.lineCount;</div><div class="line">    </div><div class="line">    <span class="built_in">NSInteger</span> index  = [<span class="keyword">self</span> getLowerHeightRowIndex:<span class="keyword">self</span>.heights];</div><div class="line">    </div><div class="line">    rect.origin.x = [<span class="keyword">self</span>.originX[index] doubleValue];</div><div class="line">    rect.origin.y = [<span class="keyword">self</span>.heights[index] doubleValue];</div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> newHeight = rect.origin.y + rect.size.height + <span class="keyword">self</span>.verticalSpacing;</div><div class="line">    </div><div class="line">    [<span class="keyword">self</span>.heights replaceObjectAtIndex:index withObject:[<span class="built_in">NSNumber</span> numberWithDouble: newHeight]];</div><div class="line">    </div><div class="line">    [<span class="keyword">self</span>.itemsArrange setObject:indexPath forKey:<span class="built_in">NSStringFromCGRect</span>(rect)];</div><div class="line">    </div><div class="line">    [<span class="keyword">self</span>.itemsInitialArrange setObject:indexPath forKey:<span class="built_in">NSStringFromCGRect</span>(<span class="built_in">CGRectMake</span>(rect.origin.x, rect.origin.y - [<span class="built_in">UIScreen</span> mainScreen].bounds.size.height, rect.size.width, rect.size.height))];</div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma mark - 子类必须重写此方法并使用它来返回的宽度和高度的视图的内容。这些值表示的宽度和高度的所有内容，视图使用此信息来配置其自身内容的大小，以便滚动。</span></div><div class="line">- (<span class="built_in">CGSize</span>)collectionViewContentSize</div><div class="line">&#123;</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> heightest = [<span class="keyword">self</span> getHeightest:<span class="keyword">self</span>.heights];</div><div class="line">    </div><div class="line">    <span class="built_in">CGSize</span> size = <span class="built_in">CGSizeMake</span>(<span class="number">0</span>, heightest);</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> size;</div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma mark - 设置布局信息</span></div><div class="line">- (<span class="built_in">UICollectionViewLayoutAttributes</span> *)layoutAttributesForItemAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;</div><div class="line">    </div><div class="line">    <span class="built_in">UICollectionViewLayoutAttributes</span> *attributes = [<span class="built_in">UICollectionViewLayoutAttributes</span> layoutAttributesForCellWithIndexPath:indexPath];</div><div class="line">    </div><div class="line">    <span class="built_in">NSArray</span> *keyArr = <span class="keyword">self</span>.itemsArrange.allKeys;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSString</span> *rectStr <span class="keyword">in</span> keyArr) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.itemsArrange[rectStr] != indexPath) &#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectFromString</span>(rectStr);</div><div class="line">        </div><div class="line">        attributes.frame = rect;</div><div class="line">        </div><div class="line">        <span class="keyword">break</span>;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> attributes;</div><div class="line">&#125;</div><div class="line"><span class="meta">#pragma mark - 重新自定义layout</span></div><div class="line">- (<span class="built_in">UICollectionViewLayoutAttributes</span> *)initialLayoutAttributesForAppearingItemAtIndexPath:(<span class="built_in">NSIndexPath</span> *)itemIndexPath &#123;</div><div class="line">    <span class="comment">// layout初始化方法</span></div><div class="line">    <span class="built_in">UICollectionViewLayoutAttributes</span> *attributes = [<span class="built_in">UICollectionViewLayoutAttributes</span> layoutAttributesForCellWithIndexPath:itemIndexPath];</div><div class="line">    </div><div class="line">    <span class="built_in">NSArray</span> *keyArr = <span class="keyword">self</span>.itemsArrange.allKeys;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSString</span> *rectStr <span class="keyword">in</span> keyArr) &#123;</div><div class="line">        <span class="comment">// item的rect信息和布局信息不等 就跳出本次循环</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.itemsInitialArrange[rectStr] != itemIndexPath) &#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectFromString</span>(rectStr);</div><div class="line">        </div><div class="line">        attributes.frame = rect;</div><div class="line">        </div><div class="line">        <span class="keyword">break</span>;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> attributes;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#pragma mark - 布局属性返回数组 视图在给定矩形</span></div><div class="line">- (<span class="built_in">NSArray</span> *)layoutAttributesForElementsInRect:(<span class="built_in">CGRect</span>)rect &#123;</div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> up = rect.origin.y;</div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> down = rect.origin.y + rect.size.height;</div><div class="line">    </div><div class="line">    <span class="built_in">NSMutableArray</span> *attributes = [<span class="built_in">NSMutableArray</span> array];</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSString</span> *rectStr <span class="keyword">in</span> <span class="keyword">self</span>.itemsArrange) &#123;</div><div class="line">        </div><div class="line">        <span class="built_in">CGRect</span> itemRect = <span class="built_in">CGRectFromString</span>(rectStr);</div><div class="line">        </div><div class="line">        <span class="keyword">if</span> (itemRect.origin.y &lt;= down &amp;&amp; itemRect.origin.y + itemRect.size.height &gt;= up) &#123;</div><div class="line">            </div><div class="line">            <span class="built_in">NSIndexPath</span> *indexPath = [<span class="keyword">self</span>.itemsArrange objectForKey:rectStr];</div><div class="line">            </div><div class="line">                    <span class="comment">//设置布局信息 添加到数组里</span></div><div class="line">            [attributes addObject:[<span class="keyword">self</span> layoutAttributesForItemAtIndexPath:indexPath]];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> attributes;</div><div class="line">&#125;</div><div class="line"><span class="meta"># pragma mark - 获取低行高</span></div><div class="line">- (<span class="built_in">NSInteger</span>)getLowerHeightRowIndex:(<span class="built_in">NSMutableArray</span> *)height &#123;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (height.count == <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="built_in">NSInteger</span> index  = <span class="number">0</span>;</div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> heightest = [height[<span class="number">0</span>] doubleValue];</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i  = <span class="number">1</span>; i &lt; height.count; i++) &#123;</div><div class="line">        <span class="comment">// 判定获取低行位置</span></div><div class="line">        index = heightest &gt; [height[i] doubleValue] ? i : index;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> index;</div><div class="line">&#125;</div><div class="line"><span class="meta"># pragma mark - 获取高度</span></div><div class="line">- (<span class="built_in">CGFloat</span>)getHeightest:(<span class="built_in">NSMutableArray</span> *)height &#123;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> (height.count == <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="built_in">CGFloat</span> heightest = <span class="keyword">self</span>.sectionInset.top;</div><div class="line">    <span class="comment">// 遍历最高点</span></div><div class="line">    <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i  = <span class="number">0</span>; i &lt; height.count; i++) &#123;</div><div class="line">        <span class="comment">// 如果heightest为最高点返回返回 如果不是则返回height</span></div><div class="line">        heightest  = heightest &gt; [height[i] doubleValue] ? heightest : [height[i] doubleValue];</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> heightest;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/和CFStringRef相关的CFSTR与和NSString相关的@" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/和CFStringRef相关的CFSTR与和NSString相关的@/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">CoreFoundation里面的<span class="built_in">CFStringRef</span>和<span class="built_in">NSString</span>*是可以直接转换的，两种也都有一个相似的用来直接赋常量的操作。例如：</div><div class="line"></div><div class="line"><span class="built_in">CFStringRef</span> a = <span class="built_in">CFSTR</span>(<span class="string">"a"</span>);</div><div class="line"><span class="built_in">NSString</span> *b = <span class="string">@"b"</span>;</div><div class="line"></div><div class="line"><span class="built_in">CFSTR</span>是一个宏，这个宏的定义可能是<span class="built_in">CFStringMakeConstantString</span>，也可能是__builtin___CFStringMakeConstantString。如果是<span class="built_in">CFStringMakeConstantString</span>，看看<span class="built_in">CFStringMakeConstantString</span>的实现就会明白，<span class="built_in">CFSTR</span>(<span class="string">"a"</span>)是存放在一个全局字典里面的，下次用到<span class="built_in">CFSTR</span>(<span class="string">"a"</span>)的时候先查字典里面有没有，如果有就是用存在的，如果没有则分配一个，并且放到字典里面。</div><div class="line"></div><div class="line">所以这里有两个需要注意的，一：<span class="built_in">CFSTR</span>分配出来的字符串对象是不能自己释放的，如果你释放了下次在使用就会使用到一个野对象；二：多线程使用可能会出问题，因为全局的字典是没有锁的。</div><div class="line"></div><div class="line">而<span class="built_in">NSString</span>的@有些不一样，应该和__builtin___CFStringMakeConstantString有些类似，允许你多线程使用，同样也不需要你自己去release，可以理解为b是一个autorelease的对象，系统会自己自动收回b。如果想长时间持有b那就<span class="keyword">retain</span>，但不要忘了release。</div><div class="line"></div><div class="line">他们俩直接类型转换就可以了，比如</div><div class="line"><span class="built_in">CFStringRef</span> aCFString = (<span class="built_in">CFStringRef</span>)aNSString;</div><div class="line"><span class="built_in">NSString</span> *aNSString = (<span class="built_in">NSString</span> *)aCFString;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/单例模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/单例模式/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/单例模式/">单例模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>单例模式：传值<br>    单一的实例 唯一的对象 全工程中唯一的一个对象<br>    作用是通过单例来保存工程中的多个页面中共享的对象和数据<br>    生命周期和程序的生命周期一样 当程序结束时单例对象释放掉<br>
           
       
     </div>
@@ -666,7 +599,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/08/oc/NSTimer/#more">more >></a>
+          <a href="/2016/10/08/oc/单例模式/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -685,10 +618,10 @@
 
 
   
-    <article id="post-oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/在c的函数中调用oc的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/" class="article-date">
+      <a href="/2016/10/08/oc/在c的函数中调用oc的方法/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -704,7 +637,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a>
+      <a class="article-title" href="/2016/10/08/oc/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a>
     </h1>
   
 
@@ -714,7 +647,189 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>在iOS中音频播放从形式上可以分为音效播放和音乐播放。前者主要指的是一些短音频播放，通常作为点缀音频，对于这类音频不需要进行进度、循环等控制。后者指的是一些较长的音频，通常是主音频，对于这些音频的播放通常需要进行精确的控制。<br>
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> soundCompleteCallback(SystemSoundID sound,<span class="keyword">void</span> * clientData) &#123;</div><div class="line"></div><div class="line"> </div><div class="line">    [[Single shareDateHandle] a];</div><div class="line">&#125;</div><div class="line">在程序中创建个单例</div><div class="line">使用单例调用方法，单例属于全局性的指针</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/协议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/协议/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/协议/">协议</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">协议共分六步：<span class="number">1.</span>声明协议<span class="number">2.</span>声明代理人属性<span class="number">3.</span>执行协议方法<span class="number">4.</span>签订协议<span class="number">5.</span>指定代理人<span class="number">6.</span>实现协议方法<span class="comment">/******************声明协议的类****************************/</span></div><div class="line"></div><div class="line"><span class="comment">/******************声明协议的类.h****************************/</span><span class="meta">#warning协议第一步声明协议@protocolMarry <span class="meta-string">&lt;NSObject&gt;</span></span></div><div class="line">-(<span class="keyword">void</span>)makeMoney:(<span class="built_in">NSString</span>*)text;</div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="meta">#warning协议第二步声明代理人@interfaceGirl :NSObject@property(nonatomic,assign)id<span class="meta-string">&lt;Marry&gt;</span>myDelegate;//assign弱引用，不会对内存引起记数变化</span></div><div class="line">-(<span class="keyword">void</span>)getMessage:(<span class="built_in">NSString</span>*)content;<span class="keyword">@end</span><span class="comment">/*********************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******************声明协议的类.m****************************/</span><span class="meta">#warning协议第三步执行协议方法@implementationGirl-(void)getMessage:(NSString*)content</span></div><div class="line">&#123;</div><div class="line"></div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,content);</div><div class="line">   <span class="comment">//使用代理人去执行协议方法</span></div><div class="line">    [<span class="keyword">self</span>.myDelegate makeMoney:<span class="string">@"赶快去赚钱!!!"</span>];</div><div class="line">   </div><div class="line">&#125;<span class="keyword">@end</span><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/********************执行协议的类*************************/</span></div><div class="line"></div><div class="line"><span class="comment">/********************执行协议的类.h***********************/</span><span class="meta">#warning协议第四步签订协议#import<span class="meta-string">"Girl.h"</span>@interfaceBoy :NSObject<span class="meta-string">&lt;Marry&gt;</span></span></div><div class="line">-(<span class="keyword">void</span>)sendMessageToGirl:(<span class="built_in">NSString</span> *)content;<span class="keyword">@end</span><span class="comment">/*******************************************************/</span></div><div class="line"><span class="comment">/********************执行协议的类.m*************************/</span><span class="meta">#warning协议第五步指定代理人@implementationBoy</span></div><div class="line">-(<span class="keyword">void</span>)sendMessageToGirl:(<span class="built_in">NSString</span>*)content</div><div class="line">&#123;</div><div class="line"></div><div class="line">   Girl*aGirl = [[Girlalloc]init];</div><div class="line"></div><div class="line"></div><div class="line">   <span class="comment">//指定代理人，一定要找到声明协议类的对象，因为代理人是Girl的一个属性，所以用Girl对象调用属性.</span></div><div class="line">    aGirl.myDelegate=<span class="keyword">self</span>;<span class="comment">//成为奴隶</span></div><div class="line">    [aGirlgetMessage:content];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#warning协议第六步实现协议方法</span></div><div class="line">-(<span class="keyword">void</span>)makeMoney:(<span class="built_in">NSString</span>*)text</div><div class="line">&#123;</div><div class="line">   <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,text);</div><div class="line">&#125;<span class="keyword">@end</span><span class="comment">/******************************************************/</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/oc/">oc</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/按照时间排序" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/按照时间排序/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/按照时间排序/">按照时间排序</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//排序 对时间进行排序</span></div><div class="line">    <span class="built_in">NSMutableArray</span> *dataArray=[[<span class="built_in">NSMutableArray</span> alloc]initWithCapacity:<span class="number">0</span>];</div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir setObject:<span class="string">@"2012-12-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir1=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir1 setObject:<span class="string">@"2012-02-15"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir1];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir2=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir2 setObject:<span class="string">@"2012-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir2];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir3=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir3 setObject:<span class="string">@"2000-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir3];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableDictionary</span> *dir4=[[<span class="built_in">NSMutableDictionary</span> alloc]init];</div><div class="line">    [dir4 setObject:<span class="string">@"2112-03-02"</span> forKey:<span class="string">@"time"</span>];</div><div class="line">    [dataArray addObject:dir4];</div><div class="line"></div><div class="line">   </div><div class="line">    <span class="built_in">NSMutableArray</span> *myArray=[[<span class="built_in">NSMutableArray</span> alloc]initWithCapacity:<span class="number">0</span>];</div><div class="line">    [myArray addObjectsFromArray:dataArray];</div><div class="line">    <span class="comment">//[myArray release];</span></div><div class="line"></div><div class="line">   </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;[myArray count]; i++) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"排序前-----&gt;&gt;%@"</span>,[[myArray objectAtIndex:i] objectForKey:<span class="string">@"time"</span>]);</div><div class="line">    &#125;</div><div class="line">   </div><div class="line">    <span class="built_in">NSSortDescriptor</span> *sorter = [[<span class="built_in">NSSortDescriptor</span> alloc]initWithKey:<span class="string">@"time"</span> ascending:<span class="literal">YES</span>];</div><div class="line">    <span class="built_in">NSMutableArray</span> *sortDescriptors=[[<span class="built_in">NSMutableArray</span> alloc]initWithObjects:&amp;sorter count:<span class="number">1</span>];</div><div class="line">    <span class="built_in">NSArray</span> *sortArray=[myArray sortedArrayUsingDescriptors:sortDescriptors];</div><div class="line"></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;[sortArray count]; i++) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"排序后-----&gt;&gt;%@"</span>,[[sortArray objectAtIndex:i] objectForKey:<span class="string">@"time"</span>]);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/夜间模式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/夜间模式/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/夜间模式/">夜间模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>夜间模式：利用继承与NSUserDefaults1.创建基类，负责夜间模式的转换2.所有的类都继承于基类，基类的模式改变了，所有子类的模式也改变了3.夜间模式触发的按钮发送通知4.利用NSUserDefault把模式保存到本地<br>
           
       
     </div>
@@ -730,130 +845,8 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/#more">more >></a>
+          <a href="/2016/10/08/oc/夜间模式/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/NSUserDefaults" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/NSUserDefaults/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/NSUserDefaults/">NSUserDefaults</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*NSUserDefaults通常用于存储用户偏好设置和登陆注册等信息*/</span></div><div class="line"></div><div class="line">    <span class="comment">//取值</span></div><div class="line">    [[<span class="built_in">NSUserDefaults</span> standardUserDefaults]objectForKey:<span class="string">@"night"</span>];</div><div class="line">    <span class="comment">//存值</span></div><div class="line">    [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] setObject:<span class="string">@"yes"</span> forKey:<span class="string">@"night"</span>];</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//存储数据</span></div><div class="line">    <span class="built_in">NSUserDefaults</span> *userDefault = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</div><div class="line">   </div><div class="line">    [userDefault setObject:<span class="string">@"张三"</span> forKey:<span class="string">@"name"</span>];</div><div class="line">    [userDefault setInteger:<span class="number">23</span> forKey:<span class="string">@"age"</span>];  </div><div class="line">  </div><div class="line"><span class="comment">//取出数据</span></div><div class="line">    <span class="keyword">self</span>.navigationItem.title = [[<span class="built_in">NSUserDefaults</span> standardUserDefaults]objectForKey:<span class="string">@"name"</span>];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>,[[<span class="built_in">NSUserDefaults</span> standardUserDefaults]integerForKey:<span class="string">@"age"</span> ]);</div><div class="line"></div><div class="line"><span class="comment">//修改数据</span></div><div class="line">    [[<span class="built_in">NSUserDefaults</span> standardUserDefaults]setObject:<span class="string">@"李四"</span> forKey:<span class="string">@"name"</span>];</div><div class="line"></div><div class="line"> <span class="comment">//强制存储</span></div><div class="line">    <span class="comment">/*原因：NSUserDefaults存储数据会发生延迟现象，把数据存储到本地文件中，不是马上就生效，所以会出现娶不到数据现象*/</span></div><div class="line">    [[<span class="built_in">NSUserDefaults</span> standardUserDefaults]synchronize];</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/OC 函数库方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/OC 函数库方法/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/OC 函数库方法/">OC 函数库方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">　　<span class="number">2.1</span><span class="number">.1</span>　rand()函数：产生随机数　</div><div class="line">　　<span class="number">2.1</span><span class="number">.2</span>　abs()函数/labs()函数：整数的绝对值　</div><div class="line">　　<span class="number">2.1</span><span class="number">.3</span>　fabs()/fabsf()/fabsl()函数：浮点数的绝对值　</div><div class="line">　　<span class="number">2.1</span><span class="number">.4</span>　floor()/floorf()/floorl()函数：向下取整　</div><div class="line">　　<span class="number">2.1</span><span class="number">.5</span>　ceil()/ceilf()/ceill()函数：向上取整　</div><div class="line">　　<span class="number">2.1</span><span class="number">.6</span>　round()/roundf()/roundl()函数：四舍五入　</div><div class="line">　　<span class="number">2.1</span><span class="number">.7</span>　sqrt()/sqrtf()/sqrtl()函数：求平方根　</div><div class="line">　　<span class="number">2.1</span><span class="number">.8</span>　fmax()/fmaxf()/fmaxl()函数：求最大值　</div><div class="line">　　<span class="number">2.1</span><span class="number">.9</span>　fmin()/fminf()/fminl()函数：求最小值　</div><div class="line">　　<span class="number">2.1</span><span class="number">.10</span>　hypot()/hypotf()/hypotl()函数：求直角三角形斜边的长度　</div><div class="line">　　<span class="number">2.1</span><span class="number">.11</span>　fmod()/fmodf()/fmodl()函数：求两数整除后的余数　</div><div class="line">　　<span class="number">2.1</span><span class="number">.12</span>　modf()/modff()/modfl()函数：浮点数分解为整数和小数　</div><div class="line">　　<span class="number">2.1</span><span class="number">.13</span>　frexp()/frexpf()/frexpl()函数：浮点数分解尾数和以二为底的指数　</div><div class="line">　　<span class="number">2.2</span>　三角运算函数　</div><div class="line">　　<span class="number">2.2</span><span class="number">.1</span>　sin()/sinf()/sinl()/函数：求正弦值　</div><div class="line">　　<span class="number">2.2</span><span class="number">.2</span>　sinh()/sinhf()/sinhl()函数：求双曲正弦值　</div><div class="line">　　<span class="number">2.2</span><span class="number">.3</span>　cos()/cosf()/cosl()函数：求余弦值　</div><div class="line">　　<span class="number">2.2</span><span class="number">.4</span>　cosh()/coshf()/coshl()函数：求双曲余弦值　</div><div class="line">　　<span class="number">2.2</span><span class="number">.5</span>　tan()/tanf()/tanl()函数：求正切值　</div><div class="line">　　<span class="number">2.2</span><span class="number">.6</span>　tanh()/tanhf()/tanhl()函数：求双曲正切值　</div><div class="line">　　<span class="number">2.3</span>　反三角运算　</div><div class="line">　　<span class="number">2.3</span><span class="number">.1</span>　asin()/asinf()/asinl()函数：求反正弦值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.2</span>　asinh()/asinhf()/asinhl()函数：求反双曲正弦值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.3</span>　acos()/acosf()/acosl()函数：求反余弦值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.4</span>　acosh()/acoshf()/acoshl()函数：求反双曲余弦值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.5</span>　atan()/atanf()/atanl()函数：求反正切值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.6</span>　atan2()/atan2f()/atanl()函数：求坐标值的反正切值　</div><div class="line">　　<span class="number">2.3</span><span class="number">.7</span>　atanh()/atanhf()/atanhl()函数：求反双曲正切值　</div><div class="line">　　<span class="number">2.4</span>　指数和对数运算　</div><div class="line">　　<span class="number">2.4</span><span class="number">.1</span>　pow()/powf()/powl函数：求n的m次方的值　</div><div class="line">　　<span class="number">2.4</span><span class="number">.2</span>　exp()/expf()/expl()函数：求e的x次方的值　</div><div class="line">　　<span class="number">2.4</span><span class="number">.3</span>　exp2()/exp2f()/exp2l()函数：<span class="number">2</span>的x的次方的值　</div><div class="line">　　<span class="number">2.4</span><span class="number">.4</span>　log()/logf()/logl()函数：求以e为底的对数值　</div><div class="line">　　<span class="number">2.4</span><span class="number">.5</span>　log10()/log10f()/log10l()函数：求以<span class="number">10</span>为底的对数值</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
       
       <div class="clearfix"></div>
     </div>
@@ -873,7 +866,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -889,7 +882,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -898,7 +891,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -915,9 +908,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

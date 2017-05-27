@@ -1,57 +1,58 @@
 ---
 title: rails
 date: 2016-11-18 22:01:18
-categories:
+categories: [ruby]
 ---
 rails
 <!-- more -->
 <h2>常用命令</h2>
 <h3>创建</h3>
-```markdown
+```bash
 rails new name
 ```
-```markdown
+```bash
 rails new name --skip-bundle
 ```
 
 <h3>开启服务</h3>
-```markdown
+```bash
 rails server
 ```
-```markdown
+```bash
 rails server -p 2000
 ```
 
 <h2>bundle</h2>
-```markdown
+```bash
 bundle install
 ```
 
 <h2>路由routes</h2>
 <h3>查看所有路由信息</h3>
-```markdown
+```bash
 rake routes
 ```
 <h3>设置根路由</h3>
-```markdown
-root 'welcome#index'
+```ruby
+root 'controller_name#action_name'
 ```
+`
 <h3>一般路由</h3>
 创建
-```markdown
+```ruby
   get 'names/:id', :to => 'names#actionname'
 ```
 调用
-```markdown
+```ruby
  <%= link_to 'xxxxxxx',{:controller => 'names', :action => 'actionname', :id => 1} %>
 ```
 <h3>命名路由</h3>
 创建
-```markdown
+```ruby
   get 'names/:id', :to => 'names#actionname', :as => 'names_actionname'
 ```
 调用
-```markdown
+```ruby
 <%= link_to 'xxxxxxx',names_actionname_path(1) %>
 <%= link_to 'xxxxxxx',names_actionname_path %>
 ```
@@ -63,20 +64,20 @@ root 'welcome#index'
 + new   get  /books/new
 
 设置
-```markdown
+```ruby
 resources :names
 ```
 
-```markdown
+```ruby
   resources :names, :except => :show
 ```
 <h4>集合路由</h4>
-```markdown
+```ruby
   resources :posts do
     get 'recent', :on => :collection
   end
 ```
-```markdown
+```ruby
   resources :posts do
     collection do
       get 'recent'
@@ -84,19 +85,19 @@ resources :names
   end
 ```
 <h4>成员路由</h4>
-```markdown
+```ruby
   resources :posts do
     get 'recent', :on => :member
   end
 ```
-```markdown
+```ruby
     member do
       get 'recent' #post/:id/recent
     end
   end
 ```
 
-```markdown
+```ruby
   resources :posts do
     collection do
       get 'recent' #post/recent
@@ -107,38 +108,38 @@ resources :names
   end
 ```
 <h2>db</h2>
-```markdown
+```ruby
 rake db:migrate
 ```
 
 <h2>generate</h2>
 <h3>scaffold</h3>
-```markdown
+```ruby
  rails generate scaffold name
 ```
-```markdown
+```ruby
  rails generate scaffold product name price:decimal description:text
 ```
 <h3>controller</h3>
 生成
-```markdown
+```ruby
 rails generate controller controllername
 ```
 删除
-```markdown
+```ruby
 rails destroy controller controllername
 ```
 生成
-```markdown
+```ruby
 rails generate controller controllername actionname1 actionname2
 ```
 <h3>model</h3>
 生成
-```markdown
+```ruby
 rails generate model modelname name1 name2:string
 ```
 添加关联字段
-```markdown
+```ruby
 rails generate migration add_user_id_to_posts user_id:id
 ```
 

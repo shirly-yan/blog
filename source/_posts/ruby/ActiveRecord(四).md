@@ -1,7 +1,7 @@
 ---
 title: ActiveRecord(四)
 date: 2016-04-06 10:48:37
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 关联

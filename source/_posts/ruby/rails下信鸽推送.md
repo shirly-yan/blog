@@ -1,7 +1,7 @@
 ---
 title: rails下信鸽推送
 date: 2016-12-20 21:29:38
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 rails下信鸽推送

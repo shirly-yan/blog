@@ -1,7 +1,7 @@
 ---
 title: php文件系统
 date: 2016-10-17 12:38:53
-categories: php
+categories: [php]
 ---
 php文件系统
 <!-- more -->

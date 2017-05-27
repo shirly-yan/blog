@@ -1,7 +1,7 @@
 ---
 title: rake
 date: 2016-11-14 15:23:56
-categories: ruby
+categories: [ruby]
 tags: [ruby,rake]
 ---
 rake

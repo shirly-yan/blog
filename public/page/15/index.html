@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
                     </ul>
@@ -178,7 +178,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apt/">apt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oc效果/">oc效果</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phpmyadmin/">phpmyadmin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rake/">rake</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rspec/">rspec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvm/">rvm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">swift</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,15 +241,15 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-ruby/ruby常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UISwitch 圆点按钮" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/17/ruby/ruby常用命令/" class="article-date">
-      <time datetime="2016-04-17T08:51:32.000Z" itemprop="datePublished">2016-04-17</time>
+      <a href="/2016/10/08/oc/UISwitch 圆点按钮/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -264,7 +264,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/17/ruby/ruby常用命令/">ruby常用命令</a>
+      <a class="article-title" href="/2016/10/08/oc/UISwitch 圆点按钮/">UISwitch 圆点按钮</a>
     </h1>
   
 
@@ -274,7 +274,129 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ruby常用命令<br>
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//UISwitch的初始化</span></div><div class="line">    <span class="built_in">UISwitch</span> *switchView = [[<span class="built_in">UISwitch</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">54.0</span>f, <span class="number">16.0</span>f, <span class="number">100.0</span>f, <span class="number">28.0</span>f)];</div><div class="line">    [view addSubview:switchView];</div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//设置UISwitch的初始化状态</span></div><div class="line">    switchView.on = <span class="literal">YES</span>;<span class="comment">//设置初始为ON的一边</span></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//UISwitch事件的响应</span></div><div class="line">    [switchView addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(switchAction:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">  </div><div class="line">    <span class="comment">//开启状态的颜色</span></div><div class="line">    switchView.onTintColor = [<span class="built_in">UIColor</span> redColor];</div><div class="line">   </div><div class="line">    <span class="comment">//关闭状态的颜色</span></div><div class="line">    switchView.tintColor = [<span class="built_in">UIColor</span> greenColor];</div><div class="line"></div><div class="line">    <span class="comment">//圆圈的颜色</span></div><div class="line">    switchView.thumbTintColor = [<span class="built_in">UIColor</span> yellowColor];</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UITextField" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UITextField/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UITextField/">UITextField</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//创建 </span></div><div class="line">     <span class="built_in">UITextField</span>*textfield = [[<span class="built_in">UITextField</span>             alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">200</span>,<span class="number">40</span>)];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:<span class="keyword">self</span>.myTextField];</div><div class="line">   </div><div class="line">    <span class="comment">//设置背景颜色</span></div><div class="line">    <span class="keyword">self</span>.myTextField.backgroundColor = [<span class="built_in">UIColor</span> clearColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框样式</span></div><div class="line">    <span class="keyword">self</span>.myTextField.borderStyle = <span class="built_in">UITextBorderStyleRoundedRect</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//密文输入</span></div><div class="line">    <span class="keyword">self</span>.myTextField.secureTextEntry = <span class="literal">YES</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置占位提示符</span></div><div class="line">    <span class="keyword">self</span>.myTextField.placeholder = <span class="string">@"请输入"</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框删除按钮</span></div><div class="line">    <span class="keyword">self</span>.myTextField.clearButtonMode = <span class="built_in">UITextFieldViewModeAlways</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置键盘类型</span></div><div class="line">    <span class="keyword">self</span>.myTextField.keyboardType = <span class="built_in">UIKeyboardTypeNumberPad</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按按钮键盘隐藏*********************************/</span></div><div class="line">  <span class="comment">//创建按钮</span></div><div class="line">    <span class="built_in">UIButton</span> *Button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:Button];</div><div class="line">    Button.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">80</span>, <span class="number">100</span>, <span class="number">30</span>);</div><div class="line">    Button.backgroundColor = [<span class="built_in">UIColor</span> cyanColor];</div><div class="line"></div><div class="line">    [Button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(buttonAction:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>) buttonAction:(<span class="built_in">UIButton</span> *)b</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="comment">//取消第一响应者</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按return键盘隐藏*********************************/</span></div><div class="line"><span class="number">1.</span>签<span class="built_in">UITextFieldDelegate</span>协议</div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> : <span class="title">UIResponder</span> &lt;<span class="title">UIApplicationDelegate</span>,<span class="title">UITextFieldDelegate</span>&gt;</span></div><div class="line"></div><div class="line"><span class="number">2.</span>成为代理人</div><div class="line">哪个输入框成为代理人哪个输入框有此功能</div><div class="line"> <span class="keyword">self</span>.myTextField.delegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line"><span class="number">3.</span>实现协议里的方法</div><div class="line"><span class="comment">//点击return建的时候被触发</span></div><div class="line">通用，一个就可以给所有输入框用</div><div class="line">- (<span class="built_in">BOOL</span>)textFieldShouldReturn:(<span class="built_in">UITextField</span> *)textField</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"><span class="comment">/******按空白处键盘隐藏*********************************/</span></div><div class="line"> <span class="comment">//按空白处键盘回收</span></div><div class="line">    <span class="built_in">UITapGestureRecognizer</span> *tap = [[<span class="built_in">UITapGestureRecognizer</span> alloc]initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(backgroundTap:)];</div><div class="line">    [<span class="keyword">self</span>.view addGestureRecognizer:tap];</div><div class="line"></div><div class="line"><span class="comment">//按空白处键盘回收调用的方法</span></div><div class="line">- (<span class="keyword">IBAction</span>)backgroundTap:(<span class="keyword">id</span>)sender &#123;</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf1  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf2  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf3  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf4  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf5  resignFirstResponder];</div><div class="line">   </div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UISlider滑条" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UISlider滑条/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UISlider滑条/">UISlider滑条</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>UIDevice提供了多种属性、类函数及状态通知，帮助我们全方位了解设备状况。从检测电池电量到定位设备与临近感应，UIDevice所做的工作就是为应用程序提供用户及设备的一些信息。UIDevice类还能够收集关于设备的各种具体细节，例如机型及iOS版本等。其中大部分属性都对开发工作具有积极的辅助作用。下面的代码简单的使用UIDevice获取手机属性。<br>
           
       
     </div>
@@ -283,18 +405,14 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
       
         <p class="article-more-link">
-          <a href="/2016/04/17/ruby/ruby常用命令/#more">more >></a>
+          <a href="/2016/10/08/oc/UISlider滑条/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -313,11 +431,11 @@
 
 
   
-    <article id="post-ruby/ruby调试" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIWebView" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/14/ruby/ruby调试/" class="article-date">
-      <time datetime="2016-04-14T06:54:51.000Z" itemprop="datePublished">2016-04-14</time>
+      <a href="/2016/10/08/oc/UIWebView/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -332,7 +450,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/14/ruby/ruby调试/">ruby调试</a>
+      <a class="article-title" href="/2016/10/08/oc/UIWebView/">UIWebView</a>
     </h1>
   
 
@@ -342,8 +460,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ruby调试<br>
-          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">retain</span>)<span class="built_in">UIWebView</span> *webView;</div><div class="line"></div><div class="line">    <span class="comment">//创建</span></div><div class="line">    <span class="keyword">self</span>.webView = [[<span class="built_in">UIWebViewalloc</span>]initWithFrame:[[<span class="built_in">UIScreenmainScreen</span>] bounds]];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.webView];</div><div class="line"></div><div class="line">   <span class="comment">//要前往的URL</span></div><div class="line">   <span class="built_in">NSString</span> *str = <span class="string">@"http://www.youku.com"</span>;</div><div class="line">    <span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:str];</div><div class="line">    <span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:url];</div><div class="line">    [<span class="keyword">self</span>.webView loadRequest:request];</div><div class="line"></div><div class="line">   <span class="comment">//成为代理</span></div><div class="line">    <span class="keyword">self</span>.webView.delegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line">   <span class="comment">//自定义导航栏左右按钮</span></div><div class="line">    <span class="keyword">self</span>.navigationItem.leftBarButtonItem = [[<span class="built_in">UIBarButtonItem</span> alloc]initWithTitle:<span class="string">@"后退"</span> style:<span class="built_in">UIBarButtonItemStylePlain</span> target:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(leftAction)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.navigationItem.rightBarButtonItem = [[<span class="built_in">UIBarButtonItem</span> alloc]initWithTitle:<span class="string">@"前进"</span> style:<span class="built_in">UIBarButtonItemStylePlain</span> target:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(rightAction)];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="built_in">UITextField</span> *textf = [[<span class="built_in">UITextField</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">150</span>, <span class="number">30</span>)];</div><div class="line">    textf.borderStyle = <span class="built_in">UITextBorderStyleRoundedRect</span>;</div><div class="line">    textf.clearButtonMode = <span class="built_in">UITextFieldViewModeAlways</span>;</div><div class="line">    <span class="keyword">self</span>.navigationItem.titleView = textf;</div><div class="line">    textf.delegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//后退</span></div><div class="line">-(<span class="keyword">void</span>)leftAction</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.webView goBack];</div><div class="line">&#125;</div><div class="line"><span class="comment">//前进</span></div><div class="line">-(<span class="keyword">void</span>)rightAction</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.webView goForward];</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">UITextFieldDelegate</span>协议方法</div><div class="line">-(<span class="built_in">BOOL</span>)textFieldShouldReturn:(<span class="built_in">UITextField</span> *)textField</div><div class="line">&#123;</div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="keyword">if</span> ([textField.text hasPrefix:<span class="string">@"http://www."</span>]) &#123;</div><div class="line">       </div><div class="line">        <span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:[<span class="built_in">NSURL</span> URLWithString:textField.text]];</div><div class="line">        [<span class="keyword">self</span>.webView loadRequest:request];</div><div class="line">       </div><div class="line">    &#125;<span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">NSString</span> *str = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"http://www.%@"</span>,textField.text];</div><div class="line">        <span class="built_in">NSURLRequest</span> *request = [<span class="built_in">NSURLRequest</span> requestWithURL:[<span class="built_in">NSURL</span> URLWithString:str]];</div><div class="line">        [<span class="keyword">self</span>.webView loadRequest:request];</div><div class="line">    &#125;</div><div class="line">    [textField resignFirstResponder];</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -351,19 +470,11 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/14/ruby/ruby调试/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -381,11 +492,11 @@
 
 
   
-    <article id="post-ruby/ActiveRecord(四)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIWindow.h详解" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/06/ruby/ActiveRecord(四)/" class="article-date">
-      <time datetime="2016-04-06T02:48:37.000Z" itemprop="datePublished">2016-04-06</time>
+      <a href="/2016/10/08/oc/UIWindow.h详解/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -400,7 +511,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/06/ruby/ActiveRecord(四)/">ActiveRecord(四)</a>
+      <a class="article-title" href="/2016/10/08/oc/UIWindow.h详解/">UIWindow.h详解</a>
     </h1>
   
 
@@ -410,8 +521,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>关联<br>
-          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span>//基础框架入口</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;CoreGraphics/CoreGraphics.h&gt;</span>//绘图入口</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIView.h&gt;</span>//视图对象</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIApplication.h&gt;</span>//提供iOS程序运行期的协作和控制</span></div><div class="line"></div><div class="line"><span class="meta">#import <span class="meta-string">&lt;UIKit/UIKitDefines.h&gt;</span>//一些宏定义</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">NS_ASSUME_NONNULL_BEGIN</span> </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="built_in">CGFloat</span> <span class="built_in">UIWindowLevel</span>;<span class="comment">//32位则为float | 64位为double</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"></div><div class="line">  UIEvent 触摸事件，运动事件</div><div class="line"></div><div class="line">  UIScreen 屏幕处理</div><div class="line"></div><div class="line">  NSUndoManager  记录撤销，修改操作的消息</div><div class="line"></div><div class="line">  UIViewController 视图控制器</div><div class="line"></div><div class="line">*/</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@class</span> <span class="title">UIEvent</span>,<span class="title">UIScreen</span>, <span class="title">NSUndoManager</span>,<span class="title">UIViewController</span>;</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">NS_CLASS_AVAILABLE_IOS</span>(<span class="number">2</span>_0)<span class="class"><span class="keyword">@interface</span> <span class="title">UIWindow</span> :<span class="title">UIView</span></span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">strong</span>)<span class="built_in">UIScreen</span> *screen; </div><div class="line"></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>)<span class="built_in">UIWindowLevel</span> windowLevel;            </div><div class="line"></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">readonly</span>,<span class="keyword">getter</span>=isKeyWindow) </div><div class="line"></div><div class="line"><span class="built_in">BOOL</span> keyWindow;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)becomeKeyWindow;                               </div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)resignKeyWindow;                               </div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)makeKeyWindow;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)makeKeyAndVisible;                             </div><div class="line"></div><div class="line"><span class="keyword">@property</span>(<span class="keyword">nullable</span>,<span class="keyword">nonatomic</span>,<span class="keyword">strong</span>)<span class="built_in">UIViewController</span> *rootViewController <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">4</span>_0);  <span class="comment">// default is nil</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"></div><div class="line"> 事件拦截分发到指定视图对象</div><div class="line"></div><div class="line"> 当用户发起一个事件，比如触摸屏幕或者晃动设备，系统产生一个事件，同时投递给UIApplication，而UIApplication则将这个事件传递给特定</div><div class="line"></div><div class="line"> UIWindow进行处理(正常情况都一个程序都只有一个UIWindow)，然后由UIWindow将这个事件传递给特定的对象(即first responder)并通过响应链</div><div class="line"></div><div class="line"> 进行处理。虽然都是通过响应链对事件进行处理，但是触摸事件和运动事件在处理上有着明显的不同(主要体现在确定哪个对象才是他们的first</div><div class="line"></div><div class="line"> responder)：</div><div class="line"></div><div class="line">*/</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)sendEvent:(<span class="built_in">UIEvent</span> *)event; </div><div class="line"></div><div class="line">                   </div><div class="line"></div><div class="line"><span class="comment">//窗口坐标系统转化</span></div><div class="line"></div><div class="line">- (<span class="built_in">CGPoint</span>)convertPoint:(<span class="built_in">CGPoint</span>)point toWindow:(nullableUIWindow *)window;<span class="comment">//转化当前窗口一个坐标相对另外一个窗口的坐标</span></div><div class="line"></div><div class="line">- (<span class="built_in">CGPoint</span>)convertPoint:(<span class="built_in">CGPoint</span>)point fromWindow:(nullableUIWindow *)window;<span class="comment">//转化另外窗口一个坐标相对于当前窗口的坐标</span></div><div class="line"></div><div class="line">- (<span class="built_in">CGRect</span>)convertRect:(<span class="built_in">CGRect</span>)rect toWindow:(nullableUIWindow *)window;<span class="comment">//转化当前窗口一个矩形坐标相对另外一个窗口的坐标</span></div><div class="line"></div><div class="line">- (<span class="built_in">CGRect</span>)convertRect:(<span class="built_in">CGRect</span>)rect fromWindow:(nullableUIWindow *)window;<span class="comment">//转化另外窗口一个矩形坐标相对于当前窗口的坐标</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> constUIWindowLevel <span class="built_in">UIWindowLevelNormal</span>;<span class="comment">//默认等级</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> constUIWindowLevel <span class="built_in">UIWindowLevelAlert</span>;<span class="comment">//UIAlert等级</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> constUIWindowLevel <span class="built_in">UIWindowLevelStatusBar</span>;<span class="comment">//状态栏等级</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIWindowDidBecomeVisibleNotification</span>;<span class="comment">// nil 通知对象窗口为可见</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIWindowDidBecomeHiddenNotification</span>; <span class="comment">// nil 通知对象窗口为隐藏</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIWindowDidBecomeKeyNotification</span>;    <span class="comment">// nil 通知对象窗口为重要</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIWindowDidResignKeyNotification</span>;    <span class="comment">// nil 通知对象窗口取消主窗</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//当键盘显示或消失时，系统会发送相关的通知:</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardWillShowNotification</span>;<span class="comment">//通知键盘对象视图即将加载</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardDidShowNotification</span>;<span class="comment">//通知键盘对象视图完全加载</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardWillHideNotification</span>;<span class="comment">//通知键盘对象视图即将隐藏</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardDidHideNotification</span>;<span class="comment">//通知键盘对象视图完全隐藏</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"></div><div class="line">通知消息 NSNotification中的 userInfo字典中包含键盘的位置和大小信息，对应的key为</div><div class="line"></div><div class="line">  UIKeyboardFrameBeginUserInfoKey</div><div class="line"></div><div class="line">  UIKeyboardFrameEndUserInfoKey</div><div class="line"></div><div class="line">  UIKeyboardAnimationDurationUserInfoKey</div><div class="line"></div><div class="line">  UIKeyboardAnimationCurveUserInfoKey</div><div class="line"></div><div class="line">UIKeyboardFrameBeginUserInfoKey,UIKeyboardFrameEndUserInfoKey对应的Value是个NSValue对象，内部包含CGRect结构，分别为键盘起始时和终止时的位置信息。</div><div class="line"></div><div class="line">UIKeyboardAnimationCurveUserInfoKey对应的Value是NSNumber对象，内部为UIViewAnimationCurve类型的数据，表示键盘显示或消失的动画类型。</div><div class="line"></div><div class="line">UIKeyboardAnimationDurationUserInfoKey对应的Value也是NSNumber对象，内部为double类型的数据，表示键盘h显示或消失时动画的持续时间</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> 例如，在UIKeyboardWillShowNotification，UIKeyboardDidShowNotification通知中的userInfo内容为</div><div class="line"></div><div class="line">    userInfo = &#123;</div><div class="line"></div><div class="line">                 UIKeyboardAnimationCurveUserInfoKey = 0;</div><div class="line"></div><div class="line">                 UIKeyboardAnimationDurationUserInfoKey = "0.25";</div><div class="line"></div><div class="line">                 UIKeyboardBoundsUserInfoKey = "NSRect: &#123;&#123;0, 0&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardCenterBeginUserInfoKey = "NSPoint: &#123;160, 588&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardCenterEndUserInfoKey = "NSPoint: &#123;160, 372&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardFrameBeginUserInfoKey = "NSRect: &#123;&#123;0, 480&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardFrameChangedByUserInteraction = 0;</div><div class="line"></div><div class="line">                 UIKeyboardFrameEndUserInfoKey = "NSRect: &#123;&#123;0, 264&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">               &#125;</div><div class="line"></div><div class="line">    在UIKeyboardWillHideNotification,UIKeyboardDidHideNotification通知中的userInfo内容为:</div><div class="line"></div><div class="line">   userInfo = &#123;</div><div class="line"></div><div class="line">                 UIKeyboardAnimationCurveUserInfoKey = 0;</div><div class="line"></div><div class="line">                 UIKeyboardAnimationDurationUserInfoKey = "0.25";</div><div class="line"></div><div class="line">                 UIKeyboardBoundsUserInfoKey = "NSRect: &#123;&#123;0, 0&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardCenterBeginUserInfoKey = "NSPoint: &#123;160, 372&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardCenterEndUserInfoKey = "NSPoint: &#123;160, 588&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardFrameBeginUserInfoKey = "NSRect: &#123;&#123;0, 264&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">                 UIKeyboardFrameChangedByUserInteraction = 0;</div><div class="line"></div><div class="line">                 UIKeyboardFrameEndUserInfoKey = "NSRect: &#123;&#123;0, 480&#125;, &#123;320, 216&#125;&#125;";</div><div class="line"></div><div class="line">              &#125;</div><div class="line"></div><div class="line">*/</div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardFrameBeginUserInfoKey</span>       <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">3</span>_2);<span class="comment">// NSValue of CGRect</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardFrameEndUserInfoKey</span>         <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">3</span>_2);<span class="comment">// NSValue of CGRect</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardAnimationDurationUserInfoKeyNS_AVAILABLE_IOS</span>(<span class="number">3</span>_0);<span class="comment">// NSNumber of double</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardAnimationCurveUserInfoKey</span>   <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">3</span>_0);<span class="comment">// NSNumber of NSUInteger (UIViewAnimationCurve)</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardIsLocalUserInfoKey</span>          <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">9</span>_0);<span class="comment">// NSNumber of BOOL</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardWillChangeFrameNotification</span> <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0);<span class="comment">//键盘即将改变布局发出通知</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardDidChangeFrameNotification</span>  <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">5</span>_0);<span class="comment">//键盘已经改变布局后发出通知</span></div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardCenterBeginUserInfoKey</span>  <span class="built_in">NS_DEPRECATED_IOS</span>(<span class="number">2</span>_0,<span class="number">3</span>_2);</div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardCenterEndUserInfoKey</span>    <span class="built_in">NS_DEPRECATED_IOS</span>(<span class="number">2</span>_0,<span class="number">3</span>_2);</div><div class="line"></div><div class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> <span class="built_in">UIKeyboardBoundsUserInfoKey</span>       <span class="built_in">NS_DEPRECATED_IOS</span>(<span class="number">2</span>_0,<span class="number">3</span>_2);</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">NS_ASSUME_NONNULL_END</span></div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -419,19 +531,11 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/06/ruby/ActiveRecord(四)/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -449,11 +553,11 @@
 
 
   
-    <article id="post-ruby/ActiveRecord(三)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UITextView" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/05/ruby/ActiveRecord(三)/" class="article-date">
-      <time datetime="2016-04-05T06:31:10.000Z" itemprop="datePublished">2016-04-05</time>
+      <a href="/2016/10/08/oc/UITextView/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -468,7 +572,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/05/ruby/ActiveRecord(三)/">ActiveRecord(三)</a>
+      <a class="article-title" href="/2016/10/08/oc/UITextView/">UITextView</a>
     </h1>
   
 
@@ -478,8 +582,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>查询<br>
-          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView = [[<span class="built_in">UITextView</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">667</span><span class="number">-80</span>, <span class="number">375</span>, <span class="number">80</span>)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.delegate = <span class="keyword">self</span>;</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">20</span>];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.textColor = [<span class="built_in">UIColor</span> blackColor];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.contentInset = <span class="built_in">UIEdgeInsetsMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);<span class="comment">//添加滚动区域</span></div><div class="line"></div><div class="line">    <span class="keyword">self</span>.textView.text = <span class="string">@"习大大"</span>;</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.scrollEnabled = <span class="literal">YES</span>;<span class="comment">//是否可滚动</span></div><div class="line"></div><div class="line">    <span class="keyword">self</span>.textView.editable = <span class="literal">YES</span>;<span class="comment">//是否可编辑</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.returnKeyType = <span class="built_in">UIReturnKeyDefault</span>;<span class="comment">//返回键的类型</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.keyboardType = <span class="built_in">UIKeyboardTypeDefault</span>;<span class="comment">//键盘类型</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.scrollEnabled = <span class="literal">YES</span>;<span class="comment">//是否可以拖动</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.autoresizingMask = <span class="built_in">UIViewAutoresizingFlexibleHeight</span>;<span class="comment">//自适应高度</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.layer.cornerRadius = <span class="number">8</span>; <span class="comment">//边框设置为圆角</span></div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.textView.layer.borderWidth = <span class="number">1</span>;</div><div class="line">   </div><div class="line"><span class="comment">//    设置边框颜色 参数2是一个数组 分别为三基色和alpha分量；</span></div><div class="line">    <span class="built_in">CGFloat</span> color[]=&#123;<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">1</span>&#125;;</div><div class="line">    <span class="keyword">self</span>.textView.layer.borderColor = <span class="built_in">CGColorCreate</span>(<span class="built_in">CGColorSpaceCreateDeviceRGB</span>(),color);</div><div class="line">    <span class="keyword">self</span>.textView.layer.masksToBounds = <span class="literal">YES</span>;</div><div class="line">   </div><div class="line"><span class="comment">//    [self.textView becomeFirstResponder];//获得焦点 程序运行就获取光标</span></div><div class="line"></div><div class="line">    <span class="keyword">self</span>.myView = [[<span class="built_in">UIView</span> alloc]initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen]bounds]];</div><div class="line">    <span class="keyword">self</span>.myView.tag = <span class="number">1000</span>;</div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.myView];</div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.myView addSubview:<span class="keyword">self</span>.textView];</div><div class="line">   </div><div class="line">    <span class="comment">//注册通知,监听键盘弹出事件</span></div><div class="line">    [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(keyboardDidShow:) name:<span class="built_in">UIKeyboardDidShowNotification</span> object:<span class="literal">nil</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//注册通知,监听键盘消失事件</span></div><div class="line">    [[<span class="built_in">NSNotificationCenter</span> defaultCenter] addObserver:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(keyboardDidHidden) name:<span class="built_in">UIKeyboardDidHideNotification</span> object:<span class="literal">nil</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//将要开始编辑</span></div><div class="line">- (<span class="built_in">BOOL</span>)textViewShouldBeginEditing:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line">   </div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//将要结束编辑</span></div><div class="line">- (<span class="built_in">BOOL</span>)textViewShouldEndEditing:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line">   </div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//开始编辑</span></div><div class="line">- (<span class="keyword">void</span>)textViewDidBeginEditing:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//结束编辑</span></div><div class="line">- (<span class="keyword">void</span>)textViewDidEndEditing:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//焦点发生改变</span></div><div class="line">- (<span class="keyword">void</span>)textViewDidChangeSelection:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line">   </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//内容发生改变编辑</span></div><div class="line">- (<span class="keyword">void</span>)textViewDidChange:(<span class="built_in">UITextView</span> *)textView&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//内容将要发生改变编辑</span></div><div class="line"></div><div class="line"><span class="comment">//控制输入文字的长度和内容，可通调用以下代理方法实现</span></div><div class="line">- (<span class="built_in">BOOL</span>)textView:(<span class="built_in">UITextView</span> *)textView shouldChangeTextInRange:(<span class="built_in">NSRange</span>)range replacementText:(<span class="built_in">NSString</span> *)text&#123;</div><div class="line">   </div><div class="line">    <span class="keyword">if</span> (range.location&gt;=<span class="number">100</span>)&#123;</div><div class="line">        <span class="comment">//控制输入文本的长度</span></div><div class="line">        <span class="keyword">return</span>  <span class="literal">NO</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> ([text isEqualToString:<span class="string">@"\n"</span>]) &#123;</div><div class="line">        <span class="comment">//禁止输入换行</span></div><div class="line">        <span class="keyword">return</span> <span class="literal">NO</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 键盘弹出时</span></div><div class="line">-(<span class="keyword">void</span>)keyboardDidShow:(<span class="built_in">NSNotification</span> *)notification&#123;</div><div class="line">   </div><div class="line">    <span class="comment">//获取键盘高度</span></div><div class="line">    <span class="built_in">NSValue</span> *keyboardObject = [[notification userInfo] objectForKey:<span class="built_in">UIKeyboardFrameEndUserInfoKey</span>];</div><div class="line">   </div><div class="line">    <span class="built_in">CGRect</span> keyboardRect;</div><div class="line">   </div><div class="line">    [keyboardObject getValue:&amp;keyboardRect];</div><div class="line">   </div><div class="line">    <span class="comment">//调整放置有textView的view的位置</span></div><div class="line">   </div><div class="line">    <span class="comment">//设置动画</span></div><div class="line">    [<span class="built_in">UIView</span> beginAnimations:<span class="literal">nil</span> context:<span class="literal">nil</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//定义动画时间</span></div><div class="line">    [<span class="built_in">UIView</span> setAnimationDuration:kAnimationDuration];</div><div class="line">   </div><div class="line">    <span class="comment">//设置view的frame，往上平移</span></div><div class="line">    [(<span class="built_in">UIView</span> *)[<span class="keyword">self</span>.view viewWithTag:<span class="number">1000</span>] setFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="keyword">self</span>.view.frame.size.height-keyboardRect.size.height-kViewHeight, <span class="number">375</span>, kViewHeight)];</div><div class="line">   </div><div class="line">    [<span class="built_in">UIView</span> commitAnimations];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//键盘消失时</span></div><div class="line">-(<span class="keyword">void</span>)keyboardDidHidden</div><div class="line">&#123;</div><div class="line">    <span class="comment">//定义动画</span></div><div class="line">    [<span class="built_in">UIView</span> beginAnimations:<span class="literal">nil</span> context:<span class="literal">nil</span>];</div><div class="line">    [<span class="built_in">UIView</span> setAnimationDuration:kAnimationDuration];</div><div class="line">    <span class="comment">//设置view的frame，往下平移</span></div><div class="line">    [(<span class="built_in">UIView</span> *)[<span class="keyword">self</span>.view viewWithTag:<span class="number">1000</span>] setFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="keyword">self</span>.view.frame.size.height-kViewHeight, <span class="number">375</span>, kViewHeight)];</div><div class="line">    [<span class="built_in">UIView</span> commitAnimations];</div><div class="line">&#125;</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event&#123;</div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.textView resignFirstResponder];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -487,19 +592,11 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/05/ruby/ActiveRecord(三)/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -517,11 +614,11 @@
 
 
   
-    <article id="post-ruby/ActiveRecord(二)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UTF-8 和 GBK 的 NSString 相互转化的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/04/ruby/ActiveRecord(二)/" class="article-date">
-      <time datetime="2016-04-04T06:38:26.000Z" itemprop="datePublished">2016-04-04</time>
+      <a href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -536,7 +633,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/04/ruby/ActiveRecord(二)/">ActiveRecord(二)</a>
+      <a class="article-title" href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a>
     </h1>
   
 
@@ -546,8 +643,31 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ActiveRecord 回调<br>
-          
+        <a id="more"></a>
+<p>应用都要遇到一个很头疼的问题：文字编码，汉字的 GBK 和 国际通用的 UTF-8 的互相转化稍一不慎，<br>就会满屏乱码。下面介绍 UTF-8 和 GBK 的 NSString 相互转化的方法</p>
+<p> NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);<br>    char<em> c_test = “北京”;<br>    int nLen = strlen(c_test);<br>    NSString</em> str = [[NSString alloc]initWithBytes:c_test length:nLen encoding:enc ];<br>    NSLog(@”str = %@”,str);</p>
+<p><strong>从 GBK 转到 UTF-8
+</strong>用 NSStringEncoding enc =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000) ，<br>然后就可以用initWithData：encoding来实现。</p>
+<p><strong>从 UTF-8 转到 GBK
+</strong>CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)，<br>得到的enc却是kCFStringEncodingInvalidId。<br>没关系，试试 NSData *data=[nsstring dataUsingEncoding:-2147482063];</p>
+<p>转换字符编码主要用到CFStringConvertEncodingToNSStringEncoding函数,具体的大家可以看看这个函数的用法<br>NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding (kCFStringEncodingGB_18030_2000);</p>
+<p>完整代码如下:<br><strong>NSURL <em>url = [NSURL URLWithString:urlStr];<br>NSData </em>data = [NSData dataWithContentsOfURL:url];<br>NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);<br>NSString *retStr = [[NSString alloc] initWithData:data encoding:enc];
+</strong><br>一个比较方便的转换NSString为UTF8编码的函数,大家可以试试</p>
+<p><strong>头文件：
+</strong>@interface NSString (OAURLEncodingAdditions) </p>
+<ul>
+<li>(NSString *)URLEncodedString; </li>
+<li><p>(NSString <em>)URLDecodedString;<br>@end<br><em>*m文件:
+</em></em><br>@implementation<br>NSString (OAURLEncodingAdditions) </p>
+<ul>
+<li>(NSString <em>)URLEncodedString<br>{<br>NSString </em>result = (NSString <em>)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,NULL,CFSTR(“!</em>‘();:@&amp;=+$,/?%#[]”),kCFStringEncodingUTF8);<br>[result autorelease];<br>return result;<br>}</li>
+</ul>
+</li>
+<li><p>(NSString<em>)URLDecodedString<br>{<br> NSString </em>result = (NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,(CFStringRef)self, CFSTR(“”),kCFStringEncodingUTF8);CFSTR(“”),kCFStringEncodingUTF8);<br> [result autorelease];<br> return result;<br>}<br>@end<br>如果需要转换一个NSString, 只需要</p>
+</li>
+</ul>
+<p>NSString <em>temp = [@”测试utf8” URLEncodedString];<br>NSString </em>decoded = [temp URLDecodedString];</p>
+
       
     </div>
     
@@ -555,19 +675,11 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/04/ruby/ActiveRecord(二)/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -585,11 +697,11 @@
 
 
   
-    <article id="post-ruby/ActiveRecord(一)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iPhone尺寸" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/01/ruby/ActiveRecord(一)/" class="article-date">
-      <time datetime="2016-04-01T12:47:18.000Z" itemprop="datePublished">2016-04-01</time>
+      <a href="/2016/10/08/oc/iPhone尺寸/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -604,7 +716,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/01/ruby/ActiveRecord(一)/">ActiveRecord(一)</a>
+      <a class="article-title" href="/2016/10/08/oc/iPhone尺寸/">iPhone尺寸</a>
     </h1>
   
 
@@ -614,8 +726,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ActiveRecord(一)<br>
-          
+        <a id="more"></a>
+<p>/<em> 屏幕尺寸     物理pt     像素pxiPhone4     320 </em> 480    2倍iPhone4s<br> 320 <em> 480    2倍iPhone5<br>     320 </em> 568    2倍iPhone6<br>     375 <em> 667    2倍iPhone6plus<br> 414 </em> 736    3倍iPhone6s    375</p>
+<ul>
+<li>667    2倍iPhone6splus<br>414 <em> 736    3倍 </em>/<br>/*Icon.png             –  57×57          iPhone (ios5/6) Icon@2x.png      – 114×114        iPhone Retina (ios5/6) </li>
+</ul>
+<p>Icon-72.png         – 72×72        iPad (ios5/6) Icon-72@2x.png  - 144×144     iPad Retina (ios5/6)<br>Icon-60@2x.png  - 120x120     iphone &amp; ipod touch (ios7/8)<br>Icon-60@3x.png  - 180x180     iphone6 plus (ios8) </p>
+<p>Icon-76.png         - 76x76         ipad2 &amp; ipad mini (ios7/8)<br>Icon-76@2x.png - 152x152      ipad retina (ios7/8)*/</p>
+
       
     </div>
     
@@ -623,19 +741,11 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
     </div>
 
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/01/ruby/ActiveRecord(一)/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -653,11 +763,11 @@
 
 
   
-    <article id="post-ruby/ruby基本语法3" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-markdown/hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/17/ruby/ruby基本语法3/" class="article-date">
-      <time datetime="2016-03-17T09:40:04.000Z" itemprop="datePublished">2016-03-17</time>
+      <a href="/2016/09/30/markdown/hello-world/" class="article-date">
+      <time datetime="2016-09-30T11:56:27.000Z" itemprop="datePublished">2016-09-30</time>
 </a>
 
 
@@ -672,7 +782,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/17/ruby/ruby基本语法3/">ruby基本语法3</a>
+      <a class="article-title" href="/2016/09/30/markdown/hello-world/">Hello World</a>
     </h1>
   
 
@@ -682,28 +792,24 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ruby基本语法3<br>
-          
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/03/17/ruby/ruby基本语法3/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -721,11 +827,11 @@
 
 
   
-    <article id="post-ruby/ruby正则" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-swift/swift类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/14/ruby/ruby正则/" class="article-date">
-      <time datetime="2016-03-14T03:00:05.000Z" itemprop="datePublished">2016-03-14</time>
+      <a href="/2016/07/20/swift/swift类型/" class="article-date">
+      <time datetime="2016-07-20T02:09:39.000Z" itemprop="datePublished">2016-07-20</time>
 </a>
 
 
@@ -740,7 +846,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/14/ruby/ruby正则/">ruby正则</a>
+      <a class="article-title" href="/2016/07/20/swift/swift类型/">swift类型</a>
     </h1>
   
 
@@ -750,7 +856,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>ruby正则<br>
+              <p>swift类型<br>
           
       
     </div>
@@ -759,154 +865,18 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    <a class="article-category-link" href="/categories/swift/">swift</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
     </div>
 
       
         <p class="article-more-link">
-          <a href="/2016/03/14/ruby/ruby正则/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/ruby基本语法2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/13/ruby/ruby基本语法2/" class="article-date">
-      <time datetime="2016-03-13T09:40:04.000Z" itemprop="datePublished">2016-03-13</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/13/ruby/ruby基本语法2/">ruby基本语法2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>ruby基本语法2<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/03/13/ruby/ruby基本语法2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/ruby基本语法1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/11/ruby/ruby基本语法1/" class="article-date">
-      <time datetime="2016-03-11T09:16:29.000Z" itemprop="datePublished">2016-03-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/11/ruby/ruby基本语法1/">ruby基本语法1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>ruby基本语法1<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/03/11/ruby/ruby基本语法1/#more">more >></a>
+          <a href="/2016/07/20/swift/swift类型/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -927,7 +897,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/14/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/16/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/14/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/16/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -943,7 +913,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -952,7 +922,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -969,9 +939,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

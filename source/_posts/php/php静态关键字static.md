@@ -1,7 +1,7 @@
 ---
 title: php静态关键字static
 date: 2016-10-14 16:33:33
-categories: php
+categories: [php]
 ---
 php静态关键字static
 <!-- more -->

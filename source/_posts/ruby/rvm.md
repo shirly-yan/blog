@@ -1,7 +1,7 @@
 ---
 title: rvm
 date: 2017-02-04 13:40:59
-categories: ruby
+categories: [ruby]
 tags: [rvm] 
 ---
 rvm

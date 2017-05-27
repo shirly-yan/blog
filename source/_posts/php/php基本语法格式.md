@@ -1,7 +1,7 @@
 ---
 title: php基本语法格式
 date: 2016-10-11 10:56:04
-categories: php
+categories: [php]
 ---
 php基本语法格式的记录，对于有基础的人试用
 <!-- more -->

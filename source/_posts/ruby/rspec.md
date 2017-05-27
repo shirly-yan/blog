@@ -1,7 +1,7 @@
 ---
 title: rspec
 date: 2016-11-22 14:27:03
-categories: ruby
+categories: [ruby]
 tags: [ruby,rspec]
 ---
 rspec

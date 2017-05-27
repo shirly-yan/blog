@@ -1,7 +1,7 @@
 ---
 title: 会话控制（session与cookie）
 date: 2016-10-17 11:19:03
-categories: php
+categories: [php]
 ---
 会话控制（session与cookie）
 <!-- more -->

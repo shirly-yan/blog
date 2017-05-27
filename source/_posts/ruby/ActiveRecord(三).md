@@ -1,7 +1,7 @@
 ---
 title: ActiveRecord(三)
 date: 2016-04-05 14:31:10
-categories: ruby
+categories: [ruby]
 tags: [ruby,rails]
 ---
 查询

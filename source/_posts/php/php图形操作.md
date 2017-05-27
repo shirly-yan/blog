@@ -1,7 +1,7 @@
 ---
 title: php图形操作
 date: 2016-10-17 13:58:32
-categories: php
+categories: [php]
 ---
 php图形操作
 <!-- more -->

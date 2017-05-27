@@ -1,7 +1,8 @@
 ---
 title: docker
 date: 2016-11-15 13:52:31
-categories:
+categories: [docker]
+tags: [docker]
 ---
 docker
 <!-- more -->

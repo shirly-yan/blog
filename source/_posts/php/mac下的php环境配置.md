@@ -1,7 +1,7 @@
 ---
 title: mac下的php环境配置
 date: 2016-10-10 14:08:56
-categories: php
+categories: [php]
 ---
 mac下配置php环境的方法注意事项
 <!-- more -->

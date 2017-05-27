@@ -1,7 +1,7 @@
 ---
 title: php结构语句
 date: 2016-10-14 09:51:50
-categories: php
+categories: [php]
 ---
 顺序结构 条件结构 循环结构 
 <!-- more -->
