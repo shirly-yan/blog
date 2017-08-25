@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>Friends</li>
+                        <li>友情鏈接</li>
                         
                         
                     </ul>
@@ -241,14 +241,14 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-oc/cell的几种style" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIColor和TintColor" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/cell的几种style/" class="article-date">
+      <a href="/2016/10/08/oc/UIColor和TintColor/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -264,7 +264,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/cell的几种style/">cell的几种style</a>
+      <a class="article-title" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a>
     </h1>
   
 
@@ -275,7 +275,7 @@
       
           
         <a id="more"></a>
-<p>cell.accessoryType = UITableViewCellAccessoryNone;//cell没有任何的样式<br>cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;//cell的右边有一个小箭头，距离右边有十几像素；<br>cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;//cell右边有一个蓝色的圆形button；<br>cell.accessoryType = UITableViewCellAccessoryCheckmark;//cell右边的形状是对号；</p>
+<p>前者是指颜色，tint是指着色，色调。<br>通过tintColor属性可以定制UINavigationBar的背景颜色，但如果需要设定渐变色、甚至纹理来说，就需要贴图了。比较“暴力”的一种做法就是通过Category来重新实现- (void)<br> drawRect:(CGRect)rect的实现，“暴力”是因为这种杀伤面很广，所有项目内的UINavigationBar都会因此改变。</p>
 
       
     </div>
@@ -306,10 +306,10 @@
 
 
   
-    <article id="post-oc/double 型转换成 金额" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIBlurEffect系统自带毛玻璃效果" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/double 型转换成 金额/" class="article-date">
+      <a href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -325,7 +325,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/double 型转换成 金额/">double 型转换成 金额</a>
+      <a class="article-title" href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a>
     </h1>
   
 
@@ -336,11 +336,9 @@
       
           
         <a id="more"></a>
-<p>```objc</p>
-<ul>
-<li>(NSString <em>)priceString:(double)input {<br>DDLogDebug(@”input %f”,input);<br>NSNumber </em>price = [NSNumber numberWithDouble:input];<br>DDLogDebug(@”price %@”,price);<br>NSNumberFormatter *nf = [NSNumberFormatter new];<br>[nf setNumberStyle:NSNumberFormatterCurrencyStyle];<br>nf.locale = [NSLocale localeWithLocaleIdentifier:@”zh_CN”];<br>DDLogDebug(@”nf %@”,[nf stringFromNumber:price]);<br>return [nf stringFromNumber:price];<br>}</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20151218115131757" alt="这里写图片描述"></p>
+<p>```objc<br>   //需要模糊效果的view<br>   UIImageView*i = [[UIImageViewalloc]initWithFrame:CGRectMake(100,100,100,200)];<br>    [self.viewaddSubview:i];<br>    i.image= [UIImageimageNamed:@”1”];</p>
+<p>   //创建UIBlurEffect<br>   UIBlurEffect*blurEffect = [UIBlurEffecteffectWithStyle:UIBlurEffectStyleLight];</p>
+<p>   //UIVisualEffectView<br>   UIVisualEffectView*effectView = [[UIVisualEffectViewalloc]initWithEffect:blurEffect];   //设置模糊效果的frame    effectView.frame = i.bounds;   //添加到view上    [iaddSubview:effectView];    //设置模糊的程度    effectView.alpha =.5f;<br>typedefNS_ENUM(NSInteger, UIBlurEffectStyle) {    UIBlurEffectStyleExtraLight,    UIBlurEffectStyleLight,<br>    UIBlurEffectStyleDark}</p>
 
       
     </div>
@@ -371,10 +369,10 @@
 
 
   
-    <article id="post-oc/iOS 使用纯代码或xib创建圆角视图" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIAlertController" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/" class="article-date">
+      <a href="/2016/10/08/oc/UIAlertController/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -390,7 +388,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a>
+      <a class="article-title" href="/2016/10/08/oc/UIAlertController/">UIAlertController</a>
     </h1>
   
 
@@ -401,227 +399,63 @@
       
           
         <a id="more"></a>
-<p>####尊重原创 转自：<a href="http://www.jianshu.com/p/80f1fd3f63a0" target="_blank" rel="external">http://www.jianshu.com/p/80f1fd3f63a0</a></p>
-<p>####</p>
-<p>####引言:</p>
-<blockquote>
-<p>在我们日常开发中, 很多中情况下我们需要设置UIView或者UIImageView的圆角以及边框等,例如个人中心的用户头像等等。</p>
-<p><strong>例如 简书:</strong><br><img src="http://upload-images.jianshu.io/upload_images/1975627-4cd88898bae5d219.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>简书-我的界面#####我们通常的做法是:</p>
-<ol>
-<li>使用纯代码。</li>
-<li>在xib下设置属性。</li>
-</ol>
-</blockquote>
-<hr>
-<p>####纯代码创建圆角视图:<br>代码如下:<br>        UIView *view = [[UIView alloc] initWithFrame:(CGRectMake(50, 100, 200, 200))];<br>        view.backgroundColor = [UIColor brownColor];</p>
-<pre><code>// 设置圆角的角度(当view的宽和高相等, 且 圆角角度为宽的一半时 为圆形)
-view.layer.cornerRadius = 20;
-
-// 设置允许裁剪
-view.layer.masksToBounds = YES;
-
-// 设置边框
-view.layer.borderWidth = 5;
-
-// 设置边框颜色
-view.layer.borderColor = [[UIColor redColor] CGColor];
-
-[self.view addSubview:view];
-</code></pre><p>创建imageView 和 view 的方式是一样的, 在这里只演示view的创建。</p>
-<hr>
-<p>####xib下创建圆角视图:<br>正常情况下, 我们在xib中使用 keyPath 来设置圆角。如图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-5e1fb160b9f1c014.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>xib.png<br>这里虽然设置了, 但是我们并不能立即在xib中看到设置后圆角效果的, 只有在程序运行后才会看到效果。 所以我们要使用<code>IB_DESIGNABLE</code>和<code>IBInspectable</code>来实现实时查看圆角效果。</p>
-<p>######IB_DESIGNABLE:<br>这是一个宏定义, 功能就是让XCode动态渲染出该类图形化界面。<br>使用方法: 在自定义的view的.h文件中 添加该 宏定义。</p>
-<p>######IBInspectable:<br>IBInspectable 宏定义的功能是可以可视化显示自定义view中相关的属性。</p>
-<hr>
-<p>####如何实现实时查看圆角效果:<br>1.自定义view , CornerView.h:</p>
-<pre><code>#import &lt;UIKit/UIKit.h&gt;
-IB_DESIGNABLE  // 动态刷新
-@interfaceCornerView : UIView
-// 注意: 加上IBInspectable就可以可视化显示相关的属性
-/** 可视化设置边框宽度 */
-@property (nonatomic, assign)IBInspectable CGFloat borderWidth;
-/** 可视化设置边框颜色 */
-@property (nonatomic, strong)IBInspectable UIColor *borderColor;
-/** 可视化设置圆角 */
-@property (nonatomic, assign)IBInspectable CGFloat cornerRadius;
-@end
-</code></pre><p>CornerView.m:<br>    @implementationCornerView.m</p>
-<pre><code>#pragma mark - 设置边框宽度
-- (void)setBorderWidth:(CGFloat)borderWidth {
-
-    if (borderWidth &lt; 0) return;
-
-    self.layer.borderWidth = borderWidth;
-}
-
-#pragma mark - 设置边框颜色
-- (void)setBorderColor:(UIColor *)borderColor {
-
-    self.layer.borderColor = borderColor.CGColor;
-}
-
-#pragma mark - 设置圆角
-- (void)setCornerRadius:(CGFloat)cornerRadius {
-
-    self.layer.cornerRadius = cornerRadius;
-    self.layer.masksToBounds = cornerRadius &gt; 0;
-}
-</code></pre><p>2.在xib中拖一个view, 将view设定为 自定义view: CornerView 如图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-4db67f19b49fe871.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>自定义view<br>注意:<code>Designable</code>如果没有这行字，说明没有正确添加添加IB_DESIGNABLE，如果它的状态显示up to date,说明设置成功, 如果是updating，说明视图在更新，案如果是build failed的话，请检查布局代码，可能有哪里出错了。<br>3.如图, 我们就可以看到自定义view中设置的属性了:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-07722f927de30e71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>自定义属性4.设置好 属性后 , 右边的view就会立即 更新了!<br><img src="http://upload-images.jianshu.io/upload_images/1975627-e8d8c896c0de4983.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>效果图.jpg该方法同样适用于UIIamgeView ! ! ! !</p>
-<hr>
-<p>####效果图:<br><img src="http://upload-images.jianshu.io/upload_images/1975627-ebdb869d89da681f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>效果图</p>
-<p>本篇文章对应的源代码下载地址:<a href="https://github.com/LiCheng244/CornerViewDemo" target="_blank" rel="external">CornerViewDemo</a><br><strong>该 demo 中封装了 自定义view 和 自定义imageView , 可以将CornerTool文件夹拖入到项目中直接使用, <code>xib下 view</code> 继承 <code>CornerView</code>类, <code>imageView</code> 继承 <code>CornerImageView</code>即可设置属性。</strong></p>
-<p>文／Li_Cheng（简书作者）<br>原文链接：<a href="http://www.jianshu.com/p/80f1fd3f63a0" target="_blank" rel="external">http://www.jianshu.com/p/80f1fd3f63a0</a><br>著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
+<p>   //初始化方法</p>
+<pre><code>+ (instancetype)alertControllerWithTitle:(nullableNSString *)title message:(nullableNSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle;
+</code></pre><p>   //UIAlertControllerStyle<br>   typedefNS_ENUM(NSInteger, UIAlertControllerStyle) {<br>            UIAlertControllerStyleActionSheet =0,            UIAlertControllerStyleAlert     }<br>   /<strong><strong><strong>**</strong></strong></strong>自动消失的UIAlertController<strong><strong>*</strong></strong>/   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”标题”message:@”UIAlertController”preferredStyle:UIAlertControllerStyleAlert];</p>
+<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:nil];
+</code></pre><p>   //线程2秒后执行<br>   dispatch_after(dispatch_time(DISPATCH_TIME_NOW,<br> (int64_t)(2.f*NSEC_PER_SEC)),dispatch_get_main_queue(), ^{</p>
+<pre><code>    [alertControllerdismissViewControllerAnimated:YEScompletion:^{
 
 
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    }];
+});   /**************自动消失的UIAlertController*********/ 
+</code></pre><p> /<em><br>     <strong>**</strong>添加按钮<strong>**</strong><br>     Title :标题名称<br>     style :样式[Cancle(取消)<br> Default(默认的) destructive(重置)]<br>     handler:处理程序(点击按钮执行的代码)
+     </em>/</p>
+<p>   /<strong><strong><strong>**</strong></strong></strong>带按钮的的UIAlertController<strong><strong>*</strong></strong>/<br>   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”标题”message:@”UIAlertController”preferredStyle:UIAlertControllerStyleAlert];</p>
+<p>   //创建”取消”样式按钮<br>   UIAlertAction<em>cancelAction = [UIAlertActionactionWithTitle:@”取消”style:UIAlertActionStyleCancelhandler:^(UIAlertAction</em>action) {<br>       //添加点击事件<br>       self.view.backgroundColor= [UIColoryellowColor];</p>
+<pre><code>}];
+</code></pre><p>   //创建”默认”样式按钮<br>   UIAlertAction<em>defaultAction = [UIAlertActionactionWithTitle:@”默认default”style:UIAlertActionStyleDefaulthandler:^(UIAlertAction</em>_Nonnullaction) {</p>
+<pre><code>}];
+</code></pre><p>   //创建“警示”样式按钮<br>   UIAlertAction<em>destructiveAction = [UIAlertActionactionWithTitle:@”重置deatructive” style:UIAlertActionStyleDestructivehandler:^(UIAlertAction</em>_Nonnullaction) {</p>
+<pre><code>}];
+</code></pre><p>   //将按钮添加到alertController上<br>    [alertControlleraddAction:cancelAction];<br>    [alertControlleraddAction:defaultAction];<br>    [alertControlleraddAction:destructiveAction];</p>
+<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:nil];
+</code></pre><p>   /<strong><strong><strong>**</strong></strong></strong>带按钮的的UIAlertController<strong><strong>*</strong></strong>/</p>
+<p>/<strong><strong><strong>**</strong></strong></strong>带输入框的UIAlertController<strong><strong>*</strong></strong>/   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”文本对话框”message:@”登录和密码对话框示例”preferredStyle:UIAlertControllerStyleAlert];</p>
+<p>   //添加输入框<br>    [alertControlleraddTextFieldWithConfigurationHandler:^(UITextField*textField){<br>        textField.placeholder=@”登录”;</p>
+<pre><code>   //添加通知，监听输入框的变化
+    [[NSNotificationCenterdefaultCenter]addObserver:selfselector:@selector(alertTextFieldDidChange:)name:UITextFieldTextDidChangeNotificationobject:textField];
+}];
+
+[alertControlleraddTextFieldWithConfigurationHandler:^(UITextField*textField) {
+    textField.placeholder=@&quot;密码&quot;;
+    textField.secureTextEntry=YES;
+}];
+</code></pre><p>   //添加按钮<br>   UIAlertAction<em>okAction = [UIAlertActionactionWithTitle:@”好的”style:UIAlertActionStyleDefaulthandler:^(UIAlertAction</em>action) {</p>
+<pre><code>   //获取到输入框的内容
+   UITextField*login = alertController.textFields.firstObject;
+   UITextField*password = alertController.textFields.lastObject;
+
+   //移除通知
+    [[NSNotificationCenterdefaultCenter]removeObserver:selfname:UITextFieldTextDidChangeNotificationobject:nil];
+
+}];
+</code></pre><p>   //冻结按钮<br>    okAction.enabled=NO;<br>    [alertControlleraddAction:okAction];</p>
+<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:^{
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-oc/iOS 打电话" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS 打电话/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS 打电话/">iOS 打电话</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)telePhoneAction:(<span class="built_in">NSString</span> *)teleNum &#123;</div><div class="line"></div><div class="line">    <span class="built_in">NSString</span> *number = teleNum;<span class="comment">// 此处读入电话号码</span></div><div class="line">   </div><div class="line">    <span class="comment">//NSString *num = [[NSString alloc] initWithFormat:@"tel://%@",number]; //number为号码字符串 如果使用这个方法 结束电话之后会进入联系人列表</span></div><div class="line">   </div><div class="line">    <span class="built_in">NSString</span> *num = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"telprompt://%@"</span>,number]; <span class="comment">//而这个方法则打电话前先弹框  是否打电话 然后打完电话之后回到程序中 网上说这个方法可能不合法 无法通过审核</span></div><div class="line">   </div><div class="line">    [[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:num]]; <span class="comment">//拨号</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-system/移动UIUX设计师和PM使用的原型工具" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>【编者按】本文转载自个人博客—<a href="http://www.zhangping.name/" target="_blank" rel="external">羽化博客</a>，原作者通过对页面原型设计的理解来介绍四款原型设计工具。<br>与一般针对产品功能的介绍不同，本文以亲身的设计需求为出发点，通过对产品整理和提供相关的链接，帮助解决从业人群对做产品页面原型的直接需求。可以为做产品设计的童鞋提供一些参考和下载帮助。<br>天天和产品打交道，不时要做一些页面原型、离不开各种工具，工欲善其事必先利其器，好的工具软件可以大大提高工作效率，工具各有优劣，大家按需取之。原型设计工具我暂时把它分为两类，Web应用原型设计工具及软件应用原型设计工具、微软的visio就不说了：<br>Web应用原型设计工具：先来看看这个几个：<a href="http://www.axure.com/" target="_blank" rel="external">Axure RP</a> 、<a href="http://www.balsamiq.com/" target="_blank" rel="external">Balsamiq Mockups</a> 、 <a href="http://pencil.evolus.vn/en-US/Home.aspx" target="_blank" rel="external">Pencil<br> Project</a> 以及<a href="http://www.omnigroup.com/" target="_blank" rel="external">OmniGraffle</a>试用感觉：</p>
-<p>###<strong>第一个、Axure RP：</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/Axure-RP.jpg" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/Axure-RP.jpg" alt="" title="Axure-RP"></a><br>来这里看看视频简介：<a href="http://www.axure.com/tour.aspx" target="_blank" rel="external">http://www.axure.com/tour.aspx</a></p>
+}];
+</code></pre><p>   /<strong><strong><strong>**</strong></strong></strong>带输入框的UIAlertController<strong><strong>*</strong></strong>/<br>}<br>//通知触发的方法</p>
 <ul>
-<li>Axure的发音是”Ack-sure”，RP则是”Rapid Prototyping”快速原型的缩写。Axure RP Pro是美国Axure Software Solution公司的精心杰作，可以说Axure是Windows上最出色的原型设计软件，亦是web产品前期设计的首选，原因是：够简单、上手快，能帮助网站需求设计者，快捷而简便的创建 基于目录组织的原型文档、功能说明、交互界面以及带注释的wireframe网页，并可自动生成用于演示的网页文件和word文档，以提供演示与开发；</li>
-<li>Axure RP六合一功能：网站构架图、示意图、流程图、交互设计、自动输出网站原型、自动输出word格式规格文件；</li>
-<li>国内都有很多教程了，看看这些：<a href="http://cn.userxper.com/axure_tutorial" target="_blank" rel="external">悠识网站的教程</a></li>
-<li>Windows版：<a href="http://axure.cachefly.net/AxureRP-Pro-Setup.exe" target="_blank" rel="external">http://axure.cachefly.net/AxureRP-Pro-Setup.exe</a><br>MAC版：<a href="http://axure.cachefly.net/AxureRP-Pro-Setup.dmg" target="_blank" rel="external">http://axure.cachefly.net/AxureRP-Pro-Setup.dmg</a><br>Axure6.5汉化语言包下载地址：<a href="http://www.axure.us/283/" target="_blank" rel="external">http://www.axure.us/283/</a></li>
-</ul>
-<p>###<strong>第二个、Balsamiq Mockups：</strong><br><strong> <a href="http://www.leiphone.com/wp-content/uploads/2012/06/Balsamiq-Mockups.jpg" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/Balsamiq-Mockups.jpg" alt="" title="Balsamiq-Mockups"></a></strong><br><strong> </strong><a href="http://www.balsamiq.com/products/mockups" target="_blank" rel="external">Balsamiq Mockups 视频简介</a></p>
-<ul>
-<li>Balsamiq Mokups是用Flex和Air实现的，在Mac OS, Linux和Windows下都能使用，有桌面版本、Confluence，JIRA，和XWiki中的版本；</li>
-<li>涂鸦风格、使用起来也很简单、各模块工具也很齐全，详细说明可见官方博客：<a href="http://www.balsamiq.com/blogs" target="_blank" rel="external">http://www.balsamiq.com/blogs</a></li>
-</ul>
-<p><a href="http://www.leiphone.com/wp-content/uploads/2012/06/iphonedemo.jpg" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/iphonedemo.jpg" alt="" title="iphonedemo"></a><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/iphoneexamples.png" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/iphoneexamples.png" alt="" title="iphoneexamples"></a></p>
-<ul>
-<li>有人提到不能输入中文的问题，很简单：在Mockups的菜单里选择 View -&gt; Use System Font 就可以了；</li>
-<li>该软件的桌面版售价78美刀。作者意大利人Peldi说这款软件的设计就是用它自己来设计的，满足自己的需求。而在经济寒冷的2008年，从1,322位付费用户那获得了162,302美元的收入（其中12月份就有39,000美元）;</li>
-<li>windows版本下载地址 <a href="http://www.balsamiq.com/download" target="_blank" rel="external">http://www.balsamiq.com/download</a></li>
-</ul>
-<p>###<strong><br>第三个、Pencil Project：</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/pencil-project.jpg" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/pencil-project.jpg" alt="" title="pencil-project"></a>- 查看官网简介：<a href="http://www.evolus.vn/Pencil/Screenshots.html" target="_blank" rel="external">http://www.evolus.vn/Pencil/Screenshots.html</a></p>
-<ul>
-<li>一个firefox插件，比较小的工具，画简单的界面基本上可以满足了；</li>
-<li>安装地址：<a href="https://addons.mozilla.org/en-US/firefox/addon/8487" target="_blank" rel="external">https://addons.mozilla.org/en-US/firefox/addon/8487</a></li>
-</ul>
-<p>###<strong>第四个、OmniGraffle</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/OmniGraffle.png" target="_blank" rel="external"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/OmniGraffle.png" alt="" title="OmniGraffle"></a></p>
-<ul>
-<li>很不幸的是，这个软件只有Mac版；</li>
-<li><a href="http://www.omnigroup.com/" target="_blank" rel="external">Omni Group</a>这家只有<a href="http://www.omnigroup.com/company/people/" target="_blank" rel="external">26个人</a>的小公司，他们人数虽少，但却产出了像<a href="http://www.omnigroup.com/applications/omniweb/" target="_blank" rel="external">OmniWeb</a>、<a href="http://www.omnigroup.com/applications/omnigraffle/" target="_blank" rel="external">OmniGraffle</a>、<a href="http://www.omnigroup.com/applications/omniplan/" target="_blank" rel="external">OmniPlan</a>和<a href="http://www.omnigroup.com/applications/omnioutliner/" target="_blank" rel="external">OmniOutliner</a>等等一系列深受用户欢迎的精品软件，实力绝对不容小觑；</li>
-<li>漂亮的界面、能轻而易举的绘制出漂亮的图形、丰富、精致的模板（Stencil/Template）、辅助对齐和尺寸调整功能；</li>
-<li>下载地址 <a href="http://www.omnigroup.com/applications/omnigraffle/" target="_blank" rel="external">http://www.omnigroup.com/applications/omnigraffle/</a></li>
+<li><p>(void)alertTextFieldDidChange:(NSNotification<em>)notification{<br> UIAlertController</em>alertController = (UIAlertController*)self.presentedViewController;</p>
+<p> if(alertController) {</p>
+<pre><code>UITextField*login = alertController.textFields.firstObject;
+UIAlertAction*okAction = alertController.actions.lastObject;
+
+//当输入的字数大于2时解冻
+ okAction.enabled= login.text.length&gt;2;
+</code></pre><p>  }<br>}</p>
+</li>
 </ul>
 
       
@@ -653,10 +487,10 @@ IB_DESIGNABLE  // 动态刷新
 
 
   
-    <article id="post-oc/iOS 网络编程模式总结" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIBarMetrics" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS 网络编程模式总结/" class="article-date">
+      <a href="/2016/10/08/oc/UIBarMetrics/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -672,7 +506,7 @@ IB_DESIGNABLE  // 动态刷新
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS 网络编程模式总结/">iOS 网络编程模式总结</a>
+      <a class="article-title" href="/2016/10/08/oc/UIBarMetrics/">UIBarMetrics</a>
     </h1>
   
 
@@ -683,209 +517,7 @@ IB_DESIGNABLE  // 动态刷新
       
           
         <a id="more"></a>
-<p>转自：  <a href="http://blog.csdn.net/goohong/article/details/40505291" target="_blank" rel="external">http://blog.csdn.net/goohong/article/details/40505291</a><br>IOS 可以采用三类api 接口进行网络编程，根据抽象层次从低到高分别为socket方式、stream方式、url 方式。<br>一 、socket 方式<br>       IOS 提供的socket 方式的网络编程接口为CFSocket。CFSocket是BSD sockets的抽象和封装，CFSocket提供BSD sockets几乎所有的功能，并与run loop集成，用来实现多线程网络编程和网络事件监听。基于 CFSocket可以实现各种类型的 socket编程，包括stream-based 的sockets(如tcp)和packet-based 的sockets(如udp)。需要注意的是在iOS中CFSocket接口在需要时不自动激活设备的<br> cellular modem或on-demand VPN。<br>      CFSocket包括以下编程接口，包括Socket的 创建、配置，以及根据创建和配置好的Socket 进行 远程通讯等接口。<br>1  Socket的 创建</p>
-<blockquote>
-<p>1 .1、CFSocketCreate<br>创建一个特定协议和类型的 CFSocket对象<br>1.2、CFSocketCreateWithSocketSignature<br>该接口根据一个包含通讯协议和地址的CFSocketSignature结构来创建一个CFSocket对象</p>
-<p>1.3、 CFSocketCreateConnectedToSocketSignature<br>该接口在创建一个CFSocket对象的同时还与一个远端主机进行连接。</p>
-<p>1.4、CFSocketCreateWithNative<br>该接口通过封装一个存在的 BSD socket来创建一个CFSocket对象。</p>
-</blockquote>
-<p>2   Socket的配置</p>
-<blockquote>
-<p>2.1   CFSocketCopyAddress<br>功能： 返回一个 CFSocket对象的本地地址。<br>语法：<br>SWIFT<br>func CFSocketCopyAddress(<em> s: CFSocket!) -&gt; CFData!<br>2.2、CFSocketCopyPeerAddress<br>功能：返回与一个 CFSocket对象连接的远端地址。<br>语法：<br>SWIFT<br>func CFSocketCopyPeerAddress(</em> s: CFSocket!) -&gt; CFData!<br>2.3  CFSocketDisableCallBacks<br>功能：临时取消一个CFSocket对象创建时指定的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketDisableCallBacks(<em> s: CFSocket!,
-                            </em> callBackTypes: CFOptionFlags)<br>2.4   CFSocketEnableCallBacks<br>功能：重新允许先前CFSocketDisableCallBacks函数取消的某种类型的事件回调。<br>语法：<br>SWIFT<br>func CFSocketEnableCallBacks(<em> s: CFSocket!,
-                           </em> callBackTypes: CFOptionFlags)<br>2.5 CFSocketGetContext<br>功能：返回一个CFSocket对象的上下文信息。<br>语法：<br>SWIFT<br>func CFSocketGetContext(<em> s: CFSocket!,
-                      </em> context: UnsafeMutablePointer<cfsocketcontext>)<br>2.6 CFSocketGetNative<br>返回与一个CFSocket对象相关的本地 BSD socket。<br>语法：<br>SWIFT<br>func CFSocketGetNative(<em> s: CFSocket!) -&gt; CFSocketNativeHandle<br>2.7   CFSocketGetSocketFlags<br>功能：返回控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketGetSocketFlags(</em> s: CFSocket!) -&gt; CFOptionFlags</cfsocketcontext></p>
-<p>2.8 CFSocketSetSocketFlags<br>功能：设置控制一个CFSocket对象的确定行为的 标志。<br>语法：<br>SWIFT<br>func CFSocketSetSocketFlags(<em> s: CFSocket!,
-                          </em> flags: CFOptionFlags)<br>2.9 CFSocketSetAddress<br>语法：<br>SWIFT<br>func CFSocketSetAddress(<em> s: CFSocket!,
-                      </em> address: CFData!) -&gt; CFSocketError<br>功能：为一个CFSocket对象绑定一个本地地址并在本地socket支持的情况下对socket进行配置使其处于监听状态。该函数对应本地socket的 bind以及listen功能。一旦CFSocket对象绑定地址，依赖于socket的协议，其它进程和主机能连接到该CFSocket对象。</p>
-</blockquote>
-<p>3、Sockets的使用</p>
-<blockquote>
-<p>3.1 CFSocketConnectToAddress<br>功能：打开与一个远程socket的一个连接。<br>语法：<br>SWIFT<br>func CFSocketConnectToAddress(<em> s: CFSocket!,
-                            </em> address: CFData!,<br>                            <em> timeout: CFTimeInterval) -&gt; CFSocketError<br>3.2 CFSocketCreateRunLoopSource<br>语法：<br>SWIFT<br>func CFSocketCreateRunLoopSource(</em> allocator: CFAllocator!,<br>                               <em> s: CFSocket!,
-                               </em> order: CFIndex) -&gt; CFRunLoopSource!<br>功能：为一个CFSocket对象创建一个CFRunLoopSource对象。该创建的 CFRunLoopSource对象不自动添加到一个run loop。为了增加该run loop source到某个run loop，需要调用CFRunLoop对象 的CFRunLoopAddSource函数来为该CFRunLoop对象添加run loop source。<br>3.3 CFSocketGetTypeID<br>功能：返回CFSocket对象的 opaque类型对应的类型标示符。<br>语法：<br>SWIFT<br>func CFSocketGetTypeID() -&gt; CFTypeID<br>3.4  CFSocketInvalidate<br>功能：使一个CFSocket对象无效，使其停止接收和发送任何消息。<br>语法：<br>SWIFT<br>func CFSocketInvalidate(<em> s: CFSocket!)<br>3.5 CFSocketIsValid<br>功能：返回一个指示一个CFSocket对象是否有效及是否能够发送和接收消息的布尔值。<br>语法：<br>SWIFT<br>func CFSocketIsValid(</em> s: CFSocket!) -&gt; Boolean<br>3.6 CFSocketSendData<br>功能：该函数用来通过一个CFSocket对象发送数据。<br>语法：<br>SWIFT<br>func CFSocketSendData(<em> s: CFSocket!,
-                    </em> address: CFData!,<br>                    <em> data: CFData!,
-                    </em> timeout: CFTimeInterval) -&gt; CFSocketError</p>
-</blockquote>
-<p>二、stream编程模式<br>       stream编程模式提供了与 unix 的文件操作类似的模式。首先创建和设置流，接着打开流，然后读写流，在流存在时还可以通过查询流的相关属性来读取流的相关信息，在流使用完毕后关闭流。<br>       iOS 为stream编程模式提供的api编程接口包括两大类，一类是Core Foundation框架层用C语言实现的CFStream  API（包括CFStream、 CFReadStream 、CFWriteStream等）,一类是基于其上的在Foundation框架层用Objective-C语言实现的NSStream API（包括NSStream、NSInputStream NSOutputStream等）,两者提供相似的接口和行为，其中某些对象是toll-free<br> bridged类型的，如CFStream 与NSStream，CFReadStream与NSInputStream，CFWriteStream与NSOutputStream之间，因此可以混合使用。<br>       开发人员可以根据自己的语言偏好选择使用。<br>       CFStream API的主要接口：<br>1、CFStream 创建接口</p>
-<blockquote>
-<p>1.1  CFStreamCreatePairWithPeerSocketSignature<br>          功能：创建一对到一个socket的可读和可写流。<br>1.2 CFStreamCreatePairWithSocketToHost<br>功能：创建连接到一个特定主机的特定端口的一对可读写流。<br>1.3 CFStreamCreatePairWithSocket<br>功能：创建一对连接到一个socket的可读写流<br>1.4 CFStreamCreateBoundPair<br>功能：创建一对读写流。<br>其它可读写流创建接口：<br> 1.5 CFReadStreamCreateForHTTPRequest<br>   功能：为一个CFHTTP请求创建一个可读流。<br>1.6 CFReadStreamCreateForStreamedHTTPRequest<br>功能：为一个HTTP请求的body保持在内存的CFHTTP请求创建一个可读流。<br>1.7  CFReadStreamCreateWithFTPURL<br>功能：创建一个FTP可读流<br>1.8  CFWriteStreamCreateWithFTPURL<br>功能：创建一个FTP可读流</p>
-<ol>
-<li>CFReadStream接口<br>2.1 流的打开和关闭<br>   CFReadStreamOpen<pre><code>CFReadStreamClose
-</code></pre>2.2  读取数据<br>   CFReadStreamRead<br>2.3.  调度一个可读流<br>CFReadStreamScheduleWithRunLoop(<em>:</em>:_:) <pre><code>CFReadStreamUnscheduleFromRunLoop(_:_:_:) 
-</code></pre>2.4 检查可读流的属性<br>CFReadStreamCopyProperty(<em>:</em>:)<br>CFReadStreamGetBuffer(<em>:</em>:<em>:)<br>CFReadStreamCopyError(</em>:)<br>CFReadStreamGetError(<em>:)<br>CFReadStreamGetStatus(</em>:)<br>CFReadStreamHasBytesAvailable(<em>:)<br>2.5 设置可读流的属性<br>CFReadStreamSetClient(</em>:<em>:</em>:<em>:)<br>CFReadStreamSetProperty(</em>:<em>:</em>:)<br>2.6 得到 CFReadStream的 Type ID<pre><code>CFReadStreamGetTypeID()
-</code></pre></li>
-</ol>
-</blockquote>
-<p>3.CFWriteStream 相关接口</p>
-<blockquote>
-<pre><code>3.1 CFWriteStreamClose(_:) 
-3.2 CFWriteStreamOpen(_:) 
-3.3 CFWriteStreamWrite(_:_:_:)
-   3.4 CFWriteStreamScheduleWithRunLoop(_:_:_:)
-</code></pre><p>  3.5 CFWriteStreamUnscheduleFromRunLoop(<em>:</em>:<em>:)<br>        3.6 CFWriteStreamCanAcceptBytes(</em>:)<br>      3.7 CFWriteStreamCopyProperty(<em>:</em>:)<br>      3.8 CFWriteStreamCopyError(<em>:)<br>      3.9 CFWriteStreamGetError(</em>:)<br>      3.10 CFWriteStreamGetStatus(<em>:)<br>         3.11 CFWriteStreamSetClient(</em>:<em>:</em>:<em>:)<br>  3.12 CFWriteStreamSetProperty(</em>:<em>:</em>:)<br>      3.13 CFWriteStreamGetTypeID()<br>CFStream API的使用步骤：<br>1） 利用流创建接口创建相关流；<br>2）、调用CFReadStreamSetClient （可读流）或CFWriteStreamSetClient （可写流）来登记要接收的流相关的事件；<br>3）、调用CFReadStreamScheduleWithRunLoop（可读流）或CFWriteStreamScheduleWithRunLoop（可写流）来使在流在一个run loop上进行调度以便接收相关事件；<br>4）、调用CFReadStreamOpen 或CFWriteStreamOpen 来打开已创建的流；<br>5）、在读取流的创建时登记的回调中，在接收到kCFStreamEventHasBytesAvailable事件时来读取数据， 在可写流已登记的回调中，在接收到kCFStreamEventCanAcceptBytes 事件时开始发送数据或请求；<br>6） 数据传输完成，关闭和释放打开和创建的相关流；<br>2、NSStream   API的使用&gt;  在ios 中由于NSStream类不支持 与一个远程主机连接，而CFStream支持，因此为了使用 NSStream，你需要使用流创建函数CFStreamCreatePairWithSocketToHost或CFStreamCreatePairWithSocketToCFHost来打开一个与远程主机连接的socket并分配一对CFStream 对象（CFReadStream和CFWriteStream），并cast这些对象到NSStream<br> 对象（对应NSInputStream 和 NSOutputStream）。从而可以使用NSStream类的相关接口进行相关网络编程。如设置接收网络事件的代理对象，调度到当前的run loop，然后打开它们进行相应处理。<br>代码片段如下：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. {  </p>
-<ol>
-<li></li>
-<li>NSURL *website = [NSURL URLWithString:urlStr];  </li>
-<li></li>
-<li>if (!website) {  </li>
-<li></li>
-<li>NSLog(@”%@ is not a valid URL”);  </li>
-<li></li>
-<li>return;  </li>
-<li></li>
-<li>}  </li>
-<li></li>
-<li>CFReadStreamRef readStream;  </li>
-<li></li>
-<li>CFWriteStreamRef writeStream;  </li>
-<li></li>
-<li>CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)[website host], 80, &amp;readStream, &amp;writeStream);  </li>
-<li></li>
-<li>NSInputStream <em>inputStream = (__bridge_transfer NSInputStream </em>)readStream;  </li>
-<li></li>
-<li>NSOutputStream <em>outputStream = (__bridge_transfer NSOutputStream </em>)writeStream;  </li>
-<li></li>
-<li>[inputStream setDelegate:self];  </li>
-<li></li>
-<li>[outputStream setDelegate:self];  </li>
-<li></li>
-<li>[inputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
-<li></li>
-<li>[outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];  </li>
-<li></li>
-<li>[inputStream open];  </li>
-<li></li>
-<li>[outputStream open];  </li>
-<li></li>
-<li></li>
-<li>/* Store a reference to the input and output streams so that </li>
-<li></li>
-<li>they don’t go away…. */  </li>
-<li></li>
-<li>…  </li>
-<li></li>
-<li>}  </li>
-</ol>
-</blockquote>
-<pre><code>在NSStream对象打开后，当接收到相关的stream-event网络消息，其代理对象中的handleEvent: 函数被调用，从而进行流相关的网络消息处理，  如发送相关协议的请求或接收应答等。以下为handleEvent: 函数进行事件处理的代码片段：
-</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode {  </p>
-<ol>
-<li></li>
-<li>NSLog(@”stream:handleEvent: is invoked…”);  </li>
-<li></li>
-<li></li>
-<li></li>
-<li>switch(eventCode) {  </li>
-<li></li>
-<li>case NSStreamEventHasSpaceAvailable:  </li>
-<li></li>
-<li>{  </li>
-<li></li>
-<li>if (stream == oStream) {  </li>
-<li></li>
-<li>NSString * str = [NSString stringWithFormat:  </li>
-<li></li>
-<li>@”GET / HTTP/1.0\r\n\r\n”];  </li>
-<li></li>
-<li>const uint8_t * rawstring =  </li>
-<li></li>
-<li>(const uint8_t *)[str UTF8String];  </li>
-<li></li>
-<li>[oStream write:rawstring maxLength:strlen(rawstring)];  </li>
-<li></li>
-<li>[oStream close];  </li>
-<li></li>
-<li>}  </li>
-<li></li>
-<li>break;  </li>
-<li></li>
-<li>}  </li>
-<li></li>
-<li>// continued …  </li>
-<li></li>
-<li>}  </li>
-<li></li>
-<li>}  </li>
-</ol>
-<p>三、url 编程模式<br>         url 编程模式通过URL 的方式来实现网络编程，任何要存取的网络资源（包括局域网和广域网）都可以用一个URL来表示和存取，并支持设备间的资源共享。url 编程模式系统提供http, https, file, ftp, data等五种协议支持，并允许用户自己开发和登记相关类来支持另外的应用层网络协议，进行协议的扩展。<br>        url 编程模式在IOS系统可以使用两种编程接口：NSURLSession 和NSURLConnection。<br>        对于iOS 7 以后的最新系统推荐使用NSURLSession API，对于老版本由于不支持NSURLSession，因此必须使用NSURLConnection API。<br>NSURLSession编程模式是对相关的连接请求通过一个会话来完成，应用通过创建一系列sessions来实现网络通讯，每一个session协调一组相关数据的传输任务。在每一个session内，应用添加一系列任务，每一个任务表现一个特定URL 请求。<br>        NSURLSession相比NSURLConnection的优点是支持在应用挂起、停止或crashed时能够在后台继续下载数据，即支持任务的取消、重启（恢复）、挂起，以及支持从已挂起、取消或失败的下载中重新恢复下载的能力。<br>         对于简单的请求，还可以直接通过一个简单的NSURL对象来发出请求，并使用一个NSData内存对象或者一个文件的方式来引出NSURL指向的内容。而NSURLConnection API只能通过构造一个NSURLRequest对象或其子类来发出URL请求来请求下载或上传URL数据。 使用一个NSURLRequest请求对象封装一个URL请求，例如HTTP协议方法，除了可以封装一些协议特定的属性外，还可以规定任意本地cached数据的使用策略。<br>         对于NSURLRequest请求对象的应答包括两部分：描述内容的元数据metadata及内容数据本身。两种API对于使用NSURLRequest请求接收的元数据metadata都由NSURLResponse类来封装，其中包含MIME类型、内容长度、编码及提供应答的URL等内容。NSURLResponse协议特定的子类还能提供额外的元数据，如NSHTTPURLResponse提供协议头和WEB服务器返回的状态码<br> 等信息。<br>         NSURLSession API的使用：</p>
-<pre><code>NSURLSession类支持三种会话类型（默认会话类型、临时会话、后台会话）以及三种类型的任务（数据任务、下载任务、上传任务）。
-数据任务使用NSData 对象来发送和接收内存数据，不存储数据到一个文件，因此不支持后台会话。
-下载任务以一个文件的形式引出数据，并支持在应用没有运行时的后台下载。
-上传任务用来上传数据（文件），也能够支持应用没有运行时的后台上传。
- 默认会话和后台会话的区别是后台会话使用一个分离的进程处理所有的数据传输任务，并带有一些限制：后台会话必须使用特定应用代理来提供事件提交，并仅支持HTTP和HTTPS 协议，不支持其它定制协议，并仅支持上传和下载任务，不支持数据任务。
-临时会话不存储任何数据到磁盘，所有接收的内容都保存到与会话关联的RAM中，当会话无效时，RAM中接收的内容自动被清除。
-</code></pre><p>   NSURLSession API的使用步骤：<br>   1 、创建一个NSURLSessionConfiguration配置对象</p>
-<blockquote>
-<p>NSURLSessionConfiguration配置对象提供广泛的配置选项，包括：<br>1）、特定于单个会话的私有数据存储，包括caches, cookies, credentials, 和protocols；<br>2）、与一个特定请求或一个会话关联的Authentication；<br>3）、与一个主机的最大连接数；<br>4）、与一个资源关联的超时；<br>5）、最小和最大TLS版本支持；<br>6）、定制的代理词典；<br>7）、cookie策略的控制；<br>8）、HTTP pipelining行为的控制<br>2、根据配置创建相应的NSURLSession；<br>       如下代码片段展示了根据不同的配置对象创建不同类型的NSURLSession会话对象。</p>
-</blockquote>
-<p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. /<em> Create a session for each configurations. </em>/  </p>
-<ol>
-<li>self.defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
-<li>self.backgroundSession = [NSURLSession sessionWithConfiguration: backgroundConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
-<li>self.ephemeralSession = [NSURLSession sessionWithConfiguration: ephemeralConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];  </li>
-</ol>
-<pre><code>  NSURLSession API通过代理来实现异步URL内容存取，代理可以是系统提供的代理，还可以是应用提供的特定代理对象。任务对象当从服务器接收到数据或传输完成时调用这些代理对象的方法。
-在创建会话指定相应的代理对象。
-</code></pre><p>3、为会话添加任务；<br>使用如下方法来添加数据任务到一个会话。</p>
-<blockquote>
-<p>dataTaskWithURL(<em>:)<br>dataTaskWithURL(</em>:completionHandler:)<br>dataTaskWithRequest(<em>:)<br>dataTaskWithRequest(</em>:completionHandler:) </p>
-</blockquote>
-<p>使用如下方法来添加下载任务到一个会话。</p>
-<blockquote>
-<p>downloadTaskWithURL(<em>:)<br>downloadTaskWithURL(</em>:completionHandler:)<br>downloadTaskWithRequest(<em>:)<br>downloadTaskWithRequest(</em>:completionHandler:)<br>downloadTaskWithResumeData(<em>:)<br>downloadTaskWithResumeData(</em>:completionHandler:) </p>
-</blockquote>
-<p>使用如下方法来添加上传任务到一个会话</p>
-<blockquote>
-<p>uploadTaskWithRequest(<em>:fromData:)<br>uploadTaskWithRequest(</em>:fromData:completionHandler:)<br>uploadTaskWithRequest(<em>:fromFile:)<br>uploadTaskWithRequest(</em>:fromFile:completionHandler:)<br>uploadTaskWithStreamedRequest(_:)<br>         如下是数据任务创建代码片段：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“];  </p>
-<ol>
-<li></li>
-<li>NSURLSessionDataTask *dataTask = [self.defaultSession dataTaskWithURL: url];  </li>
-<li></li>
-<li>[dataTask resume];  </li>
-</ol>
-</blockquote>
-<pre><code>下面是下载任务创建代码片段：         
-</code></pre><p><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURL *url = [NSURL URLWithString: @”<a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/" target="_blank" rel="external">https://developer.apple.com/library/ios/documentation/Cocoa/Reference/</a>“  </p>
-<ol>
-<li></li>
-<li>“Foundation/ObjC_classic/FoundationObjC.pdf”];  </li>
-<li></li>
-<li>NSURLSessionDownloadTask *downloadTask = [self.backgroundSession downloadTaskWithURL: url];  </li>
-<li></li>
-<li>[downloadTask resume];  </li>
-</ol>
-<p>4、使用代理方法接收数据及状态信息</p>
-<blockquote>
-<p>会话的数据任务在使用应用特定代理接收数据时必须实现如下两个代理方法：<br>URLSession:dataTask:didReceiveData:<br>一次一片的提供请求的数据给会话任务。<br>URLSession:task:didCompleteWithError:<br>指示请求数据已经全部接收。</p>
-<p>会话的下载任务在下载文件时应该实现如下代理方法：<br>URLSession:downloadTask:didFinishDownloadingToURL:<br>下载内容存储到一个URL指定的一个临时文件，在该方法返回之前，必须把临时文件的内容移到一个永久位置，而临时文件被删除。<br>URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:<br>为应用提供关于当前下载进度的状态信息<br>URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:<br>告诉应用已经从从先前的失败下载中恢复。<br>URLSession:task:didCompleteWithError:<br>告诉应用下载已经失败。</p>
-<p>下载失败恢复处理：<br>在应用使用cancelByProducingResumeData: 方法取消下载任务时，可以使用downloadTaskWithResumeData: 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务并传送cancelByProducingResumeData:产生的恢复数据从而接着继续下载。<br>在传输失败时，如果任务可恢复，则调用URLSession:task:didCompleteWithError: 方法。在传送给URLSession:task:didCompleteWithError: 方法的参数NSError中的 userInfo 词典中包含键值为NSURLSessionDownloadTaskResumeData的恢复数据，因此可以使用downloadTaskWithResumeData:<br> 或 downloadTaskWithResumeData:completionHandler:方法重新创建一个新下载任务来接着恢复数据继续下载。</p>
-<p>系统代理仅能支持基本的URL资源存取任务，不支持认证和后台下载，并且还必须提供一个completion handler block来把返回的URL数据提交到应用。如下是一个使用系统代理的代码例子：<br><strong>[objc]</strong> <a href="http://blog.csdn.net/goohong/article/details/40505291#" title="view plain" target="_blank" rel="external">view<br> plain</a><a href="http://blog.csdn.net/goohong/article/details/40505291#" title="copy" target="_blank" rel="external">copy</a><a href="https://code.csdn.net/snippets/498585" title="在CODE上查看代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/CODE_ico.png" alt="在CODE上查看代码片"></a><a href="https://code.csdn.net/snippets/498585/fork" title="派生到我的代码片" target="_blank" rel="external"><img src="https://code.csdn.net/assets/ico_fork.svg" alt="派生到我的代码片"></a>1. NSURLSession *delegateFreeSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];  </p>
-<ol>
-<li></li>
-<li>[delegateFreeSession dataTaskWithURL: [NSURL URLWithString: @”<a href="http://www.example.com/" target="_blank" rel="external">http://www.example.com/</a>“]  </li>
-<li></li>
-<li>completionHandler:^(NSData <em>data, NSURLResponse </em>response,  </li>
-<li></li>
-<li>NSError *error) {  </li>
-<li></li>
-<li>NSLog(@”Got response %@ with error %@.\n”, response, error);  </li>
-<li></li>
-<li>NSLog(@”DATA:\n%@\nEND DATA\n”,  </li>
-<li></li>
-<li>[[NSString alloc] initWithData: data  </li>
-<li></li>
-<li>encoding: NSUTF8StringEncoding]);  </li>
-<li></li>
-<li>}] resume];  </li>
-</ol>
-</blockquote>
-<pre><code>会话的上传任务的任务创建和相关代理方法：
-会话的上传任务使用HTTP  POST方法来上传数据。可以以一个NSData对象、一个文件或使用一个流为HTTP POST请求的body提供内容。
-在以NSData对象提供上传数据时，应用调用uploadTaskWithRequest:fromData: 或uploadTaskWithRequest:fromData:completionHandler: 方法来创建上传任务。
-</code></pre><blockquote>
-<p>在以文件形式提供上传数据时，应用调用uploadTaskWithRequest:fromFile: 或 uploadTaskWithRequest:fromFile:completionHandler:方法来创建上传任务<br>在以流方式提供上传数据时，应用调用uploadTaskWithStreamedRequest:方法来创建上传任务。<br>应用特定代理可以通过实现URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:方法来获得上传进度信息。</p>
-</blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">forBarMetrics有点类似于按钮的<span class="keyword">for</span> state状态，即什么状态下显示</div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsDefault-竖屏横屏都有，横屏导航条变宽，则自动repeat图片</span></div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsCompact-竖屏没有，横屏有，相当于之前老iOS版本里地UIBarMetricsLandscapePhone</span></div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsCompactPrompt和UIBarMetricsDefaultPrompt暂时不知道用处，官方解释是Applicable only in bars with the prompt property, such as UINavigationBar and UISearchBar，</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -916,10 +548,10 @@ IB_DESIGNABLE  // 动态刷新
 
 
   
-    <article id="post-oc/iOS-使用AudioServices相关接口的连续震动" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIDatePicker" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS-使用AudioServices相关接口的连续震动/" class="article-date">
+      <a href="/2016/10/08/oc/UIDatePicker/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -935,7 +567,7 @@ IB_DESIGNABLE  // 动态刷新
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a>
+      <a class="article-title" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a>
     </h1>
   
 
@@ -946,7 +578,7 @@ IB_DESIGNABLE  // 动态刷新
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">转自：http:<span class="comment">//www.jianshu.com/p/dded314dd920</span></div><div class="line">话不多说，先上代码！！！喜欢就点赞</div><div class="line"></div><div class="line">主要功能函数</div><div class="line"><span class="comment">/*!</span></div><div class="line">    @function       AudioServicesAddSystemSoundCompletion</div><div class="line">    @abstract       Call the provided Completion Routine when provided SystemSoundID</div><div class="line">                    finishes playing.</div><div class="line">    @discussion     Once set, the System Sound server will send a message to the System Sound client</div><div class="line">                    indicating which SystemSoundID has finished playing.</div><div class="line">    @param          inSystemSoundID</div><div class="line">                        systemSoundID 自定义的sound（1007系统默认提示音）或者kSystemSoundID_Vibrate（震动）</div><div class="line">    @param          inRunLoop</div><div class="line">                       没有研究 一般写NULL 有兴趣可以自己研究一下跟大家共享</div><div class="line">    @param          inRunLoopMode</div><div class="line">                        同上个属性</div><div class="line">    @param          inCompletionRoutine</div><div class="line">                        这个是指某次震动播放完成后的回调 注意是C的函数 一般我们会在回调中写播放震动的函数 来实现连续震动</div><div class="line">    @param          inClientData</div><div class="line">                        没有研究啦！！！NULL就行啦</div><div class="line">*/</div><div class="line"><span class="keyword">extern</span> OSStatus </div><div class="line">AudioServicesAddSystemSoundCompletion(  SystemSoundID               inSystemSoundID,</div><div class="line">                                     <span class="built_in">CFRunLoopRef</span>                         inRunLoop,</div><div class="line">                                     <span class="built_in">CFStringRef</span>                          inRunLoopMode,</div><div class="line">                                     AudioServicesSystemSoundCompletionProc  inCompletionRoutine,</div><div class="line">                                     <span class="keyword">void</span>*                                inClientData)       </div><div class="line">首先实现上述函数中的回调函数（注意是C）</div><div class="line"><span class="keyword">void</span> soundCompleteCallback(SystemSoundID sound,<span class="keyword">void</span> * clientData) &#123;</div><div class="line">    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);  <span class="comment">//震动</span></div><div class="line">    AudioServicesPlaySystemSound(sound);  <span class="comment">// 播放系统声音 这里的sound是我自定义的，不要copy哈，没有的</span></div><div class="line">&#125;</div><div class="line">实现播放声音或震动的代码</div><div class="line">    SystemSoundID sound;</div><div class="line">    <span class="built_in">NSString</span> *path = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:soundName ofType:<span class="literal">nil</span>];</div><div class="line">    AudioServicesCreateSystemSoundID((__bridge <span class="built_in">CFURLRef</span>)[<span class="built_in">NSURL</span> fileURLWithPath:path], &amp;_sound);</div><div class="line"></div><div class="line">    AudioServicesAddSystemSoundCompletion(_soundID, <span class="literal">NULL</span>, <span class="literal">NULL</span>, soundCompleteCallback, <span class="literal">NULL</span>);</div><div class="line">    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);</div><div class="line">    AudioServicesPlaySystemSound(_sound);</div><div class="line">至此，就可以顺利的播放声音和震动了，而且是连续的哦！！！</div><div class="line">别忘了！ 怎么让他停下来</div><div class="line">为了方便 我就写了而一个OC的方法来做了</div><div class="line">-(<span class="keyword">void</span>)stopAlertSoundWithSoundID:(SystemSoundID)sound &#123;</div><div class="line">    AudioServicesDisposeSystemSoundID(kSystemSoundID_Vibrate);</div><div class="line">    AudioServicesDisposeSystemSoundID(sound);</div><div class="line">    AudioServicesRemoveSystemSoundCompletion(sound);</div><div class="line">&#125;</div><div class="line">这里要详细解说一下需要注意的事项：</div><div class="line">AudioServicesAddSystemSoundCompletion(kSystemSoundID_Vibrate, <span class="literal">NULL</span>, <span class="literal">NULL</span>, systemAudioCallback, <span class="literal">NULL</span>);</div><div class="line">AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate);</div><div class="line">这两个接口的用途是绑定和取消指定soundID对应的回调方法；kSystemSoundID_Vibrate为soundID类型，其回调方法认准的也是这个soundID,在任何地方使用这个<span class="keyword">id</span>去执行AudioServicesPlaySystemSound(xxxSoundID)都会调用到该回调方法。而一旦调用remove方法取消回调，同样的在任何地方使用这个<span class="keyword">id</span>去执行AudioServicesPlaySystemSound(xxxSoundID)都不会调用到这个回调。说的这么绕，其实就是说这俩接口的影响是全局的，威力很大。</div><div class="line">我们只要在回调方法里面再调用AudioServicesPlaySystemSound接口，就可以实现连续震动了；当我们想要停止震动时，调用remove接口，ok，回调方法就歇火了。</div><div class="line"></div><div class="line">优化：（参考某大神的博客，名字太长，直接附链接）</div><div class="line">http:<span class="comment">//blog.csdn.net/openglnewbee/article/details/8494598</span></div><div class="line">经过测试发现震动之间太连续，体验不符合要求；所以我们在c回调里面通过单例（全局变量性质的指针）调用到oc的方法进行[<span class="keyword">self</span> performSelector:<span class="keyword">@selector</span>(triggerShake) withObject:<span class="literal">nil</span> afterDelay:<span class="number">1</span>]（triggerShake是震动接口);在停止震动时候我们需要调用</div><div class="line"></div><div class="line">[<span class="built_in">NSObject</span> cancelPreviousPerformRequestsWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(triggerShake)  object:<span class="literal">nil</span>];</div><div class="line">停止之前可能的回调；这两个方法的成对使用既好用又简便，对于需要定时调用的场景很适合，也免去维护定时器的麻烦。</div><div class="line"></div><div class="line">这个时候屏幕要是常亮就更好了，不用费脑子了，用这个！！！</div><div class="line">[[<span class="built_in">UIApplication</span> sharedApplication] setIdleTimerDisabled:<span class="literal">YES</span>];   <span class="comment">// 设置播放时屏幕常亮</span></div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.datePicker = [[<span class="built_in">UIDatePicker</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">200</span>, <span class="number">375</span>, <span class="number">267</span>)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.datePicker.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置地区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.locale = [[<span class="built_in">NSLocale</span> alloc]initWithLocaleIdentifier:<span class="string">@"zh_CN"</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//设置DatePicker的日历，默认为当天。</span></div><div class="line">    <span class="keyword">self</span>.datePicker.calendar = [<span class="built_in">NSCalendar</span> currentCalendar];</div><div class="line">   </div><div class="line">    <span class="comment">//设置时区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.timeZone = [<span class="built_in">NSTimeZone</span> defaultTimeZone];</div><div class="line">   </div><div class="line">    <span class="comment">//选择时区</span></div><div class="line"><span class="comment">//    [self.datePicker setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+8"]];</span></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 设置当前显示时间</span></div><div class="line">   </div><div class="line">    <span class="built_in">NSDate</span> *currentTime  = [<span class="built_in">NSDate</span> date];</div><div class="line"></div><div class="line">    <span class="keyword">self</span>.datePicker.date = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 设置显示最大时间</span></div><div class="line">   </div><div class="line">   <span class="keyword">self</span>.datePicker.maximumDate = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 显示模式</span></div><div class="line">    [<span class="keyword">self</span>.datePicker setDatePickerMode:<span class="built_in">UIDatePickerModeDate</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//倒计时按秒显示</span></div><div class="line">    <span class="keyword">self</span>.datePicker.countDownDuration = <span class="number">600</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置分钟间隔</span></div><div class="line">    <span class="keyword">self</span>.datePicker.minuteInterval = <span class="number">10</span>;</div><div class="line">   </div><div class="line">    <span class="comment">// 回调的方法</span></div><div class="line">    [<span class="keyword">self</span>.datePicker addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(datePickerValueChanged:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.datePicker];</div><div class="line">   </div><div class="line">&#125;</div><div class="line">   </div><div class="line">-(<span class="keyword">void</span>)datePickerValueChanged:(<span class="keyword">id</span>)sender</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSDate</span> *selected = [<span class="built_in">NSDate</span> date];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"date: %@"</span>, selected);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -977,10 +609,10 @@ IB_DESIGNABLE  // 动态刷新
 
 
   
-    <article id="post-oc/iOS实现一个颜色渐变的弧形进度条" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIGestureRecognizerState" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS实现一个颜色渐变的弧形进度条/" class="article-date">
+      <a href="/2016/10/08/oc/UIGestureRecognizerState/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -996,7 +628,7 @@ IB_DESIGNABLE  // 动态刷新
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a>
+      <a class="article-title" href="/2016/10/08/oc/UIGestureRecognizerState/">UIGestureRecognizerState</a>
     </h1>
   
 
@@ -1007,120 +639,7 @@ IB_DESIGNABLE  // 动态刷新
       
           
         <a id="more"></a>
-<p>转自：<a href="https://www.ganlvji.com/gradient_circle_progress/###1、先来一个结果" target="_blank" rel="external">https://www.ganlvji.com/gradient_circle_progress/###1、先来一个结果</a><br>80%的状态：<br><a href="http://img.ganlvji.com/2014/03/80percent.png" target="_blank" rel="external"><img src="http://img.ganlvji.com/2014/03/80percent.png" alt="80percent"></a><br>99%的状态:<br><a href="http://img.ganlvji.com/2014/03/99percent.png" target="_blank" rel="external"><img src="http://img.ganlvji.com/2014/03/99percent.png" alt="99percent"></a></p>
-<p>###2、需要用到的宏：</p>
-<pre><code>#define degreesToRadians(x) (M_PI*(x)/180.0) //把角度转换成PI的方式
-#define  PROGREESS_WIDTH 80 //圆直径 
-#define PROGRESS_LINE_WIDTH 4 //弧线的宽度
-</code></pre><p>###3、CAShapeLayer<br>首先，你得要引入Core Animation框架。为了实现环形效果，需要使用到CAShapeLayer，原理是CAShapeLayer可以通过指定Path的方式实现生成一个图形，非常方便。</p>
-<p>###4、UIBezierPath</p>
-<p>由于需要画一个圆形，UIBeziperPath是非常好用的画圆形的工具。实现下面的代码可以画出上面所示的整个轨道。这个圆形是从-210度的角度到30度。</p>
-<pre><code>UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(40, 40) radius:(PROGREESS_WIDTH-PROGRESS_LINE_WIDTH)/2 startAngle:degreesToRadians(-210) endAngle:degreesToRadians(30) clockwise:YES];
-</code></pre><p>###5、画出一个完成的进度的背景轨道</p>
-<p>这里原理很简单，就是使用CAShapeLayer和UIBezierPath结合起来就能够达成目标，这一步的结果如下所示：<br><a href="http://img.ganlvji.com/2014/03/0percent.png" target="_blank" rel="external"><img src="http://img.ganlvji.com/2014/03/0percent.png" alt="0percent"></a></p>
-<pre><code>_trackLayer = [CAShapeLayer layer];//创建一个track shape layer
-_trackLayer.frame = self.bounds;
-[self.layer addSublayer:_trackLayer];
-_trackLayer.fillColor = [[UIColor clearColor] CGColor];
- _trackLayer.strokeColor = [_strokeColor CGColor];//指定path的渲染颜色
-_trackLayer.opacity = 0.25; //背景同学你就甘心做背景吧，不要太明显了，透明度小一点
-_trackLayer.lineCap = kCALineCapRound;//指定线的边缘是圆的
-_trackLayer.lineWidth = PROGRESS_LINE_WIDTH;//线的宽度
-UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(40, 40) radius:(PROGREESS_WIDTH-PROGRESS_LINE_WIDTH)/2 startAngle:degreesToRadians(-210) endAngle:degreesToRadians(30) clockwise:YES];//上面说明过了用来构建圆形
-_trackLayer.path =[path CGPath]; //把path传递給layer，然后layer会处理相应的渲染，整个逻辑和CoreGraph是一致的。
-</code></pre><p>###6、渐变进度条：<br>首先要明确的需求是，我们需要颜色根据百分比从红色渐变到黄色然后再到蓝色。<br>怎么实现这个颜色的渐变效果。这里我们需要使用到CAGradientLayer，CAGradientLayer是一个用来画颜色渐变的层（如果使用透明的颜色，也就可以做到透明渐变）。我们先用CAGradientLayer做出渐变效果，然后把ShapeLayer作为GradientLayer的Mask来截取出需要的部分，以此达到渐变的进度条效果。</p>
-<p>首先，需要构建出顺着弧形的颜色渐变。上面的需求我们可以分解成两部分。<br>①左半部分，颜色从红色渐变到黄色。<br>②右半部分，颜色从黄色渐变到蓝色。<br>由此可以了解到是我们需要两个CAShapeLayer。<br>为什么要这么折腾？CAShapeLayer不能顺着弧线进行渐变只能指定两个点之间进行渐变。所以只能曲线救国了。<br>先看看这个部分的效果：<br><a href="http://img.ganlvji.com/2014/03/gradient.png" target="_blank" rel="external"><img src="http://img.ganlvji.com/2014/03/gradient.png" alt="gradient"></a><br>然后，创建一个新的CAShapeLayer来截取这个颜色渐变的层。<br>这部分代码如下所示：<br>            _progressLayer = [CAShapeLayer layer];<br>            _progressLayer.frame = self.bounds;<br>            _progressLayer.fillColor =  [[UIColor clearColor] CGColor];<br>            _progressLayer.strokeColor  = [PROCESS_COLOR CGColor];<br>            _progressLayer.lineCap = kCALineCapRound;<br>            _progressLayer.lineWidth = PROGRESS_LINE_WIDTH;<br>            _progressLayer.path = [path CGPath];<br>            _progressLayer.strokeEnd = 0;</p>
-<pre><code>CALayer *gradientLayer = [CALayer layer];
-CAGradientLayer *gradientLayer1 =  [CAGradientLayer layer];
-gradientLayer1.frame = CGRectMake(0, 0, self.width/2, self.height);
-[gradientLayer1 setColors:[NSArray arrayWithObjects:(id)[[UIColor redColor] CGColor],(id)[UIColorFromRGB(0xfde802) CGColor], nil]];
-[gradientLayer1 setLocations:@[@0.5,@0.9,@1 ]];
-[gradientLayer1 setStartPoint:CGPointMake(0.5, 1)];
-[gradientLayer1 setEndPoint:CGPointMake(0.5, 0)];
-[gradientLayer addSublayer:gradientLayer1];
-
-CAGradientLayer *gradientLayer2 =  [CAGradientLayer layer];
-[gradientLayer2 setLocations:@[@0.1,@0.5,@1]];
-gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
-[gradientLayer2 setColors:[NSArray arrayWithObjects:(id)[UIColorFromRGB(0xfde802) CGColor],(id)[MAIN_BLUE CGColor], nil]];
-[gradientLayer2 setStartPoint:CGPointMake(0.5, 0)];
-[gradientLayer2 setEndPoint:CGPointMake(0.5, 1)];
-[gradientLayer addSublayer:gradientLayer2];
-
-[gradientLayer setMask:_progressLayer]; //用progressLayer来截取渐变层
-[self.layer addSublayer:gradientLayer];
-</code></pre><p>###7、进度条效果<br>走到上面一步我们得到的效果是一个进度为100%的效果，_progressLayer的长度和_trackLayer的长度是一样的。那么怎么解决百分比的问题呢？<br>CAShapeLayer有一个strokeEnd的属性，这个属性是从0到1的浮点类型，正好可以用表达百分比，而且这个属性是animatable，可以动态的表示进度的变化。<br>如下代码所示：<br>    -(void)setPercent:(NSInteger)percent animated:(BOOL)animated<br>    {<br>        [CATransaction begin];<br>        [CATransaction setDisableActions:!animated];<br>        [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];<br>        [CATransaction setAnimationDuration:MAIN_SCREEN_ANIMATION_TIME];<br>        _progressLayer.strokeEnd = percent/100.0;<br>        [CATransaction commit];</p>
-<pre><code>    _percent = percent;
-}
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/iOS开发拓展篇—CoreLocation简单介绍" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p><strong>一、简介</strong><br>1.在移动互联网时代，移动app能解决用户的很多生活琐事，比如<br>（1）导航：去任意陌生的地方<br>（2）周边：找餐馆、找酒店、找银行、找电影院</p>
-<p>2.在上述应用中，都用到了地图和定位功能，在iOS开发中，要想加入这2大功能，必须基于2个框架进行开发<br>（1）Map Kit ：用于地图展示<br>（2）Core Location ：用于地理定位</p>
-<p>3.两个热门专业术语<br>（1）LBS ：Location Based Service（基于定位的服务）<br>（2）SoLoMo ：Social Local Mobile（索罗门）</p>
-<p><strong>二、CoreLocation框架的使用</strong><br>1.CoreLocation框架使用前提<br>（1）导入框架<br>　　<img src="http://images.cnitblog.com/i/450136/201408/091531084436493.png" alt=""><br>说明：在Xcode5以后，不再需要我们手动导入<br>（2）导入主头文件<br>　　#import <corelocation corelocation.h=""></corelocation></p>
-<p>2.CoreLocation框架使用须知<br>CoreLocation框架中所有数据类型的前缀都是CL<br>CoreLocation中使用CLLocationManager对象来做用户定位</p>
-<p><strong>三、经纬度等地理信息扫盲</strong><br>1.示意图<br><strong>　　<img src="http://images.cnitblog.com/i/450136/201408/091533193501020.png" alt=""></strong><br>2.本初子午线：穿过英国伦敦格林文治天文台<br>往东边（右边）走，是东经（E）<br>往西边（左边）走，是西经（W）<br>东西经各180°，总共360°</p>
-<p>3.赤道：零度维度<br>往北边（上边）走，是北纬（N）<br>往南边（下边）走，是南纬（S）<br>南北纬各90°，总共180°</p>
-<p>提示：横跨经度\纬度越大（1° ≈ 111km），表示的范围就越大，在地图上看到的东西就越小<br>4.我国的经纬度:<br>（1）中国的经纬度范围<br>纬度范围：N 3°51′ ~  N 53°33′<br>经度范围：E 73°33′ ~  E 135°05′<br>（2）部分城市的经纬度<br>　　<img src="http://images.cnitblog.com/i/450136/201408/091536473652603.png" alt=""></p>
-<p><strong>四、模拟位置</strong><br>说明：在对程序进行测试的时候，设置手机模拟器的模拟位置（经纬度）<br><img src="http://images.cnitblog.com/i/450136/201408/091538586931958.png" alt="">    <img src="http://images.cnitblog.com/i/450136/201408/091539108818080.png" alt=""></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, <span class="built_in">UIGestureRecognizerState</span>) &#123;</div><div class="line">    <span class="built_in">UIGestureRecognizerStatePossible</span>,   <span class="comment">// the recognizer has not yet recognized its gesture, but may be evaluating touch events. this is the default state</span></div><div class="line">   </div><div class="line">    <span class="built_in">UIGestureRecognizerStateBegan</span>,      <span class="comment">// the recognizer has received touches recognized as the gesture. the action method will be called at the next turn of the run loop</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateChanged</span>,    <span class="comment">// the recognizer has received touches recognized as a change to the gesture. the action method will be called at the next turn of the run loop</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateEnded</span>,      <span class="comment">// the recognizer has received touches recognized as the end of the gesture. the action method will be called at the next turn of the run loop and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateCancelled</span>,  <span class="comment">// the recognizer has received touches resulting in the cancellation of the gesture. the action method will be called at the next turn of the run loop. the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">   </div><div class="line">    <span class="built_in">UIGestureRecognizerStateFailed</span>,     <span class="comment">// the recognizer has received a touch sequence that can not be recognized as the gesture. the action method will not be called and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">   </div><div class="line">    <span class="comment">// Discrete Gestures – gesture recognizers that recognize a discrete event but do not report changes (for example, a tap) do not transition through the Began and Changed states and can not fail or be cancelled</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateRecognized</span> = <span class="built_in">UIGestureRecognizerStateEnded</span> <span class="comment">// the recognizer has received touches recognized as the gesture. the action method will be called at the next turn of the run loop and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">Possible: 识别器在未识别出它的手势，但可能会接收到触摸时处于这个状态。这是默认状态。</div><div class="line">Began: 识别器接收到触摸并识别出是它的手势时处于这个状态。响应方法将在下个循环步骤中被调用。</div><div class="line"></div><div class="line">Changed:the recognizer has received touches recognized as a change to the gesture. （不懂怎么翻译，理解上就是识别器识别出一个变化为它的手势的触摸），响应方法将在下个循环步骤中被调用。</div><div class="line"></div><div class="line">Ended:识别器在识别到作为当前手势结束信号的触摸时处于这个状态。响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Cancelled:识别器处于取消状态.响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Failed: 识别器接收到不能识别为它的手势的一系列触摸。响应方法不会被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Recognized: 识别器已识别到它的手势。响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -1151,10 +670,10 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
 
 
   
-    <article id="post-oc/iOS开发系列--Swift语言" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/UIDevice" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/iOS开发系列--Swift语言/" class="article-date">
+      <a href="/2016/10/08/oc/UIDevice/" class="article-date">
       <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
@@ -1170,7 +689,7 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a>
+      <a class="article-title" href="/2016/10/08/oc/UIDevice/">UIDevice</a>
     </h1>
   
 
@@ -1180,7 +699,7 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>Swift是苹果2014年推出的全新的编程语言，它继承了C语言、ObjC的特性，且克服了C语言的兼容性问题。<br>
+              <p>UIDevice提供了多种属性、类函数及状态通知，帮助我们全方位了解设备状况。从检测电池电量到定位设备与临近感应，UIDevice所做的工作就是为应用程序提供用户及设备的一些信息。UIDevice类还能够收集关于设备的各种具体细节，例如机型及iOS版本等。其中大部分属性都对开发工作具有积极的辅助作用。下面的代码简单的使用UIDevice获取手机属性。<br>
           
       
     </div>
@@ -1196,8 +715,224 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
       
       
         <p class="article-more-link">
-          <a href="/2016/10/08/oc/iOS开发系列--Swift语言/#more">more >></a>
+          <a href="/2016/10/08/oc/UIDevice/#more">查看全文 >></a>
         </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UIImagePickerController从本地相册加载图片" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>/*1.签两个协议协议<br>          UIImagePickerControllerDelegate<br>          UINavigationControllerDelegate<br>  2.两个方法</p>
+<p>方法一：<br>//点击按钮触发的方法<br>-(void)buttonAction:(UIButton*)button<br>{</p>
+<pre><code>//创建获取本地相册控制器对象
+UIImagePickerController *picker = [[UIImagePickerControlleralloc]init];
+
+//成为代理
+picker.delegate= self;
+
+//设置相片来源类型
+picker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+
+//是否可以编辑
+picker.allowsEditing= YES;
+
+//模态显示本地相册
+[selfpresentViewController:pickeranimated:YEScompletion:^{
+
+
+}]; 
+</code></pre><p>}</p>
+<p>方法二：<br>//当用户选择相册中的某个图片时触发的方法,协议里的方法<br>//该方法可以获取到选中的图片</p>
+<ul>
+<li><p>(void)imagePickerController:(UIImagePickerController<em>)picker didFinishPickingMediaWithInfo:(NSDictionary</em>)info<br>{</p>
+<p>  NSLog(@”info = %@”,info);<br>  UIImage <em>image=<br>  [info objectForKey:@”UIImagePickerControllerOriginalImage”];<br>  //通过tag值取对象<br>  UIButton </em>button = (UIButton*)[self.viewviewWithTag:10000];<br>  [button setBackgroundImage:imageforState:UIControlStateNormal];</p>
+<p>  //让相册模态消失<br>  [picker dismissViewControllerAnimated:YEScompletion:^{</p>
+</li>
+</ul>
+<pre><code>}];
+</code></pre><p>}<br>数据来源类型一共有三种：<br>enum {<br>   UIImagePickerControllerSourceTypePhotoLibrary ,//来自图库<br>   UIImagePickerControllerSourceTypeCamera ,//来自相机<br>   UIImagePickerControllerSourceTypeSavedPhotosAlbum //来自相册<br>};<br>在用这些来源的时候最好检测以下设备是否支持；<br> if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])<br>    {<br>        NSLog(@”支持相机”);<br>    }<br>    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])<br>    {<br>        NSLog(@”支持图库”);<br>    }<br>    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])<br>    {<br>        NSLog(@”支持相片库”);<br>    }</p>
+<p>调用摄像头来获取资源</p>
+<ul>
+<li>(void)viewDidLoad {<br>  [super viewDidLoad];<br>  picker = [[UIImagePickerController alloc]init];<br>  picker.view.backgroundColor = [UIColor orangeColor];<br>  UIImagePickerControllerSourceType sourcheType = UIImagePickerControllerSourceTypeCamera;<br>  picker.sourceType = sourcheType;<br>  picker.delegate = self;<br>  picker.allowsEditing = YES;<br>}</li>
+</ul>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UIPageControl" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UIPageControl/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UIPageControl/">UIPageControl</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">/*****************创建UIPageControl*********************/</span></div><div class="line">    <span class="comment">//创建UIPageControl</span></div><div class="line">   <span class="keyword">self</span>.pageC= [[<span class="built_in">UIPageControlalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>((WIDTH<span class="number">-300</span>)/<span class="number">2</span>,HEIGHT<span class="number">-60</span>,<span class="number">300</span>,<span class="number">50</span>)];</div><div class="line">    [<span class="keyword">self</span>.viewaddSubview:<span class="keyword">self</span>.pageC];</div><div class="line">    [<span class="keyword">self</span>.pageCrelease];</div><div class="line">   </div><div class="line">    <span class="comment">//设置页数</span></div><div class="line">   <span class="keyword">self</span>.pageC.numberOfPages =<span class="number">10</span>;</div><div class="line"></div><div class="line">   <span class="comment">//设置当前页码的颜色</span></div><div class="line">   <span class="keyword">self</span>.pageC.currentPageIndicatorTintColor = [<span class="built_in">UIColoryellowColor</span>];</div><div class="line"></div><div class="line">   <span class="comment">//设置所有页的颜色</span></div><div class="line">    <span class="keyword">self</span>.pageC.pageIndicatorTintColor= [<span class="built_in">UIColorredColor</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//核心方法</span></div><div class="line">    [<span class="keyword">self</span>.pageCaddTarget:selfaction:<span class="keyword">@selector</span>(pageAction:)forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.scroll.delegate= <span class="keyword">self</span>;</div><div class="line">   </div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)pageAction:(<span class="built_in">UIPageControl</span>*)pageC</div><div class="line">&#123;</div><div class="line">    <span class="comment">//打印当前页码</span></div><div class="line"></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"切换页码= %ld "</span>,(<span class="keyword">long</span>)pageC.currentPage);</div><div class="line">   </div><div class="line">  <span class="comment">//页面跟着page的点动</span></div><div class="line">    [<span class="keyword">self</span>.scrollsetContentOffset:<span class="built_in">CGPointMake</span>(<span class="number">375</span>*<span class="keyword">self</span>.pageC.currentPage,<span class="number">0</span>)animated:<span class="literal">YES</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">&#125;</div><div class="line">   <span class="comment">/*****************************************************/</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/UIProgressView进度条" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UIProgressView进度条/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UIProgressView进度条/">UIProgressView进度条</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//创建</span></div><div class="line">    <span class="built_in">UIProgressView</span> *progressView = [[<span class="built_in">UIProgressView</span> alloc]initWithProgressViewStyle:<span class="built_in">UIProgressViewStyleBar</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:progressView];</div><div class="line">    [progressView release];</div><div class="line">   </div><div class="line">    progressView.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">100</span>, <span class="number">300</span>, <span class="number">10</span>);</div><div class="line">   </div><div class="line">    <span class="comment">//属性progress决定值的大小</span></div><div class="line">    <span class="comment">//设置初始值</span></div><div class="line">    progressView.progress = <span class="number">0</span>;</div><div class="line"></div><div class="line">     <span class="comment">//利用NSTimer</span></div><div class="line">     <span class="comment">//创建NSTimer</span></div><div class="line">    <span class="built_in">NSTimer</span> *timer = [<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">0.1</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(timerAction:) userInfo:<span class="literal">nil</span> repeats:<span class="literal">YES</span>];</div><div class="line">  </div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)timerAction:(<span class="built_in">NSTimer</span> *)timer</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.progressView.progress &lt; <span class="number">1</span>) &#123;</div><div class="line">         <span class="keyword">self</span>.progressView.progress += <span class="number">0.01</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
       
       <div class="clearfix"></div>
     </div>
@@ -1233,7 +968,7 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -1242,7 +977,7 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -1259,9 +994,9 @@ gradientLayer2.frame = CGRectMake(self.width/2, 0, self.width/2, self.height);
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

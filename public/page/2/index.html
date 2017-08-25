@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>Friends</li>
+                        <li>友情鏈接</li>
                         
                         
                     </ul>
@@ -241,9 +241,92 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-ruby/File" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/01/ruby/File/" class="article-date">
+      <time datetime="2017-04-01T12:47:18.000Z" itemprop="datePublished">2017-04-01</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/01/ruby/File/">File</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>Use:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">File.open(<span class="string">"out.txt"</span>, [your-option-string]) &#123;<span class="params">|f|</span> f.write(<span class="string">"write your stuff here"</span>) &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">out_file = File.new(<span class="string">"out.txt"</span>, <span class="string">"w"</span>)</div><div class="line">out_file.puts(<span class="string">"write your stuff here"</span>)</div><div class="line">out_file.close</div></pre></td></tr></table></figure>
+<p>where your options are:</p>
+<ul>
+<li>r - Read only. The file must exist.</li>
+<li>w - Create an empty file for writing.</li>
+<li>a - Append to a file.The file is created if it does not exist.</li>
+<li>r+ - Open a file for update both reading and writing. The file must exist.</li>
+<li>w+ - Create an empty file for both reading and writing.</li>
+<li>a+ - Open a file for reading and appending. The file is created if it does not exist.</li>
+</ul>
+<p>读取<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">File.open(<span class="string">"out.txt"</span>) <span class="keyword">do</span> <span class="params">|file|</span></div><div class="line">  <span class="keyword">while</span> line = file.gets</div><div class="line">    puts line</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>文件重命名：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">File.rename( <span class="string">"new_file.js"</span>, <span class="string">"new.js"</span> )<span class="comment">#原来的文件名，新的文件名</span></div></pre></td></tr></table></figure></p>
+<p>删除文件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">File.delete( <span class="string">"new.js"</span> )<span class="comment">#原来的文件名</span></div></pre></td></tr></table></figure></p>
+<p>目录操作：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Dir.mkdir(<span class="string">"new"</span>)<span class="comment">#创建一个新文件夹</span></div><div class="line">Dir.rmdir(<span class="string">"new"</span>)<span class="comment">#删除指定的文件夹</span></div></pre></td></tr></table></figure></p>
+<p>将一个文件拷贝到目标目标：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">'fileutils'</span></div><div class="line">FileUtils.cp <span class="string">'new.js'</span>, <span class="string">'new'</span></div></pre></td></tr></table></figure></p>
+<p>将一个文件移动到目标目标：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">'fileutils'</span></div><div class="line">FileUtils.mv <span class="string">'new.js'</span>, <span class="string">'new'</span></div></pre></td></tr></table></figure></p>
+<!--<img src="/images/6.png" width="800" height="263" />-->
+<!--<font color=#FF6666></font>-->
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/ruby/">ruby</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file/">file</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-oc/指针跟随手指转动的钟表" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -294,7 +377,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/03/31/oc/指针跟随手指转动的钟表/#more">more >></a>
+          <a href="/2017/03/31/oc/指针跟随手指转动的钟表/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -362,7 +445,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/03/31/oc/标题自动旋转滚动效果/#more">more >></a>
+          <a href="/2017/03/31/oc/标题自动旋转滚动效果/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -430,7 +513,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/03/22/security/wifi/#more">more >></a>
+          <a href="/2017/03/22/security/wifi/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -494,7 +577,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2017/03/21/system/linux环境变量/#more">more >></a>
+          <a href="/2017/03/21/system/linux环境变量/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -562,7 +645,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/02/24/ruby/ruby属性/#more">more >></a>
+          <a href="/2017/02/24/ruby/ruby属性/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -630,7 +713,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/02/04/ruby/rvm/#more">more >></a>
+          <a href="/2017/02/04/ruby/rvm/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -698,7 +781,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/02/02/system/excel/#more">more >></a>
+          <a href="/2017/02/02/system/excel/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -766,7 +849,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/01/04/ruby/用string或symbol访问hash/#more">more >></a>
+          <a href="/2017/01/04/ruby/用string或symbol访问hash/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -834,75 +917,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/12/20/ruby/rails下信鸽推送/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/rake任务" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/20/ruby/rake任务/" class="article-date">
-      <time datetime="2016-12-20T12:59:13.000Z" itemprop="datePublished">2016-12-20</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/20/ruby/rake任务/">rake任务</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>rails中创建使用rake任务<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rake/">rake</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/12/20/ruby/rake任务/#more">more >></a>
+          <a href="/2016/12/20/ruby/rails下信鸽推送/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -939,7 +954,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -948,7 +963,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -965,9 +980,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

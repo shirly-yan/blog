@@ -139,10 +139,10 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>Friends</li>
+                        <li>友情鏈接</li>
                         
                         
                     </ul>
@@ -241,9 +241,70 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-oc/UITextField" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/UITextField/" class="article-date">
+      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/UITextField/">UITextField</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//创建 </span></div><div class="line">     <span class="built_in">UITextField</span>*textfield = [[<span class="built_in">UITextField</span>             alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">200</span>,<span class="number">40</span>)];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:<span class="keyword">self</span>.myTextField];</div><div class="line">   </div><div class="line">    <span class="comment">//设置背景颜色</span></div><div class="line">    <span class="keyword">self</span>.myTextField.backgroundColor = [<span class="built_in">UIColor</span> clearColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框样式</span></div><div class="line">    <span class="keyword">self</span>.myTextField.borderStyle = <span class="built_in">UITextBorderStyleRoundedRect</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//密文输入</span></div><div class="line">    <span class="keyword">self</span>.myTextField.secureTextEntry = <span class="literal">YES</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置占位提示符</span></div><div class="line">    <span class="keyword">self</span>.myTextField.placeholder = <span class="string">@"请输入"</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框删除按钮</span></div><div class="line">    <span class="keyword">self</span>.myTextField.clearButtonMode = <span class="built_in">UITextFieldViewModeAlways</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置键盘类型</span></div><div class="line">    <span class="keyword">self</span>.myTextField.keyboardType = <span class="built_in">UIKeyboardTypeNumberPad</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按按钮键盘隐藏*********************************/</span></div><div class="line">  <span class="comment">//创建按钮</span></div><div class="line">    <span class="built_in">UIButton</span> *Button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:Button];</div><div class="line">    Button.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">80</span>, <span class="number">100</span>, <span class="number">30</span>);</div><div class="line">    Button.backgroundColor = [<span class="built_in">UIColor</span> cyanColor];</div><div class="line"></div><div class="line">    [Button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(buttonAction:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>) buttonAction:(<span class="built_in">UIButton</span> *)b</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="comment">//取消第一响应者</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按return键盘隐藏*********************************/</span></div><div class="line"><span class="number">1.</span>签<span class="built_in">UITextFieldDelegate</span>协议</div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> : <span class="title">UIResponder</span> &lt;<span class="title">UIApplicationDelegate</span>,<span class="title">UITextFieldDelegate</span>&gt;</span></div><div class="line"></div><div class="line"><span class="number">2.</span>成为代理人</div><div class="line">哪个输入框成为代理人哪个输入框有此功能</div><div class="line"> <span class="keyword">self</span>.myTextField.delegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line"><span class="number">3.</span>实现协议里的方法</div><div class="line"><span class="comment">//点击return建的时候被触发</span></div><div class="line">通用，一个就可以给所有输入框用</div><div class="line">- (<span class="built_in">BOOL</span>)textFieldShouldReturn:(<span class="built_in">UITextField</span> *)textField</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"><span class="comment">/******按空白处键盘隐藏*********************************/</span></div><div class="line"> <span class="comment">//按空白处键盘回收</span></div><div class="line">    <span class="built_in">UITapGestureRecognizer</span> *tap = [[<span class="built_in">UITapGestureRecognizer</span> alloc]initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(backgroundTap:)];</div><div class="line">    [<span class="keyword">self</span>.view addGestureRecognizer:tap];</div><div class="line"></div><div class="line"><span class="comment">//按空白处键盘回收调用的方法</span></div><div class="line">- (<span class="keyword">IBAction</span>)backgroundTap:(<span class="keyword">id</span>)sender &#123;</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf1  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf2  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf3  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf4  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf5  resignFirstResponder];</div><div class="line">   </div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-swift/swift类型" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -294,7 +355,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/07/20/swift/swift类型/#more">more >></a>
+          <a href="/2016/07/20/swift/swift类型/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -362,7 +423,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/06/01/system/git/#more">more >></a>
+          <a href="/2016/06/01/system/git/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -430,7 +491,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/17/ruby/ruby常用命令/#more">more >></a>
+          <a href="/2016/04/17/ruby/ruby常用命令/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -498,7 +559,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/14/ruby/ruby调试/#more">more >></a>
+          <a href="/2016/04/14/ruby/ruby调试/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -652,7 +713,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/06/ruby/ActiveRecord(四)/#more">more >></a>
+          <a href="/2016/04/06/ruby/ActiveRecord(四)/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -720,7 +781,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/05/ruby/ActiveRecord(三)/#more">more >></a>
+          <a href="/2016/04/05/ruby/ActiveRecord(三)/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -788,7 +849,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/04/ruby/ActiveRecord(二)/#more">more >></a>
+          <a href="/2016/04/04/ruby/ActiveRecord(二)/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -856,75 +917,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/01/ruby/ActiveRecord(一)/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/ruby基本语法3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/17/ruby/ruby基本语法3/" class="article-date">
-      <time datetime="2016-03-17T09:40:04.000Z" itemprop="datePublished">2016-03-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/17/ruby/ruby基本语法3/">ruby基本语法3</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>ruby基本语法3<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/03/17/ruby/ruby基本语法3/#more">more >></a>
+          <a href="/2016/04/01/ruby/ActiveRecord(一)/#more">查看全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -961,7 +954,7 @@
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -970,7 +963,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -987,9 +980,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
