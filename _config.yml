@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://yqzh186.github.io/
+url: https://shirly-yan.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -69,5 +69,5 @@ theme: yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
      type: git
-     repo: https://github.com/yqzh186/yqzh186.github.io.git
+     repo: https://github.com/shirly-yan/shirly-yan.github.io
      branch: master

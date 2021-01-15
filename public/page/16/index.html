@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,10 +8,10 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Shirly" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Shirly">
 
 
     
@@ -20,12 +20,13 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shirly">
-<meta property="og:url" content="https://yqzh186.github.io/page/16/index.html">
+<meta property="og:url" content="https://shirly-yan.github.io/page/16/index.html">
 <meta property="og:site_name" content="Shirly">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shirly">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
@@ -73,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+        search: undefined
     }
 </script>
 
@@ -89,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -105,13 +106,6 @@
 
         
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -133,17 +127,24 @@
                         </div>
                         
                         
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
                     </div>
                     
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
+                        
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -160,16 +161,20 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">分类</a></li>
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -189,7 +194,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yqzh186">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -197,6 +202,12 @@
                 </section>
                 
 
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
                 
             </div>
         </div>
@@ -225,7 +236,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">分类</a></li>
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -233,23 +246,25 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-oc/UITextField" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/进程和线程" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/UITextField/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+      <a href="/2016/10/08/oc/进程和线程/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -264,7 +279,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UITextField/">UITextField</a>
+      <a class="article-title" href="/2016/10/08/oc/进程和线程/">进程和线程</a>
     </h1>
   
 
@@ -275,7 +290,22 @@
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//创建 </span></div><div class="line">     <span class="built_in">UITextField</span>*textfield = [[<span class="built_in">UITextField</span>             alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">200</span>,<span class="number">40</span>)];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:<span class="keyword">self</span>.myTextField];</div><div class="line">   </div><div class="line">    <span class="comment">//设置背景颜色</span></div><div class="line">    <span class="keyword">self</span>.myTextField.backgroundColor = [<span class="built_in">UIColor</span> clearColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框样式</span></div><div class="line">    <span class="keyword">self</span>.myTextField.borderStyle = <span class="built_in">UITextBorderStyleRoundedRect</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//密文输入</span></div><div class="line">    <span class="keyword">self</span>.myTextField.secureTextEntry = <span class="literal">YES</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置占位提示符</span></div><div class="line">    <span class="keyword">self</span>.myTextField.placeholder = <span class="string">@"请输入"</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置输入框删除按钮</span></div><div class="line">    <span class="keyword">self</span>.myTextField.clearButtonMode = <span class="built_in">UITextFieldViewModeAlways</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置键盘类型</span></div><div class="line">    <span class="keyword">self</span>.myTextField.keyboardType = <span class="built_in">UIKeyboardTypeNumberPad</span>;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按按钮键盘隐藏*********************************/</span></div><div class="line">  <span class="comment">//创建按钮</span></div><div class="line">    <span class="built_in">UIButton</span> *Button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</div><div class="line">    [<span class="keyword">self</span>.window addSubview:Button];</div><div class="line">    Button.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">80</span>, <span class="number">100</span>, <span class="number">30</span>);</div><div class="line">    Button.backgroundColor = [<span class="built_in">UIColor</span> cyanColor];</div><div class="line"></div><div class="line">    [Button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(buttonAction:) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</div><div class="line"></div><div class="line">-(<span class="keyword">void</span>) buttonAction:(<span class="built_in">UIButton</span> *)b</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="comment">//取消第一响应者</span></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/******按return键盘隐藏*********************************/</span></div><div class="line"><span class="number">1.</span>签<span class="built_in">UITextFieldDelegate</span>协议</div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> : <span class="title">UIResponder</span> &lt;<span class="title">UIApplicationDelegate</span>,<span class="title">UITextFieldDelegate</span>&gt;</span></div><div class="line"></div><div class="line"><span class="number">2.</span>成为代理人</div><div class="line">哪个输入框成为代理人哪个输入框有此功能</div><div class="line"> <span class="keyword">self</span>.myTextField.delegate = <span class="keyword">self</span>;</div><div class="line"></div><div class="line"><span class="number">3.</span>实现协议里的方法</div><div class="line"><span class="comment">//点击return建的时候被触发</span></div><div class="line">通用，一个就可以给所有输入框用</div><div class="line">- (<span class="built_in">BOOL</span>)textFieldShouldReturn:(<span class="built_in">UITextField</span> *)textField</div><div class="line">&#123;</div><div class="line">    [<span class="keyword">self</span>.myTextField resignFirstResponder];</div><div class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div><div class="line"></div><div class="line"><span class="comment">/******按空白处键盘隐藏*********************************/</span></div><div class="line"> <span class="comment">//按空白处键盘回收</span></div><div class="line">    <span class="built_in">UITapGestureRecognizer</span> *tap = [[<span class="built_in">UITapGestureRecognizer</span> alloc]initWithTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(backgroundTap:)];</div><div class="line">    [<span class="keyword">self</span>.view addGestureRecognizer:tap];</div><div class="line"></div><div class="line"><span class="comment">//按空白处键盘回收调用的方法</span></div><div class="line">- (<span class="keyword">IBAction</span>)backgroundTap:(<span class="keyword">id</span>)sender &#123;</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf1  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf2  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf3  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf4  resignFirstResponder];</div><div class="line">    [<span class="keyword">self</span>.studentDetailV.tf5  resignFirstResponder];</div><div class="line">   </div><div class="line">&#125;</div><div class="line"><span class="comment">/******************************************************/</span></div></pre></td></tr></table></figure>
+<p><strong>一、进程和线程</strong><br>1.什么是进程</p>
+<p>进程是指在系统中正在运行的一个应用程序<br>每个进程之间是独立的，每个进程均运行在其专用且受保护的内存空间内<br><img src="http://images.cnitblog.com/i/450136/201406/241224432836121.png" alt></p>
+<p>比如同时打开QQ、Xcode，系统就会分别启动2个进程<br>通过“活动监视器”可以查看Mac系统中所开启的进程</p>
+<p>2.什么是线程<br>1个进程要想执行任务，必须得有线程（每1个进程至少要有1条线程）<br>线程是进程的基本执行单元，一个进程（程序）的所有任务都在线程中执行<br>比如使用酷狗播放音乐、使用迅雷下载电影，都需要在线程中执行<br> 　　<img src="http://images.cnitblog.com/i/450136/201406/241225080809896.png" alt></p>
+<p>3.线程的串行</p>
+<p>1个线程中任务的执行是串行的<br>如果要在1个线程中执行多个任务，那么只能一个一个地按顺序执行这些任务<br>也就是说，在同一时间内，1个线程只能执行1个任务<br>比如在1个线程中下载3个文件（分别是文件A、文件B、文件C）<br> <img src="http://images.cnitblog.com/i/450136/201406/241225242528638.png" alt></p>
+<p>二、多线程</p>
+<p>1.什么是多线程<br>1个进程中可以开启多条线程，每条线程可以并行（同时）执行不同的任务<br>进程 -&gt;车间，线程-&gt;车间工人<br>多线程技术可以提高程序的执行效率<br>比如同时开启3条线程分别下载3个文件（分别是文件A、文件B、文件C）<br><img src="http://images.cnitblog.com/i/450136/201406/241226293143615.png" alt><br><img src="http://images.cnitblog.com/i/450136/201406/241227387673566.png" alt></p>
+<p>2.多线程的原理</p>
+<p>同一时间，CPU只能处理1条线程，只有1条线程在工作（执行）<br>多线程并发（同时）执行，其实是CPU快速地在多条线程之间调度（切换）<br>如果CPU调度线程的时间足够快，就造成了多线程并发执行的假象<br>思考：如果线程非常非常多，会发生什么情况？<br>CPU会在N多线程之间调度，CPU会累死，消耗大量的CPU资源<br>每条线程被调度执行的频次会降低（线程的执行效率降低）</p>
+<p>3.多线程的优缺点</p>
+<p>多线程的优点<br>能适当提高程序的执行效率<br>能适当提高资源利用率（CPU、内存利用率）</p>
+<p>多线程的缺点<br>开启线程需要占用一定的内存空间（默认情况下，主线程占用1M，子线程占用512KB），如果开启大量的线程，会占用大量的内存空间，降低程序的性能<br>线程越多，CPU在调度线程上的开销就越大<br>程序设计更加复杂：比如线程之间的通信、多线程的数据共享</p>
+<p>4.多线程在iOS开发中的应用<br>主线程:一个iOS程序运行后，默认会开启1条线程，称为“主线程”或“UI线程”<br>主线程的主要作用<br>显示\刷新UI界面<br>处理UI事件（比如点击事件、滚动事件、拖拽事件等）</p>
+<p>主线程的使用注意:别将比较耗时的操作放到主线程中。<br>耗时操作会卡住主线程，严重影响UI的流畅度，给用户一种“卡”的坏体验</p>
+<p>5.代码示例<br><img src="http://images.cnitblog.com/i/450136/201406/241233129086114.png" alt><br><a href="&quot;复制代码&quot;"><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>     1 //<br>     2 //  YYViewController.m 3 //  01-阻塞主线程 4 //<br>     5 //  Created by apple on 14-6-23. 6 //  Copyright (c) 2014年 itcase. All rights reserved. 7 // 8<br>     9 #import “YYViewController.h”<br>    10<br>    11 @interface YYViewController ()12 - (IBAction)btnClick;13 @end<br>    14<br>    15<br>    16 @implementation YYViewController17<br>    18<br>    19 - (void)viewDidLoad20 {21     [super viewDidLoad];22 }23<br>    24<br>    25 //按钮的点击事件<br>    26 - (IBAction)btnClick {27     //1.获取当前线程<br>    28     NSThread *current=[NSThread currentThread];29     //2.使用for循环执行一些耗时操作<br>    30     for (int i=0; i&lt;10000; i++) {31         //3.输出线程<br>    32         NSLog(@”btnClick---%d---%@”,i,current);33     }34 }35<br>    36 @end<br><a href="&quot;复制代码&quot;"><img src="http://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a><a href="&quot;复制代码&quot;"></a> 执行效果：<br><img src="http://images.cnitblog.com/i/450136/201406/241235051118926.png" alt><br>说明：当点击执行的时候，textView点击无响应。<br><img src="http://images.cnitblog.com/i/450136/201406/241236350808178.png" alt><br>执行分析：等待主线程串行执行。<br><img src="http://images.cnitblog.com/i/450136/201406/241238095028893.png" alt><br>开启子线程。<br><img src="http://images.cnitblog.com/i/450136/201406/241238382996357.png" alt></p>
 
       
     </div>
@@ -306,11 +336,140 @@
 
 
   
+    <article id="post-oc/音乐播放器时间" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/音乐播放器时间/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/音乐播放器时间/">音乐播放器时间</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p><code>`</code>objc<br> NSNumber*n = [self.dataDicvalueForKey:@”duration”];</p>
+<p>   self.progressSilder.maximumValue= n.floatValue;<br>   self.progressSilder.value= progress;</p>
+<p>   //当前时长进度progress<br>   NSIntegerproMin = (NSInteger)progress /60;//当前秒<br>   NSIntegerproSec = (NSInteger)progress %60;//当前分钟</p>
+<p>   //duration总时长<br>   NSIntegerdurMin = (NSInteger)n.floatValue/60;//总秒<br>   NSIntegerdurSec = (NSInteger)n.floatValue%60;//总分钟</p>
+<p>   self.curentTimeLabel.text= [NSStringstringWithFormat:@”%02ld:%02ld”,<br> proMin, proSec];   self.totalTimeLabel.text = [NSStringstringWithFormat:@”%02ld:%02ld”,durMin,durSec];</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>在iOS中音频播放从形式上可以分为音效播放和音乐播放。前者主要指的是一些短音频播放，通常作为点缀音频，对于这类音频不需要进行进度、循环等控制。后者指的是一些较长的音频，通常是主音频，对于这些音频的播放通常需要进行精确的控制。<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-swift/swift类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/07/20/swift/swift类型/" class="article-date">
-      <time datetime="2016-07-20T02:09:39.000Z" itemprop="datePublished">2016-07-20</time>
+      <time datetime="2016-07-20T10:09:39.000Z" itemprop="datePublished">2016-07-20</time>
 </a>
 
 
@@ -355,7 +514,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/07/20/swift/swift类型/#more">查看全文 >></a>
+          <a href="/2016/07/20/swift/swift类型/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -378,7 +537,7 @@
   
     <div class="article-meta">
       <a href="/2016/06/01/system/git/" class="article-date">
-      <time datetime="2016-06-01T02:10:10.000Z" itemprop="datePublished">2016-06-01</time>
+      <time datetime="2016-06-01T10:10:10.000Z" itemprop="datePublished">2016-06-01</time>
 </a>
 
 
@@ -423,7 +582,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/06/01/system/git/#more">查看全文 >></a>
+          <a href="/2016/06/01/system/git/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -446,7 +605,7 @@
   
     <div class="article-meta">
       <a href="/2016/04/17/ruby/ruby常用命令/" class="article-date">
-      <time datetime="2016-04-17T08:51:32.000Z" itemprop="datePublished">2016-04-17</time>
+      <time datetime="2016-04-17T16:51:32.000Z" itemprop="datePublished">2016-04-17</time>
 </a>
 
 
@@ -491,7 +650,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/17/ruby/ruby常用命令/#more">查看全文 >></a>
+          <a href="/2016/04/17/ruby/ruby常用命令/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -514,7 +673,7 @@
   
     <div class="article-meta">
       <a href="/2016/04/14/ruby/ruby调试/" class="article-date">
-      <time datetime="2016-04-14T06:54:51.000Z" itemprop="datePublished">2016-04-14</time>
+      <time datetime="2016-04-14T14:54:51.000Z" itemprop="datePublished">2016-04-14</time>
 </a>
 
 
@@ -559,7 +718,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/14/ruby/ruby调试/#more">查看全文 >></a>
+          <a href="/2016/04/14/ruby/ruby调试/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -582,7 +741,7 @@
   
     <div class="article-meta">
       <a href="/2016/04/11/ruby/ruby类/" class="article-date">
-      <time datetime="2016-04-11T11:00:05.000Z" itemprop="datePublished">2016-04-11</time>
+      <time datetime="2016-04-11T19:00:05.000Z" itemprop="datePublished">2016-04-11</time>
 </a>
 
 
@@ -608,26 +767,26 @@
       
           
         <a id="more"></a>
-<p></p><h2>常用命令</h2><br>irb中引入ruby文件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">load <span class="string">'point.rb'</span></div></pre></td></tr></table></figure><p></p>
-<p>获得一个对象的类<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p.<span class="keyword">class</span></div></pre></td></tr></table></figure></p>
-<p>获得一个对象的所有方法<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p.methods</div></pre></td></tr></table></figure></p>
-<p>获得一个对象的所有方法,不显示从祖先继承的方法<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">p.methods(<span class="literal">false</span>)</div></pre></td></tr></table></figure></p>
-<p>显示一个类的祖先<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Point.ancestors</div></pre></td></tr></table></figure></p>
+<p></p><h2>常用命令</h2><br>irb中引入ruby文件<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load <span class="string">'point.rb'</span></span><br></pre></td></tr></table></figure><p></p>
+<p>获得一个对象的类<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p<span class="class">.<span class="keyword">class</span></span></span><br></pre></td></tr></table></figure></p>
+<p>获得一个对象的所有方法<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.methods</span><br></pre></td></tr></table></figure></p>
+<p>获得一个对象的所有方法,不显示从祖先继承的方法<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.methods(<span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
+<p>显示一个类的祖先<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Point.ancestors</span><br></pre></td></tr></table></figure></p>
 <p></p><h2></h2><p></p>
-<p></p><h3>创建类</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
-<p></p><h3>默认执行的初始化方法,构造方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></div><div class="line">    puts <span class="keyword">self</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
-<p></p><h3>带参数的构造方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x, y)</span></span></div><div class="line">    @x, @y = x, y</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
-<p><font color="#FF6666">方法有几个参数必须传入几个参数，除非设置了默认值的参数可以不传</font><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x, y=<span class="number">2</span>)</span></span></div><div class="line">    @x, @y = x, y</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x=<span class="number">0</span>, y=<span class="number">0</span>)</span></span></div><div class="line">    @x, @y = x, y</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p></p><h3>创建类</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3>默认执行的初始化方法,构造方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span></span><br><span class="line">    puts <span class="keyword">self</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3>带参数的构造方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x, y)</span></span></span><br><span class="line">    @x, @y = x, y</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
+<p><font color="#FF6666">方法有几个参数必须传入几个参数，除非设置了默认值的参数可以不传</font><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x, y=<span class="number">2</span>)</span></span></span><br><span class="line">    @x, @y = x, y</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x=<span class="number">0</span>, y=<span class="number">0</span>)</span></span></span><br><span class="line">    @x, @y = x, y</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p></p><h3>变量的类型</h3><p></p>
-<p></p><h4>实例变量 instance variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@x</div></pre></td></tr></table></figure><p></p>
-<p></p><h4>类变量 class variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@@x</div></pre></td></tr></table></figure><p></p>
-<p></p><h4>全局变量 global variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$x</div></pre></td></tr></table></figure><p></p>
-<p></p><h4>局部变量 local variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x</div></pre></td></tr></table></figure><p></p>
-<p></p><h3>getter setter方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span> <span class="comment"># getter setter</span></div><div class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:y</span> <span class="comment"># getter</span></div><div class="line">  <span class="keyword">attr_writer</span> <span class="symbol">:x</span> <span class="comment">#setter</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></div><div class="line">    @x, @y, @z = x, y, z</div><div class="line">    puts x, y, z</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
-<p></p><h3>符号方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span>, <span class="symbol">:y</span>, <span class="symbol">:z</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></div><div class="line">    @x, @y, @z = x, y, z</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">+</span><span class="params">(p2)</span></span></div><div class="line">    Point.new(@x + p2.x, @y + p2.y, @z + p2.z)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
+<p></p><h4>实例变量 instance variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@x</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h4>类变量 class variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@@x</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h4>全局变量 global variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$x</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h4>局部变量 local variable</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x</span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3>getter setter方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span> <span class="comment"># getter setter</span></span><br><span class="line">  <span class="keyword">attr_reader</span> <span class="symbol">:y</span> <span class="comment"># getter</span></span><br><span class="line">  <span class="keyword">attr_writer</span> <span class="symbol">:x</span> <span class="comment">#setter</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></span><br><span class="line">    @x, @y, @z = x, y, z</span><br><span class="line">    puts x, y, z</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h3>符号方法</h3><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span>, <span class="symbol">:y</span>, <span class="symbol">:z</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></span><br><span class="line">    @x, @y, @z = x, y, z</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">+</span><span class="params">(p2)</span></span></span><br><span class="line">    Point.new(@x + p2.x, @y + p2.y, @z + p2.z)</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
 <p></p><h3>类方法</h3><p></p>
-<p></p><h4>在方法前加 self.</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></div><div class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span>, <span class="symbol">:y</span>, <span class="symbol">:z</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></div><div class="line">    @x, @y, @z = x, y, z</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">first_quadrant?</span><span class="params">(point)</span></span></div><div class="line">    point.<span class="keyword">class</span> == Point &amp;&amp; point.x &gt; <span class="number">0</span> &amp;&amp; point.y &gt; <span class="number">0</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure><p></p>
+<p></p><h4>在方法前加 self.</h4><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span></span></span><br><span class="line">  <span class="keyword">attr_accessor</span> <span class="symbol">:x</span>, <span class="symbol">:y</span>, <span class="symbol">:z</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(x = <span class="number">0</span>, y = <span class="number">0</span>, z = <span class="number">0</span>)</span></span></span><br><span class="line">    @x, @y, @z = x, y, z</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">first_quadrant?</span><span class="params">(point)</span></span></span><br><span class="line">    point.class == Point &amp;&amp; point.x &gt; 0 &amp;&amp; point.y &gt; 0</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><p></p>
 <!--<img src="/images/6.png" width="800" height="263" />-->
 <!--<font color=#FF6666></font>-->
 
@@ -668,7 +827,7 @@
   
     <div class="article-meta">
       <a href="/2016/04/06/ruby/ActiveRecord(四)/" class="article-date">
-      <time datetime="2016-04-06T02:48:37.000Z" itemprop="datePublished">2016-04-06</time>
+      <time datetime="2016-04-06T10:48:37.000Z" itemprop="datePublished">2016-04-06</time>
 </a>
 
 
@@ -713,7 +872,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/06/ruby/ActiveRecord(四)/#more">查看全文 >></a>
+          <a href="/2016/04/06/ruby/ActiveRecord(四)/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -736,7 +895,7 @@
   
     <div class="article-meta">
       <a href="/2016/04/05/ruby/ActiveRecord(三)/" class="article-date">
-      <time datetime="2016-04-05T06:31:10.000Z" itemprop="datePublished">2016-04-05</time>
+      <time datetime="2016-04-05T14:31:10.000Z" itemprop="datePublished">2016-04-05</time>
 </a>
 
 
@@ -781,143 +940,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2016/04/05/ruby/ActiveRecord(三)/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/ActiveRecord(二)" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/04/ruby/ActiveRecord(二)/" class="article-date">
-      <time datetime="2016-04-04T06:38:26.000Z" itemprop="datePublished">2016-04-04</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/04/ruby/ActiveRecord(二)/">ActiveRecord(二)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>ActiveRecord 回调<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/04/ruby/ActiveRecord(二)/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ruby/ActiveRecord(一)" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/01/ruby/ActiveRecord(一)/" class="article-date">
-      <time datetime="2016-04-01T12:47:18.000Z" itemprop="datePublished">2016-04-01</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/01/ruby/ActiveRecord(一)/">ActiveRecord(一)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>ActiveRecord(一)<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ruby/">ruby</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/04/01/ruby/ActiveRecord(一)/#more">查看全文 >></a>
+          <a href="/2016/04/05/ruby/ActiveRecord(三)/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -947,14 +970,17 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2015-2017 Shirly
+                2016-2021 Shirly
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -963,7 +989,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -975,14 +1001,30 @@
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
 
 
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

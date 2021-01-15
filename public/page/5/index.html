@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,10 +8,10 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Shirly" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Shirly">
 
 
     
@@ -20,12 +20,13 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shirly">
-<meta property="og:url" content="https://yqzh186.github.io/page/5/index.html">
+<meta property="og:url" content="https://shirly-yan.github.io/page/5/index.html">
 <meta property="og:site_name" content="Shirly">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shirly">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
@@ -73,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+        search: undefined
     }
 </script>
 
@@ -89,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -105,13 +106,6 @@
 
         
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -133,17 +127,24 @@
                         </div>
                         
                         
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
                     </div>
                     
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
+                        
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -160,16 +161,20 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">分类</a></li>
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -189,7 +194,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yqzh186">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -197,6 +202,12 @@
                 </section>
                 
 
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
                 
             </div>
         </div>
@@ -225,7 +236,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">分类</a></li>
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -233,23 +246,153 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-system/centos与ubuntu不同" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/23/system/centos与ubuntu不同/" class="article-date">
+      <time datetime="2016-10-23T15:32:25.000Z" itemprop="datePublished">2016-10-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/23/system/centos与ubuntu不同/">centos与ubuntu不同</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>centos与ubuntu不同<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2016/10/23/system/centos与ubuntu不同/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-system/linux文件权限" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/20/system/linux文件权限/" class="article-date">
+      <time datetime="2016-10-20T20:55:40.000Z" itemprop="datePublished">2016-10-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/20/system/linux文件权限/">linux文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>linux文件<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2016/10/20/system/linux文件权限/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-system/debian安装sudo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/10/20/system/debian安装sudo/" class="article-date">
-      <time datetime="2016-10-20T08:31:18.000Z" itemprop="datePublished">2016-10-20</time>
+      <time datetime="2016-10-20T16:31:18.000Z" itemprop="datePublished">2016-10-20</time>
 </a>
 
 
@@ -286,7 +429,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/20/system/debian安装sudo/#more">查看全文 >></a>
+          <a href="/2016/10/20/system/debian安装sudo/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -309,7 +452,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/20/system/linux用户管理/" class="article-date">
-      <time datetime="2016-10-20T07:26:13.000Z" itemprop="datePublished">2016-10-20</time>
+      <time datetime="2016-10-20T15:26:13.000Z" itemprop="datePublished">2016-10-20</time>
 </a>
 
 
@@ -350,7 +493,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/20/system/linux用户管理/#more">查看全文 >></a>
+          <a href="/2016/10/20/system/linux用户管理/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -373,7 +516,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/20/system/linux系统目录结构/" class="article-date">
-      <time datetime="2016-10-20T05:04:57.000Z" itemprop="datePublished">2016-10-20</time>
+      <time datetime="2016-10-20T13:04:57.000Z" itemprop="datePublished">2016-10-20</time>
 </a>
 
 
@@ -414,7 +557,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/20/system/linux系统目录结构/#more">查看全文 >></a>
+          <a href="/2016/10/20/system/linux系统目录结构/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -437,7 +580,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/20/system/linux命令/" class="article-date">
-      <time datetime="2016-10-19T23:36:09.000Z" itemprop="datePublished">2016-10-20</time>
+      <time datetime="2016-10-20T07:36:09.000Z" itemprop="datePublished">2016-10-20</time>
 </a>
 
 
@@ -478,7 +621,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/20/system/linux命令/#more">查看全文 >></a>
+          <a href="/2016/10/20/system/linux命令/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -501,7 +644,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/19/system/virtualbox安装debian/" class="article-date">
-      <time datetime="2016-10-19T07:43:03.000Z" itemprop="datePublished">2016-10-19</time>
+      <time datetime="2016-10-19T15:43:03.000Z" itemprop="datePublished">2016-10-19</time>
 </a>
 
 
@@ -542,7 +685,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/19/system/virtualbox安装debian/#more">查看全文 >></a>
+          <a href="/2016/10/19/system/virtualbox安装debian/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -565,7 +708,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/17/php/php图形操作/" class="article-date">
-      <time datetime="2016-10-17T05:58:32.000Z" itemprop="datePublished">2016-10-17</time>
+      <time datetime="2016-10-17T13:58:32.000Z" itemprop="datePublished">2016-10-17</time>
 </a>
 
 
@@ -606,7 +749,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/17/php/php图形操作/#more">查看全文 >></a>
+          <a href="/2016/10/17/php/php图形操作/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -629,7 +772,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/17/php/php日期和时间/" class="article-date">
-      <time datetime="2016-10-17T05:00:08.000Z" itemprop="datePublished">2016-10-17</time>
+      <time datetime="2016-10-17T13:00:08.000Z" itemprop="datePublished">2016-10-17</time>
 </a>
 
 
@@ -670,7 +813,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/17/php/php日期和时间/#more">查看全文 >></a>
+          <a href="/2016/10/17/php/php日期和时间/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -693,7 +836,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/17/php/php文件系统/" class="article-date">
-      <time datetime="2016-10-17T04:38:53.000Z" itemprop="datePublished">2016-10-17</time>
+      <time datetime="2016-10-17T12:38:53.000Z" itemprop="datePublished">2016-10-17</time>
 </a>
 
 
@@ -734,135 +877,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2016/10/17/php/php文件系统/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-php/会话控制（session与cookie）" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/17/php/会话控制（session与cookie）/" class="article-date">
-      <time datetime="2016-10-17T03:19:03.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/php/会话控制（session与cookie）/">会话控制（session与cookie）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>会话控制（session与cookie）<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/php/">php</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/10/17/php/会话控制（session与cookie）/#more">查看全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-php/正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/17/php/正则表达式/" class="article-date">
-      <time datetime="2016-10-17T02:19:26.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/php/正则表达式/">正则表达式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>正则表达式<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/php/">php</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2016/10/17/php/正则表达式/#more">查看全文 >></a>
+          <a href="/2016/10/17/php/php文件系统/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -892,14 +907,17 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2015-2017 Shirly
+                2016-2021 Shirly
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -908,7 +926,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -920,14 +938,30 @@
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
 
 
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

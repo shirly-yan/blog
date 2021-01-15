@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,10 +8,10 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Shirly" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Shirly">
 
 
 
@@ -19,15 +19,16 @@
 <meta name="keywords" content="ruby,rails">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ruby正则">
-<meta property="og:url" content="https://yqzh186.github.io/2016/03/14/ruby/ruby正则/index.html">
+<meta property="og:url" content="https://shirly-yan.github.io/2016/03/14/ruby/ruby正则/index.html">
 <meta property="og:site_name" content="Shirly">
 <meta property="og:description" content="ruby正则">
-<meta property="og:updated_time" content="2017-04-13T05:03:58.000Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-01-15T07:10:15.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ruby正则">
 <meta name="twitter:description" content="ruby正则">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
@@ -73,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+        search: undefined
     }
 </script>
 
@@ -89,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -105,13 +106,6 @@
 
         
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -133,17 +127,24 @@
                         </div>
                         
                         
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
                     </div>
                     
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
+                        
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -160,16 +161,20 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">分类</a></li>
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -189,7 +194,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yqzh186">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -197,6 +202,12 @@
                 </section>
                 
 
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
                 
             </div>
         </div>
@@ -225,7 +236,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">分类</a></li>
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -233,21 +246,23 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-ruby/ruby正则" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/14/ruby/ruby正则/" class="article-date">
-      <time datetime="2016-03-14T03:00:05.000Z" itemprop="datePublished">2016-03-14</time>
+      <time datetime="2016-03-14T11:00:05.000Z" itemprop="datePublished">2016-03-14</time>
 </a>
 
 
@@ -288,8 +303,8 @@
       
           
         <p>ruby正则<br><a id="more"></a></p>
-<p></p><h2>新建正则</h2><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a = Regexp.new(<span class="string">'abcd'</span>) </div><div class="line">b = <span class="regexp">/abcd/</span></div><div class="line">c = <span class="regexp">%r&#123;abcd&#125;</span></div></pre></td></tr></table></figure><p></p>
-<p></p><h2>匹配正则</h2><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">a =~ <span class="string">"abcdefg"</span></div><div class="line"></div><div class="line">a =~ <span class="string">"abcdefg"</span> <span class="comment">#0</span></div><div class="line">a.match <span class="string">"abcdefg"</span> <span class="comment">#&lt;MatchData "abcd"&gt;</span></div></pre></td></tr></table></figure><p></p>
+<p></p><h2>新建正则</h2><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = Regexp.new(<span class="string">'abcd'</span>) </span><br><span class="line">b = <span class="regexp">/abcd/</span></span><br><span class="line">c = <span class="regexp">%r&#123;abcd&#125;</span></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h2>匹配正则</h2><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a =~ <span class="string">"abcdefg"</span></span><br><span class="line"></span><br><span class="line">a =~ <span class="string">"abcdefg"</span> <span class="comment">#0</span></span><br><span class="line">a.match <span class="string">"abcdefg"</span> <span class="comment">#&lt;MatchData "abcd"&gt;</span></span><br></pre></td></tr></table></figure><p></p>
 <p></p><h2>正则修饰符</h2><br>用于控制匹配结果的特殊字符<p></p>
 <ul>
 <li>i 忽略大小写</li>
@@ -297,7 +312,7 @@
 <li>x 多行编辑+注释模式</li>
 <li>u e s n 控制编码</li>
 </ul>
-<p><a href="http://regexr.com" target="_blank" rel="external">http://regexr.com</a></p>
+<p><a href="http://regexr.com" target="_blank" rel="noopener">http://regexr.com</a></p>
 <!--<img src="/images/6.png" width="800" height="263" />-->
 <!--<font color=#FF6666></font>-->
 
@@ -308,17 +323,17 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/03/14/ruby/ruby正则/">ruby正则</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主頁">Shirly</a></p>
-        <p><span>發布時間:</span>2016-03-14, 11:00:05</p>
-        <p><span>最後更新:</span>2017-04-13, 13:03:58</p>
+        <p><span>本文标题:</span><a href="/2016/03/14/ruby/ruby正则/">ruby正则</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Shirly</a></p>
+        <p><span>发布时间:</span>2016-03-14, 11:00:05</p>
+        <p><span>最后更新:</span>2021-01-15, 07:10:15</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/03/14/ruby/ruby正则/" title="ruby正则">https://yqzh186.github.io/2016/03/14/ruby/ruby正则/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://yqzh186.github.io/2016/03/14/ruby/ruby正则/　　作者: Shirly" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/14/ruby/ruby正则/" title="ruby正则">https://shirly-yan.github.io/2016/03/14/ruby/ruby正则/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://shirly-yan.github.io/2016/03/14/ruby/ruby正则/　　作者: Shirly" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -345,9 +360,9 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目錄</strong>
+        <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">新建正则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">匹配正则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">正则修饰符</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">新建正则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">匹配正则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">正则修饰符</span></a></li></ol>
         
     </div>
     <style>
@@ -361,10 +376,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
     <script>
-        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
     </script>
 
 
@@ -397,25 +412,6 @@
 
 
     
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/03/14/ruby/ruby正则/" data-title="ruby正则" data-url="https://yqzh186.github.io/2016/03/14/ruby/ruby正则/"></div>
-    <script>
-        var duoshuoQuery = {short_name:"yqzh186"};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
 
 
 
@@ -436,7 +432,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/system/linux时间/">linux时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/01/js/node安装/">node安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/css/Bootstrap(五)/">Bootstrap(五)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/css/Bootstrap(四)/">Bootstrap(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/25/css/Bootstrap(三)/">Bootstrap(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap(二)/">Bootstrap(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap模板/">Bootstrap模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap(一)/">Bootstrap(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/database/mysql/">mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/01/php/phpmyadmin/">phpmyadmin</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/ruby/File/">File</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/oc/指针跟随手指转动的钟表/">指针跟随手指转动的钟表</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/oc/标题自动旋转滚动效果/">标题自动旋转滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/security/wifi/">wifi</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/system/linux环境变量/">linux环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/ruby/ruby属性/">ruby属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/ruby/rvm/">rvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/02/system/excel/">excel</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/ruby/用string或symbol访问hash/">用string或symbol访问hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rails下信鸽推送/">rails下信鸽推送</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rake任务/">rake任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/system/virtualbox共享文件夹/">virtualbox共享文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/system/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/ruby/I18n/">I18n</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/rspec/">rspec</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/grape/">grape</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/system/postgresql/">postgresql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/ruby/rails/">rails</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/ruby/gem/">gem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/system/supervisor/">supervisor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/docker/docker/">docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/apt/">apt</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/ssh/">ssh</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/html/bootstrap/">bootstrap</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/ruby/rake/">rake</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/system/编程思想/">编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/java/java中的spring/">java中的spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/centos与ubuntu不同/">centos与ubuntu不同</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/Ubuntu网络管理/">linux网络管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux文件权限/">linux文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/debian安装sudo/">debian安装sudo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux用户管理/">linux用户管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux系统目录结构/">linux系统目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux命令/">linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/system/virtualbox安装debian/">virtualbox安装debian</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php图形操作/">php图形操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php日期和时间/">php日期和时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php文件系统/">php文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/会话控制（session与cookie）/">会话控制（session与cookie）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php字符串/">php字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php静态关键字static/">php静态关键字static</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php类/">php类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php函数/">php函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php数组/">php数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php结构语句/">php结构语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php运算符/">php运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php常量/">php常量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/html/html字符实体/">html字符实体</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/markdown/markdown转义字符/">markdown转义字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php变量/">php变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/php/php基本语法格式/">php基本语法格式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/system/sublime text3/">sublime text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/php/mac下的php环境配置/">mac下的php环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/php/mac下升级php/">mac下升级php</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Data/">Core Data</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/IOS7使用原生API进行二维码和条形码的扫描/">iOS7使用原生API进行二维码和条形码的扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/shell/判断文件是否存在的脚本语法/">shell或bash中判断文件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIAlertController/">UIAlertController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBarMetrics/">UIBarMetrics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIGestureRecognizerState/">UIGestureRecognizerState</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDevice/">UIDevice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIPageControl/">UIPageControl</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIProgressView进度条/">UIProgressView进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UINavigationController/">UINavigationController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIControlEvents/">UIControlEvents</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISlider滑条/">UISlider滑条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISearchController/">UISearchController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISwitch 圆点按钮/">UISwitch 圆点按钮</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextView/">UITextView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWindow.h详解/">UIWindow.h详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWebView/">UIWebView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/assert/">assert</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/category extension/">category extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/double 型转换成 金额/">double 型转换成 金额</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/cell的几种style/">cell的几种style</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 打电话/">iOS 打电话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/AVAudioPlayer/">AVAudioPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS之CF和OC之间类型转换/">iOS之CF和OC之间类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iPhone尺寸/">iPhone尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS隐藏状态栏/">iOS隐藏状态栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/oc 播放gif动画/">oc 播放gif动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/APP间的调用/">APP间的调用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/model归档/">model归档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/scrollView加约束/">scrollView加约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/storyboard传值/">storyboard传值</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/tableview 下拉图片放大/">tableview 下拉图片放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/target action/">target action</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不同数据类型转换/">不同数据类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/单例模式/">单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不规则瀑布流/">不规则瀑布流</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/协议/">协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/按照时间排序/">按照时间排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/夜间模式/">夜间模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第2部分)/">Core Animation 3D介绍(第2部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/数组 基本用法和排序/">数组 基本用法和排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/模态/">模态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/汉字转拼音/">汉字转拼音</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/获取当前时间/">获取当前时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/计算字符串的宽或者高/">计算字符串的宽或者高</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/进程和线程/">进程和线程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通知/">通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通讯录/">通讯录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/长按保存图片到本地/">长按保存图片到本地</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/音乐播放器时间/">音乐播放器时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/mac显示隐藏文件夹/">mac显示隐藏文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MessageUI.framework发短信/">MessageUI.framework发短信</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSHTTPCookieStorage/">NSHTTPCookieStorage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSString/">NSString</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSTimer/">NSTimer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults/">NSUserDefaults</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/删除Xcode插件/">删除Xcode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/OC 函数库方法/">OC 函数库方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextField/">UITextField</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/swift/swift类型/">swift类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/01/system/git/">git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/ruby/ruby常用命令/">ruby常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/ruby/ruby调试/">ruby调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/ruby/ruby类/">ruby类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/ruby/ActiveRecord(四)/">ActiveRecord(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/05/ruby/ActiveRecord(三)/">ActiveRecord(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/ruby/ActiveRecord(二)/">ActiveRecord(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/ruby/ActiveRecord(一)/">ActiveRecord(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/ruby/ruby基本语法3/">ruby基本语法3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/ruby/ruby正则/">ruby正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/13/ruby/ruby基本语法2/">ruby基本语法2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/ruby/ruby基本语法1/">ruby基本语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/08/oc/iOS之 CoreMotion 框架/">iOS之 CoreMotion 框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/08/oc/推送通知/">推送通知</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/system/linux时间/">linux时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/02/js/javascript基础(二)/">javascript基础(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/01/js/node安装/">node安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/01/js/javascript基础(一)/">javascript基础(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/css/Bootstrap(五)/">Bootstrap(五)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/26/css/Bootstrap(四)/">Bootstrap(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/25/css/Bootstrap(三)/">Bootstrap(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap(二)/">Bootstrap(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap(一)/">Bootstrap(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/css/Bootstrap模板/">Bootstrap模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/09/database/mysql/">mysql</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/01/php/phpmyadmin/">phpmyadmin</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/01/ruby/File/">File</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/oc/指针跟随手指转动的钟表/">指针跟随手指转动的钟表</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/oc/标题自动旋转滚动效果/">标题自动旋转滚动效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/22/security/wifi/">wifi</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/system/linux环境变量/">linux环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/ruby/ruby属性/">ruby属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/04/ruby/rvm/">rvm</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/02/system/excel/">excel</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/ruby/用string或symbol访问hash/">用string或symbol访问hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rails下信鸽推送/">rails下信鸽推送</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/ruby/rake任务/">rake任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/system/virtualbox共享文件夹/">virtualbox共享文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/system/nginx/">nginx</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/23/ruby/I18n/">I18n</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/rspec/">rspec</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/22/ruby/grape/">grape</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/system/postgresql/">postgresql</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/ruby/rails/">rails</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/ruby/gem/">gem</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/system/supervisor/">supervisor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/docker/docker/">docker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/apt/">apt</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/15/system/ssh/">ssh</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/html/bootstrap/">bootstrap</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/ruby/rake/">rake</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/system/编程思想/">编程思想</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/java/java中的spring/">java中的spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/Ubuntu网络管理/">linux网络管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/system/centos与ubuntu不同/">centos与ubuntu不同</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux文件权限/">linux文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/debian安装sudo/">debian安装sudo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux用户管理/">linux用户管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux系统目录结构/">linux系统目录结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/system/linux命令/">linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/19/system/virtualbox安装debian/">virtualbox安装debian</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php图形操作/">php图形操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php日期和时间/">php日期和时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/php文件系统/">php文件系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/会话控制（session与cookie）/">会话控制（session与cookie）</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/17/php/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php字符串/">php字符串</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php静态关键字static/">php静态关键字static</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php类/">php类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php函数/">php函数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php数组/">php数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/14/php/php结构语句/">php结构语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php运算符/">php运算符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php常量/">php常量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/html/html字符实体/">html字符实体</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/markdown/markdown转义字符/">markdown转义字符</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/12/php/php变量/">php变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/php/php基本语法格式/">php基本语法格式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/11/system/sublime text3/">sublime text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/php/mac下的php环境配置/">mac下的php环境配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/10/php/mac下升级php/">mac下升级php</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Data/">Core Data</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/shell/判断文件是否存在的脚本语法/">shell或bash中判断文件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/IOS7使用原生API进行二维码和条形码的扫描/">iOS7使用原生API进行二维码和条形码的扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/mac显示隐藏文件夹/">mac显示隐藏文件夹</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/删除Xcode插件/">删除Xcode插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/APP间的调用/">APP间的调用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/AVAudioPlayer/">AVAudioPlayer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Core Animation 3D介绍(第2部分)/">Core Animation 3D介绍(第2部分)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MessageUI.framework发短信/">MessageUI.framework发短信</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/MPMoviePlayerViewController和MPMoviePlayerController/">MPMoviePlayerViewController和MPMoviePlayerController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSHTTPCookieStorage/">NSHTTPCookieStorage</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/Masonry介绍与使用实践：快速上手Autolayout/">Masonry介绍与使用实践：快速上手Autolayout</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSString/">NSString</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSUserDefaults/">NSUserDefaults</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/OC 函数库方法/">OC 函数库方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIAlertController/">UIAlertController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/NSTimer/">NSTimer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBarMetrics/">UIBarMetrics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIControlEvents/">UIControlEvents</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDevice/">UIDevice</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIGestureRecognizerState/">UIGestureRecognizerState</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UINavigationController/">UINavigationController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIPageControl/">UIPageControl</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIProgressView进度条/">UIProgressView进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISlider滑条/">UISlider滑条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextView/">UITextView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UITextField/">UITextField</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWebView/">UIWebView</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIWindow.h详解/">UIWindow.h详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISwitch 圆点按钮/">UISwitch 圆点按钮</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UTF-8 和 GBK 的 NSString 相互转化的方法/">UTF-8 和 GBK 的 NSString 相互转化的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/assert/">assert</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UIscrollView滚动时调用的方法/">UIscrollView滚动时调用的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/cell的几种style/">cell的几种style</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/double 型转换成 金额/">double 型转换成 金额</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 使用纯代码或xib创建圆角视图/">iOS 使用纯代码或xib创建圆角视图</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 打电话/">iOS 打电话</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS 网络编程模式总结/">iOS 网络编程模式总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS-使用AudioServices相关接口的连续震动/">iOS-使用AudioServices相关接口的连续震动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS实现一个颜色渐变的弧形进度条/">iOS实现一个颜色渐变的弧形进度条</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--Swift语言/">iOS开发系列--Swift语言</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发拓展篇—CoreLocation简单介绍/">iOS开发拓展篇—CoreLocation简单介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS隐藏状态栏/">iOS隐藏状态栏</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iPhone尺寸/">iPhone尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/model归档/">model归档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/UISearchController/">UISearchController</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/oc 播放gif动画/">oc 播放gif动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/runtime 运行时机制 完全解读/">runtime 运行时机制 完全解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/scrollView加约束/">scrollView加约束</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/storyboard传值/">storyboard传值</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/tableview 下拉图片放大/">tableview 下拉图片放大</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/view 的 clipsToBounds属性/">view 的 clipsToBounds属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS之CF和OC之间类型转换/">iOS之CF和OC之间类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/target action/">target action</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不规则瀑布流/">不规则瀑布流</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/不同数据类型转换/">不同数据类型转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/协议/">协议</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/单例模式/">单例模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/category extension/">category extension</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/在c的函数中调用oc的方法/">在c的函数中调用oc的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/和CFStringRef相关的CFSTR与和NSString相关的@/">和CFStringRef相关的CFSTR与和NSString相关的</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/夜间模式/">夜间模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/屏幕横屏竖屏转换/">屏幕横屏竖屏转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/按照时间排序/">按照时间排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/模态/">模态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/汉字转拼音/">汉字转拼音</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/数组 基本用法和排序/">数组 基本用法和排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/获取当前时间/">获取当前时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/计算字符串的宽或者高/">计算字符串的宽或者高</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通知/">通知</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/让超出自己视图范围的子视图响应事件/">让超出自己视图范围的子视图响应事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/通讯录/">通讯录</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/长按保存图片到本地/">长按保存图片到本地</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/进程和线程/">进程和线程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/音乐播放器时间/">音乐播放器时间</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/oc/iOS开发系列--音频播放、录音、视频播放、拍照、视频录制/">iOS开发系列--音频播放、录音、视频播放、拍照、视频录制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/20/swift/swift类型/">swift类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/01/system/git/">git</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/17/ruby/ruby常用命令/">ruby常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/14/ruby/ruby调试/">ruby调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/11/ruby/ruby类/">ruby类</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/06/ruby/ActiveRecord(四)/">ActiveRecord(四)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/05/ruby/ActiveRecord(三)/">ActiveRecord(三)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/04/ruby/ActiveRecord(二)/">ActiveRecord(二)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/01/ruby/ActiveRecord(一)/">ActiveRecord(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/ruby/ruby基本语法3/">ruby基本语法3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/14/ruby/ruby正则/">ruby正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/13/ruby/ruby基本语法2/">ruby基本语法2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/11/ruby/ruby基本语法1/">ruby基本语法1</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/10/08/oc/iOS之 CoreMotion 框架/">iOS之 CoreMotion 框架</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/09/08/oc/推送通知/">推送通知</a></li></ul>
 
 
 
@@ -450,14 +446,17 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2015-2017 Shirly
+                2016-2021 Shirly
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -466,7 +465,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -478,14 +477,30 @@
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
 
 
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

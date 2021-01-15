@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
 
     <!--[if lt IE 9]>
         <style>body {display: none; background: none !important} </style>
@@ -8,10 +8,10 @@
     <![endif]-->
 
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Shirly" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Shirly">
 
 
     
@@ -20,12 +20,13 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shirly">
-<meta property="og:url" content="https://yqzh186.github.io/page/8/index.html">
+<meta property="og:url" content="https://shirly-yan.github.io/page/8/index.html">
 <meta property="og:site_name" content="Shirly">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shirly">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
     <link rel="alternate" href="/atom.xml" title="Shirly" type="application/atom+xml">
@@ -73,7 +74,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+        search: undefined
     }
 </script>
 
@@ -89,7 +90,7 @@
 
 
 
-</head>
+</head></html>
 <body>
   <div id="container">
     <div class="left-col">
@@ -105,13 +106,6 @@
 
         
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -133,17 +127,24 @@
                         </div>
                         
                         
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
                     </div>
                     
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜單</li>
-                        <li>標籤</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>友情鏈接</li>
+                        <li>友情链接</li>
                         
+                        
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -160,16 +161,20 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="/tags/">分类</a></li>
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -189,7 +194,7 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/yqzh186">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -197,6 +202,12 @@
                 </section>
                 
 
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
                 
             </div>
         </div>
@@ -225,7 +236,9 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
-                    <li><a href="/tags/">分类</a></li>
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -233,23 +246,25 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:yqzh186@163.com" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="https://github.com/yqzh186" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
   
-    <article id="post-oc/UIColor和TintColor" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/UIColor和TintColor/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+      <a href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/" class="article-date">
+      <time datetime="2016-10-08T11:39:44.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -264,7 +279,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIColor和TintColor/">UIColor和TintColor</a>
+      <a class="article-title" href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/">NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象</a>
     </h1>
   
 
@@ -274,432 +289,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<p>前者是指颜色，tint是指着色，色调。<br>通过tintColor属性可以定制UINavigationBar的背景颜色，但如果需要设定渐变色、甚至纹理来说，就需要贴图了。比较“暴力”的一种做法就是通过Category来重新实现- (void)<br> drawRect:(CGRect)rect的实现，“暴力”是因为这种杀伤面很广，所有项目内的UINavigationBar都会因此改变。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIBlurEffect系统自带毛玻璃效果" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIBlurEffect系统自带毛玻璃效果/">UIBlurEffect系统自带毛玻璃效果</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>```objc<br>   //需要模糊效果的view<br>   UIImageView*i = [[UIImageViewalloc]initWithFrame:CGRectMake(100,100,100,200)];<br>    [self.viewaddSubview:i];<br>    i.image= [UIImageimageNamed:@”1”];</p>
-<p>   //创建UIBlurEffect<br>   UIBlurEffect*blurEffect = [UIBlurEffecteffectWithStyle:UIBlurEffectStyleLight];</p>
-<p>   //UIVisualEffectView<br>   UIVisualEffectView*effectView = [[UIVisualEffectViewalloc]initWithEffect:blurEffect];   //设置模糊效果的frame    effectView.frame = i.bounds;   //添加到view上    [iaddSubview:effectView];    //设置模糊的程度    effectView.alpha =.5f;<br>typedefNS_ENUM(NSInteger, UIBlurEffectStyle) {    UIBlurEffectStyleExtraLight,    UIBlurEffectStyleLight,<br>    UIBlurEffectStyleDark}</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIAlertController" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIAlertController/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIAlertController/">UIAlertController</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>   //初始化方法</p>
-<pre><code>+ (instancetype)alertControllerWithTitle:(nullableNSString *)title message:(nullableNSString *)message preferredStyle:(UIAlertControllerStyle)preferredStyle;
-</code></pre><p>   //UIAlertControllerStyle<br>   typedefNS_ENUM(NSInteger, UIAlertControllerStyle) {<br>            UIAlertControllerStyleActionSheet =0,            UIAlertControllerStyleAlert     }<br>   /<strong><strong><strong>**</strong></strong></strong>自动消失的UIAlertController<strong><strong>*</strong></strong>/   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”标题”message:@”UIAlertController”preferredStyle:UIAlertControllerStyleAlert];</p>
-<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:nil];
-</code></pre><p>   //线程2秒后执行<br>   dispatch_after(dispatch_time(DISPATCH_TIME_NOW,<br> (int64_t)(2.f*NSEC_PER_SEC)),dispatch_get_main_queue(), ^{</p>
-<pre><code>    [alertControllerdismissViewControllerAnimated:YEScompletion:^{
-
-
-    }];
-});   /**************自动消失的UIAlertController*********/ 
-</code></pre><p> /<em><br>     <strong>**</strong>添加按钮<strong>**</strong><br>     Title :标题名称<br>     style :样式[Cancle(取消)<br> Default(默认的) destructive(重置)]<br>     handler:处理程序(点击按钮执行的代码)
-     </em>/</p>
-<p>   /<strong><strong><strong>**</strong></strong></strong>带按钮的的UIAlertController<strong><strong>*</strong></strong>/<br>   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”标题”message:@”UIAlertController”preferredStyle:UIAlertControllerStyleAlert];</p>
-<p>   //创建”取消”样式按钮<br>   UIAlertAction<em>cancelAction = [UIAlertActionactionWithTitle:@”取消”style:UIAlertActionStyleCancelhandler:^(UIAlertAction</em>action) {<br>       //添加点击事件<br>       self.view.backgroundColor= [UIColoryellowColor];</p>
-<pre><code>}];
-</code></pre><p>   //创建”默认”样式按钮<br>   UIAlertAction<em>defaultAction = [UIAlertActionactionWithTitle:@”默认default”style:UIAlertActionStyleDefaulthandler:^(UIAlertAction</em>_Nonnullaction) {</p>
-<pre><code>}];
-</code></pre><p>   //创建“警示”样式按钮<br>   UIAlertAction<em>destructiveAction = [UIAlertActionactionWithTitle:@”重置deatructive” style:UIAlertActionStyleDestructivehandler:^(UIAlertAction</em>_Nonnullaction) {</p>
-<pre><code>}];
-</code></pre><p>   //将按钮添加到alertController上<br>    [alertControlleraddAction:cancelAction];<br>    [alertControlleraddAction:defaultAction];<br>    [alertControlleraddAction:destructiveAction];</p>
-<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:nil];
-</code></pre><p>   /<strong><strong><strong>**</strong></strong></strong>带按钮的的UIAlertController<strong><strong>*</strong></strong>/</p>
-<p>/<strong><strong><strong>**</strong></strong></strong>带输入框的UIAlertController<strong><strong>*</strong></strong>/   //创建UIAlertController<br>   UIAlertController*alertController = [UIAlertControlleralertControllerWithTitle:@”文本对话框”message:@”登录和密码对话框示例”preferredStyle:UIAlertControllerStyleAlert];</p>
-<p>   //添加输入框<br>    [alertControlleraddTextFieldWithConfigurationHandler:^(UITextField*textField){<br>        textField.placeholder=@”登录”;</p>
-<pre><code>   //添加通知，监听输入框的变化
-    [[NSNotificationCenterdefaultCenter]addObserver:selfselector:@selector(alertTextFieldDidChange:)name:UITextFieldTextDidChangeNotificationobject:textField];
-}];
-
-[alertControlleraddTextFieldWithConfigurationHandler:^(UITextField*textField) {
-    textField.placeholder=@&quot;密码&quot;;
-    textField.secureTextEntry=YES;
-}];
-</code></pre><p>   //添加按钮<br>   UIAlertAction<em>okAction = [UIAlertActionactionWithTitle:@”好的”style:UIAlertActionStyleDefaulthandler:^(UIAlertAction</em>action) {</p>
-<pre><code>   //获取到输入框的内容
-   UITextField*login = alertController.textFields.firstObject;
-   UITextField*password = alertController.textFields.lastObject;
-
-   //移除通知
-    [[NSNotificationCenterdefaultCenter]removeObserver:selfname:UITextFieldTextDidChangeNotificationobject:nil];
-
-}];
-</code></pre><p>   //冻结按钮<br>    okAction.enabled=NO;<br>    [alertControlleraddAction:okAction];</p>
-<pre><code>[selfpresentViewController:alertControlleranimated:YEScompletion:^{
-
-
-}];
-</code></pre><p>   /<strong><strong><strong>**</strong></strong></strong>带输入框的UIAlertController<strong><strong>*</strong></strong>/<br>}<br>//通知触发的方法</p>
-<ul>
-<li><p>(void)alertTextFieldDidChange:(NSNotification<em>)notification{<br> UIAlertController</em>alertController = (UIAlertController*)self.presentedViewController;</p>
-<p> if(alertController) {</p>
-<pre><code>UITextField*login = alertController.textFields.firstObject;
-UIAlertAction*okAction = alertController.actions.lastObject;
-
-//当输入的字数大于2时解冻
- okAction.enabled= login.text.length&gt;2;
-</code></pre><p>  }<br>}</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIBarMetrics" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIBarMetrics/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIBarMetrics/">UIBarMetrics</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">forBarMetrics有点类似于按钮的<span class="keyword">for</span> state状态，即什么状态下显示</div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsDefault-竖屏横屏都有，横屏导航条变宽，则自动repeat图片</span></div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsCompact-竖屏没有，横屏有，相当于之前老iOS版本里地UIBarMetricsLandscapePhone</span></div><div class="line"></div><div class="line">    <span class="comment">//UIBarMetricsCompactPrompt和UIBarMetricsDefaultPrompt暂时不知道用处，官方解释是Applicable only in bars with the prompt property, such as UINavigationBar and UISearchBar，</span></div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIDatePicker" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIDatePicker/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIDatePicker/">UIDatePicker</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">self</span>.datePicker = [[<span class="built_in">UIDatePicker</span> alloc]initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">200</span>, <span class="number">375</span>, <span class="number">267</span>)];</div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.datePicker.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</div><div class="line">   </div><div class="line">    <span class="comment">//设置地区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.locale = [[<span class="built_in">NSLocale</span> alloc]initWithLocaleIdentifier:<span class="string">@"zh_CN"</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">//设置DatePicker的日历，默认为当天。</span></div><div class="line">    <span class="keyword">self</span>.datePicker.calendar = [<span class="built_in">NSCalendar</span> currentCalendar];</div><div class="line">   </div><div class="line">    <span class="comment">//设置时区</span></div><div class="line">    <span class="keyword">self</span>.datePicker.timeZone = [<span class="built_in">NSTimeZone</span> defaultTimeZone];</div><div class="line">   </div><div class="line">    <span class="comment">//选择时区</span></div><div class="line"><span class="comment">//    [self.datePicker setTimeZone:[NSTimeZone timeZoneWithName:@"GMT+8"]];</span></div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="comment">// 设置当前显示时间</span></div><div class="line">   </div><div class="line">    <span class="built_in">NSDate</span> *currentTime  = [<span class="built_in">NSDate</span> date];</div><div class="line"></div><div class="line">    <span class="keyword">self</span>.datePicker.date = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 设置显示最大时间</span></div><div class="line">   </div><div class="line">   <span class="keyword">self</span>.datePicker.maximumDate = currentTime;</div><div class="line">   </div><div class="line">    <span class="comment">// 显示模式</span></div><div class="line">    [<span class="keyword">self</span>.datePicker setDatePickerMode:<span class="built_in">UIDatePickerModeDate</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//倒计时按秒显示</span></div><div class="line">    <span class="keyword">self</span>.datePicker.countDownDuration = <span class="number">600</span>;</div><div class="line">   </div><div class="line">    <span class="comment">//设置分钟间隔</span></div><div class="line">    <span class="keyword">self</span>.datePicker.minuteInterval = <span class="number">10</span>;</div><div class="line">   </div><div class="line">    <span class="comment">// 回调的方法</span></div><div class="line">    [<span class="keyword">self</span>.datePicker addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(datePickerValueChanged:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.datePicker];</div><div class="line">   </div><div class="line">&#125;</div><div class="line">   </div><div class="line">-(<span class="keyword">void</span>)datePickerValueChanged:(<span class="keyword">id</span>)sender</div><div class="line">&#123;</div><div class="line">    <span class="built_in">NSDate</span> *selected = [<span class="built_in">NSDate</span> date];</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"date: %@"</span>, selected);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIGestureRecognizerState" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIGestureRecognizerState/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIGestureRecognizerState/">UIGestureRecognizerState</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, <span class="built_in">UIGestureRecognizerState</span>) &#123;</div><div class="line">    <span class="built_in">UIGestureRecognizerStatePossible</span>,   <span class="comment">// the recognizer has not yet recognized its gesture, but may be evaluating touch events. this is the default state</span></div><div class="line">   </div><div class="line">    <span class="built_in">UIGestureRecognizerStateBegan</span>,      <span class="comment">// the recognizer has received touches recognized as the gesture. the action method will be called at the next turn of the run loop</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateChanged</span>,    <span class="comment">// the recognizer has received touches recognized as a change to the gesture. the action method will be called at the next turn of the run loop</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateEnded</span>,      <span class="comment">// the recognizer has received touches recognized as the end of the gesture. the action method will be called at the next turn of the run loop and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateCancelled</span>,  <span class="comment">// the recognizer has received touches resulting in the cancellation of the gesture. the action method will be called at the next turn of the run loop. the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">   </div><div class="line">    <span class="built_in">UIGestureRecognizerStateFailed</span>,     <span class="comment">// the recognizer has received a touch sequence that can not be recognized as the gesture. the action method will not be called and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">   </div><div class="line">    <span class="comment">// Discrete Gestures – gesture recognizers that recognize a discrete event but do not report changes (for example, a tap) do not transition through the Began and Changed states and can not fail or be cancelled</span></div><div class="line">    <span class="built_in">UIGestureRecognizerStateRecognized</span> = <span class="built_in">UIGestureRecognizerStateEnded</span> <span class="comment">// the recognizer has received touches recognized as the gesture. the action method will be called at the next turn of the run loop and the recognizer will be reset to UIGestureRecognizerStatePossible</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">Possible: 识别器在未识别出它的手势，但可能会接收到触摸时处于这个状态。这是默认状态。</div><div class="line">Began: 识别器接收到触摸并识别出是它的手势时处于这个状态。响应方法将在下个循环步骤中被调用。</div><div class="line"></div><div class="line">Changed:the recognizer has received touches recognized as a change to the gesture. （不懂怎么翻译，理解上就是识别器识别出一个变化为它的手势的触摸），响应方法将在下个循环步骤中被调用。</div><div class="line"></div><div class="line">Ended:识别器在识别到作为当前手势结束信号的触摸时处于这个状态。响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Cancelled:识别器处于取消状态.响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Failed: 识别器接收到不能识别为它的手势的一系列触摸。响应方法不会被调用 并且 识别器将重置为possible状态。</div><div class="line"></div><div class="line">Recognized: 识别器已识别到它的手势。响应方法将在下个循环步骤中被调用 并且 识别器将重置为possible状态。</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-oc/UIDevice" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/10/08/oc/UIDevice/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIDevice/">UIDevice</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>UIDevice提供了多种属性、类函数及状态通知，帮助我们全方位了解设备状况。从检测电池电量到定位设备与临近感应，UIDevice所做的工作就是为应用程序提供用户及设备的一些信息。UIDevice类还能够收集关于设备的各种具体细节，例如机型及iOS版本等。其中大部分属性都对开发工作具有积极的辅助作用。下面的代码简单的使用UIDevice获取手机属性。<br>
+              <p>NSUserDefaults适合存储轻量级的本地数据，一些简单的数据（NSString类型的）例如密码，网址等，NSUserDefaults肯定是首选，但是如果我们自定义了一个对象，对象保存的是一些信息，这时候就不能直接存储到NSUserDefaults了<br>
           
       
     </div>
@@ -715,7 +305,7 @@ UIAlertAction*okAction = alertController.actions.lastObject;
       
       
         <p class="article-more-link">
-          <a href="/2016/10/08/oc/UIDevice/#more">查看全文 >></a>
+          <a href="/2016/10/08/oc/NSUserDefaults 简介，使用 NSUserDefaults 存储自定义对象/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -734,11 +324,11 @@ UIAlertAction*okAction = alertController.actions.lastObject;
 
 
   
-    <article id="post-oc/UIImagePickerController从本地相册加载图片" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-oc/iOS开发系列--通知与消息机制" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+      <a href="/2016/10/08/oc/iOS开发系列--通知与消息机制/" class="article-date">
+      <time datetime="2016-10-08T11:39:44.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -753,7 +343,71 @@ UIAlertAction*okAction = alertController.actions.lastObject;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIImagePickerController从本地相册加载图片/">UIImagePickerController从本地相册加载图片</a>
+      <a class="article-title" href="/2016/10/08/oc/iOS开发系列--通知与消息机制/">iOS开发系列--通知与消息机制</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>在多数移动应用中任何时候都只能有一个应用程序处于活跃状态，如果其他应用此刻发生了一些用户感兴趣的那么通过通知机制就可以告诉用户此时发生的事情。iOS中通知机制又叫消息机制，其包括两类：一类是本地通知；另一类是推送通知，也叫远程通知。两种通知在iOS中的表现一致，可以通过横幅或者弹出提醒两种形式告诉用户，并且点击通知可以会打开应用程序，但是实现原理却完全不同。今天就和大家一块去看一下如何在iOS中实现这两种机制，并且在文章后面会补充通知中心的内容避免初学者对两种概念的混淆。<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2016/10/08/oc/iOS开发系列--通知与消息机制/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-system/mac显示隐藏文件夹" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/system/mac显示隐藏文件夹/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/system/mac显示隐藏文件夹/">mac显示隐藏文件夹</a>
     </h1>
   
 
@@ -764,40 +418,7 @@ UIAlertAction*okAction = alertController.actions.lastObject;
       
           
         <a id="more"></a>
-<p>/*1.签两个协议协议<br>          UIImagePickerControllerDelegate<br>          UINavigationControllerDelegate<br>  2.两个方法</p>
-<p>方法一：<br>//点击按钮触发的方法<br>-(void)buttonAction:(UIButton*)button<br>{</p>
-<pre><code>//创建获取本地相册控制器对象
-UIImagePickerController *picker = [[UIImagePickerControlleralloc]init];
-
-//成为代理
-picker.delegate= self;
-
-//设置相片来源类型
-picker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
-
-//是否可以编辑
-picker.allowsEditing= YES;
-
-//模态显示本地相册
-[selfpresentViewController:pickeranimated:YEScompletion:^{
-
-
-}]; 
-</code></pre><p>}</p>
-<p>方法二：<br>//当用户选择相册中的某个图片时触发的方法,协议里的方法<br>//该方法可以获取到选中的图片</p>
-<ul>
-<li><p>(void)imagePickerController:(UIImagePickerController<em>)picker didFinishPickingMediaWithInfo:(NSDictionary</em>)info<br>{</p>
-<p>  NSLog(@”info = %@”,info);<br>  UIImage <em>image=<br>  [info objectForKey:@”UIImagePickerControllerOriginalImage”];<br>  //通过tag值取对象<br>  UIButton </em>button = (UIButton*)[self.viewviewWithTag:10000];<br>  [button setBackgroundImage:imageforState:UIControlStateNormal];</p>
-<p>  //让相册模态消失<br>  [picker dismissViewControllerAnimated:YEScompletion:^{</p>
-</li>
-</ul>
-<pre><code>}];
-</code></pre><p>}<br>数据来源类型一共有三种：<br>enum {<br>   UIImagePickerControllerSourceTypePhotoLibrary ,//来自图库<br>   UIImagePickerControllerSourceTypeCamera ,//来自相机<br>   UIImagePickerControllerSourceTypeSavedPhotosAlbum //来自相册<br>};<br>在用这些来源的时候最好检测以下设备是否支持；<br> if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])<br>    {<br>        NSLog(@”支持相机”);<br>    }<br>    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])<br>    {<br>        NSLog(@”支持图库”);<br>    }<br>    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])<br>    {<br>        NSLog(@”支持相片库”);<br>    }</p>
-<p>调用摄像头来获取资源</p>
-<ul>
-<li>(void)viewDidLoad {<br>  [super viewDidLoad];<br>  picker = [[UIImagePickerController alloc]init];<br>  picker.view.backgroundColor = [UIColor orangeColor];<br>  UIImagePickerControllerSourceType sourcheType = UIImagePickerControllerSourceTypeCamera;<br>  picker.sourceType = sourcheType;<br>  picker.delegate = self;<br>  picker.allowsEditing = YES;<br>}</li>
-</ul>
-<p>```</p>
+<p>打开终端，输入：defaults write com.apple.finder AppleShowAllFiles -bool true 此命令显示隐藏文件defaults write com.apple.finder AppleShowAllFiles -bool false 此命令关闭显示隐藏文件<br>命令运行之后需要重新加载Finder：快捷键option+command+esc，选中Finder，重新启动即可</p>
 
       
     </div>
@@ -828,11 +449,11 @@ picker.allowsEditing= YES;
 
 
   
-    <article id="post-oc/UIPageControl" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-system/删除Xcode插件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/UIPageControl/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+      <a href="/2016/10/08/system/删除Xcode插件/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -847,7 +468,7 @@ picker.allowsEditing= YES;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIPageControl/">UIPageControl</a>
+      <a class="article-title" href="/2016/10/08/system/删除Xcode插件/">删除Xcode插件</a>
     </h1>
   
 
@@ -858,7 +479,9 @@ picker.allowsEditing= YES;
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">/*****************创建UIPageControl*********************/</span></div><div class="line">    <span class="comment">//创建UIPageControl</span></div><div class="line">   <span class="keyword">self</span>.pageC= [[<span class="built_in">UIPageControlalloc</span>]initWithFrame:<span class="built_in">CGRectMake</span>((WIDTH<span class="number">-300</span>)/<span class="number">2</span>,HEIGHT<span class="number">-60</span>,<span class="number">300</span>,<span class="number">50</span>)];</div><div class="line">    [<span class="keyword">self</span>.viewaddSubview:<span class="keyword">self</span>.pageC];</div><div class="line">    [<span class="keyword">self</span>.pageCrelease];</div><div class="line">   </div><div class="line">    <span class="comment">//设置页数</span></div><div class="line">   <span class="keyword">self</span>.pageC.numberOfPages =<span class="number">10</span>;</div><div class="line"></div><div class="line">   <span class="comment">//设置当前页码的颜色</span></div><div class="line">   <span class="keyword">self</span>.pageC.currentPageIndicatorTintColor = [<span class="built_in">UIColoryellowColor</span>];</div><div class="line"></div><div class="line">   <span class="comment">//设置所有页的颜色</span></div><div class="line">    <span class="keyword">self</span>.pageC.pageIndicatorTintColor= [<span class="built_in">UIColorredColor</span>];</div><div class="line">   </div><div class="line">    <span class="comment">//核心方法</span></div><div class="line">    [<span class="keyword">self</span>.pageCaddTarget:selfaction:<span class="keyword">@selector</span>(pageAction:)forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">    <span class="keyword">self</span>.scroll.delegate= <span class="keyword">self</span>;</div><div class="line">   </div><div class="line">&#125;</div><div class="line">-(<span class="keyword">void</span>)pageAction:(<span class="built_in">UIPageControl</span>*)pageC</div><div class="line">&#123;</div><div class="line">    <span class="comment">//打印当前页码</span></div><div class="line"></div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"切换页码= %ld "</span>,(<span class="keyword">long</span>)pageC.currentPage);</div><div class="line">   </div><div class="line">  <span class="comment">//页面跟着page的点动</span></div><div class="line">    [<span class="keyword">self</span>.scrollsetContentOffset:<span class="built_in">CGPointMake</span>(<span class="number">375</span>*<span class="keyword">self</span>.pageC.currentPage,<span class="number">0</span>)animated:<span class="literal">YES</span>];</div><div class="line">   </div><div class="line">   </div><div class="line">&#125;</div><div class="line">   <span class="comment">/*****************************************************/</span></div></pre></td></tr></table></figure>
+<pre><code>直接进入插件所在的目录，将插件删除即可。
+</code></pre><p>插件路径为：~/Library/Application Support/Developer/Shared/Xcode/Plug-ins    Library文件夹（即资源库）默认是隐藏的，所以你可以使用一下方法打开该路径：</p>
+<p>Finder 前往-&gt;前往文件夹(快捷键cmd+Shift+G)，输入以上路径，回车，找到Fuzzy Aotocomplete插件，删除。</p>
 
       
     </div>
@@ -889,11 +512,11 @@ picker.allowsEditing= YES;
 
 
   
-    <article id="post-oc/UIProgressView进度条" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-system/移动UIUX设计师和PM使用的原型工具" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/08/oc/UIProgressView进度条/" class="article-date">
-      <time datetime="2016-10-08T03:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+      <a href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
 </a>
 
 
@@ -908,7 +531,7 @@ picker.allowsEditing= YES;
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/oc/UIProgressView进度条/">UIProgressView进度条</a>
+      <a class="article-title" href="/2016/10/08/system/移动UIUX设计师和PM使用的原型工具/">移动UI/UX设计师和PM使用的原型工具</a>
     </h1>
   
 
@@ -919,7 +542,374 @@ picker.allowsEditing= YES;
       
           
         <a id="more"></a>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//创建</span></div><div class="line">    <span class="built_in">UIProgressView</span> *progressView = [[<span class="built_in">UIProgressView</span> alloc]initWithProgressViewStyle:<span class="built_in">UIProgressViewStyleBar</span>];</div><div class="line">    [<span class="keyword">self</span>.view addSubview:progressView];</div><div class="line">    [progressView release];</div><div class="line">   </div><div class="line">    progressView.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">100</span>, <span class="number">300</span>, <span class="number">10</span>);</div><div class="line">   </div><div class="line">    <span class="comment">//属性progress决定值的大小</span></div><div class="line">    <span class="comment">//设置初始值</span></div><div class="line">    progressView.progress = <span class="number">0</span>;</div><div class="line"></div><div class="line">     <span class="comment">//利用NSTimer</span></div><div class="line">     <span class="comment">//创建NSTimer</span></div><div class="line">    <span class="built_in">NSTimer</span> *timer = [<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">0.1</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(timerAction:) userInfo:<span class="literal">nil</span> repeats:<span class="literal">YES</span>];</div><div class="line">  </div><div class="line"></div><div class="line">-(<span class="keyword">void</span>)timerAction:(<span class="built_in">NSTimer</span> *)timer</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.progressView.progress &lt; <span class="number">1</span>) &#123;</div><div class="line">         <span class="keyword">self</span>.progressView.progress += <span class="number">0.01</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>【编者按】本文转载自个人博客—<a href="http://www.zhangping.name/" target="_blank" rel="noopener">羽化博客</a>，原作者通过对页面原型设计的理解来介绍四款原型设计工具。<br>与一般针对产品功能的介绍不同，本文以亲身的设计需求为出发点，通过对产品整理和提供相关的链接，帮助解决从业人群对做产品页面原型的直接需求。可以为做产品设计的童鞋提供一些参考和下载帮助。<br>天天和产品打交道，不时要做一些页面原型、离不开各种工具，工欲善其事必先利其器，好的工具软件可以大大提高工作效率，工具各有优劣，大家按需取之。原型设计工具我暂时把它分为两类，Web应用原型设计工具及软件应用原型设计工具、微软的visio就不说了：<br>Web应用原型设计工具：先来看看这个几个：<a href="http://www.axure.com/" target="_blank" rel="noopener">Axure RP</a> 、<a href="http://www.balsamiq.com/" target="_blank" rel="noopener">Balsamiq Mockups</a> 、 <a href="http://pencil.evolus.vn/en-US/Home.aspx" target="_blank" rel="noopener">Pencil<br> Project</a> 以及<a href="http://www.omnigroup.com/" target="_blank" rel="noopener">OmniGraffle</a>试用感觉：</p>
+<p>###<strong>第一个、Axure RP：</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/Axure-RP.jpg" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/Axure-RP.jpg" alt title="Axure-RP"></a><br>来这里看看视频简介：<a href="http://www.axure.com/tour.aspx" target="_blank" rel="noopener">http://www.axure.com/tour.aspx</a></p>
+<ul>
+<li>Axure的发音是”Ack-sure”，RP则是”Rapid Prototyping”快速原型的缩写。Axure RP Pro是美国Axure Software Solution公司的精心杰作，可以说Axure是Windows上最出色的原型设计软件，亦是web产品前期设计的首选，原因是：够简单、上手快，能帮助网站需求设计者，快捷而简便的创建 基于目录组织的原型文档、功能说明、交互界面以及带注释的wireframe网页，并可自动生成用于演示的网页文件和word文档，以提供演示与开发；</li>
+<li>Axure RP六合一功能：网站构架图、示意图、流程图、交互设计、自动输出网站原型、自动输出word格式规格文件；</li>
+<li>国内都有很多教程了，看看这些：<a href="http://cn.userxper.com/axure_tutorial" target="_blank" rel="noopener">悠识网站的教程</a></li>
+<li>Windows版：<a href="http://axure.cachefly.net/AxureRP-Pro-Setup.exe" target="_blank" rel="noopener">http://axure.cachefly.net/AxureRP-Pro-Setup.exe</a><br>MAC版：<a href="http://axure.cachefly.net/AxureRP-Pro-Setup.dmg" target="_blank" rel="noopener">http://axure.cachefly.net/AxureRP-Pro-Setup.dmg</a><br>Axure6.5汉化语言包下载地址：<a href="http://www.axure.us/283/" target="_blank" rel="noopener">http://www.axure.us/283/</a></li>
+</ul>
+<p>###<strong>第二个、Balsamiq Mockups：</strong><br><strong> <a href="http://www.leiphone.com/wp-content/uploads/2012/06/Balsamiq-Mockups.jpg" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/Balsamiq-Mockups.jpg" alt title="Balsamiq-Mockups"></a></strong><br><strong> </strong><a href="http://www.balsamiq.com/products/mockups" target="_blank" rel="noopener">Balsamiq Mockups 视频简介</a></p>
+<ul>
+<li>Balsamiq Mokups是用Flex和Air实现的，在Mac OS, Linux和Windows下都能使用，有桌面版本、Confluence，JIRA，和XWiki中的版本；</li>
+<li>涂鸦风格、使用起来也很简单、各模块工具也很齐全，详细说明可见官方博客：<a href="http://www.balsamiq.com/blogs" target="_blank" rel="noopener">http://www.balsamiq.com/blogs</a></li>
+</ul>
+<p><a href="http://www.leiphone.com/wp-content/uploads/2012/06/iphonedemo.jpg" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/iphonedemo.jpg" alt title="iphonedemo"></a><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/iphoneexamples.png" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/iphoneexamples.png" alt title="iphoneexamples"></a></p>
+<ul>
+<li>有人提到不能输入中文的问题，很简单：在Mockups的菜单里选择 View -&gt; Use System Font 就可以了；</li>
+<li>该软件的桌面版售价78美刀。作者意大利人Peldi说这款软件的设计就是用它自己来设计的，满足自己的需求。而在经济寒冷的2008年，从1,322位付费用户那获得了162,302美元的收入（其中12月份就有39,000美元）;</li>
+<li>windows版本下载地址 <a href="http://www.balsamiq.com/download" target="_blank" rel="noopener">http://www.balsamiq.com/download</a></li>
+</ul>
+<p>###<strong><br>第三个、Pencil Project：</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/pencil-project.jpg" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/pencil-project.jpg" alt title="pencil-project"></a>- 查看官网简介：<a href="http://www.evolus.vn/Pencil/Screenshots.html" target="_blank" rel="noopener">http://www.evolus.vn/Pencil/Screenshots.html</a></p>
+<ul>
+<li>一个firefox插件，比较小的工具，画简单的界面基本上可以满足了；</li>
+<li>安装地址：<a href="https://addons.mozilla.org/en-US/firefox/addon/8487" target="_blank" rel="noopener">https://addons.mozilla.org/en-US/firefox/addon/8487</a></li>
+</ul>
+<p>###<strong>第四个、OmniGraffle</strong><br><a href="http://www.leiphone.com/wp-content/uploads/2012/06/OmniGraffle.png" target="_blank" rel="noopener"><img src="http://7te8bu.com1.z0.glb.clouddn.com/uploads/2012/06/OmniGraffle.png" alt title="OmniGraffle"></a></p>
+<ul>
+<li>很不幸的是，这个软件只有Mac版；</li>
+<li><a href="http://www.omnigroup.com/" target="_blank" rel="noopener">Omni Group</a>这家只有<a href="http://www.omnigroup.com/company/people/" target="_blank" rel="noopener">26个人</a>的小公司，他们人数虽少，但却产出了像<a href="http://www.omnigroup.com/applications/omniweb/" target="_blank" rel="noopener">OmniWeb</a>、<a href="http://www.omnigroup.com/applications/omnigraffle/" target="_blank" rel="noopener">OmniGraffle</a>、<a href="http://www.omnigroup.com/applications/omniplan/" target="_blank" rel="noopener">OmniPlan</a>和<a href="http://www.omnigroup.com/applications/omnioutliner/" target="_blank" rel="noopener">OmniOutliner</a>等等一系列深受用户欢迎的精品软件，实力绝对不容小觑；</li>
+<li>漂亮的界面、能轻而易举的绘制出漂亮的图形、丰富、精致的模板（Stencil/Template）、辅助对齐和尺寸调整功能；</li>
+<li>下载地址 <a href="http://www.omnigroup.com/applications/omnigraffle/" target="_blank" rel="noopener">http://www.omnigroup.com/applications/omnigraffle/</a></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-system/欢迎使用CSDN-markdown编辑器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/system/欢迎使用CSDN-markdown编辑器/">欢迎使用CSDN-markdown编辑器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>安装soucetree后，启动<br>1添加账户.<br><img src="http://img.blog.csdn.net/20151214154736709" alt="这里写图片描述"><br>设置托管主机，用户名，密码，协议方式<br><img src="http://img.blog.csdn.net/20151214154943293" alt="这里写图片描述"><br>2.克隆到本地<br>点击远程，这时就可以看见远程仓库中内容<br><img src="http://img.blog.csdn.net/20151214155310766" alt="这里写图片描述"><br>点击克隆，选择要克隆的目标路径，与克隆名称，点击克隆<br><img src="http://img.blog.csdn.net/20151214155442212" alt="这里写图片描述"><br>3.在本地管理项目<br>点击已经克隆到本地的项目<br><img src="http://img.blog.csdn.net/20151214155652034" alt="这里写图片描述"><br>此时是在主分支master分支下<br>双击一条远程分支<br><img src="http://img.blog.csdn.net/20151214155957907" alt="这里写图片描述"><br>将其他的远程分支克隆到本地</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/APP间的调用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/APP间的调用/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/APP间的调用/">APP间的调用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">被调用的App：</span><br><span class="line"><span class="number">1.</span>在appdelegate里实现方法</span><br><span class="line"></span><br><span class="line">-(<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)app openURL:(<span class="built_in">NSURL</span> *)url options:(<span class="built_in">NSDictionary</span>&lt;<span class="built_in">NSString</span> *,<span class="keyword">id</span>&gt; *)options</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,app);</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,url);</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,options);</span><br><span class="line">    <span class="keyword">return</span>  <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>配置Info.plist文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">调用方法：</span><br><span class="line"></span><br><span class="line">    <span class="comment">//打开另一个APP的方法</span></span><br><span class="line">    <span class="comment">//a另一个APP的openurl</span></span><br><span class="line">    <span class="comment">//aaaaaaaaa参数</span></span><br><span class="line">    [[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@"a:aaaaaaa"</span>]];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/AVAudioPlayer" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/AVAudioPlayer/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/AVAudioPlayer/">AVAudioPlayer</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;AVFoundation/AVFoundation.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//初始化三个按钮</span></span><br><span class="line">   </span><br><span class="line">    <span class="comment">//play</span></span><br><span class="line">    <span class="built_in">UIButton</span> * button = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:button];</span><br><span class="line">    button.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">    [button setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</span><br><span class="line">    [button setTitle:<span class="string">@"play"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(play) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">//pause暂停</span></span><br><span class="line">    <span class="built_in">UIButton</span> * button1 = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:button1];</span><br><span class="line">    button1.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">    [button1 setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">150</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</span><br><span class="line">    [button1 setTitle:<span class="string">@"pause"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button1 setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button1 addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(pause) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">//stop</span></span><br><span class="line">    <span class="built_in">UIButton</span> * button2 = [<span class="built_in">UIButton</span> buttonWithType:<span class="built_in">UIButtonTypeCustom</span>];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:button1];</span><br><span class="line">    button2.backgroundColor = [<span class="built_in">UIColor</span> yellowColor];</span><br><span class="line">    [button2 setFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">200</span> + <span class="number">64</span>, <span class="number">60</span>, <span class="number">40</span>)];</span><br><span class="line">    [button2 setTitle:<span class="string">@"stop"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button2 setTitleColor:[<span class="built_in">UIColor</span> blackColor] forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line">    [button2 addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(stop) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:button2];</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 从bundle路径下读取音频文件</span></span><br><span class="line">    <span class="built_in">NSString</span> * string = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"凭什么说-刘心"</span> ofType:<span class="string">@"mp3"</span>];</span><br><span class="line">    <span class="comment">// 把音频文件转换成url格式</span></span><br><span class="line">    <span class="built_in">NSURL</span> * url = [<span class="built_in">NSURL</span> fileURLWithPath:string];</span><br><span class="line">    <span class="comment">// 初始化音频类 并且添加播放文件</span></span><br><span class="line">    <span class="keyword">self</span>.avAudioPlayer = [[<span class="built_in">AVAudioPlayer</span> alloc] initWithContentsOfURL:url error:<span class="literal">nil</span>];</span><br><span class="line">    <span class="comment">// 设置代理</span></span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer setDelegate:<span class="keyword">self</span>];</span><br><span class="line">    <span class="comment">// 设置初始音量大小</span></span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer setVolume:<span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 设置音乐播放次数 -1为一直循环</span></span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer setNumberOfLoops:<span class="number">-1</span>];</span><br><span class="line">    <span class="comment">// 预播放</span></span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer prepareToPlay];</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 初始化一个播放进度条</span></span><br><span class="line">    <span class="keyword">self</span>.progressV = [[<span class="built_in">UIProgressView</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">80</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.progressV setProgressTintColor:[<span class="built_in">UIColor</span> redColor]];</span><br><span class="line">    [<span class="keyword">self</span>.progressV setTrackTintColor:[<span class="built_in">UIColor</span> blueColor]];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.progressV];</span><br><span class="line">    [<span class="keyword">self</span>.progressV release];</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 用NSTimer来监控音频播放进度</span></span><br><span class="line">    <span class="keyword">self</span>.timer = [<span class="built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="number">0.1</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(playProgress) userInfo:<span class="literal">nil</span> repeats:<span class="literal">YES</span>];</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 初始化音量控制</span></span><br><span class="line">    <span class="keyword">self</span>.volumeSlider = [[<span class="built_in">UISlider</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">80</span>, <span class="number">130</span>, <span class="number">200</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.volumeSlider addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(volumeChange) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</span><br><span class="line">    <span class="comment">// 设置最小音量</span></span><br><span class="line">    [<span class="keyword">self</span>.volumeSlider setMinimumValue:<span class="number">0.0</span>f];</span><br><span class="line">    <span class="comment">// 设置最大音量</span></span><br><span class="line">    [<span class="keyword">self</span>.volumeSlider setMaximumValue:<span class="number">10.0</span>f];</span><br><span class="line">    <span class="comment">// 初始化音量为多少</span></span><br><span class="line">    [<span class="keyword">self</span>.volumeSlider setValue:<span class="number">5.0</span>f];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:<span class="keyword">self</span>.volumeSlider];</span><br><span class="line">    [<span class="keyword">self</span>.volumeSlider release];</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">    <span class="comment">//声音开关控件(静音)</span></span><br><span class="line">    <span class="built_in">UISwitch</span> *swith = [[<span class="built_in">UISwitch</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">500</span>, <span class="number">60</span>, <span class="number">40</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:swith];</span><br><span class="line">    [swith addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(onOrOff:) forControlEvents:<span class="built_in">UIControlEventValueChanged</span>];</span><br><span class="line">    <span class="comment">//默认状态为打开</span></span><br><span class="line">    swith.on = <span class="literal">YES</span>;</span><br><span class="line">    [swith release];</span><br><span class="line"></span><br><span class="line"><span class="comment">/********************AVAudioPlayer***************/</span></span><br><span class="line"><span class="comment">//播放</span></span><br><span class="line">- (<span class="keyword">void</span>)play</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer play];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//暂停</span></span><br><span class="line">- (<span class="keyword">void</span>)pause</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer pause];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//停止</span></span><br><span class="line">- (<span class="keyword">void</span>)stop</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span>.avAudioPlayer.currentTime = <span class="number">0</span>;  <span class="comment">//当前播放时间设置为0</span></span><br><span class="line">    [<span class="keyword">self</span>.avAudioPlayer stop];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//播放进度条</span></span><br><span class="line">- (<span class="keyword">void</span>)playProgress</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//通过音频播放时长的百分比,给progressview进行赋值;</span></span><br><span class="line">    <span class="keyword">self</span>.progressV.progress = <span class="keyword">self</span>.avAudioPlayer.currentTime/<span class="keyword">self</span>.avAudioPlayer.duration;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//声音开关(是否静音)</span></span><br><span class="line">- (<span class="keyword">void</span>)onOrOff:(<span class="built_in">UISwitch</span> *)sender</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span>.avAudioPlayer.volume = sender.on;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//播放音量控制</span></span><br><span class="line">- (<span class="keyword">void</span>)volumeChange</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">self</span>.avAudioPlayer.volume = <span class="keyword">self</span>.volumeSlider.value;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//播放完成时调用的方法  (代理里的方法),需要设置代理才可以调用</span></span><br><span class="line">- (<span class="keyword">void</span>)audioPlayerDidFinishPlaying:(<span class="built_in">AVAudioPlayer</span> *)player successfully:(<span class="built_in">BOOL</span>)flag</span><br><span class="line">&#123;</span><br><span class="line">    [<span class="keyword">self</span>.timer invalidate]; <span class="comment">//NSTimer暂停  invalidate  使...无效;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/********************AVAudioPlayer***************/</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/BOOL  bool  Boolean  NSCFBoolean" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/BOOL  bool  Boolean  NSCFBoolean/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/BOOL  bool  Boolean  NSCFBoolean/">BOOL / bool / Boolean / NSCFBoolean</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NameTypedefHeaderTrue ValueFalse ValueBOOLsigned charobjc.hYESNObool_Bool (<span class="keyword">int</span>)stdbool.htruefalseBooleanunsigned charMacTypes.hTRUEFALSENSNumber__NSCFBooleanFoundation.h@(<span class="literal">YES</span>)@(<span class="literal">NO</span>)<span class="built_in">CFBooleanRefstructCoreFoundation</span>.hkCFBooleanTruekCFBooleanFalse</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/objective-c/">objective-c</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-oc/Core Animation 3D介绍(第1部分)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/" class="article-date">
+      <time datetime="2016-10-08T11:39:43.000Z" itemprop="datePublished">2016-10-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/08/oc/Core Animation 3D介绍(第1部分)/">Core Animation 3D介绍(第1部分)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>尊重原创 转自：<a href="http://codingobjc.com/blog/2013/06/11/core-animation-3djie-shao-di-1bu-fen/" target="_blank" rel="noopener">http://codingobjc.com/blog/2013/06/11/core-animation-3djie-shao-di-1bu-fen/</a></p>
+<p>在本教程中，我将向你介绍Core Animation中用于绘制3D图形的一些技术。<br>我要告诉你的好消息是：我们不必直接使用OpenGL，仅仅用Core Animation就可以很容易的实现一些3D效果。但是，也别太高兴了，因为”用Core Animation来制作一个复杂的3D游戏”也并不是一个好主意。<br>这个教程分两部分。第一部分，我们先讨论下一些3D原理知识，然后运用这些概念来创建一些简单的3D场景。然后在第二部分中，我们将使用Core Animation来制作一个类似于旋转木马的3D场景特效。<br>最终app的预览效果如下：(译注: 原文中这里的视频被墙，因此这里只简单的提供一个图片预览，你可以直接下载例子代码运行即可以看到最终app的效果)<br><img src="http://codingobjc.com/images/posts/2013_06_11_core_animation_3d_app_preview.png" alt><br>好，准备好了吗？我们开始写代码吧！<br>首先，下载文章后面的代码。如果你要自己创建项目的话，要记得添加QuartzCore框架。</p>
+<p>###3D和矩阵相关的数学知识(一点点…别担心，只有一点点)<br>要在一个3D空间中绘图，除了标准2D坐标(X和Y)概念外，我们还需要引入一个深度(depth)的概念，也就是要加入第三个坐标轴–Z轴。<br>这样，在空间中，我们只需要简单的改变物体的X、Y和Z坐标，就可以在垂直方向、水平方向或深度方向上移动物体。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/handed.png" alt><br>在2D或3D空间中，对一个物体执行平移、缩放或旋转这些操作时需要使用矩阵运算。<br>你可以将矩阵想象成一个多维数组。比如，在3D空间中我们使用一个像下面这种格式的4X4矩阵：</p>
+<pre><code>[X][0][0][0][0][Y][0][0][0][0][Z][0][0][0][0][1]
+</code></pre><p>把这个矩阵和物体的每一个坐标点(又称顶点)相乘，我们可以得到物体的一个变换(transformation)效果。<br>严格点讲，前面这个矩阵是用来执行缩放操作的。其中的X、Y、Z值代表每个轴上的缩放值。<br>如果你要进行其他的变换操作，比如旋转或者平移，你需要将矩阵换成其他矩阵格式(scheme)。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/Screen-Shot-2013-03-20-at-11.02.03-AM.png" alt><br>不要紧张！你不需要知道其他更多原理知识，而且也不必直接进行这些操作。Core Animation会为你完成这些操作，虽然你不知道它是如何做到的，但是它确实会为你完成这些操作，所以不必害怕。<br>当然，就我个人来说，如果我知道它背后是如何工作的(至少知道一些它的基本原理)，我会对我的代码更有自信。因此，如果你想了解更多矩阵相关的知识，建议你读一读这篇<a href="http://www.matrix44.net/cms/notes/opengl-3d-graphics/basic-3d-math-matrices" target="_blank" rel="noopener">文章</a>。</p>
+<p>###3D变换(Transformations)<br>现在基本上，你已经知道矩阵的作用了，也知道了3D空间是如何构成的。来，我们用Core Animation做一些3D的东西吧。<br>打开TB_3DIntro-&gt;viewController.m文件。<br>我在里面列出了6个分别以A、B、C、D、E、F开头的函数。每一个函数对应了一种不同的3D场景效果。<br>我们先来看看由<code>A_singlePlan</code>函数创造的场景吧。<br>用这个函数，我们画了一个平面，平面绕Y轴旋转了45度。<br>首先，我们创建了一个CALayer，用它来作容器层(当然，并不是一定要这样做，只是我更喜欢不直接在self.view的layer上进行工作)。</p>
+<pre><code>-(void)A_singlePlane{//Create the containerCALayer*container=[CALayerlayer];container.frame=CGRectMake(0,0,640,300);[self.view.layeraddSublayer:container];
+</code></pre><p>然后我们创建了另一个CALayer，用它代表一个平面。</p>
+<pre><code>//Create a PlaneCALayer*purplePlane=[selfaddPlaneToLayer:containersize:CGSizeMake(100,100)position:CGPointMake(250,150)color:[UIColorpurpleColor]];
+</code></pre><p>我写了一个简单的辅助函数，用它将平面直接添加到容器层上，然后返回这个新建的平面层。代码非常简单：</p>
+<pre><code>-(CALayer*)addPlaneToLayer:(CALayer*)containersize:(CGSize)sizeposition:(CGPoint)pointcolor:(UIColor*)color{//Initialize the layerCALayer*plane=[CALayerlayer];//Define position,size and colorsplane.backgroundColor=[colorCGColor];plane.opacity=0.6;plane.frame=CGRectMake(0,0,size.width,size.height);plane.position=point;plane.anchorPoint=CGPointMake(0.5,0.5);plane.borderColor=[[UIColorcolorWithWhite:1.0alpha:0.5]CGColor];plane.borderWidth=3;plane.cornerRadius=10;//Add the layer to the container layer[containeraddSublayer:plane];returnplane;}
+</code></pre><p>最后，我们用CATransform3D来添加变换。<br>啊？？？你一定又想问CATransform3D是什么东西？按住Cmd键点击这个类型名称，你可以发现它是一个结构体，使用了一种很”火星”的语法来表示一个矩阵。<img src="http://www.thinkandbuild.it/wp-includes/images/smilies/icon_razz.gif" alt></p>
+<pre><code>structCATransform3D{CGFloatm11,m12,m13,m14;CGFloatm21,m22,m23,m24;CGFloatm31,m32,m33,m34;CGFloatm41,m42,m43,m44;};typedefstructCATransform3DCATransform3D;
+</code></pre><p>旋转变换部分的代码也相当简单：</p>
+<pre><code>//Apply transform to the PLANECATransform3Dt=CATransform3DIdentity;t=CATransform3DRotate(t,45.00f*M_PI/180.0f,0,1,0);purplePlane.transform=t;}
+</code></pre><p>先用单位矩阵<code>CATransform3DIdentity</code>来初始化一个变换(transformation)，然后用<code>CATransform3DRotate</code>函数给变换乘上一个旋转矩阵。<br>CATransform3DRotate这个函数的参数分别表示矩阵，旋转的角度(以弧度为单位)和3个坐标轴上的变换系数。这个例子中，X和Z轴都没受到影响，只对Y轴有影响，物体会在Y轴上旋转45度。<br>下图是运行结果。<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa1.png" alt><br>呃……你可以看到，它还不是3D的！我们只是在X轴方向上将一个正方形压扁了。<br>这是由于我们还没有设置视点的值(perspective value)。通常，在绘制3D场景的时候会将场景进行正射投影(Orthographic projection)处理，由此会产生一个扁平的场景。换句话说，在正射投影后你无法看到Z轴上的深度感。<br>要给我们的场景加上空间深度感，我们必须修改变换矩阵的<code>m34</code>参数。这个参数决定了视点的值。<br>现在，来看看<code>B_singlePlanePerspective</code>这个函数，这函数展示了视点的作用。<br>这个函数和前一个函数只有变换部分的代码有所不同：</p>
+<pre><code>//Apply transform to the PLANECATransform3Dt=CATransform3DIdentity;//Add perspective!!!t.m34=1.0/-500;t=CATransform3DRotate(t,degToRad(45.0),0,1,0);purplePlane.transform=t;}
+</code></pre><p>你可以看到，我们直接给矩阵的m34属性赋了一个值。在这里，我不会深入的从数学上解释这个值是如何起作用的。但是我可以告诉你的是，这个值越接近0，视点就越深。<br>下面是两种不同视点值的效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa_2.png" alt><br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/pa_21.png" alt></p>
+<p>###3D变换的顺序问题(Transformations chain)<br>我们可以将多个矩阵相乘从而将多种变换应用到一个物体上。比如，如果我们想将平移和旋转变换应用到一个物体上，我们可以直接将两个变换矩阵相乘：</p>
+<pre><code>TransformMatrix=TranslateMtx*RotateMtx
+</code></pre><p>数学上，一般情况下乘法都可以使用交换律：</p>
+<pre><code>TranslateMtx*RotateMxt=RotateMtx*TranslateMtx
+</code></pre><p>但是矩阵乘法不适用于交换律。AxB的结果可能和BxA的结果不一样。要记住这一点！<br>接下来<code>C_transformationsChain</code>这个例子中，我们会将2个变换效果按不同的先后顺序应用到2个不同的物体上。<br>以下是主要代码：</p>
+<pre><code>//Apply transformation to the PLANESCATransform3Dt=CATransform3DIdentity;//Purple plane: Perform a rotation and then a translationt=CATransform3DRotate(t,45.0f*M_PI/180.0f,0,0,1);t=CATransform3DTranslate(t,100,0,0);purplePlane.transform=t;//reset the transform matrixt=CATransform3DIdentity;//Red plane: Perform translation first and then the rotationt=CATransform3DTranslate(t,100,0,0);t=CATransform3DRotate(t,45.0f*M_PI/180.0f,0,0,1);redPlane.transform=t;
+</code></pre><p>运行结果如下：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/Screen-Shot-2013-03-20-at-11.47.15-AM.png" alt><br>看到了吗，不同的变换顺序完全导致了不同的效果。<br>我们重点下看一下紫色的那块。旋转变换改变了它的坐标轴方向，然后我们又将它沿X轴进行了平移，此时它的X轴方向已经和红色平面的X轴方向不一致了。<br>变换步骤示意图如下：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p_r.png" alt><br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p_r2.png" alt></p>
+<p>###图层层次(layer hierarchies)<br>到目前为止，我们都是将变换直接应用在这些平面上。在3D场景中，经常需要创建一些相互之间有层次结构的物体。这个时候，只需要将变换应用到根层次上，就可以使整个层次结构中的物体整体具有这个变换效果。这种做法非常有用。<br>接下来，我们来看看<code>D_multiplePlanes</code>这个例子。<br>我们在容器层上添加了4个平面。<br>当没有任何变换效果时看起来是这样的：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5.png" alt><br>如果我们给每一个平面都加上一个Y轴上的旋转变换，我们会得到4个独立的旋转效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5_2.png" alt><br>但是，如果我们只是在容器层上应用旋转变换，我们会得到一个完全不同的场景效果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p5_1.png" alt><br>这种效果，是相机(camera)位置发生改变带来的结果。我们没有移动每个平面，只是改变了视点的位置。<br>此函数主要的变换部分代码如下，包含了分别应用于各个平面和应用于容器层的两种变换效果的代码：</p>
+<pre><code>//Transformation CATransform3Dt=CATransform3DIdentity;BOOLapplyToContainer=NO;//Apply the transformation to each PLANEif(!applyToContainer){t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);purplePlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);redPlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);orangePlane.transform=t;t=CATransform3DIdentity;t.m34=1.0/-500.0;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);yellowPlane.transform=t;}//Apply the transformation to the CONTAINERelse{CATransform3Dt=CATransform3DIdentity;t.m34=1.0/-500;t=CATransform3DRotate(t,degToRad(60.0),0,1,0);container.transform=t;}
+</code></pre><p>###CATransformLayer<br>到目前为止我们所见到的代码都能正常工作，但说实话，作为3D层次结构的根，CALayer不是正确的选择。<br>函数<code>E_multiplePlanesZAxis</code>展示了为什么。<br>这个例子中，我们创建4个XY坐标相同只有Z坐标不同的平面。紫色平面最近，黄色平面最远。</p>
+<pre><code>//Apply transforms to the PLANESt=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-10);purplePlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-50);redPlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-90);orangePlane.transform=t;t=CATransform3DIdentity;t=CATransform3DTranslate(t,0,0,-130);yellowPlane.transform=t;
+</code></pre><p>在旋转这些平面前，我们先让容器层执行了一个旋转变换。</p>
+<pre><code>//Apply transform to the CONTAINERCATransform3Dt=CATransform3DIdentity;t.m34=1.0/-500;t=CATransform3DRotate(t,80.0f*M_PI/180.0f,0,1,0);container.transform=t;
+</code></pre><p>你也许希望看到下面这种结果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p6_1.png" alt><br>但是，实际上会得到这种结果：<br><img src="http://www.thinkandbuild.it/wp-content/uploads/2013/03/p6.png" alt><br>这是因为CALayer不能处理3D层次结构的深度，它只能将场景处理成相同的Z层次。<br>为了修正这个问题，我们需要用一个<code>CATransformLayers</code>来做根层对象。<br>函数<code>F_multiplePlanesZAxis</code>修正了这个问题：</p>
+<pre><code>//Create the container as a CATransformLayerCATransformLayer*container=[CATransformLayerlayer];container.frame=CGRectMake(0,0,640,300);[self.view.layeraddSublayer:container];
+</code></pre><p>CATransformLayer是一个特殊的layer。与CALayer的不同之处在于，CATransformLayer本身不会被渲染到屏幕上，只有它的子图层才会被渲染到屏幕上。所以它的一些属性，比如backgroundColor、contents、border等等都没有什么用。要记住这点。<br>到这里，这个教程的第一部分就完了。建议你实际运行一下这些函数，也可以试试我没有讲到的<code>CATransform3DScale</code>，试试用它做一个缩放变换看。<br>如果你有任何问题，可以在twitter上找到我(<a href="http://www.twitter.com/bitwaker" target="_blank" rel="noopener">@bitwaker</a>)。<br><a href="https://github.com/ariok/TB_3DCoreAnimation" target="_blank" rel="noopener">本教程代码下载</a><br>译自：<a href="http://www.thinkandbuild.it/introduction-to-3d-drawing-in-core-animation-part-1/" target="_blank" rel="noopener">Think<br> &amp; Build</a></p>
 
       
     </div>
@@ -961,14 +951,17 @@ picker.allowsEditing= YES;
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2015-2017 Shirly
+                2016-2021 Shirly
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -977,7 +970,7 @@ picker.allowsEditing= YES;
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -989,14 +982,30 @@ picker.allowsEditing= YES;
     
 <script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
 
 
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
